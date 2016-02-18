@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<graphe>
+  <noeud n="0">
+    <latitude>45.555521</latitude>
+    <longitude>4.3333</longitude>
+    <batiment>A</batiment>
+    <salle>1</salle>
+    <salle>17</salle>
+    <voisin>5</voisin>
+    <voisin>6</voisin>
+  </noeud>
+</graphe>

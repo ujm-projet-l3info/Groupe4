@@ -1,0 +1,12 @@
+<!ELEMENT graphe (noeud*)>
+
+<!ELEMENT noeud (latitude,longitude,batiment,salle*,voisin*)>
+<!ATTLIST noeud
+          n CDATA
+          >
+
+<!ELEMENT latitude (#CDATA)>
+<!ELEMENT longitude (#CDATA)>
+<!ELEMENT batiment (#CDATA)>
+<!ELEMENT salle (#CDATA)>
+<!ELEMENT voisin (#CDATA)>
