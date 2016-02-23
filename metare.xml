@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-
+<!DOCTYPE Metare SYSTEM "metare.dtd">
 <graphe>
   <noeud num="0">
     <latitude>45.22222</latitude>
