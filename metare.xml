@@ -1,17 +1,352 @@
 <?xml version="1.0"?>
 <!DOCTYPE Metare SYSTEM "metare.dtd">
+
+
+<!-- HALL, BATIMENT A, BATIMENT F NIVEAU 1-->
+
 <graphe>
-  <noeud num="0">
-    <latitude>45.22222</latitude>
-    <longitude>4.336</longitude>
-    <batiment>A</batiment>
+  <noeud num="0"> <!-- F101 -->
+    <latitude>45.42367</latitude>
+    <longitude>4.42555</longitude>
+    <batiment>F</batiment>
     <liste_salles>
-      <salle>2</salle>
-      <salle>17</salle>
+      <salle>101</salle>
     </liste_salles>
     <liste_voisins>
       <voisin>1</voisin>
+      <voisin>21</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="1"> <!-- Croisement pour D203 -> D206 -->
+    <latitude>45.42350</latitude>
+    <longitude>4.42581</longitude>
+    <batiment>D</batiment>
+    <liste_voisins>
+      <voisin>0</voisin>
+      <voisin>2</voisin>
+      <voisin>6</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="2"> <!-- D203 -->
+    <latitude>45.42351</latitude>
+    <longitude>4.42583</longitude>
+    <batiment>D</batiment>
+    <liste_salles>
+      <salle>203</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>1</voisin>
+      <voisin>3</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="3"> <!-- D204 -->
+    <latitude>45.42353</latitude>
+    <longitude>4.42586</longitude>
+    <batiment>D</batiment>
+    <liste_salles>
+      <salle>204</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>2</voisin>
+      <voisin>4</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="4"> <!-- D205 -->
+    <latitude>45.42357</latitude>
+    <longitude>4.42592</longitude>
+    <batiment>D</batiment>
+    <liste_salles>
+      <salle>205</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>3</voisin>
+      <voisin>5</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="5"> <!-- D206 -->
+    <latitude>45.42361</latitude>
+    <longitude>4.42598</longitude>
+    <batiment>D</batiment>
+    <liste_salles>
+      <salle>206</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>4</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="6"> <!-- D202 -->
+    <latitude>45.42351</latitude>
+    <longitude>4.42592</longitude>
+    <batiment>D</batiment>
+    <liste_salles>
+      <salle>202</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>1</voisin>
+      <voisin>7</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="7"> <!-- D201 et D202 -->
+    <latitude>45.42344</latitude>
+    <longitude>4.42591</longitude>
+    <batiment>D</batiment>
+    <liste_salles>
+      <salle>201</salle>
+      <salle>202</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>6</voisin>
+      <voisin>8</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="8"> <!-- D201 -->
+    <latitude>45.42336</latitude>
+    <longitude>4.42596</longitude>
+    <batiment>D</batiment>
+    <liste_salles>
+      <salle>201</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>7</voisin>
+      <voisin>9</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="9"> <!-- Croisement pour D, dehors, C, hall -->
+    <latitude>45.42329</latitude>
+    <longitude>4.42600</longitude>
+    <batiment></batiment>
+    <liste_voisins>
+      <voisin>8</voisin>
+      <voisin>10</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="10"> <!-- Croisement A, vers D -->
+    <latitude>45.42318</latitude>
+    <longitude>4.42585</longitude>
+    <batiment></batiment>
+    <liste_voisins>
+      <voisin>9</voisin>
+      <voisin>11</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="11"> <!-- A16 -->
+    <latitude>45.42316</latitude>
+    <longitude>4.42574</longitude>
+    <batiment>A</batiment>
+    <liste_salles>
+      <salle>16</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>10</voisin>
+      <voisin>12</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="12"> <!-- A2 -->
+    <latitude>45.42317</latitude>
+    <longitude>4.42567</longitude>
+    <batiment>A</batiment>
+    <liste_salles>
+      <salle>2</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>11</voisin>
+      <voisin>13</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="13"> <!-- A3 et A15 -->
+    <latitude>45.42319</latitude>
+    <longitude>4.42561</longitude>
+    <batiment>A</batiment>
+    <liste_salles>
+      <salle>3</salle>
+      <salle>15</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>12</voisin>
+      <voisin>14</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="14"> <!-- A4 et A14 -->
+    <latitude>45.42323</latitude>
+    <longitude>4.42555</longitude>
+    <batiment>A</batiment>
+    <liste_salles>
+      <salle>4</salle>
+      <salle>14</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>13</voisin>
+      <voisin>15</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="15"> <!-- A5 et A13 -->
+    <latitude>45.42327</latitude>
+    <longitude>4.42550</longitude>
+    <batiment>A</batiment>
+    <liste_salles>
+      <salle>5</salle>
+      <salle>13</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>14</voisin>
+      <voisin>16</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="16"> <!-- A6 -->
+    <latitude>45.42335</latitude>
+    <longitude>4.42541</longitude>
+    <batiment>A</batiment>
+    <liste_salles>
+      <salle>6</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>15</voisin>
+      <voisin>17</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="17"> <!-- A7 -->
+    <latitude>45.42339</latitude>
+    <longitude>4.42537</longitude>
+    <batiment>A</batiment>
+    <liste_salles>
+      <salle>7</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>16</voisin>
+      <voisin>18</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="18"> <!-- A8 -->
+    <latitude>45.42346</latitude>
+    <longitude>4.42529</longitude>
+    <batiment>A</batiment>
+    <liste_salles>
+      <salle>7</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>17</voisin>
       <voisin>19</voisin>
     </liste_voisins>
   </noeud>
+
+  <noeud num="19"> <!-- Croisement A, dehors, vers A24 -->
+    <latitude>45.42348</latitude>
+    <longitude>4.42527</longitude>
+    <batiment>A</batiment>
+    <liste_voisins>
+      <voisin>18</voisin>
+      <voisin>20</voisin>
+      <voisin>22</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="20"> <!-- A24 -->
+    <latitude>45.42350</latitude>
+    <longitude>4.42531</longitude>
+    <batiment>A</batiment>
+    <liste_salles>
+      <salle>24</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>19</voisin>
+      <voisin>21</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="21"> <!-- A24 et porte pour dehors -->
+    <latitude>45.42353</latitude>
+    <longitude>4.42537</longitude>
+    <batiment>A</batiment>
+    <liste_salles>
+      <salle>24</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>20</voisin>
+      <voisin>0</voisin>
+      <voisin>22</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="22"> <!-- place des fumeurs de clopes -->
+    <latitude>45.42357</latitude>
+    <longitude>4.42527</longitude>
+    <batiment></batiment>
+    <liste_voisins>
+      <voisin>19</voisin>
+      <voisin>21</voisin>
+      <voisin>23</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="23"> <!-- en bas des escaliers A et vers F001 et F101 -->
+    <latitude>45.42371</latitude>
+    <longitude>4.42509</longitude>
+    <batiment></batiment>
+    <liste_voisins>
+      <voisin>22</voisin>
+      <voisin>24</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="24"> <!-- F001 et F101 -->
+    <latitude>45.42372</latitude>
+    <longitude>4.42512</longitude>
+    <batiment>F</batiment>
+    <liste_salles>
+      <salle>001</salle>
+      <salle>101</salle>
+    </liste_salles>
+    <liste_voisins>
+      <voisin>23</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="25"> <!-- ENTREE -->
+    <latitude>45.42305</latitude>
+    <longitude>4.42575</longitude>
+    <batiment></batiment>
+    <liste_voisins>
+      <voisin>10</voisin>
+      <voisin>26</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="26"> <!-- Scolarité -->
+    <latitude>45.42296</latitude>
+    <longitude>4.42581</longitude>
+    <batiment></batiment>
+    <liste_voisins>
+      <voisin>25</voisin>
+      <voisin>27</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="27"> <!-- Machine à café vers C -->
+    <latitude>45.42302</latitude>
+    <longitude>4.42611</longitude>
+    <batiment>C</batiment>
+    <liste_voisins>
+      <voisin>26</voisin>
+      <voisin>9</voisin>
+    </liste_voisins>
+  </noeud>
+  
 </graphe>
