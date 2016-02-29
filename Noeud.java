@@ -1,20 +1,22 @@
+import java.util.ArrayList;
+
 public class Noeud {
     private float latitude;
     private float longitude;
     private char batiment;
-    private ArrayList<int> salles;
-    private ArrayList<int> voisins;
+    private ArrayList<Integer> salles;
+    private ArrayList<Integer> voisins;
     
-    public Noeud(lat , long , bat)
+    public Noeud(float lat , float lon , char bat)
     {
         this.latitude = lat;
-        this.longitude = long;
+        this.longitude = lon;
         this.batiment = bat;
-        this.salles = new ArrayList<int>;
-        this.voisins = new ArrayList<int>;
+        this.salles = new ArrayList<Integer>();
+        this.voisins = new ArrayList<Integer>();
     }
 
-    void ajouterSalle(int i)
+    public void ajouterSalle(int i)
     {
         /* Ajoute le voisin i au
            Noeud courant
@@ -23,7 +25,7 @@ public class Noeud {
         this.salles.add(i);
     }
 
-    void ajouterVoisin(int i)
+    public void ajouterVoisin(int i)
     {
         /* Ajoute le voisin i au
            Noeud courant
@@ -31,6 +33,19 @@ public class Noeud {
 
         this.voisins.add(i);
     }
-    
+
+    public String toString()
+    {
+        /* Affiche le noeud courant
+           dans la console
+        */
+
+        String s = "";
+
+        s += "Lat : " + this.latitude + "\n";
+        s += "Lon : " + this.longitude + "\n";
+
+        return s;
+    }
 }
 
