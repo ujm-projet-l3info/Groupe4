@@ -14,6 +14,12 @@
       <voisin>3</voisin>
       <voisin>51</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>1</voisin_PMR>
+      <voisin_PMR>2</voisin_PMR>
+      <voisin_PMR>3</voisin_PMR>
+      <voisin_PMR>51</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="1"> <!-- Scolarité entrée intérieure -->
@@ -29,6 +35,12 @@
       <voisin>3</voisin>
       <voisin>56</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>0</voisin_PMR>
+      <voisin_PMR>2</voisin_PMR>
+      <voisin_PMR>3</voisin_PMR>
+      <voisin_PMR>56</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="2"> <!-- Hall couloir vers C -->
@@ -44,6 +56,12 @@
       <voisin>3</voisin>
       <voisin>32</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>0</voisin_PMR>
+      <voisin_PMR>1</voisin_PMR>
+      <voisin_PMR>3</voisin_PMR>
+      <voisin_PMR>32</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="3"> <!-- Hall couloir vers  A -->
@@ -60,6 +78,12 @@
       <voisin>4</voisin>
       <voisin>31</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>0</voisin_PMR>
+      <voisin_PMR>1</voisin_PMR>
+      <voisin_PMR>2</voisin_PMR>
+      <voisin_PMR>4</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="4"> <!-- Toilettes A2 -->
@@ -73,6 +97,10 @@
       <voisin>3</voisin>
       <voisin>5</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>3</voisin_PMR>
+      <voisin_PMR>5</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="5"> <!-- A16 -->
@@ -86,6 +114,10 @@
       <voisin>4</voisin>
       <voisin>6</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>4</voisin_PMR>
+      <voisin_PMR>6</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="6"> <!-- A2 -->
@@ -99,6 +131,10 @@
       <voisin>5</voisin>
       <voisin>7</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>5</voisin_PMR>
+      <voisin_PMR>7</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="7"> <!-- A3 A15 -->
@@ -113,6 +149,10 @@
       <voisin>6</voisin>
       <voisin>8</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>6</voisin_PMR>
+      <voisin_PMR>8</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="8"> <!-- A4 A14 -->
@@ -127,6 +167,10 @@
       <voisin>7</voisin>
       <voisin>9</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>7</voisin_PMR>
+      <voisin_PMR>9</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="9"> <!-- A5 A13 -->
@@ -141,6 +185,10 @@
       <voisin>8</voisin>
       <voisin>10</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>8</voisin_PMR>
+      <voisin_PMR>10</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="10"> <!-- A6 -->
@@ -154,6 +202,10 @@
       <voisin>9</voisin>
       <voisin>11</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>9</voisin_PMR>
+      <voisin_PMR>11</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="11"> <!-- A7 Bureau profs d'anglais -->
@@ -168,6 +220,10 @@
       <voisin>10</voisin>
       <voisin>12</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>10</voisin_PMR>
+      <voisin_PMR>12</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="12"> <!-- A8 Toilettes -->
@@ -182,6 +238,10 @@
       <voisin>11</voisin>
       <voisin>13</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>11</voisin_PMR>
+      <voisin_PMR>13</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="13"> <!-- Fin couloir A côté F -->
@@ -196,6 +256,9 @@
       <voisin>14</voisin>
       <voisin>37</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>12</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="14"> <!-- A24 -->
@@ -209,6 +272,9 @@
       <voisin>13</voisin>
       <voisin>15</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>15</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="15"> <!-- A24 -->
@@ -223,6 +289,11 @@
       <voisin>16</voisin>
       <voisin>37</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>14</voisin_PMR>
+      <voisin_PMR>16</voisin_PMR>
+      <voisin_PMR>37</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="16"> <!-- F101 POI de réunion -->
@@ -236,7 +307,12 @@
     <liste_voisins>
       <voisin>15</voisin>
       <voisin>17</voisin>
+      <voisin>39</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>15</voisin_PMR>
+      <voisin_PMR>17</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="17"> <!-- Fin F côté snack vers BU Toilettes -->
@@ -251,7 +327,12 @@
       <voisin>16</voisin>
       <voisin>18</voisin>
       <voisin>34</voisin>
+      <voisin>39</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>16</voisin_PMR>
+      <voisin_PMR>18</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="18"> <!-- Snack -->
@@ -266,6 +347,10 @@
       <voisin>17</voisin>
       <voisin>19</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>17</voisin_PMR>
+      <voisin_PMR>19</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="19"> <!-- Salle à manger -->
@@ -280,6 +365,10 @@
       <voisin>18</voisin>
       <voisin>20</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>18</voisin_PMR>
+      <voisin_PMR>20</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="20"> <!-- Toilettes -->
@@ -294,6 +383,10 @@
       <voisin>19</voisin>
       <voisin>21</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>19</voisin_PMR>
+      <voisin_PMR>21</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="21"> <!-- Croisement salle à manger D203-D205 -->
@@ -309,6 +402,11 @@
       <voisin>22</voisin>
       <voisin>25</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>20</voisin_PMR>
+      <voisin_PMR>22</voisin_PMR>
+      <voisin_PMR>25</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="22"> <!-- D203 -->
@@ -322,6 +420,10 @@
       <voisin>21</voisin>
       <voisin>23</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>21</voisin_PMR>
+      <voisin_PMR>23</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="23"> <!-- D204 -->
@@ -335,6 +437,10 @@
       <voisin>22</voisin>
       <voisin>24</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>22</voisin_PMR>
+      <voisin_PMR>24</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="24"> <!-- D205 -->
@@ -347,6 +453,9 @@
     <liste_voisins>
       <voisin>23</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>23</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="25"> <!-- D202 -->
@@ -374,6 +483,10 @@
       <voisin>25</voisin>
       <voisin>27</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>25</voisin_PMR>
+      <voisin_PMR>27</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="27"> <!-- D201 -->
@@ -387,6 +500,10 @@
       <voisin>26</voisin>
       <voisin>28</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>26</voisin_PMR>
+      <voisin_PMR>28</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="28"> <!-- Début D vers Vie Etudiante -->
@@ -402,6 +519,11 @@
       <voisin>32</voisin>
       <voisin>33</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>27</voisin_PMR>
+      <voisin_PMR>29</voisin_PMR>
+      <voisin_PMR>32</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="29"> <!-- Vie Etudiante -->
@@ -415,6 +537,10 @@
       <voisin>28</voisin>
       <voisin>30</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>28</voisin_PMR>
+      <voisin_PMR>30</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="30"> <!-- Bureau C2I... -->
@@ -428,6 +554,10 @@
       <voisin>29</voisin>
       <voisin>31</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>29</voisin_PMR>
+      <voisin_PMR>31</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="31"> <!-- ASTRE -->
@@ -441,6 +571,9 @@
       <voisin>3</voisin>
       <voisin>30</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>30</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="32"> <!-- Machine à café vers C -->
@@ -469,6 +602,10 @@
       <voisin>40</voisin>
       <voisin>41</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>40</voisin_PMR>
+      <voisin_PMR>41</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="34"> <!-- Escaliers vers F101 pour BU et Bâtiment H -->
@@ -484,6 +621,8 @@
       <voisin>46</voisin>
       <voisin>57</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="35"> <!-- En allant vers BU -->
@@ -497,6 +636,8 @@
       <voisin>34</voisin>
       <voisin>36</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="36"> <!-- BU -->
@@ -511,6 +652,10 @@
       <voisin>40</voisin>
       <voisin>43</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>40</voisin_PMR>
+      <voisin_PMR>43</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="37"> <!-- Place des fumeurs fin A -->
@@ -526,6 +671,11 @@
       <voisin>38</voisin>
       <voisin>52</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>15</voisin_PMR>
+      <voisin_PMR>38</voisin_PMR>
+      <voisin_PMR>52</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="38"> <!-- En bas des escaliers direction H J K L -->
@@ -544,6 +694,14 @@
       <voisin>48</voisin>
       <voisin>49</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>37</voisin_PMR>
+      <voisin_PMR>39</voisin_PMR>
+      <voisin_PMR>43</voisin_PMR>
+      <voisin_PMR>44</voisin_PMR>
+      <voisin_PMR>48</voisin_PMR>
+      <voisin_PMR>49</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="39"> <!-- F001 F101 -->
@@ -556,7 +714,12 @@
     </liste_POI>
     <liste_voisins>
       <voisin>38</voisin>
+      <voisin>16</voisin>
+      <voisin>17</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>38</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="40"> <!-- Derrière le campus côté Bâtiment D -->
@@ -570,6 +733,10 @@
       <voisin>33</voisin>
       <voisin>36</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>33</voisin_PMR>
+      <voisin_PMR>36</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="41"> <!-- En allant vers le Resto U -->
@@ -584,6 +751,10 @@
       <voisin>42</voisin>
       <voisin>54</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>33</voisin_PMR>
+      <voisin_PMR>42</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="42"> <!-- Resto U -->
@@ -595,7 +766,12 @@
     </liste_POI>
     <liste_voisins>
       <voisin>41</voisin>
+      <voisin>63</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>41</voisin_PMR>
+      <voisin_PMR>63</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="43"> <!-- Derrière le campus côté Bâtiment H -->
@@ -613,6 +789,12 @@
       <voisin>61</voisin>
       <voisin>62</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>36</voisin_PMR>
+      <voisin_PMR>38</voisin_PMR>
+      <voisin_PMR>61</voisin_PMR>
+      <voisin_PMR>62</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="44"> <!-- DSI -->
@@ -629,6 +811,12 @@
       <voisin>48</voisin>
       <voisin>49</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>38</voisin_PMR>
+      <voisin_PMR>45</voisin_PMR>
+      <voisin_PMR>48</voisin_PMR>
+      <voisin_PMR>49</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="45"> <!-- Place devant H et J -->
@@ -647,6 +835,14 @@
       <voisin>49</voisin>
       <voisin>60</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>44</voisin_PMR>
+      <voisin_PMR>46</voisin_PMR>
+      <voisin_PMR>47</voisin_PMR>
+      <voisin_PMR>48</voisin_PMR>
+      <voisin_PMR>49</voisin_PMR>
+      <voisin_PMR>60</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="46"> <!-- Entrée H -->
@@ -666,6 +862,14 @@
       <voisin>58</voisin>
       <voisin>60</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>45</voisin_PMR>
+      <voisin_PMR>47</voisin_PMR>
+      <voisin_PMR>48</voisin_PMR>
+      <voisin_PMR>49</voisin_PMR>
+      <voisin_PMR>58</voisin_PMR>
+      <voisin_PMR>60</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="47"> <!-- Entrée J -->
@@ -682,6 +886,13 @@
       <voisin>49</voisin>
       <voisin>60</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>45</voisin_PMR>
+      <voisin_PMR>46</voisin_PMR>
+      <voisin_PMR>46</voisin_PMR>
+      <voisin_PMR>49</voisin_PMR>
+      <voisin_PMR>60</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="48"> <!-- Entrée K -->
@@ -700,6 +911,15 @@
       <voisin>49</voisin>
       <voisin>60</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>38</voisin_PMR>
+      <voisin_PMR>44</voisin_PMR>
+      <voisin_PMR>45</voisin_PMR>
+      <voisin_PMR>46</voisin_PMR>
+      <voisin_PMR>47</voisin_PMR>
+      <voisin_PMR>49</voisin_PMR>
+      <voisin_PMR>60</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="49"> <!-- Portail vers Bâtiment K -->
@@ -715,10 +935,22 @@
       <voisin>44</voisin>
       <voisin>45</voisin>
       <voisin>46</voisin>
+      <voisin>47</voisin>
       <voisin>48</voisin>
       <voisin>50</voisin>
+      <voisin>52</voisin>
       <voisin>60</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>38</voisin_PMR>
+      <voisin_PMR>44</voisin_PMR>
+      <voisin_PMR>45</voisin_PMR>
+      <voisin_PMR>46</voisin_PMR>
+      <voisin_PMR>47</voisin_PMR>
+      <voisin_PMR>48</voisin_PMR>
+      <voisin_PMR>50</voisin_PMR>
+      <voisin_PMR>60</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="50"> <!-- Portail principal -->
@@ -733,6 +965,10 @@
       <voisin>51</voisin>
       <voisin>55</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>49</voisin_PMR>
+      <voisin_PMR>55</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="51"> <!-- Place devant l'entrée principale -->
@@ -748,6 +984,11 @@
       <voisin>52</voisin>
       <voisin>53</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>0</voisin_PMR>
+      <voisin_PMR>52</voisin_PMR>
+      <voisin_PMR>53</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="52"> <!-- Coin pique-nique vers fin Bâtiment A -->
@@ -763,6 +1004,12 @@
       <voisin>49</voisin>
       <voisin>51</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>37</voisin_PMR>
+      <voisin_PMR>48</voisin_PMR>
+      <voisin_PMR>49</voisin_PMR>
+      <voisin_PMR>51</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="53"> <!-- Début parking côté Scolarité -->
@@ -778,6 +1025,12 @@
       <voisin>55</voisin>
       <voisin>56</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>51</voisin_PMR>
+      <voisin_PMR>54</voisin_PMR>
+      <voisin_PMR>55</voisin_PMR>
+      <voisin_PMR>56</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="54"> <!-- Devant descente vers Resto U parking -->
@@ -794,6 +1047,11 @@
       <voisin>55</voisin>
       <voisin>56</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>53</voisin_PMR>
+      <voisin_PMR>55</voisin_PMR>
+      <voisin_PMR>56</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="55"> <!-- Entrée fin parking côté City stade -->
@@ -810,6 +1068,12 @@
       <voisin>54</voisin>
       <voisin>56</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>50</voisin_PMR>
+      <voisin_PMR>53</voisin_PMR>
+      <voisin_PMR>54</voisin_PMR>
+      <voisin_PMR>56</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="56"> <!-- Entrée scolarité depuis parking -->
@@ -825,6 +1089,12 @@
       <voisin>54</voisin>
       <voisin>55</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>1</voisin_PMR>
+      <voisin_PMR>53</voisin_PMR>
+      <voisin_PMR>54</voisin_PMR>
+      <voisin_PMR>55</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="57"> <!-- Coin pique-nique vers le Snack -->
@@ -832,11 +1102,13 @@
     <longitude>4.42571</longitude>
     <batiment></batiment>
     <liste_POI>
-      <POI>Tables à pique-nique</snack
+      <POI>Tables à pique-nique</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>34</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="58"> <!-- H202 (Salle serverurs) H206 Toilettes -->
@@ -852,6 +1124,10 @@
       <voisin>46</voisin>
       <voisin>59</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>46</voisin_PMR>
+      <voisin_PMR>59</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="59"> <!-- H203 H204 H205 (Salle libre accès) -->
@@ -867,6 +1143,9 @@
       <voisin>58</voisin>
       <voisin>62</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>58</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="60"> <!-- Passage à côté de H -->
@@ -884,6 +1163,13 @@
       <voisin>48</voisin>
       <voisin>49</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>45</voisin_PMR>
+      <voisin_PMR>46</voisin_PMR>
+      <voisin_PMR>47</voisin_PMR>
+      <voisin_PMR>48</voisin_PMR>
+      <voisin_PMR>49</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="61"> <!-- Parking après la BU -->
@@ -896,6 +1182,9 @@
     <liste_voisins>
       <voisin>43</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>43</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
   <noeud num="62"> <!-- Sortie derrière H -->
@@ -909,8 +1198,40 @@
       <voisin>43</voisin>
       <voisin>59</voisin>
     </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>43</voisin_PMR>
+    </liste_voisins_PMR>
   </noeud>
 
+  <noeud num="63"> <!-- En allant vers la cafette -->
+    <latitude>45.42233</latitude>
+    <longitude>4.42741</longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI>En allant vers la cafet'U</POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin>42</voisin>
+    </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>42</voisin_PMR>
+    </liste_voisins_PMR>
+  </noeud>
+
+  <noeud num="64"> <!-- Cafet'U -->
+    <latitude>45.42238</latitude>
+    <longitude>4.42761</longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI>Cafet'U</POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin>63</voisin>
+    </liste_voisins>
+    <liste_voisins_PMR>
+    </liste_voisins_PMR>
+    </noeud> -->
+
   <!-- <noeud num="">
     <latitude></latitude>
     <longitude></longitude>
@@ -920,8 +1241,86 @@
     </liste_POI>
     <liste_voisins>
       <voisin></voisin>
-    </liste_voisins>
+      </liste_voisins>
+      <liste_voisins_PMR>
+      <voisin_PMR></voisin_PMR>
+      </liste_voisins_PMR>
     </noeud> -->
+
+  <!-- <noeud num="">
+    <latitude></latitude>
+    <longitude></longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI></POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin></voisin>
+      </liste_voisins>
+      <liste_voisins_PMR>
+      <voisin_PMR></voisin_PMR>
+      </liste_voisins_PMR>
+    </noeud> -->
+
+  <!-- <noeud num="">
+    <latitude></latitude>
+    <longitude></longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI></POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin></voisin>
+      </liste_voisins>
+      <liste_voisins_PMR>
+      <voisin_PMR></voisin_PMR>
+      </liste_voisins_PMR>
+      </noeud> -->
+  
+  <!-- <noeud num="">
+    <latitude></latitude>
+    <longitude></longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI></POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin></voisin>
+      </liste_voisins>
+      <liste_voisins_PMR>
+      <voisin_PMR></voisin_PMR>
+      </liste_voisins_PMR>
+      </noeud> -->
+
+  <!-- <noeud num="">
+    <latitude></latitude>
+    <longitude></longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI></POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin></voisin>
+      </liste_voisins>
+      <liste_voisins_PMR>
+      <voisin_PMR></voisin_PMR>
+      </liste_voisins_PMR>
+      </noeud> -->
+
+  <!-- <noeud num="">
+    <latitude></latitude>
+    <longitude></longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI></POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin></voisin>
+      </liste_voisins>
+      <liste_voisins_PMR>
+      <voisin_PMR></voisin_PMR>
+      </liste_voisins_PMR>
+      </noeud> -->
 
   <!-- <noeud num="">
     <latitude></latitude>
@@ -944,8 +1343,11 @@
     </liste_POI>
     <liste_voisins>
       <voisin></voisin>
-    </liste_voisins>
-    </noeud> -->
+      </liste_voisins>
+      <liste_voisins_PMR>
+      <voisin_PMR></voisin_PMR>
+      </liste_voisins_PMR>
+      </noeud> -->
 
   <!-- <noeud num="">
     <latitude></latitude>
@@ -956,91 +1358,10 @@
     </liste_POI>
     <liste_voisins>
       <voisin></voisin>
-    </liste_voisins>
-    </noeud> -->
-
-  <!-- <noeud num="">
-    <latitude></latitude>
-    <longitude></longitude>
-    <batiment></batiment>
-    <liste_POI>
-      <POI></POI>
-    </liste_POI>
-    <liste_voisins>
-      <voisin></voisin>
-    </liste_voisins>
-    </noeud> -->
-
-  <!-- <noeud num="">
-    <latitude></latitude>
-    <longitude></longitude>
-    <batiment></batiment>
-    <liste_POI>
-      <POI></POI>
-    </liste_POI>
-    <liste_voisins>
-      <voisin></voisin>
-    </liste_voisins>
-    </noeud> -->
-
-  <!-- <noeud num="">
-    <latitude></latitude>
-    <longitude></longitude>
-    <batiment></batiment>
-    <liste_POI>
-      <POI></POI>
-    </liste_POI>
-    <liste_voisins>
-      <voisin></voisin>
-    </liste_voisins>
-    </noeud> -->
-
-  <!-- <noeud num="">
-    <latitude></latitude>
-    <longitude></longitude>
-    <batiment></batiment>
-    <liste_POI>
-      <POI></POI>
-    </liste_POI>
-    <liste_voisins>
-      <voisin></voisin>
-    </liste_voisins>
-    </noeud> -->
-
-  <!-- <noeud num="">
-    <latitude></latitude>
-    <longitude></longitude>
-    <batiment></batiment>
-    <liste_POI>
-      <POI></POI>
-    </liste_POI>
-    <liste_voisins>
-      <voisin></voisin>
-    </liste_voisins>
-    </noeud> -->
-
-  <!-- <noeud num="">
-    <latitude></latitude>
-    <longitude></longitude>
-    <batiment></batiment>
-    <liste_POI>
-      <POI></POI>
-    </liste_POI>
-    <liste_voisins>
-      <voisin></voisin>
-    </liste_voisins>
-    </noeud> -->
-
-  <!-- <noeud num="">
-    <latitude></latitude>
-    <longitude></longitude>
-    <batiment></batiment>
-    <liste_POI>
-      <POI></POI>
-    </liste_POI>
-    <liste_voisins>
-      <voisin></voisin>
-    </liste_voisins>
-  </noeud> -->
+      </liste_voisins>
+      <liste_voisins_PMR>
+      <voisin_PMR></voisin_PMR>
+      </liste_voisins_PMR>
+      </noeud> -->
   
 </graphe>

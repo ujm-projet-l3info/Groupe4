@@ -1,6 +1,6 @@
 <!ELEMENT graphe (noeud*)>
 
-<!ELEMENT noeud (latitude, longitude, batiment, liste_POI+, liste_voisins+)>
+<!ELEMENT noeud (latitude, longitude, batiment, liste_POI+, liste_voisins+, liste_voisins_PMR+)>
 <!ATTLIST noeud
           num CDATA
           >
@@ -10,5 +10,7 @@
 <!ELEMENT batiment (#CDATA)>
 <!ELEMENT liste_POI (POI+)>
 <!ELEMENT POI (#CDATA)>
-<!ELEMENT liste_voisins (voisin+)>
+<!ELEMENT liste_voisins (voisin*)>
 <!ELEMENT voisin (#CDATA)>
+<!ELEMENT liste_voisins_PMR (voisin_PMR*)>
+<!ELEMENT voisin_PMR (#CDATA)>
