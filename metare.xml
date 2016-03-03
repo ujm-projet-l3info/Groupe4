@@ -1,29 +1,13 @@
 <?xml version="1.0"?>
 
-
-<!--  -1 SCOLARITE   -->
-<!--  -2 TOILETTES   -->
-<!--  -3 BUREAU ANGL -->
-<!--  -4 REUNION     -->
-<!--  -5 SNACK       -->
-<!--  -6 MACHINES    -->
-<!--  -7 SALLE MIDI  -->
-<!--  -8 VIE ETUD.   -->
-<!--  -9 C2I...      -->
-<!-- -10 ASTRE       -->
-<!-- -11 BU          -->
-<!-- -12 RESTO U     -->
-<!-- -13 DSI         -->
-<!-- -14 PARKING     -->
-
-
 <graphe>
-  <noeud num="0"> <!-- ENTREE -->
+  <noeud num="0"> <!-- Entrée principale du campus -->
     <latitude>45.42303</latitude>
     <longitude>4.42575</longitude>
     <batiment></batiment>
-    <liste_salles>
-    </liste_salles>
+    <liste_POI>
+      <POI>Entrée principale</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>1</voisin>
       <voisin>2</voisin>
@@ -32,27 +16,28 @@
     </liste_voisins>
   </noeud>
 
-  <noeud num="1"> <!-- SCOLARITE -->
+  <noeud num="1"> <!-- Scolarité entrée intérieure -->
     <latitude>45.42295</latitude>
     <longitude>4.42580</longitude>
     <batiment>B</batiment>
-    <liste_salles>
-      <salle>-1</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Scolarité</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>0</voisin>
       <voisin>2</voisin>
       <voisin>3</voisin>
-      <voisin>56</voisin
+      <voisin>56</voisin>
     </liste_voisins>
   </noeud>
 
-  <noeud num="2"> <!-- HALL COULOIR VERS C -->
+  <noeud num="2"> <!-- Hall couloir vers C -->
     <latitude>45.42300</latitude>
     <longitude>4.42581</longitude>
     <batiment></batiment>
-    <liste_salles>
-    </liste_salles>
+    <liste_POI>
+      <POI>Couloir vers bâtiment C</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>0</voisin>
       <voisin>1</voisin>
@@ -61,12 +46,13 @@
     </liste_voisins>
   </noeud>
 
-  <noeud num="3"> <!-- HALL COULOIR VERS A -->
+  <noeud num="3"> <!-- Hall couloir vers  A -->
     <latitude>45.42303</latitude>
     <longitude>4.42575</longitude>
     <batiment></batiment>
-    <liste_salles>
-    </liste_salles>
+    <liste_POI>
+      <POI>Couloir vers salles A</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>0</voisin>
       <voisin>1</voisin>
@@ -76,13 +62,13 @@
     </liste_voisins>
   </noeud>
 
-  <noeud num="4"> <!-- TOILETTES A2 -->
+  <noeud num="4"> <!-- Toilettes A2 -->
     <latitude>45.42306</latitude>
     <longitude>4.42571</longitude>
     <batiment>A</batiment>
-    <liste_salles>
-      <salle>-2</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Toilettes</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>3</voisin>
       <voisin>5</voisin>
@@ -93,9 +79,9 @@
     <latitude>45.42309</latitude>
     <longitude>4.42568</longitude>
     <batiment>A</batiment>
-    <liste_salles>
-      <salle>16</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>16</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>4</voisin>
       <voisin>6</voisin>
@@ -106,9 +92,9 @@
     <latitude>45.42313</latitude>
     <longitude>4.42564</longitude>
     <batiment>A</batiment>
-    <liste_salles>
-      <salle>2</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>2</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>5</voisin>
       <voisin>7</voisin>
@@ -119,10 +105,10 @@
     <latitude>45.42318</latitude>
     <longitude>4.42559</longitude>
     <batiment>A</batiment>
-    <liste_salles>
-      <salle>3</salle>
-      <salle>15</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>3</POI>
+      <POI>15</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>6</voisin>
       <voisin>8</voisin>
@@ -133,10 +119,10 @@
     <latitude>45.42323</latitude>
     <longitude>4.42554</longitude>
     <batiment>A</batiment>
-    <liste_salles>
-      <salle>4</salle>
-      <salle>14</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>4</POI>
+      <POI>14</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>7</voisin>
       <voisin>9</voisin>
@@ -147,10 +133,10 @@
     <latitude>45.42328</latitude>
     <longitude>4.42549</longitude>
     <batiment>A</batiment>
-    <liste_salles>
-      <salle>5</salle>
-      <salle>13</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>5</POI>
+      <POI>13</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>8</voisin>
       <voisin>10</voisin>
@@ -161,23 +147,23 @@
     <latitude>45.42333</latitude>
     <longitude>4.42542</longitude>
     <batiment>A</batiment>
-    <liste_salles>
-      <salle>6</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>6</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>9</voisin>
       <voisin>11</voisin>
     </liste_voisins>
   </noeud>
 
-  <noeud num="11"> <!-- A7 Bureau d'anglais -->
+  <noeud num="11"> <!-- A7 Bureau profs d'anglais -->
     <latitude>45.42338</latitude>
     <longitude>4.42537</longitude>
     <batiment>A</batiment>
-    <liste_salles>
-      <salle>7</salle>
-      <salle>-3</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>7</POI>
+      <POI>Bureau professeurs d'Anglais</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>10</voisin>
       <voisin>12</voisin>
@@ -188,10 +174,10 @@
     <latitude>45.42343</latitude>
     <longitude>4.42532</longitude>
     <batiment>A</batiment>
-    <liste_salles>
-      <salle>8</salle>
-      <salle>-2</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>8</POI>
+      <POI>Toilettes</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>11</voisin>
       <voisin>13</voisin>
@@ -202,8 +188,9 @@
     <latitude>45.42347</latitude>
     <longitude>4.42529</longitude>
     <batiment>A</batiment>
-    <liste_salles>
-    </liste_salles>
+    <liste_POI>
+      <POI>Fin des salles A</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>12</voisin>
       <voisin>14</voisin>
@@ -215,9 +202,9 @@
     <latitude>45.42350</latitude>
     <longitude>4.42531</longitude>
     <batiment>A</batiment>
-    <liste_salles>
-      <salle>24</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>24</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>13</voisin>
       <voisin>15</voisin>
@@ -228,9 +215,9 @@
     <latitude>45.42354</latitude>
     <longitude>4.42537</longitude>
     <batiment>A</batiment>
-    <liste_salles>
-      <salle>24</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>24</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>14</voisin>
       <voisin>16</voisin>
@@ -238,14 +225,14 @@
     </liste_voisins>
   </noeud>
 
-  <noeud num="16"> <!-- F101 Salle de réunion -->
+  <noeud num="16"> <!-- F101 POI de réunion -->
     <latitude>45.42359</latitude>
     <longitude>4.42544</longitude>
     <batiment>F</batiment>
-    <liste_salles>
-      <salle>101</salle>
-      <salle>-4</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>101</POI>
+      <POI>Salle de réunion</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>15</voisin>
       <voisin>17</voisin>
@@ -256,10 +243,10 @@
     <latitude>45.42363</latitude>
     <longitude>4.42551</longitude>
     <batiment>F</batiment>
-    <liste_salles>
-      <salle>101</salle>
-      <salle>-2</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>101</POI>
+      <POI>Toilettes</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>16</voisin>
       <voisin>18</voisin>
@@ -271,10 +258,10 @@
     <latitude>45.42361</latitude>
     <longitude>4.42558</longitude>
     <batiment>D</batiment>
-    <liste_salles>
-      <salle>-5</salle>
-      <salle>-6</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Snack</POI>
+      <POI>Distributeurs</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>17</voisin>
       <voisin>19</voisin>
@@ -285,9 +272,10 @@
     <latitude>45.42346</latitude>
     <longitude>4.42579</longitude>
     <batiment>D</batiment>
-    <liste_salles>
-      <salle>-7</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Salle de repas</POI>
+      <POI>Tables à pique-nique</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>18</voisin>
       <voisin>20</voisin>
@@ -298,22 +286,24 @@
     <latitude>45.42348</latitude>
     <longitude>4.42577</longitude>
     <batiment>D</batiment>
-    <liste_salles>
-      <salle>-2</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Toilettes</POI>
+      <POI>Tables à pique-nique</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>19</voisin>
       <voisin>21</voisin>
     </liste_voisins>
   </noeud>
 
-  <noeud num="21"> <!-- Croisement Salle à manger D203-D205 -->
+  <noeud num="21"> <!-- Croisement salle à manger D203-D205 -->
     <latitude>45.42347</latitude>
     <longitude>4.42578</longitude>
     <batiment>D</batiment>
-    <liste_salles>
-      <salle>-7</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Salle de repas</POI>
+      <POI>Tables à pique-nique</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>20</voisin>
       <voisin>22</voisin>
@@ -325,9 +315,9 @@
     <latitude>45.42350</latitude>
     <longitude>4.42581</longitude>
     <batiment>D</batiment>
-    <liste_salles>
-      <salle>203</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>203</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>21</voisin>
       <voisin>23</voisin>
@@ -338,9 +328,9 @@
     <latitude>45.42354</latitude>
     <longitude>4.42586</longitude>
     <batiment>D</batiment>
-    <liste_salles>
-      <salle>204</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>204</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>22</voisin>
       <voisin>24</voisin>
@@ -351,9 +341,9 @@
     <latitude>45.42360</latitude>
     <longitude>4.42595</longitude>
     <batiment>D</batiment>
-    <liste_salles>
-      <salle>205</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>205</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>23</voisin>
     </liste_voisins>
@@ -363,9 +353,9 @@
     <latitude>45.42351</latitude>
     <longitude>4.42589</longitude>
     <batiment>D</batiment>
-    <liste_salles>
-      <salle>202</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>202</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>21</voisin>
       <voisin>26</voisin>
@@ -376,10 +366,10 @@
     <latitude>45.42343</latitude>
     <longitude>4.42591</longitude>
     <batiment>D</batiment>
-    <liste_salles>
-      <salle>201</salle>
-      <salle>202</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>201</POI>
+      <POI>202</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>25</voisin>
       <voisin>27</voisin>
@@ -390,9 +380,9 @@
     <latitude>45.42335</latitude>
     <longitude>4.42596</longitude>
     <batiment>D</batiment>
-    <liste_salles>
-      <salle>201</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>201</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>26</voisin>
       <voisin>28</voisin>
@@ -403,8 +393,9 @@
     <latitude>45.42329</latitude>
     <longitude>4.42600</longitude>
     <batiment></batiment>
-    <liste_salles>
-    </liste_salles>
+    <liste_POI>
+      <POI>Intersection bâtiment D et salle de vie étudiante</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>27</voisin>
       <voisin>29</voisin>
@@ -417,9 +408,9 @@
     <latitude>45.42323</latitude>
     <longitude>4.42599</longitude>
     <batiment></batiment>
-    <liste_salles>
-      <salle>-8</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Salle de vie étudiante</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>28</voisin>
       <voisin>30</voisin>
@@ -430,9 +421,9 @@
     <latitude>45.42319</latitude>
     <longitude>4.42595</longitude>
     <batiment></batiment>
-    <liste_salles>
-      <salle>-9</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Bureau C2I</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>29</voisin>
       <voisin>31</voisin>
@@ -443,9 +434,9 @@
     <latitude>45.42316</latitude>
     <longitude>4.42589</longitude>
     <batiment></batiment>
-    <liste_salles>
-      <salle>-10</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>A.S.T.R.E</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>3</voisin>
       <voisin>30</voisin>
@@ -456,9 +447,10 @@
     <latitude>45.42311</latitude>
     <longitude>4.42605</longitude>
     <batiment>C</batiment>
-    <liste_salles>
-      <salle>-6</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Distributeurs</POI>
+      <POI>Intersection hall d'entrée bâtiment C</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>2</voisin>
       <voisin>28</voisin>
@@ -469,11 +461,13 @@
     <latitude>45.42319</latitude>
     <longitude>4.42628</longitude>
     <batiment></batiment>
-    <liste_salles>
-    </liste_salles>
+    <liste_POI>
+      <POI>Dehors sortie après salle de vie étudiante</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>28</voisin>
       <voisin>40</voisin>
+      <voisin>41</voisin>
     </liste_voisins>
   </noeud>
 
@@ -481,8 +475,9 @@
     <latitude>45.42376</latitude>
     <longitude>4.42567</longitude>
     <batiment>F</batiment>
-    <liste_salles>
-    </liste_salles>
+    <liste_POI>
+      <POI>Intersection passerelle vers bâtiments H F et BU</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>17</voisin>
       <voisin>35</voisin>
@@ -495,8 +490,9 @@
     <latitude>45.42380</latitude>
     <longitude>4.42566</longitude>
     <batiment></batiment>
-    <liste_salles>
-    </liste_salles>
+    <liste_POI>
+      <POI>Chemin vers la BU</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>34</voisin>
       <voisin>36</voisin>
@@ -507,13 +503,13 @@
     <latitude>45.42388</latitude>
     <longitude>4.42600</longitude>
     <batiment></batiment>
-    <liste_salles>
-      <salle>-11</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Bibliothèque universitaire</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>35</voisin>
       <voisin>40</voisin>
-      <voisin>42</voisin>
+      <voisin>43</voisin>
     </liste_voisins>
   </noeud>
 
@@ -521,8 +517,9 @@
     <latitude>45.42356</latitude>
     <longitude>4.42547</longitude>
     <batiment></batiment>
-    <liste_salles>
-    </liste_salles>
+    <liste_POI>
+      <POI>Petite place en sortant du bâtiment A vers H J K L</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>13</voisin>
       <voisin>15</voisin>
@@ -535,9 +532,10 @@
     <latitude>45.42366</latitude>
     <longitude>4.42525</longitude>
     <batiment></batiment>
-    <liste_salles>
-      <salle>-14</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>En bas des escaliers après bâtiment A</POI>
+      <POI>Parking Nord</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>37</voisin>
       <voisin>39</voisin>
@@ -552,25 +550,25 @@
     <latitude>45.42370</latitude>
     <longitude>4.42520</longitude>
     <batiment>F</batiment>
-    <liste_salles>
-      <salle>001</salle>
-      <salle>101</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>001</POI>
+      <POI>101</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>38</voisin>
     </liste_voisins>
   </noeud>
 
-  <noeud num="40"> <!-- Derrière le campus côté Bâtiment C -->
+  <noeud num="40"> <!-- Derrière le campus côté Bâtiment D -->
     <latitude>45.42342</latitude>
     <longitude>4.42648</longitude>
     <batiment></batiment>
-    <liste_salles>
-    </liste_salles>
+    <liste_POI>
+      <POI>Intersection derrière bâtiment D</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>33</voisin>
-      <voisin>41</voisin>
-      <voisin>42</voisin>
+      <voisin>36</voisin>
     </liste_voisins>
   </noeud>
 
@@ -578,10 +576,11 @@
     <latitude>45.42268</latitude>
     <longitude>4.42697</longitude>
     <batiment></batiment>
-    <liste_salles>
-    </liste_salles>
+    <liste_POI>
+      <POI>Intersection Resto U montée vers Parking Sud</POI>
+    </liste_POI>
     <liste_voisins>
-      <voisin>40</voisin>
+      <voisin>33</voisin>
       <voisin>42</voisin>
       <voisin>54</voisin>
     </liste_voisins>
@@ -591,9 +590,9 @@
     <latitude>45.42247</latitude>
     <longitude>4.42714</longitude>
     <batiment></batiment>
-    <liste_salles>
-      <salle>-12</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Resto U</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>41</voisin>
     </liste_voisins>
@@ -603,12 +602,16 @@
     <latitude>45.42403</latitude>
     <longitude>4.42586</longitude>
     <batiment></batiment>
-    <liste_salles>
-      <salle>-14</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Intersection parking Est et Nord et BU</POI>
+      <POI>Parking Est</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>36</voisin>
       <voisin>38</voisin>
+      <voisin>60</voisin>
+      <voisin>61</voisin>
+      <voisin>62</voisin>
     </liste_voisins>
   </noeud>
 
@@ -616,13 +619,15 @@
     <latitude>45.42386</latitude>
     <longitude>4.42517</longitude>
     <batiment></batiment>
-    <liste_salles>
-      <salle>-13</salle>
-      <salle>-14</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>D.S.I</POI>
+      <POI>Parking Nord</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>38</voisin>
       <voisin>45</voisin>
+      <voisin>48</voisin>
+      <voisin>49</voisin>
     </liste_voisins>
   </noeud>
 
@@ -630,15 +635,17 @@
     <latitude>45.42403</latitude>
     <longitude>4.42501</longitude>
     <batiment></batiment>
-    <liste_salles>
-      <salle>-14</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Petite place devant bâtiments H et J</POI>
+      <POI>Parking Nord</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>44</voisin>
       <voisin>46</voisin>
       <voisin>47</voisin>
       <voisin>48</voisin>
       <voisin>49</voisin>
+      <voisin>60</voisin>
     </liste_voisins>
   </noeud>
 
@@ -646,13 +653,18 @@
     <latitude>45.42406</latitude>
     <longitude>4.42543</longitude>
     <batiment>H</batiment>
-    <liste_salles>
-      <salle>-6</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Intersection salles H200 et passerelle vers F</POI>
+      <POI>Distributeurs</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>34</voisin>
       <voisin>45</voisin>
+      <voisin>47</voisin>
+      <voisin>48</voisin>
+      <voisin>49</voisin>
       <voisin>58</voisin>
+      <voisin>60</voisin>
     </liste_voisins>
   </noeud>
 
@@ -660,10 +672,15 @@
     <latitude>45.42420</latitude>
     <longitude>4.42493</longitude>
     <batiment>J</batiment>
-    <liste_salles>
-    </liste_salles>
+    <liste_POI>
+      <POI>Entrée bâtiment J</POI> <!-- A CHANGER -->
+    </liste_POI>
     <liste_voisins>
       <voisin>45</voisin>
+      <voisin>46</voisin>
+      <voisin>48</voisin>
+      <voisin>49</voisin>
+      <voisin>60</voisin>
     </liste_voisins>
   </noeud>
 
@@ -671,13 +688,17 @@
     <latitude>45.42401</latitude>
     <longitude>4.42464</longitude>
     <batiment>K</batiment>
-    <liste_salles>
-    </liste_salles>
+    <liste_POI>
+      <POI>Entrée bâtiment K</POI> <!-- A CHANGER -->
+    </liste_POI>
     <liste_voisins>
       <voisin>38</voisin>
       <voisin>44</voisin>
       <voisin>45</voisin>
+      <voisin>46</voisin>
+      <voisin>47</voisin>
       <voisin>49</voisin>
+      <voisin>60</voisin>
     </liste_voisins>
   </noeud>
 
@@ -685,15 +706,18 @@
     <latitude>45.42391</latitude>
     <longitude>4.42450</longitude>
     <batiment></batiment>
-    <liste_salles>
-      <salle>-14</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Portail Nord vers bâtiment K</POI>
+      <POI>Parking Nord</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>38</voisin>
       <voisin>44</voisin>
       <voisin>45</voisin>
+      <voisin>46</voisin>
       <voisin>48</voisin>
       <voisin>50</voisin>
+      <voisin>60</voisin>
     </liste_voisins>
   </noeud>
 
@@ -701,8 +725,9 @@
     <latitude>45.42291</latitude>
     <longitude>4.42545</longitude>
     <batiment></batiment>
-    <liste_salles>
-    </liste_salles>
+    <liste_POI>
+      <POI>Portail principal</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>49</voisin>
       <voisin>51</voisin>
@@ -714,8 +739,9 @@
     <latitude>45.42291</latitude>
     <longitude>4.42566</longitude>
     <batiment></batiment>
-    <liste_salles>
-    </liste_salles>
+    <liste_POI>
+      <POI>Place devant l'entrée principale</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>0</voisin>
       <voisin>50</voisin>
@@ -728,8 +754,9 @@
     <latitude>45.42345</latitude>
     <longitude>4.42521</longitude>
     <batiment></batiment>
-    <liste_salles>
-    </liste_salles>
+    <liste_POI>
+      <POI>Tables à pique-nique</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>37</voisin>
       <voisin>48</voisin>
@@ -742,9 +769,9 @@
     <latitude>45.42274</latitude>
     <longitude>4.42587</longitude>
     <batiment></batiment>
-    <liste_salles>
-      <salle>-14</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Parking Sud</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>51</voisin>
       <voisin>54</voisin>
@@ -757,9 +784,10 @@
     <latitude>45.42239</latitude>
     <longitude>4.42668</longitude>
     <batiment></batiment>
-    <liste_salles>
-      <salle>-14</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Intersection Parking Sud descente Resto U</POI>
+      <POI>Parking Sud</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>41</voisin>
       <voisin>53</voisin>
@@ -772,9 +800,10 @@
     <latitude>45.42202</latitude>
     <longitude>4.42665</longitude>
     <batiment></batiment>
-    <liste_salles>
-      <salle>-14</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Portail Sud</POI>
+      <POI>Parking Sud</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>50</voisin>
       <voisin>53</voisin>
@@ -787,9 +816,9 @@
     <latitude>45.42285</latitude>
     <longitude>4.42610</longitude>
     <batiment>B</batiment>
-    <liste_salles>
-      <salle>-1</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>Scolarité</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>1</voisin>
       <voisin>53</voisin>
@@ -798,26 +827,27 @@
     </liste_voisins>
   </noeud>
 
-  <noeud num="57"> <!-- Coin pique nique vers le Snack -->
+  <noeud num="57"> <!-- Coin pique-nique vers le Snack -->
     <latitude>45.42371</latitude>
     <longitude>4.42571</longitude>
     <batiment></batiment>
-    <liste_salles>
-    </liste_salles>
+    <liste_POI>
+      <POI>Tables à pique-nique</snack
+    </liste_POI>
     <liste_voisins>
       <voisin>34</voisin>
     </liste_voisins>
   </noeud>
 
-  <noeud num="58"> <!-- H202 (salle serverurs) H206 Toilettes -->
+  <noeud num="58"> <!-- H202 (Salle serverurs) H206 Toilettes -->
     <latitude>45.42427</latitude>
     <longitude>4.42534</longitude>
     <batiment>H</batiment>
-    <liste_salles>
-      <salle>202</salle>
-      <salle>206</salle>
-      <salle>-2</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>202</POI>
+      <POI>206</POI>
+      <POI>Toilettes</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>46</voisin>
       <voisin>59</voisin>
@@ -828,13 +858,56 @@
     <latitude>45.42433</latitude>
     <longitude>4.42532</longitude>
     <batiment>H</batiment>
-    <liste_salles>
-      <salle>203</salle>
-      <salle>204</salle>
-      <salle>205</salle>
-    </liste_salles>
+    <liste_POI>
+      <POI>203</POI>
+      <POI>204</POI>
+      <POI>205</POI>
+    </liste_POI>
     <liste_voisins>
       <voisin>58</voisin>
+      <voisin>62</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="60"> <!-- Passage à côté de H -->
+    <latitude>45.42399</latitude>
+    <longitude>4.42520</longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI>Passage à côté du bâtiment H</POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin>43</voisin>
+      <voisin>45</voisin>
+      <voisin>46</voisin>
+      <voisin>47</voisin>
+      <voisin>48</voisin>
+      <voisin>49</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="61"> <!-- Parking après la BU -->
+    <latitude>45.42420</latitude>
+    <longitude>4.42606</longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI>Parking Est</POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin>43</voisin>
+    </liste_voisins>
+  </noeud>
+
+  <noeud num="62"> <!-- Sortie derrière H -->
+    <latitude>45.42422</latitude>
+    <longitude>4.42563</longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI>Sortie derrière bâtiment H</POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin>43</voisin>
+      <voisin>59</voisin>
     </liste_voisins>
   </noeud>
 
@@ -842,9 +915,129 @@
     <latitude></latitude>
     <longitude></longitude>
     <batiment></batiment>
-    <liste_salles>
-      <salle></salle>
-    </liste_salles>
+    <liste_POI>
+      <POI></POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin></voisin>
+    </liste_voisins>
+    </noeud> -->
+
+  <!-- <noeud num="">
+    <latitude></latitude>
+    <longitude></longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI></POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin></voisin>
+    </liste_voisins>
+    </noeud> -->
+
+  <!-- <noeud num="">
+    <latitude></latitude>
+    <longitude></longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI></POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin></voisin>
+    </liste_voisins>
+    </noeud> -->
+
+  <!-- <noeud num="">
+    <latitude></latitude>
+    <longitude></longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI></POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin></voisin>
+    </liste_voisins>
+    </noeud> -->
+
+  <!-- <noeud num="">
+    <latitude></latitude>
+    <longitude></longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI></POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin></voisin>
+    </liste_voisins>
+    </noeud> -->
+
+  <!-- <noeud num="">
+    <latitude></latitude>
+    <longitude></longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI></POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin></voisin>
+    </liste_voisins>
+    </noeud> -->
+
+  <!-- <noeud num="">
+    <latitude></latitude>
+    <longitude></longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI></POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin></voisin>
+    </liste_voisins>
+    </noeud> -->
+
+  <!-- <noeud num="">
+    <latitude></latitude>
+    <longitude></longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI></POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin></voisin>
+    </liste_voisins>
+    </noeud> -->
+
+  <!-- <noeud num="">
+    <latitude></latitude>
+    <longitude></longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI></POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin></voisin>
+    </liste_voisins>
+    </noeud> -->
+
+  <!-- <noeud num="">
+    <latitude></latitude>
+    <longitude></longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI></POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin></voisin>
+    </liste_voisins>
+    </noeud> -->
+
+  <!-- <noeud num="">
+    <latitude></latitude>
+    <longitude></longitude>
+    <batiment></batiment>
+    <liste_POI>
+      <POI></POI>
+    </liste_POI>
     <liste_voisins>
       <voisin></voisin>
     </liste_voisins>

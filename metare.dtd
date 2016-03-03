@@ -1,6 +1,6 @@
 <!ELEMENT graphe (noeud*)>
 
-<!ELEMENT noeud (latitude,longitude,batiment,liste_salles*,liste_voisins*)>
+<!ELEMENT noeud (latitude, longitude, batiment, liste_POI+, liste_voisins+)>
 <!ATTLIST noeud
           num CDATA
           >
@@ -8,7 +8,7 @@
 <!ELEMENT latitude (#CDATA)>
 <!ELEMENT longitude (#CDATA)>
 <!ELEMENT batiment (#CDATA)>
-<!ELEMENT liste_salles (salle+)>
-<!ELEMENT salle (#CDATA)>
+<!ELEMENT liste_POI (POI+)>
+<!ELEMENT POI (#CDATA)>
 <!ELEMENT liste_voisins (voisin+)>
 <!ELEMENT voisin (#CDATA)>
