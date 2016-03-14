@@ -449,6 +449,7 @@
     <batiment>D</batiment>
     <liste_POI>
       <POI>D205</POI>
+      <POI>Ascenseur</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>23</voisin>
@@ -601,6 +602,7 @@
     <longitude>4.42628</longitude>
     <batiment></batiment>
     <liste_POI>
+      <POI>Ingénierie des matériaux polymères</POI>
       <POI>Dehors sortie après salle de vie étudiante</POI>
     </liste_POI>
     <liste_voisins>
@@ -859,6 +861,7 @@
     <liste_POI>
       <POI>Intersection salles H200 et passerelle vers F</POI>
       <POI>Distributeurs</POI>
+      <POI>Ascenseur</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>34</voisin>
@@ -1255,20 +1258,22 @@
     </liste_voisins_PMR>
   </noeud>
 
+  <!-- Niveau -1 -->
+  
   <!-- <noeud num="">
-    <latitude></latitude>
-    <longitude></longitude>
-    <batiment></batiment>
+    <latitude>45.42359</latitude>
+    <longitude>4.42601</longitude>
+    <batiment>D</batiment>
     <liste_POI>
-      <POI></POI>
+      <POI>En bas des escaliers D203</POI>
     </liste_POI>
     <liste_voisins>
       <voisin></voisin>
-      </liste_voisins>
-      <liste_voisins_PMR>
+    </liste_voisins>
+    <liste_voisins_PMR>
       <voisin_PMR></voisin_PMR>
-      </liste_voisins_PMR>
-    </noeud> -->
+    </liste_voisins_PMR>
+  </noeud> -->
 
   <!-- <noeud num="">
     <latitude></latitude>
