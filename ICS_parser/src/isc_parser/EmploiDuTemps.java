@@ -23,15 +23,6 @@ public class EmploiDuTemps {
 		Collections.sort(this.edt, new compareCours());
 	}
 	
-	class compareCours implements Comparator<Cours> {
-		public int compare(Cours a, Cours b){
-			if(a.getDebut().getTime() > b.getDebut().getTime())
-				return 1;
-			
-			return -1;
-		}
-	}
-	
 	public void afficherEDT() {
 		for(int i = 0; i < edt.size(); i++)
 			System.out.println("Cours " + i + "\n" + edt.get(i) + "\n");
@@ -39,5 +30,14 @@ public class EmploiDuTemps {
 	
 	public ArrayList<Cours> getEDT() {
 		return edt;
+	}
+	
+	class compareCours implements Comparator<Cours> {
+		public int compare(Cours a, Cours b){
+			if(a.getDebut().getTime() > b.getDebut().getTime())
+				return 1;
+			
+			return -1;
+		}
 	}
 }
