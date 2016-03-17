@@ -2,9 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/ICS_parser/ical4j-2.0-beta1/ical4j-2.0-beta1.jar"/>
-	<classpathentry kind="lib" path="/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/ICS_parser/slf4j-1.7.19/slf4j-api-1.7.19.jar"/>
-	<classpathentry kind="lib" path="/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/ICS_parser/commons-lang3-3.4/commons-lang3-3.4.jar"/>
-	<classpathentry kind="lib" path="/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/ICS_parser/slf4j-1.7.19/slf4j-simple-1.7.19.jar"/>
+	<classpathentry kind="lib" path="/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/ICS_parser/lib/ical4j-2.0-beta1/ical4j-2.0-beta1.jar"/>
+	<classpathentry kind="lib" path="/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/ICS_parser/lib/slf4j-1.7.19/slf4j-api-1.7.19.jar"/>
+	<classpathentry kind="lib" path="/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/ICS_parser/lib/commons-lang3-3.4/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/ICS_parser/lib/slf4j-1.7.19/slf4j-simple-1.7.19.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
