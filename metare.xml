@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!DOCTYPE graphe SYSTEM "metare.dtd">
 
 <graphe>
   <noeud num="0"> <!-- Entrée principale du campus -->
@@ -449,7 +450,6 @@
     <batiment>D</batiment>
     <liste_POI>
       <POI>D205</POI>
-      <POI>Ascenseur</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>23</voisin>
@@ -527,6 +527,7 @@
     <liste_voisins_PMR>
       <voisin_PMR>27</voisin_PMR>
       <voisin_PMR>29</voisin_PMR>
+      <voisin_PMR>32</voisin_PMR>
     </liste_voisins_PMR>
   </noeud>
 
@@ -602,7 +603,6 @@
     <longitude>4.42628</longitude>
     <batiment></batiment>
     <liste_POI>
-      <POI>Ingénierie des matériaux polymères</POI>
       <POI>Dehors sortie après salle de vie étudiante</POI>
     </liste_POI>
     <liste_voisins>
@@ -667,8 +667,8 @@
   </noeud>
 
   <noeud num="37"> <!-- Place des fumeurs fin A -->
-    <latitude>45.42361</latitude>
-    <longitude>4.42534</longitude>
+    <latitude>45.42356</latitude>
+    <longitude>4.42547</longitude>
     <batiment></batiment>
     <liste_POI>
       <POI>Petite place en sortant du bâtiment A vers H J K L</POI>
@@ -681,8 +681,8 @@
     </liste_voisins>
     <liste_voisins_PMR>
       <voisin_PMR>15</voisin_PMR>
+      <voisin_PMR>38</voisin_PMR>
       <voisin_PMR>52</voisin_PMR>
-      <voisin_PMR>65</voisin_PMR>
     </liste_voisins_PMR>
   </noeud>
 
@@ -709,7 +709,6 @@
       <voisin_PMR>44</voisin_PMR>
       <voisin_PMR>48</voisin_PMR>
       <voisin_PMR>49</voisin_PMR>
-      <voisin_PMR>65</voisin_PMR>
     </liste_voisins_PMR>
   </noeud>
 
@@ -766,7 +765,7 @@
     </liste_voisins_PMR>
   </noeud>
 
-  <noeud num="2"> <!-- Resto U -->
+  <noeud num="42"> <!-- Resto U -->
     <latitude>45.42247</latitude>
     <longitude>4.42714</longitude>
     <batiment></batiment>
@@ -861,7 +860,6 @@
     <liste_POI>
       <POI>Intersection salles H200 et passerelle vers F</POI>
       <POI>Distributeurs</POI>
-      <POI>Ascenseur</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>34</voisin>
@@ -1242,52 +1240,4 @@
     <liste_voisins_PMR>
     </liste_voisins_PMR>
     </noeud>
-
-  <noeud num="65"> <!-- Chemin PMR entre 37 et 38 -->
-    <latitude>45.42357</latitude>
-    <longitude>4.42506</longitude>
-    <batiment></batiment>
-    <liste_POI>
-      <POI>Chemin PMR vers parking Nord</POI>
-    </liste_POI>
-    <liste_voisins>
-    </liste_voisins>
-    <liste_voisins_PMR>
-      <voisin_PMR>37</voisin_PMR>
-      <voisin_PMR>38</voisin_PMR>
-    </liste_voisins_PMR>
-  </noeud>
-
-  <!-- Niveau -1 -->
-  
-  <!-- <noeud num="">
-    <latitude>45.42359</latitude>
-    <longitude>4.42601</longitude>
-    <batiment>D</batiment>
-    <liste_POI>
-      <POI>En bas des escaliers D203</POI>
-    </liste_POI>
-    <liste_voisins>
-      <voisin></voisin>
-    </liste_voisins>
-    <liste_voisins_PMR>
-      <voisin_PMR></voisin_PMR>
-    </liste_voisins_PMR>
-  </noeud> -->
-
-  <!-- <noeud num="">
-    <latitude></latitude>
-    <longitude></longitude>
-    <batiment></batiment>
-    <liste_POI>
-      <POI></POI>
-    </liste_POI>
-    <liste_voisins>
-      <voisin></voisin>
-      </liste_voisins>
-      <liste_voisins_PMR>
-      <voisin_PMR></voisin_PMR>
-      </liste_voisins_PMR>
-      </noeud> -->
-  
-</graphe>
+  </graphe>

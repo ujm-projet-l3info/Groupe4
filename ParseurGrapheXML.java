@@ -14,19 +14,19 @@ public class ParseurGrapheXML {
         fXmlFile = new File(file_name);
 		
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-		
-        dbFactory.setValidating(false);
+        
+        //dbFactory.setValidating(true); // Validation du fichier par la grammaire
 		
         dBuilder = dbFactory.newDocumentBuilder();
     }
-
-    public Graphe remplirGraphe()
+    
+    public Graphe remplirGraphe(boolean PMR)
     {
         /* Cette methode parse le fichier XML
          * ouvert et rempli le graphe associe
          */
 
-        Graphe g = new Graphe();
+        Graphe g = new Graphe(PMR);
     	try {
             Noeud n = null;
     		
@@ -36,9 +36,10 @@ public class ParseurGrapheXML {
             NodeList listeLat = doc.getElementsByTagName("latitude");
             NodeList listeLon = doc.getElementsByTagName("longitude");
             NodeList listeBat = doc.getElementsByTagName("batiment");
-            NodeList listeSalles = doc.getElementsByTagName("liste_salles");
+            NodeList listePOI = doc.getElementsByTagName("liste_POI");
             NodeList listeVoisins = doc.getElementsByTagName("liste_voisins");
-    		
+            NodeList listeVoisinsPMR = doc.getElementsByTagName("liste_voisins_PMR");
+
             for(int i = 0 ; i < listeLat.getLength() ; i++) // Parcours des noeud du graphe
             {
                 float latitude = Float.parseFloat(listeLat.item(i).getTextContent());
@@ -49,16 +50,21 @@ public class ParseurGrapheXML {
     			
                 n = new Noeud(latitude , longitude , batiment);
     			
-                NodeList salles = listeSalles.item(i).getChildNodes();    // Ajout salles concernees par le noeud
-                for(int j = 0 ; j < salles.getLength() ; j++)
-                    if(salles.item(j).getNodeType() == Node.ELEMENT_NODE)
-                        n.ajouterSalle(Integer.parseInt(salles.item(j).getTextContent()));
+                NodeList POIs = listePOI.item(i).getChildNodes();    // Ajout salles concernees par le noeud
+                for(int j = 0 ; j < POIs.getLength() ; j++)
+                    if(POIs.item(j).getNodeType() == Node.ELEMENT_NODE)
+                        n.ajouterPOI(POIs.item(j).getTextContent());
     			
                 NodeList voisins = listeVoisins.item(i).getChildNodes();  // Ajout des voisins du noeud
                 for(int j = 0 ; j < voisins.getLength() ; j++)
                     if(voisins.item(j).getNodeType() == Node.ELEMENT_NODE)
                         n.ajouterVoisin(Integer.parseInt(voisins.item(j).getTextContent()));
-    			
+                
+                NodeList voisinsPMR = listeVoisinsPMR.item(i).getChildNodes(); // Ajout des voisins PMR du noeud                
+                for(int j = 0 ; j < voisinsPMR.getLength() ; j++)
+                    if(voisinsPMR.item(j).getNodeType() == Node.ELEMENT_NODE)
+                        n.ajouterVoisinPMR(Integer.parseInt(voisinsPMR.item(j).getTextContent()));
+                
                 g.ajouterNoeud(n); // Ajout du noeud au graphe
             }
     		
@@ -71,18 +77,4 @@ public class ParseurGrapheXML {
         
         return g;
     }
-    
-    
-    public static void main(String args[]) // Exemple d'utilisation (temporaire)
-    {
-        try {
-            ParseurGrapheXML p = new ParseurGrapheXML("metare.xml");
-            p.remplirGraphe();
-        }
-        catch (SAXException | ParserConfigurationException | IOException e)
-        {
-            e.printStackTrace();
-        }
-    }
-
 }
