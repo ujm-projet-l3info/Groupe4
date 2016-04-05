@@ -15,7 +15,7 @@ public class ParseurGrapheXML {
 		
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         
-        //dbFactory.setValidating(true); // Validation du fichier par la grammaire
+        dbFactory.setValidating(true); // Validation du fichier par la grammaire
 		
         dBuilder = dbFactory.newDocumentBuilder();
     }
