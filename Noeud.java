@@ -1,23 +1,29 @@
 import java.util.ArrayList;
 
 public class Noeud {
-    private double latitude;
-    private double longitude;
+    private float latitude;
+    private float longitude;
     private char batiment;
+    private double distance;
+    private boolean utile;
     public ArrayList<String> POIs;
     public ArrayList<Integer> voisins;
     public ArrayList<Integer> voisinsPMR;
+    public int predecesseur;
 
-    public Noeud(double lat , double lon)
+    public Noeud(float lat , float lon)
     {
         this.latitude = lat;
         this.longitude = lon;
+        this.distance = -1;
+        this.utile = true;
         this.POIs = new ArrayList<String>();
         this.voisins = new ArrayList<Integer>();
         this.voisinsPMR = new ArrayList<Integer>();
+        this.predecesseur = -1;;
     }
     
-    public Noeud(double lat , double lon , char bat)
+    public Noeud(float lat , float lon , char bat)
     {
         this(lat , lon);
         this.batiment = bat;
@@ -72,8 +78,8 @@ public class Noeud {
     
     double distance(Noeud n)
     {
-        /* Renvoit la distance entre
-           deux noeuds
+        /* Renvoit la distance metrique
+           entre deux noeuds
         */
 
         double R = 6371000; // en metres
@@ -86,9 +92,10 @@ public class Noeud {
                               (Math.cos(a) * Math.cos(b) * Math.cos(c - d)));
     }
 
+    
     /* Accesseurs / Mutateurs */
 
-    public double getLat()
+    public float getLat()
     {
         /* Renvoit la latitude
            du noeud courant
@@ -97,7 +104,7 @@ public class Noeud {
         return this.latitude;
     }
 
-    public double getLon()
+    public float getLon()
     {
         /* Renvoit la latitude
            du noeud courant
@@ -105,6 +112,65 @@ public class Noeud {
 
         return this.longitude;
     }
+
+    public double getDistance()
+    {
+        /* Renvoit la distance
+           du Noeud actuel par rapport
+           au Noeud src de l'itinéraire actuel
+        */
+
+        return this.distance;
+    }
+
+    public boolean isUtile()
+    {
+        /* Renvoit vrai si le noeud
+           actuel n'est pas encore 
+           visite dans le calcul d'itineraire
+        */
+
+        return this.utile;
+    }
+
+    public int getPredecesseur()
+    {
+        /* Renvoit le predecesseur
+           actuel du Noeud courant
+           dans le calcul d'itineraire
+           courant
+        */
+
+        return this.predecesseur;
+    }
+    
+    public void setDistance(double d)
+    {
+        /* MaJ de la distance du Noeud
+           actuel au Noeud src
+        */
+
+        this.distance = d;
+    }
+
+    public void setUtile(boolean u)
+    {
+        /* MaJ de l'utilite
+           du Noeud
+        */
+
+        this.utile = u;
+    }
+
+    public void setPredecesseur(int p)
+    {
+        /* MaJ du predecesseur dans le
+           calcul d'itineraire en cours
+        */
+
+        this.predecesseur = p;
+    }
+
     /* Redefinition de equals */
 
     public boolean equals(Noeud n)
