@@ -180,9 +180,6 @@ public class ItineraireActivity extends AppCompatActivity
         } else if (id == R.id.nav_aide) {
             Intent i = new Intent(ItineraireActivity.this, AideActivity.class);
             startActivity(i);
-        } else if (id == R.id.nav_itineraire) {
-            Intent i = new Intent(ItineraireActivity.this, ItineraireActivity.class);
-            startActivity(i);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

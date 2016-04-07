@@ -23,6 +23,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -115,7 +117,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         LatLng fac = new LatLng(45.42291, 4.42566);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(fac,18));
-
+        fac=new LatLng(45.4235668,4.4254605);
+        GroundOverlayOptions carteFac= new GroundOverlayOptions();
+        carteFac.image(BitmapDescriptorFactory.fromResource(R.drawable.calque0704));
+        carteFac.position(fac,428.435f,428.435f);
+        mMap.addGroundOverlay(carteFac);
     }
 
     /* MENU */
@@ -156,9 +162,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_carte) {
-
-        } else if (id == R.id.nav_Calendrier) {
+        if (id == R.id.nav_Calendrier) {
             Intent i = new Intent(MapsActivity.this, CalendrierActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_aide) {

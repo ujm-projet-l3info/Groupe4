@@ -84,9 +84,6 @@ public class AideActivity extends AppCompatActivity
         } else if (id == R.id.nav_Calendrier) {
             Intent i = new Intent(AideActivity.this, CalendrierActivity.class);
             startActivity(i);
-        } else if (id == R.id.nav_aide) {
-            Intent i = new Intent(AideActivity.this, AideActivity.class);
-            startActivity(i);
         } else if (id == R.id.nav_itineraire) {
             Intent i = new Intent(AideActivity.this, ItineraireActivity.class);
             startActivity(i);

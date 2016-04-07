@@ -81,9 +81,6 @@ public class CalendrierActivity extends AppCompatActivity
         if (id == R.id.nav_carte) {
             Intent i = new Intent(CalendrierActivity.this, MapsActivity.class);
             startActivity(i);
-        } else if (id == R.id.nav_Calendrier) {
-            Intent i = new Intent(CalendrierActivity.this, CalendrierActivity.class);
-            startActivity(i);
         } else if (id == R.id.nav_aide) {
             Intent i = new Intent(CalendrierActivity.this, AideActivity.class);
             startActivity(i);
