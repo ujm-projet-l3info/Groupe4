@@ -165,12 +165,15 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         if (id == R.id.nav_Calendrier) {
             Intent i = new Intent(MapsActivity.this, CalendrierActivity.class);
             startActivity(i);
+            this.finish();
         } else if (id == R.id.nav_aide) {
             Intent i = new Intent(MapsActivity.this, AideActivity.class);
             startActivity(i);
+            this.finish();
         } else if (id == R.id.nav_itineraire) {
             Intent i = new Intent(MapsActivity.this, ItineraireActivity.class);
             startActivity(i);
+            this.finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
