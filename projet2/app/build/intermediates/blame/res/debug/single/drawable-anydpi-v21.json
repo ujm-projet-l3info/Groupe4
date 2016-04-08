@@ -1,27 +1,61 @@
 [
     {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_paste_material.xml",
-        "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_paste_material.xml"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_overflow_material.xml",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_overflow_material.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml"
     },
     {
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_overflow_material.xml",
         "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_overflow_material.xml"
+=======
+        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_overflow_material.xml",
+        "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_checkbox_checked_mtrl.xml",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_checkbox_checked_mtrl.xml"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_go_search_api_material.xml",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml",
+        "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml"
+>>>>>>> 2dfe496ca9c85c87a125131613ed329f72b481dd
     },
     {
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml",
         "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml"
     },
     {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml",
-        "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml"
+        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_paste_material.xml",
+        "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_paste_material.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_clear_material.xml",
         "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_clear_material.xml"
+=======
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml"
+    },
+    {
+        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml",
+        "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_radio_on_mtrl.xml",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_radio_on_mtrl.xml"
+>>>>>>> 2dfe496ca9c85c87a125131613ed329f72b481dd
     },
     {
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_paste_material.xml",
@@ -30,10 +64,13 @@
     {
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml",
         "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml"
+<<<<<<< HEAD
     },
     {
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml"
+=======
+>>>>>>> 2dfe496ca9c85c87a125131613ed329f72b481dd
     },
     {
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_radio_on_mtrl.xml",
@@ -52,8 +89,17 @@
         "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_voice_search_api_material.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml"
+=======
+        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml",
+        "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_voice_search_api_material.xml",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_voice_search_api_material.xml"
+>>>>>>> 2dfe496ca9c85c87a125131613ed329f72b481dd
     },
     {
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml",
@@ -64,12 +110,39 @@
         "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_selectall_material.xml"
     },
     {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_paste_material.xml",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_paste_material.xml"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml"
+    },
+    {
+        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_checkbox_checked_mtrl.xml",
+        "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_checkbox_checked_mtrl.xml"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml"
+    },
+    {
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_selectall_material.xml",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_selectall_material.xml"
     },
     {
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml"
+<<<<<<< HEAD
+=======
+    },
+    {
+        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_radio_on_mtrl.xml",
+        "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_radio_on_mtrl.xml"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml"
+>>>>>>> 2dfe496ca9c85c87a125131613ed329f72b481dd
     },
     {
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_radio_on_mtrl.xml",
@@ -88,10 +161,21 @@
         "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_go_search_api_material.xml"
     },
     {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_radio_off_mtrl.xml",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_radio_off_mtrl.xml"
+    },
+    {
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_ab_back_material.xml",
         "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_ab_back_material.xml"
     },
     {
+<<<<<<< HEAD
+=======
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_ab_back_material.xml",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_ab_back_material.xml"
+    },
+    {
+>>>>>>> 2dfe496ca9c85c87a125131613ed329f72b481dd
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_voice_search_api_material.xml",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_voice_search_api_material.xml"
     },
@@ -104,8 +188,20 @@
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_overflow_material.xml"
     },
     {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml"
+    },
+    {
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_radio_off_mtrl.xml",
         "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_radio_off_mtrl.xml"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_clear_material.xml",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_selectall_material.xml",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_selectall_material.xml"
     },
     {
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_checkbox_checked_mtrl.xml",

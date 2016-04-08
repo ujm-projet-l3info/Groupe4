@@ -6,5 +6,12 @@
     {
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_launcher.png",
         "source": "/home/clement/Groupe4/projet2/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+<<<<<<< HEAD
+=======
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_launcher.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+>>>>>>> 2dfe496ca9c85c87a125131613ed329f72b481dd
     }
 ]
