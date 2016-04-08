@@ -2,12 +2,15 @@ package com.example.jules.projet2;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.XmlResourceParser;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.IBinder;
+import android.os.RemoteException;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -28,6 +31,25 @@ import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.GroundOverlay;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.android.gms.maps.model.internal.IPolylineDelegate;
+
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import parseur.*;
+import graphe.*;
+
+
 
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback, NavigationView.OnNavigationItemSelectedListener, LocationListener {
@@ -36,10 +58,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private GoogleMap mMap;
     private Marker marker;
     private LocationManager lManager;
-
+    private ParseurGrapheXML p;
+    private Graphe g;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_maps);
@@ -69,6 +93,17 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         navigationView.setNavigationItemSelectedListener(this);
 
         lManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+
+        // Charger graphe
+        try {
+            getXMLfromResource();
+        }
+        catch (IOException | XmlPullParserException e)
+        {
+            e.printStackTrace();
+        }
+
+
     }
 /*
     private void obtenirPosition() {
@@ -112,16 +147,82 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onMapReady(GoogleMap googleMap) throws SecurityException{
         mMap = googleMap;
         mMap.setMyLocationEnabled(true);
-        // Add a marker in Sydney and move the camera
-        //LatLng mapos= new LatLng(mMap.getMyLocation().getLatitude(), mMap.getMyLocation().getLongitude());
+
         LatLng fac = new LatLng(45.42291, 4.42566);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(fac,18));
         fac=new LatLng(45.4235668,4.4254605);
         GroundOverlayOptions carteFac= new GroundOverlayOptions();
         carteFac.image(BitmapDescriptorFactory.fromResource(R.drawable.calque0704));
-        carteFac.position(fac,428.435f,428.435f);
+        carteFac.position(fac, 428.435f, 428.435f);
         mMap.addGroundOverlay(carteFac);
+
+
+        /*mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+            @Override
+            public void onMapClick(LatLng latLng) {
+                mMap.addMarker(new MarkerOptions()
+                        .position(latLng)
+                        .title("Lat : " + latLng.latitude + " Lon : " + latLng.longitude));
+            }
+        });*/
+
+        /* Test TAD graphe */
+
+
+        ArrayList<Integer> l = new ArrayList<Integer>(); // Ajout de checkpoint pour itineraire
+        l.add(64);
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(g.noeuds.get(64).getLat(), g.noeuds.get(64).getLon()))
+                .title("" + g.noeuds.get(58).POIs.get(0)));
+        l.add(0);
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(g.noeuds.get(0).getLat(), g.noeuds.get(0).getLon()))
+                .title("" + g.noeuds.get(0).POIs.get(0)));
+        l.add(36);
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(g.noeuds.get(36).getLat(), g.noeuds.get(36).getLon()))
+                .title("" + g.noeuds.get(36).POIs.get(0)));
+        l.add(48);
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(g.noeuds.get(48).getLat(), g.noeuds.get(48).getLon()))
+                .title("" + g.noeuds.get(48).POIs.get(0)));
+        l.add(62);
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(g.noeuds.get(62).getLat(), g.noeuds.get(62).getLon()))
+                .title("" + g.noeuds.get(62).POIs.get(0)));
+        l.add(27);
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(g.noeuds.get(27).getLat(), g.noeuds.get(27).getLon()))
+                .title("" + g.noeuds.get(27).POIs.get(0)));
+
+        Chemin chemin = g.itineraireMultiple(l , false); // Calcul itineraire le plus court pour non PMR
+
+        PolylineOptions lineOptions = new PolylineOptions();
+        int j;
+        for(int i = 0 ; i < chemin.noeuds.size() ; i++)
+        {
+            j = chemin.noeuds.get(i);
+            lineOptions.add(new LatLng(g.noeuds.get(j).getLat() , g.noeuds.get(j).getLon()));
+            /*mMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()))
+                    .title("" + g.noeuds.get(j).POIs.get(0)));*/
+        }
+
+        lineOptions.width(30);
+        lineOptions.color(Color.MAGENTA);
+
+        mMap.addPolyline(lineOptions);
+
+        /*
+        for(int i = 0 ; i < g.noeuds.size() ; i++) {
+            mMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(g.noeuds.get(i).getLat(), g.noeuds.get(i).getLon()))
+                    .title("n°" + i + " " + g.noeuds.get(i).POIs.get(0)));
+        }
+
+        */
+
     }
 
     /* MENU */
@@ -176,6 +277,50 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void getXMLfromResource() throws IOException, XmlPullParserException {
+        // Create ResourceParser for XML file
+        XmlResourceParser xpp = getResources().getXml(R.xml.metare);
+
+        g = new Graphe();
+        Noeud n = null;
+        float latitude = 0;
+        float longitude = 0;
+        char batiment ='-';
+        String POI = "";
+        int voisin = -1;
+        int voisin_pmr = -1;
+
+        int eventType = xpp.getEventType();
+
+        while (eventType != XmlPullParser.END_DOCUMENT)
+        {
+            if(eventType == XmlPullParser.START_TAG)
+            {
+                if(xpp.getName().equals("noeud")) { n = new Noeud(); }
+                else if(xpp.getName().equals("latitude")) { eventType = xpp.next(); latitude = Float.parseFloat(xpp.getText()); }
+                else if(xpp.getName().equals("longitude")) { eventType = xpp.next(); longitude = Float.parseFloat(xpp.getText()); }
+                else if(xpp.getName().equals("batiment")) { eventType = xpp.next(); batiment = xpp.getText().charAt(0); }
+                else if(xpp.getName().equals("POI")) { eventType = xpp.next(); POI = xpp.getText(); }
+                else if(xpp.getName().equals("voisin")) { eventType = xpp.next(); voisin = Integer.parseInt(xpp.getText()); }
+                else if(xpp.getName().equals("voisins_PMR")) { eventType = xpp.next(); Integer.parseInt(xpp.getText()); }
+            }
+            else if(eventType == XmlPullParser.END_TAG)
+            {
+                if(xpp.getName().equals("noeud")) { g.ajouterNoeud(n); }
+                else if(xpp.getName().equals("latitude")) { n.setLatitude(latitude); }
+                else if(xpp.getName().equals("longitude")) { n.setLongitude(longitude); }
+                else if(xpp.getName().equals("batiment")) { n.setBatiment(batiment); }
+                else if(xpp.getName().equals("POI")) { n.ajouterPOI(POI); }
+                else if(xpp.getName().equals("voisin")) { n.ajouterVoisin(voisin); }
+                else if(xpp.getName().equals("voisins_PMR")) { n.ajouterVoisinPMR(voisin_pmr); }
+            }
+
+            eventType = xpp.next();
+        }
+        // indicate app done reading the resource.
+        xpp.close();
     }
 
 
