@@ -1,14 +1,6 @@
 [
     {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
-        "source": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
-    },
-    {
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
     }
 ]

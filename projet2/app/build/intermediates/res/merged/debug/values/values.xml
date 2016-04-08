@@ -400,6 +400,7 @@
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
     <string name="decline">Decline</string>
+    <string name="emploi_du_temps">Emploi du temps</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyA8YsXuA3PQMlH6I32KBwW87zaNMolhnkc</string>
     <string name="mr_media_route_button_content_description">Cast</string>
     <string name="mr_media_route_chooser_searching">Searching for devices\u2026</string>
@@ -416,14 +417,17 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="place_autocomplete_clear_button">Clear search</string>
     <string name="place_autocomplete_search_hint">Search</string>
+    <string name="precedent">Précédent</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
     <string name="store_picture_title">Save image</string>
+    <string name="suivant">Suivant</string>
     <string name="title_activity_aide">Aide</string>
     <string name="title_activity_calendrier">Calendrier</string>
     <string name="title_activity_itineraire">Itinéraire</string>
     <string name="title_activity_maps">Carte</string>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>
+    <string name="y_aller">Trouver la salle</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

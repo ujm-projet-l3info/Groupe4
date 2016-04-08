@@ -81,12 +81,15 @@ public class AideActivity extends AppCompatActivity
         if (id == R.id.nav_carte) {
             Intent i = new Intent(AideActivity.this, MapsActivity.class);
             startActivity(i);
+            this.finish();
         } else if (id == R.id.nav_Calendrier) {
             Intent i = new Intent(AideActivity.this, CalendrierActivity.class);
             startActivity(i);
+            this.finish();
         } else if (id == R.id.nav_itineraire) {
             Intent i = new Intent(AideActivity.this, ItineraireActivity.class);
             startActivity(i);
+            this.finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

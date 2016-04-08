@@ -1,11 +1,7 @@
 package com.example.jules.projet2;
 
-import android.content.ContentResolver;
-import android.content.ContentValues;
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.support.design.widget.FloatingActionButton;
@@ -24,16 +20,19 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.text.Format;
+import java.util.Date;
 
 public class CalendrierActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     private Cursor mCursor = null;
-    private static final String[] COLS = new String[]
+    private static final String[] ATTRIBUTS = new String[]
             {
                     CalendarContract.Events.TITLE,
                     CalendarContract.Events.DTSTART,
-                    CalendarContract.Events.EVENT_LOCATION
+                    CalendarContract.Events.DTEND,
+                    CalendarContract.Events.EVENT_LOCATION,
+                    CalendarContract.Events.CALENDAR_DISPLAY_NAME
             };
 
     @Override
@@ -45,15 +44,6 @@ public class CalendrierActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -63,50 +53,82 @@ public class CalendrierActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        /* Calendrier */
+        recupererCalendrier();
+    }
 
-        mCursor = getContentResolver().query(
-                CalendarContract.Events.CONTENT_URI, COLS, null, null, null);
-        mCursor.moveToNext();
+    private void recupererCalendrier() {
+        if(mCursor == null)
+            mCursor = getContentResolver().query(CalendarContract.Events.CONTENT_URI, ATTRIBUTS, null, null, CalendarContract.Events.DTSTART + " ASC");
 
-        Button b = (Button)findViewById(R.id.next);
+        mCursor.moveToFirst();
+        Long mtn = (new Date()).getTime();
+        while(mCursor.getLong(1) < mtn || mCursor.getString(4).equals("Numéros de semaine") || mCursor.getString(4).equals("Jours feriés en France")) {
+            if(!mCursor.isLast())
+                mCursor.moveToNext();
+        }
+
+        Button b = (Button)findViewById(R.id.suivant);
         b.setOnClickListener(this);
 
-        b = (Button)findViewById(R.id.previous);
+        b = (Button)findViewById(R.id.precedent);
         b.setOnClickListener(this);
 
-        onClick(findViewById(R.id.previous));
+        if(!mCursor.isLast())
+            mCursor.moveToNext();
+        onClick(findViewById(R.id.precedent));
     }
 
 
     public void onClick(View v) {
-        TextView tv = (TextView)findViewById(R.id.data);
+        TextView tvDate = (TextView)findViewById(R.id.date);
+        TextView tvHeure = (TextView)findViewById(R.id.heure);
+        TextView tvNom = (TextView)findViewById(R.id.nom);
+        TextView tvSalle = (TextView)findViewById(R.id.salle);
 
-        String title = "";
+        Long debut = 0L;
+        Long fin = 0L;
+        String nom = "";
         String salle = "";
-        Long start = 0L;
-
-        switch(v.getId()) {
-            case R.id.next:
-                if(!mCursor.isLast()) mCursor.moveToNext();
-                break;
-            case R.id.previous:
-                if(!mCursor.isFirst()) mCursor.moveToPrevious();
-                break;
-        }
 
         Format df = DateFormat.getDateFormat(this);
         Format tf = DateFormat.getTimeFormat(this);
 
-        try {
-            title = mCursor.getString(0);
-            salle = mCursor.getString(2);
-            start = mCursor.getLong(1);
-        } catch (Exception e) {
+        switch(v.getId()) {
+            case R.id.suivant:
+                do
+                    mCursor.moveToNext();
+                while((mCursor.getString(4).equals("Numéros de semaine") || mCursor.getString(4).equals("Jours feriés en France")) &&
+                        !mCursor.isLast());
+
+                if(mCursor.getString(4).equals("Numéros de semaine") || mCursor.getString(4).equals("Jours feriés en France"))
+                    mCursor.moveToPrevious();
+
+                break;
+            case R.id.precedent:
+                do
+                    mCursor.moveToPrevious();
+                while((mCursor.getString(4).equals("Numéros de semaine") || mCursor.getString(4).equals("Jours feriés en France")) &&
+                        !mCursor.isFirst());
+
+                if(mCursor.getString(4).equals("Numéros de semaine") || mCursor.getString(4).equals("Jours feriés en France"))
+                    mCursor.moveToNext();
+
+                break;
         }
 
-        //tv.setText(title+" on "+df.format(start)+" at "+tf.format(start));
-        tv.setText(df.format(start) + " " + tf.format(start) + " : " + title + " " + salle);
+        try {
+            nom = mCursor.getString(0);
+            debut = mCursor.getLong(1);
+            fin = mCursor.getLong(2);
+            salle = mCursor.getString(3);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        tvNom.setText(nom);
+        tvSalle.setText(salle);
+        tvDate.setText(df.format(debut));
+        tvHeure.setText(tf.format(debut) + " - " + tf.format(fin));
     }
 
     @Override
@@ -147,12 +169,15 @@ public class CalendrierActivity extends AppCompatActivity
         if (id == R.id.nav_carte) {
             Intent i = new Intent(CalendrierActivity.this, MapsActivity.class);
             startActivity(i);
+            this.finish();
         } else if (id == R.id.nav_aide) {
             Intent i = new Intent(CalendrierActivity.this, AideActivity.class);
             startActivity(i);
+            this.finish();
         } else if (id == R.id.nav_itineraire) {
             Intent i = new Intent(CalendrierActivity.this, ItineraireActivity.class);
             startActivity(i);
+            this.finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
