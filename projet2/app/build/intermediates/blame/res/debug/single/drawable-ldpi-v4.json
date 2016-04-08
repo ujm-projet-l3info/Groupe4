@@ -1,21 +1,27 @@
 [
     {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_btn_checkbox_checked_mtrl.png",
-        "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_btn_checkbox_checked_mtrl.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_btn_radio_on_mtrl.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_btn_radio_on_mtrl.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_menu_selectall_material.png",
         "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_menu_selectall_material.png"
     },
     {
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_menu_copy_material.png",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_menu_copy_material.png"
+=======
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_menu_share_material.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_menu_share_material.png"
+>>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
     },
     {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_clear_material.png",
-        "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_clear_material.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_btn_checkbox_unchecked_mtrl.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_btn_checkbox_unchecked_mtrl.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_menu_overflow_material.png",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_menu_overflow_material.png"
     },
@@ -26,12 +32,25 @@
     {
         "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_menu_paste_material.png",
         "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_menu_paste_material.png"
+=======
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_clear_material.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_clear_material.png"
     },
     {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_menu_copy_material.png",
-        "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_menu_copy_material.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_menu_selectall_material.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_menu_selectall_material.png"
     },
     {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_voice_search_api_material.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_voice_search_api_material.png"
+>>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_btn_radio_off_mtrl.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_btn_radio_off_mtrl.png"
+    },
+    {
+<<<<<<< HEAD
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_go_search_api_material.png",
         "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_go_search_api_material.png"
     },
@@ -46,12 +65,21 @@
     {
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_btn_checkbox_unchecked_mtrl.png",
         "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_btn_checkbox_unchecked_mtrl.png"
+=======
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_menu_overflow_material.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_menu_overflow_material.png"
     },
     {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_menu_cut_material.png",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_menu_cut_material.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_ab_back_material.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_ab_back_material.png"
+>>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
     },
     {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_menu_cut_material.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_menu_cut_material.png"
+    },
+    {
+<<<<<<< HEAD
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_menu_share_material.png",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_menu_share_material.png"
     },
@@ -166,5 +194,21 @@
     {
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_btn_radio_on_mtrl.png",
         "source": "/home/clement/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_btn_radio_on_mtrl.png"
+=======
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_go_search_api_material.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_go_search_api_material.png"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_menu_paste_material.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_menu_paste_material.png"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_menu_copy_material.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_menu_copy_material.png"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_btn_checkbox_checked_mtrl.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-ldpi/abc_btn_checkbox_checked_mtrl.png"
+>>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
     }
 ]

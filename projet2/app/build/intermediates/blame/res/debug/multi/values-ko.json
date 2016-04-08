@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "outputFile": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/values-ko/values-ko.xml",
         "map": [
             {
@@ -1203,6 +1204,9 @@
     },
     {
         "outputFile": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/values-ko/values-ko.xml",
+=======
+        "outputFile": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/values-ko/values-ko.xml",
+>>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
         "map": [
             {
                 "to": {
@@ -1213,7 +1217,7 @@
                     "endOffset": 195
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -1232,7 +1236,7 @@
                     "endOffset": 303
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -1251,7 +1255,7 @@
                     "endOffset": 426
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -1270,7 +1274,7 @@
                     "endOffset": 520
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -1289,7 +1293,7 @@
                     "endOffset": 622
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -1308,7 +1312,7 @@
                     "endOffset": 704
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -1327,7 +1331,7 @@
                     "endOffset": 802
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -1346,7 +1350,7 @@
                     "endOffset": 908
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -1365,7 +1369,7 @@
                     "endOffset": 987
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -1384,7 +1388,7 @@
                     "endOffset": 1063
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -1403,7 +1407,7 @@
                     "endOffset": 1143
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -1422,7 +1426,7 @@
                     "endOffset": 1241
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -1441,7 +1445,7 @@
                     "endOffset": 1336
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -1460,7 +1464,7 @@
                     "endOffset": 1431
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -1479,7 +1483,7 @@
                     "endOffset": 1531
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -1498,7 +1502,7 @@
                     "endOffset": 1627
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -1517,7 +1521,7 @@
                     "endOffset": 1726
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -1536,7 +1540,7 @@
                     "endOffset": 1841
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -1555,7 +1559,7 @@
                     "endOffset": 1935
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -1574,7 +1578,7 @@
                     "endOffset": 2146
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
@@ -1593,7 +1597,7 @@
                     "endOffset": 2265
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -1612,7 +1616,7 @@
                     "endOffset": 2436
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -1631,7 +1635,7 @@
                     "endOffset": 2554
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -1650,7 +1654,7 @@
                     "endOffset": 2674
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -1669,7 +1673,7 @@
                     "endOffset": 2856
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -1688,7 +1692,7 @@
                     "endOffset": 3038
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -1707,7 +1711,7 @@
                     "endOffset": 3157
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -1726,7 +1730,7 @@
                     "endOffset": 3303
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -1745,7 +1749,7 @@
                     "endOffset": 3414
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -1764,7 +1768,7 @@
                     "endOffset": 3557
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -1783,7 +1787,7 @@
                     "endOffset": 3671
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -1802,7 +1806,7 @@
                     "endOffset": 3796
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -1821,7 +1825,7 @@
                     "endOffset": 3933
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 28,
                         "startColumn": 4,
@@ -1840,7 +1844,7 @@
                     "endOffset": 4052
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 27,
                         "startColumn": 4,
@@ -1859,7 +1863,7 @@
                     "endOffset": 4201
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
@@ -1878,7 +1882,7 @@
                     "endOffset": 4315
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 25,
                         "startColumn": 4,
@@ -1897,7 +1901,7 @@
                     "endOffset": 4514
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-ko/common_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-ko/common_strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -1916,7 +1920,7 @@
                     "endOffset": 4714
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -1935,7 +1939,7 @@
                     "endOffset": 4833
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -1954,7 +1958,7 @@
                     "endOffset": 4938
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -1973,7 +1977,7 @@
                     "endOffset": 5105
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -1992,7 +1996,7 @@
                     "endOffset": 5225
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -2011,7 +2015,7 @@
                     "endOffset": 5402
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -2030,7 +2034,7 @@
                     "endOffset": 5526
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -2049,7 +2053,7 @@
                     "endOffset": 5675
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -2068,7 +2072,7 @@
                     "endOffset": 5763
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -2087,7 +2091,7 @@
                     "endOffset": 5851
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 29,
                         "startColumn": 4,
@@ -2106,7 +2110,7 @@
                     "endOffset": 5956
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ko/base_strings.xml",
                     "position": {
                         "startLine": 30,
                         "startColumn": 4,
@@ -2125,7 +2129,7 @@
                     "endOffset": 6059
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -2144,7 +2148,7 @@
                     "endOffset": 6159
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -2163,7 +2167,7 @@
                     "endOffset": 6253
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -2182,7 +2186,7 @@
                     "endOffset": 6353
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -2201,7 +2205,7 @@
                     "endOffset": 6465
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -2220,7 +2224,7 @@
                     "endOffset": 6560
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -2239,7 +2243,7 @@
                     "endOffset": 6652
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -2258,7 +2262,7 @@
                     "endOffset": 6762
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -2277,7 +2281,7 @@
                     "endOffset": 6857
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -2296,7 +2300,7 @@
                     "endOffset": 6940
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -2315,7 +2319,7 @@
                     "endOffset": 7029
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -2334,7 +2338,7 @@
                     "endOffset": 7127
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-ko/location_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-ko/location_strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -2353,7 +2357,7 @@
                     "endOffset": 7219
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-ko/location_strings.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-ko/location_strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -2372,7 +2376,7 @@
                     "endOffset": 7320
                 },
                 "from": {
-                    "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ko/values-ko.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -2391,6 +2395,7 @@
                     "endOffset": 7420
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/res/values-ko/wallet_strings.xml",
                     "position": {
                         "startLine": 5,
@@ -3594,6 +3599,9 @@
                 },
                 "from": {
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/res/values-ko/wallet_strings.xml",
+=======
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/res/values-ko/wallet_strings.xml",
+>>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,

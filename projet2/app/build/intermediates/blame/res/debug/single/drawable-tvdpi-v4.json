@@ -1,25 +1,43 @@
 [
     {
+<<<<<<< HEAD
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_icon_dark_focused.9.png",
         "source": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_icon_dark_focused.9.png"
     },
     {
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_plusone_standard_off_client.png",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-tvdpi/ic_plusone_standard_off_client.png"
+=======
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_text_dark_normal.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_text_dark_normal.9.png"
     },
     {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_light_normal.9.png",
-        "source": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_text_light_normal.9.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_icon_light_focused.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_icon_light_focused.9.png"
     },
     {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_light_focused.9.png",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_text_light_focused.9.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_icon_light_normal.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_icon_light_normal.9.png"
     },
     {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_light_disabled.9.png",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_text_light_disabled.9.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_light_focused.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_text_light_focused.9.png"
+>>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
     },
     {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_icon_light_normal.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_icon_light_normal.9.png"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_icon_dark_normal.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_icon_dark_normal.9.png"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_text_dark_disabled.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_text_dark_disabled.9.png"
+    },
+    {
+<<<<<<< HEAD
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_plusone_small_off_client.png",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-tvdpi/ic_plusone_small_off_client.png"
     },
@@ -30,12 +48,29 @@
     {
         "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_plusone_standard_off_client.png",
         "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-tvdpi/ic_plusone_standard_off_client.png"
+=======
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_text_dark_pressed.9.png"
     },
     {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_icon_dark_normal.9.png",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_icon_dark_normal.9.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_plusone_standard_off_client.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-tvdpi/ic_plusone_standard_off_client.png"
     },
     {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_dark_focused.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_light_disabled.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_text_light_disabled.9.png"
+>>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_light_normal.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_text_light_normal.9.png"
+    },
+    {
+<<<<<<< HEAD
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_text_dark_disabled.9.png",
         "source": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_text_dark_disabled.9.png"
     },
@@ -78,24 +113,34 @@
     {
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_text_dark_pressed.9.png",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_text_dark_pressed.9.png"
+=======
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_icon_dark_pressed.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_icon_dark_pressed.9.png"
+>>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
     },
     {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_icon_dark_pressed.9.png",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_icon_dark_pressed.9.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_icon_dark_focused.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_icon_dark_focused.9.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_dark_focused.9.png",
         "source": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_text_dark_focused.9.png"
     },
     {
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_icon_light_normal.9.png",
         "source": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_icon_light_normal.9.png"
+=======
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_plusone_tall_off_client.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-tvdpi/ic_plusone_tall_off_client.png"
+>>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
     },
     {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_icon_light_focused.9.png",
-        "source": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_icon_light_focused.9.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_text_light_pressed.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_text_light_pressed.9.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_plusone_tall_off_client.png",
         "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-tvdpi/ic_plusone_tall_off_client.png"
     },
@@ -134,60 +179,80 @@
     {
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_text_light_disabled.9.png",
         "source": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_text_light_disabled.9.png"
+=======
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_icon_light_focused.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_icon_light_focused.9.png"
+>>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
     },
     {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_dark_disabled.9.png",
-        "source": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_text_dark_disabled.9.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_text_light_normal.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_text_light_normal.9.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_icon_light_normal.9.png",
         "source": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_icon_light_normal.9.png"
     },
     {
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_icon_dark_focused.9.png",
         "source": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_icon_dark_focused.9.png"
+=======
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_icon_dark_disabled.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_icon_dark_disabled.9.png"
+>>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
     },
     {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_plusone_medium_off_client.png",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-tvdpi/ic_plusone_medium_off_client.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_text_dark_pressed.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_text_dark_pressed.9.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_icon_light_focused.9.png",
         "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_icon_light_focused.9.png"
     },
     {
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_icon_dark_pressed.9.png",
         "source": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_icon_dark_pressed.9.png"
+=======
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_text_dark_focused.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_text_dark_focused.9.png"
+>>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
     },
     {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_icon_light_pressed.9.png",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_icon_light_pressed.9.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_dark_disabled.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_text_dark_disabled.9.png"
     },
     {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_icon_dark_focused.9.png",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_icon_dark_focused.9.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_light_pressed.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_text_light_pressed.9.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_dark_disabled.9.png",
         "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_text_dark_disabled.9.png"
+=======
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_icon_dark_disabled.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_icon_dark_disabled.9.png"
+>>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
     },
     {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_dark_normal.9.png",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_text_dark_normal.9.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_full_open_on_phone.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_full_open_on_phone.png"
     },
     {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_light_pressed.9.png",
-        "source": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_text_light_pressed.9.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_icon_dark_normal.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_icon_dark_normal.9.png"
     },
     {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_text_light_pressed.9.png",
-        "source": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_text_light_pressed.9.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_icon_dark_pressed.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_icon_dark_pressed.9.png"
     },
     {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_plusone_small_off_client.png",
-        "source": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-tvdpi/ic_plusone_small_off_client.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_icon_light_disabled.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_icon_light_disabled.9.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_text_light_normal.9.png",
         "source": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_text_light_normal.9.png"
     },
@@ -198,20 +263,42 @@
     {
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_icon_light_disabled.9.png",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_icon_light_disabled.9.png"
+=======
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_icon_dark_focused.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_icon_dark_focused.9.png"
     },
     {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_text_light_disabled.9.png",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_text_light_disabled.9.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_plusone_medium_off_client.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-tvdpi/ic_plusone_medium_off_client.png"
     },
     {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_text_light_disabled.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_text_light_disabled.9.png"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_dark_normal.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_text_dark_normal.9.png"
+>>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_plusone_small_off_client.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-tvdpi/ic_plusone_small_off_client.png"
+    },
+    {
+<<<<<<< HEAD
         "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_icon_dark_focused.9.png",
         "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_icon_dark_focused.9.png"
+=======
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_icon_light_pressed.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_icon_light_pressed.9.png"
+>>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
     },
     {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_text_dark_normal.9.png",
-        "source": "/home/clement/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_text_dark_normal.9.png"
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_text_light_focused.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_text_light_focused.9.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_text_light_focused.9.png",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_google_signin_btn_text_light_focused.9.png"
     },
@@ -442,5 +529,13 @@
     {
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_icon_light_pressed.9.png",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_icon_light_pressed.9.png"
+=======
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_icon_light_disabled.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_icon_light_disabled.9.png"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_icon_light_pressed.9.png",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-tvdpi/common_plus_signin_btn_icon_light_pressed.9.png"
+>>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
     }
 ]

@@ -174,12 +174,15 @@ public class ItineraireActivity extends AppCompatActivity
         if (id == R.id.nav_carte) {
             Intent i = new Intent(ItineraireActivity.this, MapsActivity.class);
             startActivity(i);
+            this.finish();
         } else if (id == R.id.nav_Calendrier) {
             Intent i = new Intent(ItineraireActivity.this, CalendrierActivity.class);
             startActivity(i);
+            this.finish();
         } else if (id == R.id.nav_aide) {
             Intent i = new Intent(ItineraireActivity.this, AideActivity.class);
             startActivity(i);
+            this.finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
