@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:2:1-61:12
+ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:2:1-63:12
 	xmlns:android
 		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:2:11-69
 	package
@@ -56,8 +56,16 @@ uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
 ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:16:5-98
 	android:name
 		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:16:22-95
+uses-permission#android.permission.READ_CALENDAR
+ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:17:5-72
+	android:name
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:17:22-69
+uses-permission#android.permission.WRITE_CALENDAR
+ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:18:5-73
+	android:name
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:18:22-70
 application
-ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:18:5-59:19
+ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:20:5-61:19
 MERGED from [com.android.support:appcompat-v7:23.2.0] /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:23.2.0] /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.2.0] /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
@@ -175,63 +183,63 @@ MERGED from [com.android.support:support-vector-drawable:23.2.0] /home/yann/Docu
 MERGED from [com.android.support:support-v4:23.2.0] /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.2.0] /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
 	android:supportsRtl
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:22:9-35
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:24:9-35
 	android:label
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:21:9-41
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:23:9-41
 	android:allowBackup
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:19:9-35
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:21:9-35
 	android:icon
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:20:9-43
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:22:9-43
 	android:theme
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:23:9-40
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:25:9-40
 meta-data#com.google.android.geo.API_KEY
-ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:33:9-35:55
+ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:35:9-37:55
 	android:name
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:34:13-58
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:36:13-58
 	android:value
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:35:13-52
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:37:13-52
 activity#com.example.jules.projet2.MapsActivity
-ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:37:9-46:20
+ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:39:9-48:20
 	android:label
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:39:13-56
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:41:13-56
 	android:theme
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:40:13-56
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:42:13-56
 	android:name
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:38:13-41
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:40:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:41:13-45:29
+ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:43:13-47:29
 action#android.intent.action.MAIN
-ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:42:17-69
+ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:44:17-69
 	android:name
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:42:25-66
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:44:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:44:17-77
+ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:46:17-77
 	android:name
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:44:27-74
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:46:27-74
 activity#com.example.jules.projet2.ItineraireActivity
-ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:47:9-50:59
+ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:49:9-52:59
 	android:label
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:49:13-62
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:51:13-62
 	android:theme
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:50:13-56
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:52:13-56
 	android:name
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:48:13-47
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:50:13-47
 activity#com.example.jules.projet2.AideActivity
-ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:51:9-54:59
+ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:53:9-56:59
 	android:label
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:53:13-56
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:55:13-56
 	android:theme
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:54:13-56
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:56:13-56
 	android:name
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:52:13-41
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:54:13-41
 activity#com.example.jules.projet2.CalendrierActivity
-ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:55:9-58:68
+ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:57:9-60:59
 	android:label
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:57:13-62
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:59:13-62
 	android:theme
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:58:13-56
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:60:13-56
 	android:name
-		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:56:13-47
+		ADDED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml:58:13-47
 uses-sdk
 INJECTED from /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.2.0] /home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:21:5-23:78

@@ -1,9 +1,16 @@
 package com.example.jules.projet2;
 
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.text.format.DateFormat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,9 +20,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
+
+import java.text.Format;
 
 public class CalendrierActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+
+    private Cursor mCursor = null;
+    private static final String[] COLS = new String[]
+            {
+                    CalendarContract.Events.TITLE,
+                    CalendarContract.Events.DTSTART,
+                    CalendarContract.Events.EVENT_LOCATION
+            };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +62,51 @@ public class CalendrierActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        /* Calendrier */
+
+        mCursor = getContentResolver().query(
+                CalendarContract.Events.CONTENT_URI, COLS, null, null, null);
+        mCursor.moveToNext();
+
+        Button b = (Button)findViewById(R.id.next);
+        b.setOnClickListener(this);
+
+        b = (Button)findViewById(R.id.previous);
+        b.setOnClickListener(this);
+
+        onClick(findViewById(R.id.previous));
+    }
+
+
+    public void onClick(View v) {
+        TextView tv = (TextView)findViewById(R.id.data);
+
+        String title = "";
+        String salle = "";
+        Long start = 0L;
+
+        switch(v.getId()) {
+            case R.id.next:
+                if(!mCursor.isLast()) mCursor.moveToNext();
+                break;
+            case R.id.previous:
+                if(!mCursor.isFirst()) mCursor.moveToPrevious();
+                break;
+        }
+
+        Format df = DateFormat.getDateFormat(this);
+        Format tf = DateFormat.getTimeFormat(this);
+
+        try {
+            title = mCursor.getString(0);
+            salle = mCursor.getString(2);
+            start = mCursor.getLong(1);
+        } catch (Exception e) {
+        }
+
+        //tv.setText(title+" on "+df.format(start)+" at "+tf.format(start));
+        tv.setText(df.format(start) + " " + tf.format(start) + " : " + title + " " + salle);
     }
 
     @Override

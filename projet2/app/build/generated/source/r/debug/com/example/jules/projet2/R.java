@@ -2902,10 +2902,6 @@ containing a value of this type.
         public static final int buy_now=0x7f0d0051;
         public static final int buy_with=0x7f0d0052;
         public static final int buy_with_google=0x7f0d0053;
-        public static final int calendar_date_display=0x7f0d0097;
-        public static final int calendar_grid=0x7f0d0099;
-        public static final int calendar_next_button=0x7f0d0098;
-        public static final int calendar_prev_button=0x7f0d0096;
         public static final int cancel_action=0x7f0d00b8;
         public static final int cast_notification_id=0x7f0d0004;
         public static final int center=0x7f0d001f;
@@ -2921,6 +2917,7 @@ containing a value of this type.
         public static final int custom=0x7f0d0077;
         public static final int customPanel=0x7f0d0076;
         public static final int dark=0x7f0d0043;
+        public static final int data=0x7f0d0097;
         public static final int decor_content_parent=0x7f0d007f;
         public static final int default_activity_button=0x7f0d0067;
         public static final int default_control_frame=0x7f0d00ad;
@@ -2936,6 +2933,7 @@ containing a value of this type.
         public static final int donate_with_google=0x7f0d0055;
         public static final int drawer_layout=0x7f0d0090;
         public static final int edit_query=0x7f0d0083;
+        public static final int edt=0x7f0d0096;
         public static final int end=0x7f0d0022;
         public static final int end_padder=0x7f0d00c3;
         public static final int enterAlways=0x7f0d0016;
@@ -2990,6 +2988,7 @@ containing a value of this type.
         public static final int nav_view=0x7f0d0091;
         public static final int navigation_header_container=0x7f0d00a3;
         public static final int never=0x7f0d003d;
+        public static final int next=0x7f0d0099;
         public static final int none=0x7f0d0011;
         public static final int normal=0x7f0d000d;
         public static final int parallax=0x7f0d001c;
@@ -3004,6 +3003,7 @@ containing a value of this type.
         public static final int place_autocomplete_search_input=0x7f0d00c5;
         public static final int place_autocomplete_separator=0x7f0d00c7;
         public static final int play_pause=0x7f0d00af;
+        public static final int previous=0x7f0d0098;
         public static final int production=0x7f0d0049;
         public static final int progress_circular=0x7f0d0007;
         public static final int progress_horizontal=0x7f0d0008;

@@ -822,10 +822,6 @@ int id buyButton 0x7f0d004d
 int id buy_now 0x7f0d0051
 int id buy_with 0x7f0d0052
 int id buy_with_google 0x7f0d0053
-int id calendar_date_display 0x7f0d0097
-int id calendar_grid 0x7f0d0099
-int id calendar_next_button 0x7f0d0098
-int id calendar_prev_button 0x7f0d0096
 int id cancel_action 0x7f0d00b8
 int id cast_notification_id 0x7f0d0004
 int id center 0x7f0d001f
@@ -841,6 +837,7 @@ int id contentPanel 0x7f0d0071
 int id custom 0x7f0d0077
 int id customPanel 0x7f0d0076
 int id dark 0x7f0d0043
+int id data 0x7f0d0097
 int id decor_content_parent 0x7f0d007f
 int id default_activity_button 0x7f0d0067
 int id default_control_frame 0x7f0d00ad
@@ -856,6 +853,7 @@ int id donate_with 0x7f0d0054
 int id donate_with_google 0x7f0d0055
 int id drawer_layout 0x7f0d0090
 int id edit_query 0x7f0d0083
+int id edt 0x7f0d0096
 int id end 0x7f0d0022
 int id end_padder 0x7f0d00c3
 int id enterAlways 0x7f0d0016
@@ -910,6 +908,7 @@ int id nav_itineraire 0x7f0d00cd
 int id nav_view 0x7f0d0091
 int id navigation_header_container 0x7f0d00a3
 int id never 0x7f0d003d
+int id next 0x7f0d0099
 int id none 0x7f0d0011
 int id normal 0x7f0d000d
 int id parallax 0x7f0d001c
@@ -924,6 +923,7 @@ int id place_autocomplete_search_button 0x7f0d00c4
 int id place_autocomplete_search_input 0x7f0d00c5
 int id place_autocomplete_separator 0x7f0d00c7
 int id play_pause 0x7f0d00af
+int id previous 0x7f0d0098
 int id production 0x7f0d0049
 int id progress_circular 0x7f0d0007
 int id progress_horizontal 0x7f0d0008
