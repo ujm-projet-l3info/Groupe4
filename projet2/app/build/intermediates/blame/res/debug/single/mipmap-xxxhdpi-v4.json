@@ -1,19 +1,6 @@
 [
     {
-<<<<<<< HEAD
-        "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_launcher.png",
-        "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_launcher.png",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_launcher.png",
-        "source": "/home/clement/Groupe4/projet2/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
-=======
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_launcher.png",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
->>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
     }
 ]

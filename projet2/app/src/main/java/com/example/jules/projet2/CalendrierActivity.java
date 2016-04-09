@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.CalendarContract;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.text.format.DateFormat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -22,8 +20,7 @@ import android.widget.TextView;
 import java.text.Format;
 import java.util.Date;
 
-public class CalendrierActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+public class CalendrierActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     private Cursor mCursor = null;
     private static final String[] ATTRIBUTS = new String[]
@@ -57,8 +54,13 @@ public class CalendrierActivity extends AppCompatActivity
     }
 
     private void recupererCalendrier() {
-        if(mCursor == null)
-            mCursor = getContentResolver().query(CalendarContract.Events.CONTENT_URI, ATTRIBUTS, null, null, CalendarContract.Events.DTSTART + " ASC");
+        if(mCursor == null) {
+            try {
+                mCursor = getContentResolver().query(CalendarContract.Events.CONTENT_URI, ATTRIBUTS, null, null, CalendarContract.Events.DTSTART + " ASC");
+            } catch(SecurityException e){
+                e.printStackTrace();
+            }
+        }
 
         mCursor.moveToFirst();
         Long mtn = (new Date()).getTime();

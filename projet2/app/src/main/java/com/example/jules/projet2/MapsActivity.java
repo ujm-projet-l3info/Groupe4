@@ -52,7 +52,7 @@ import graphe.*;
 
 
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback, NavigationView.OnNavigationItemSelectedListener, LocationListener {
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback, View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, LocationListener {
 
 
     private GoogleMap mMap;
@@ -76,12 +76,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
+        fab.setOnClickListener(this);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -105,8 +100,15 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
     }
-/*
-    private void obtenirPosition() {
+
+    @Override
+    public void onClick(View view) {
+        Intent i = new Intent(MapsActivity.this, ItineraireActivity.class);
+        startActivity(i);
+        super.finish();
+    }
+
+    /*private void obtenirPosition() {
         //on démarre le cercle de chargement
         setProgressBarIndeterminateVisibility(true);
 
@@ -115,9 +117,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         //Le paramètre this spécifie que notre classe implémente LocationListener et recevra
         //les notifications.
         lManager.requestLocationUpdates(, 60000, 0, this);
-    }
-*/
-
+    }*/
 
     public void onLocationChanged(Location location)
     {
@@ -157,7 +157,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         carteFac.position(fac, 428.435f, 428.435f);
         mMap.addGroundOverlay(carteFac);
 
-
         /*mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {
@@ -169,60 +168,62 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         /* Test TAD graphe */
 
+        Bundle b = getIntent().getExtras();
 
-        ArrayList<Integer> l = new ArrayList<Integer>(); // Ajout de checkpoint pour itineraire
-        l.add(64);
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(g.noeuds.get(64).getLat(), g.noeuds.get(64).getLon()))
-                .title("" + g.noeuds.get(58).POIs.get(0)));
-        l.add(0);
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(g.noeuds.get(0).getLat(), g.noeuds.get(0).getLon()))
-                .title("" + g.noeuds.get(0).POIs.get(0)));
-        l.add(36);
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(g.noeuds.get(36).getLat(), g.noeuds.get(36).getLon()))
-                .title("" + g.noeuds.get(36).POIs.get(0)));
-        l.add(48);
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(g.noeuds.get(48).getLat(), g.noeuds.get(48).getLon()))
-                .title("" + g.noeuds.get(48).POIs.get(0)));
-        l.add(62);
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(g.noeuds.get(62).getLat(), g.noeuds.get(62).getLon()))
-                .title("" + g.noeuds.get(62).POIs.get(0)));
-        l.add(27);
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(g.noeuds.get(27).getLat(), g.noeuds.get(27).getLon()))
-                .title("" + g.noeuds.get(27).POIs.get(0)));
+        if(b != null) {
+            int depart = b.getInt("depart");
+            int arrivee = b.getInt("arrivee");
+            boolean pmr = b.getBoolean("pmr");
 
-        Chemin chemin = g.itineraireMultiple(l , false); // Calcul itineraire le plus court pour non PMR
+            ArrayList<Integer> l = new ArrayList<Integer>(); // Ajout de checkpoint pour itineraire
+            l.add(depart);
+            mMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()))
+                    .title(g.noeuds.get(depart).POIs.get(0)));
 
-        PolylineOptions lineOptions = new PolylineOptions();
-        int j;
-        for(int i = 0 ; i < chemin.noeuds.size() ; i++)
-        {
-            j = chemin.noeuds.get(i);
-            lineOptions.add(new LatLng(g.noeuds.get(j).getLat() , g.noeuds.get(j).getLon()));
-            /*mMap.addMarker(new MarkerOptions()
-                    .position(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()))
-                    .title("" + g.noeuds.get(j).POIs.get(0)));*/
+
+            l.add(arrivee);
+            mMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(g.noeuds.get(arrivee).getLat(), g.noeuds.get(arrivee).getLon()))
+                    .title(g.noeuds.get(arrivee).POIs.get(0)));
+
+            Chemin chemin = g.itineraireMultiple(l, pmr); // Calcul itineraire le plus court pour non PMR
+
+            PolylineOptions lineOptions = new PolylineOptions();
+            int j;
+            for (int i = 0; i < chemin.noeuds.size(); i++) {
+                j = chemin.noeuds.get(i);
+                lineOptions.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()));
+            }
+
+            lineOptions.width(20);
+            lineOptions.color(Color.rgb((int)(Math.random() * 255), (int)(Math.random() * 255), ((int)Math.random() * 255)));
+
+            mMap.addPolyline(lineOptions);
         }
 
-        lineOptions.width(30);
-        lineOptions.color(Color.MAGENTA);
-
-        mMap.addPolyline(lineOptions);
-
-        /*
-        for(int i = 0 ; i < g.noeuds.size() ; i++) {
+        /*for(int i = 0 ; i < g.noeuds.size() ; i++)
+        {
             mMap.addMarker(new MarkerOptions()
                     .position(new LatLng(g.noeuds.get(i).getLat(), g.noeuds.get(i).getLon()))
-                    .title("n°" + i + " " + g.noeuds.get(i).POIs.get(0)));
-        }
+                    .title("n°" + i));
 
-        */
+            for(int j = 0 ; j < g.noeuds.get(i).voisins.size() ; j++)
+            {
+                int k = g.noeuds.get(i).voisins.get(j);
 
+                if(g.noeuds.get(k).voisins.contains(i)) {
+                    PolylineOptions lineOptions = new PolylineOptions();
+                    lineOptions.add(new LatLng(g.noeuds.get(i).getLat(), g.noeuds.get(i).getLon()));
+                    lineOptions.add(new LatLng(g.noeuds.get(k).getLat(), g.noeuds.get(k).getLon()));
+                    lineOptions.width(8);
+                    lineOptions.color(Color.rgb(0,153,153));
+                    mMap.addPolyline(lineOptions);
+                }
+
+            }
+
+        }*/
     }
 
     /* MENU */
@@ -325,6 +326,5 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         // indicate app done reading the resource.
         xpp.close();
     }
-
 
 }

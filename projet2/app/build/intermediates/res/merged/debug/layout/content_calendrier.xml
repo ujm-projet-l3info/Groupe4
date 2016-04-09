@@ -79,7 +79,8 @@
                 android:id="@+id/precedent"
                 android:text="@string/precedent"
                 android:padding="10dip"
-                android:textColor="@color/colorAccent" />
+                android:background="@color/colorAccent"
+                android:textColor="@color/colorText" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -87,7 +88,8 @@
                 android:id="@+id/y_aller"
                 android:text="@string/y_aller"
                 android:padding="10dip"
-                android:textColor="@color/colorAccent" />
+                android:background="@color/colorAccent"
+                android:textColor="@color/colorText" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -95,7 +97,8 @@
                 android:id="@+id/suivant"
                 android:text="@string/suivant"
                 android:padding="10dip"
-                android:textColor="@color/colorAccent" />
+                android:background="@color/colorAccent"
+                android:textColor="@color/colorText" />
 
         </LinearLayout>
 

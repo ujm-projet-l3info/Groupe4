@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<merger version="3"><dataSet config="main"><source path="/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/src/debug/jniLibs"/></dataSet></merger>
-=======
 <merger version="3"><dataSet config="main"><source path="/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/debug/jniLibs"/></dataSet></merger>
->>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
