@@ -9,4 +9,6 @@
     <color name="transparent" type="color">#00FFFFFF</color>
 
     <color name="colorBackgroundCalendar">#606060</color>
+
+    <color name="colorError">#ef00ac</color>
 </resources>

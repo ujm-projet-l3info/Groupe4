@@ -1,8 +1,9 @@
 package com.example.jules.projet2;
 
+import android.app.Activity;
+import android.content.res.XmlResourceParser;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,97 +16,73 @@ import android.view.MenuItem;
 import android.content.Intent;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.MultiAutoCompleteTextView;
+import android.widget.Switch;
+import android.widget.TextView;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import graphe.Graphe;
+import graphe.Noeud;
+import parseur.ParseurGrapheXML;
 
 public class ItineraireActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
-    private String[] poi = new String[] {
-            "Ma position",
-            "A2",
-            "Intersection Parking Sud descente Resto U",
-            "A4",
-            "A3",
-            "A6",
-            "A5",
-            "A8",
-            "A7",
-            "Scolarité",
-            "Place devant l'entrée principale",
-            "Portail Nord",
-            "ASTRE",
-            "DSI",
-            "Intersection parking Est et Nord et BU",
-            "Salle de réunion",
-            "Chemin vers la BU",
-            "A24",
-            "Salle de vie étudiante",
-            "Distributeurs",
-            "Sortie derrière bâtiment H",
-            "Portail Sud",
-            "Toilettes",
-            "F101",
-            "Intersection Resto U montée vers Parking Sud",
-            "Intersection derrière bâtiment D",
-            "Dehors sortie après salle de vie étudiante",
-            "Bibliothèque universitaire",
-            "Entrée principale",
-            "En bas des escaliers après bâtiment A",
-            "Bureau professeurs d'Anglais",
-            "Entrée bâtiment J",
-            "Petite place devant bâtiments H et J",
-            "Entrée bâtiment K",
-            "Petite place en sortant du bâtiment A vers H J K L",
-            "Intersection bâtiment D et salle de vie étudiante",
-            "Passage à côté du bâtiment H",
-            "Parking Est",
-            "Resto U",
-            "Portail principal",
-            "Parking Sud",
-            "Cafet'U",
-            "Snack",
-            "Couloir vers bâtiment C",
-            "En allant vers la cafet'U",
-            "F001",
-            "H204",
-            "H205",
-            "H202",
-            "H203",
-            "Fin des salles A",
-            "Intersection passerelle vers bâtiments H F et BU",
-            "Couloir vers salles A",
-            "Intersection hall d'entrée bâtiment C",
-            "Bureau C2I",
-            "D203",
-            "D202",
-            "Salle de repas",
-            "D205",
-            "D204",
-            "D201",
-            "Tables à pique-nique",
-            "Intersection salles H200 et passerelle vers F",
-            "Parking Nord",
-            "A13",
-            "A15",
-            "A14",
-            "H206",
-            "A16"
-    };
+    private Graphe g;
+    private ParseurGrapheXML p;
+    private String[] poiStr;
+    private int[] poiInt;
 
-    public void recupererItineraire(View button) {
+    public void recupererItineraire() {
         final EditText dep = (EditText) findViewById(R.id.depart);
         String dep_str = dep.getText().toString();
 
         final EditText arr = (EditText) findViewById(R.id.arrivee);
         String arr_str = arr.getText().toString();
 
-        //final CheckBox pmr = (CheckBox) findViewById(R.id.PMR);
-        boolean bool_pmr = false;//pmr.isChecked();
+        final Switch pmr = (Switch) findViewById(R.id.PMR);
+        boolean bool_pmr = pmr.isChecked();
 
-        Snackbar.make(button, dep_str + " " + arr_str + " " + bool_pmr, Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show();
+        int depInt = -1;
+        int arrInt = -1;
+
+        for(int k = 0; k < poiStr.length; k++){
+            if(poiStr[k].equals(dep_str))
+                depInt = poiInt[k];
+        }
+
+        for(int k = 0; k < poiStr.length; k++){
+            if(poiStr[k].equals(arr_str))
+                arrInt = poiInt[k];
+        }
+
+        if(depInt != -1 && arrInt != -1) {
+            Intent i = new Intent();
+            Bundle b = new Bundle();
+
+            b.putInt("depart", depInt);
+            b.putInt("arrivee", arrInt);
+            b.putBoolean("pmr", bool_pmr);
+
+            i.putExtras(b);
+            setResult(Activity.RESULT_OK, i);
+            overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
+
+            finish();
+        }else{
+            TextView error = (TextView) findViewById(R.id.erreur);
+
+            if(arrInt == -1)
+                error.setText("'" + arr_str + "' n'est pas un point d'intérêt");
+
+            if(depInt == -1)
+                error.setText("'" + dep_str + "' n'est pas un point d'intérêt");
+        }
     }
 
     @Override
@@ -124,10 +101,22 @@ public class ItineraireActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //poi = charger_poi();
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(this);
+
+        // Charger graphe
+        try {
+            getXMLfromResource();
+        }
+        catch (IOException | XmlPullParserException e)
+        {
+            e.printStackTrace();
+        }
+
+        chargerPoi();
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_dropdown_item_1line, poi);
+                android.R.layout.simple_dropdown_item_1line, poiStr);
 
         AutoCompleteTextView deroule_dep = (AutoCompleteTextView) findViewById(R.id.depart);
         deroule_dep.setAdapter(adapter);
@@ -137,12 +126,45 @@ public class ItineraireActivity extends AppCompatActivity
     }
 
     @Override
+    public void onClick(View view) {
+        recupererItineraire();
+    }
+
+    public void chargerPoi() {
+        ArrayList<String> POIs = g.getPOIS();
+
+        poiStr = new String[POIs.size()];
+        poiInt = new int[POIs.size()];
+
+        for(int i = 0; i < POIs.size(); i++) {
+            poiStr[i] = POIs.get(i);
+            poiInt[i] = g.cherchePOIExact(poiStr[i]);
+        }
+
+        for (int i = 1; i < poiStr.length; i++){
+            for(int j = i; j > 0; j--){
+                if(poiStr[j].compareTo(poiStr[j - 1]) < 0){
+                    String tmpS = poiStr[j];
+                    poiStr[j] = poiStr[j - 1];
+                    poiStr[j - 1] = tmpS;
+
+                    int tmpI = poiInt[j];
+                    poiInt[j] = poiInt[j - 1];
+                    poiInt[j - 1] = tmpI;
+                }
+            }
+        }
+    }
+
+    @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            Intent i = new Intent();
+            setResult(ItineraireActivity.this.RESULT_CANCELED, i);
+            finish();
         }
     }
 
@@ -171,22 +193,70 @@ public class ItineraireActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+
         if (id == R.id.nav_carte) {
-            Intent i = new Intent(ItineraireActivity.this, MapsActivity.class);
-            startActivity(i);
-            this.finish();
+            Intent i = new Intent();
+            setResult(ItineraireActivity.this.RESULT_CANCELED, i);
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+            finish();
         } else if (id == R.id.nav_Calendrier) {
             Intent i = new Intent(ItineraireActivity.this, CalendrierActivity.class);
             startActivity(i);
-            this.finish();
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            finish();
         } else if (id == R.id.nav_aide) {
             Intent i = new Intent(ItineraireActivity.this, AideActivity.class);
             startActivity(i);
-            this.finish();
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            finish();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void getXMLfromResource() throws IOException, XmlPullParserException {
+        // Create ResourceParser for XML file
+        XmlResourceParser xpp = getResources().getXml(R.xml.metare);
+
+        g = new Graphe();
+        Noeud n = null;
+        float latitude = 0;
+        float longitude = 0;
+        char batiment ='-';
+        String POI = "";
+        int voisin = -1;
+        int voisin_pmr = -1;
+
+        int eventType = xpp.getEventType();
+
+        while (eventType != XmlPullParser.END_DOCUMENT)
+        {
+            if(eventType == XmlPullParser.START_TAG)
+            {
+                if(xpp.getName().equals("noeud")) { n = new Noeud(); }
+                else if(xpp.getName().equals("latitude")) { eventType = xpp.next(); latitude = Float.parseFloat(xpp.getText()); }
+                else if(xpp.getName().equals("longitude")) { eventType = xpp.next(); longitude = Float.parseFloat(xpp.getText()); }
+                else if(xpp.getName().equals("batiment")) { eventType = xpp.next(); batiment = xpp.getText().charAt(0); }
+                else if(xpp.getName().equals("POI")) { eventType = xpp.next(); POI = xpp.getText(); }
+                else if(xpp.getName().equals("voisin")) { eventType = xpp.next(); voisin = Integer.parseInt(xpp.getText()); }
+                else if(xpp.getName().equals("voisins_PMR")) { eventType = xpp.next(); Integer.parseInt(xpp.getText()); }
+            }
+            else if(eventType == XmlPullParser.END_TAG)
+            {
+                if(xpp.getName().equals("noeud")) { g.ajouterNoeud(n); }
+                else if(xpp.getName().equals("latitude")) { n.setLatitude(latitude); }
+                else if(xpp.getName().equals("longitude")) { n.setLongitude(longitude); }
+                else if(xpp.getName().equals("batiment")) { n.setBatiment(batiment); }
+                else if(xpp.getName().equals("POI")) { n.ajouterPOI(POI); }
+                else if(xpp.getName().equals("voisin")) { n.ajouterVoisin(voisin); }
+                else if(xpp.getName().equals("voisins_PMR")) { n.ajouterVoisinPMR(voisin_pmr); }
+            }
+
+            eventType = xpp.next();
+        }
+        // indicate app done reading the resource.
+        xpp.close();
     }
 }

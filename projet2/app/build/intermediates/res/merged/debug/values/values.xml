@@ -41,6 +41,7 @@
     <color name="colorAccent">#b266b2</color>
     <color name="colorBackground">#404040</color>
     <color name="colorBackgroundCalendar">#606060</color>
+    <color name="colorError">#ef00ac</color>
     <color name="colorPrimary">#993299</color>
     <color name="colorPrimaryDark">#800080</color>
     <color name="colorText">#eeeeee</color>
@@ -422,6 +423,7 @@
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
     <string name="store_picture_title">Save image</string>
     <string name="suivant">Suivant</string>
+    <string name="title_activity_aaa">aaa</string>
     <string name="title_activity_aide">Aide</string>
     <string name="title_activity_calendrier">Calendrier</string>
     <string name="title_activity_itineraire">Itinéraire</string>

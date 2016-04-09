@@ -304,6 +304,24 @@ public class Graphe {
         return l;
     }
 
+    public int cherchePOIExact(String poi)
+    {
+        /* Renvoit le noeud dans lequel se trouve poi */
+
+        ArrayList<Integer> l = new ArrayList<Integer>();
+
+        for(int i = 0 ; i < noeuds.size() ; i++)
+        {
+            for(int j = 0 ; j < noeuds.get(i).POIs.size() ; j++)
+            {
+                if(noeuds.get(i).POIs.get(j).equals(poi)) // Si POI correspond au parametre
+                    return i;
+            }
+        }
+
+        return -1;
+    }
+
     public ArrayList<Integer> chercheToilettes()
     {
         /* Renvoit la liste des Noeuds correspondant

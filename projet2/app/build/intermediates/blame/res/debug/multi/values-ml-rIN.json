@@ -1170,7 +1170,11 @@
                     "endOffset": 8479
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ml-rIN/values-ml-rIN.xml",
+=======
+                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ml-rIN/values-ml-rIN.xml",
+>>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,

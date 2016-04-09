@@ -1,5 +1,6 @@
 package com.example.jules.projet2;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.XmlResourceParser;
@@ -52,7 +53,8 @@ import graphe.*;
 
 
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback, NavigationView.OnNavigationItemSelectedListener, LocationListener {
+public class MapsActivity extends AppCompatActivity
+        implements OnMapReadyCallback, View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, LocationListener {
 
 
     private GoogleMap mMap;
@@ -77,12 +79,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
+        fab.setOnClickListener(this);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -106,6 +103,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
     }
+<<<<<<< HEAD
 /*
     private void obtenirPosition()
     {
@@ -116,6 +114,77 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }*/
 
 
+=======
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1) {
+            if(resultCode == Activity.RESULT_OK){
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                Bundle b = data.getExtras();
+                tracerItineraire(b);
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            }
+        }
+    }
+
+    public void tracerItineraire(Bundle b) {
+        if(b != null) {
+            mMap.clear();
+            placerCalque();
+
+            int depart = b.getInt("depart");
+            int arrivee = b.getInt("arrivee");
+            boolean pmr = b.getBoolean("pmr");
+
+            ArrayList<Integer> l = new ArrayList<Integer>(); // Ajout de checkpoint pour itineraire
+            l.add(depart);
+            mMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()))
+                    .title(g.noeuds.get(depart).POIs.get(0)));
+
+
+            l.add(arrivee);
+            mMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(g.noeuds.get(arrivee).getLat(), g.noeuds.get(arrivee).getLon()))
+                    .title(g.noeuds.get(arrivee).POIs.get(0)));
+
+            Chemin chemin = g.itineraireMultiple(l, pmr); // Calcul itineraire le plus court pour non PMR
+
+            PolylineOptions lineOptions = new PolylineOptions();
+            int j;
+            for (int i = 0; i < chemin.noeuds.size(); i++) {
+                j = chemin.noeuds.get(i);
+                lineOptions.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()));
+            }
+
+            lineOptions.width(20);
+            lineOptions.color(Color.rgb((int) (Math.random() * 255), (int) (Math.random() * 255), ((int) Math.random() * 255)));
+
+            mMap.addPolyline(lineOptions);
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent i = new Intent(MapsActivity.this, ItineraireActivity.class);
+        startActivityForResult(i, 1);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    /*private void obtenirPosition() {
+        //on démarre le cercle de chargement
+        setProgressBarIndeterminateVisibility(true);
+
+        //On demande au service de localisation de nous notifier tout changement de position
+        //sur la source (le provider) choisie, toute les minutes (60000millisecondes).
+        //Le paramètre this spécifie que notre classe implémente LocationListener et recevra
+        //les notifications.
+        lManager.requestLocationUpdates(, 60000, 0, this);
+    }*/
+>>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
 
     public void onLocationChanged(Location location)
     {
@@ -123,21 +192,37 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap.addMarker(new MarkerOptions().position(posUser).title("USER"));
     }
 
+    public void placerCalque() {
+        LatLng fac = new LatLng(45.42291, 4.42566);
 
+<<<<<<< HEAD
+=======
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(fac,18));
+
+        fac = new LatLng(45.4235668,4.4254605);
+        GroundOverlayOptions carteFac= new GroundOverlayOptions();
+        carteFac.image(BitmapDescriptorFactory.fromResource(R.drawable.calque0704));
+        carteFac.position(fac, 428.435f, 428.435f);
+
+        mMap.addGroundOverlay(carteFac);
+    }
+
+    /**
+     * Manipulates the map once available.
+     * This callback is triggered when the map is ready to be used.
+     * This is where we can add markers or lines, add listeners or move the camera. In this case,
+     * we just add a marker near Sydney, Australia.
+     * If Google Play services is not installed on the device, the user will be prompted to install
+     * it inside the SupportMapFragment. This method will only be triggered once the user has
+     * installed Google Play services and returned to the app.
+     */
+>>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
     @Override
     public void onMapReady(GoogleMap googleMap) throws SecurityException{
         mMap = googleMap;
         mMap.setMyLocationEnabled(true);
 
-        LatLng fac = new LatLng(45.42291, 4.42566);
-
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(fac,18));
-        fac=new LatLng(45.4235668,4.4254605);
-        GroundOverlayOptions carteFac= new GroundOverlayOptions();
-        carteFac.image(BitmapDescriptorFactory.fromResource(R.drawable.calque0704));
-        carteFac.position(fac, 428.435f, 428.435f);
-        mMap.addGroundOverlay(carteFac);
-
+        placerCalque();
 
         /*mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
@@ -150,9 +235,33 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         /* Test TAD graphe */
 
+<<<<<<< HEAD
     }
+=======
+        /*for(int i = 0 ; i < g.noeuds.size() ; i++)
+        {
+            mMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(g.noeuds.get(i).getLat(), g.noeuds.get(i).getLon()))
+                    .title("n°" + i));
 
-    /* MENU */
+            for(int j = 0 ; j < g.noeuds.get(i).voisins.size() ; j++)
+            {
+                int k = g.noeuds.get(i).voisins.get(j);
+
+                if(g.noeuds.get(k).voisins.contains(i)) {
+                    PolylineOptions lineOptions = new PolylineOptions();
+                    lineOptions.add(new LatLng(g.noeuds.get(i).getLat(), g.noeuds.get(i).getLon()));
+                    lineOptions.add(new LatLng(g.noeuds.get(k).getLat(), g.noeuds.get(k).getLon()));
+                    lineOptions.width(8);
+                    lineOptions.color(Color.rgb(0,153,153));
+                    mMap.addPolyline(lineOptions);
+                }
+>>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
+
+            }
+
+        }*/
+    }
 
     @Override
     public void onBackPressed() {
@@ -190,22 +299,23 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_Calendrier) {
-            Intent i = new Intent(MapsActivity.this, CalendrierActivity.class);
-            startActivity(i);
-            this.finish();
-        } else if (id == R.id.nav_aide) {
-            Intent i = new Intent(MapsActivity.this, AideActivity.class);
-            startActivity(i);
-            this.finish();
-        } else if (id == R.id.nav_itineraire) {
-            Intent i = new Intent(MapsActivity.this, ItineraireActivity.class);
-            startActivity(i);
-            this.finish();
-        }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+
+        if (id == R.id.nav_Calendrier) {
+            Intent i = new Intent(MapsActivity.this, CalendrierActivity.class);
+            startActivityForResult(i, 1);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        } else if (id == R.id.nav_aide) {
+            Intent i = new Intent(MapsActivity.this, AideActivity.class);
+            startActivityForResult(i, 1);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        } else if (id == R.id.nav_itineraire) {
+            Intent i = new Intent(MapsActivity.this, ItineraireActivity.class);
+            startActivityForResult(i, 1);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }
+
         return true;
     }
 
@@ -252,6 +362,5 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         // indicate app done reading the resource.
         xpp.close();
     }
-
 
 }
