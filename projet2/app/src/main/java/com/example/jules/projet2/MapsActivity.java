@@ -7,8 +7,6 @@ import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.os.IBinder;
-import android.os.RemoteException;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,6 +14,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -45,6 +44,7 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.jar.Manifest;
 
 import parseur.*;
 import graphe.*;
@@ -60,6 +60,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private LocationManager lManager;
     private ParseurGrapheXML p;
     private Graphe g;
+    private LatLng posUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -106,43 +107,23 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 /*
-    private void obtenirPosition() {
-        //on démarre le cercle de chargement
-        setProgressBarIndeterminateVisibility(true);
+    private void obtenirPosition()
+    {
+        LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+        locationManager.getLastKnownLocation().getLatitude();
+        locationManager.getLastKnownLocation().getLongitude();
 
-        //On demande au service de localisation de nous notifier tout changement de position
-        //sur la source (le provider) choisie, toute les minutes (60000millisecondes).
-        //Le paramètre this spécifie que notre classe implémente LocationListener et recevra
-        //les notifications.
-        lManager.requestLocationUpdates(, 60000, 0, this);
-    }
-*/
+    }*/
+
 
 
     public void onLocationChanged(Location location)
     {
-        LatLng mapos=new LatLng(location.getLatitude(),location.getLongitude());
-        //marker.remove();
-        //marker = mMap.addMarker(new MarkerOptions().title("Vous êtes ici").position(mapos));
-        //marker.setPosition(mapos);
-        //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mapos, 18));
-        Toast.makeText(getApplicationContext(),
-                "Tu bouges !", Toast.LENGTH_SHORT)
-                .show();
-
+        posUser = new LatLng(location.getLatitude(),location.getLongitude());
+        mMap.addMarker(new MarkerOptions().position(posUser).title("USER"));
     }
 
 
-
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
     @Override
     public void onMapReady(GoogleMap googleMap) throws SecurityException{
         mMap = googleMap;
@@ -168,60 +149,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         });*/
 
         /* Test TAD graphe */
-
-
-        ArrayList<Integer> l = new ArrayList<Integer>(); // Ajout de checkpoint pour itineraire
-        l.add(64);
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(g.noeuds.get(64).getLat(), g.noeuds.get(64).getLon()))
-                .title("" + g.noeuds.get(58).POIs.get(0)));
-        l.add(0);
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(g.noeuds.get(0).getLat(), g.noeuds.get(0).getLon()))
-                .title("" + g.noeuds.get(0).POIs.get(0)));
-        l.add(36);
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(g.noeuds.get(36).getLat(), g.noeuds.get(36).getLon()))
-                .title("" + g.noeuds.get(36).POIs.get(0)));
-        l.add(48);
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(g.noeuds.get(48).getLat(), g.noeuds.get(48).getLon()))
-                .title("" + g.noeuds.get(48).POIs.get(0)));
-        l.add(62);
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(g.noeuds.get(62).getLat(), g.noeuds.get(62).getLon()))
-                .title("" + g.noeuds.get(62).POIs.get(0)));
-        l.add(27);
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(g.noeuds.get(27).getLat(), g.noeuds.get(27).getLon()))
-                .title("" + g.noeuds.get(27).POIs.get(0)));
-
-        Chemin chemin = g.itineraireMultiple(l , false); // Calcul itineraire le plus court pour non PMR
-
-        PolylineOptions lineOptions = new PolylineOptions();
-        int j;
-        for(int i = 0 ; i < chemin.noeuds.size() ; i++)
-        {
-            j = chemin.noeuds.get(i);
-            lineOptions.add(new LatLng(g.noeuds.get(j).getLat() , g.noeuds.get(j).getLon()));
-            /*mMap.addMarker(new MarkerOptions()
-                    .position(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()))
-                    .title("" + g.noeuds.get(j).POIs.get(0)));*/
-        }
-
-        lineOptions.width(30);
-        lineOptions.color(Color.MAGENTA);
-
-        mMap.addPolyline(lineOptions);
-
-        /*
-        for(int i = 0 ; i < g.noeuds.size() ; i++) {
-            mMap.addMarker(new MarkerOptions()
-                    .position(new LatLng(g.noeuds.get(i).getLat(), g.noeuds.get(i).getLon()))
-                    .title("n°" + i + " " + g.noeuds.get(i).POIs.get(0)));
-        }
-
-        */
 
     }
 
@@ -307,7 +234,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 else if(xpp.getName().equals("batiment")) { eventType = xpp.next(); batiment = xpp.getText().charAt(0); }
                 else if(xpp.getName().equals("POI")) { eventType = xpp.next(); POI = xpp.getText(); }
                 else if(xpp.getName().equals("voisin")) { eventType = xpp.next(); voisin = Integer.parseInt(xpp.getText()); }
-                else if(xpp.getName().equals("voisins_PMR")) { eventType = xpp.next(); Integer.parseInt(xpp.getText()); }
+                else if(xpp.getName().equals("voisin_PMR")) { eventType = xpp.next(); voisin_pmr = Integer.parseInt(xpp.getText()); }
             }
             else if(eventType == XmlPullParser.END_TAG)
             {
@@ -317,7 +244,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 else if(xpp.getName().equals("batiment")) { n.setBatiment(batiment); }
                 else if(xpp.getName().equals("POI")) { n.ajouterPOI(POI); }
                 else if(xpp.getName().equals("voisin")) { n.ajouterVoisin(voisin); }
-                else if(xpp.getName().equals("voisins_PMR")) { n.ajouterVoisinPMR(voisin_pmr); }
+                else if(xpp.getName().equals("voisin_PMR")) { n.ajouterVoisinPMR(voisin_pmr); }
             }
 
             eventType = xpp.next();

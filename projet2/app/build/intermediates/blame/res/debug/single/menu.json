@@ -1,61 +1,7 @@
 [
     {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/calendrier.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/res/menu/calendrier.xml"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/menu/activity_aide_drawer.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/src/main/res/menu/activity_aide_drawer.xml"
-    },
-    {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/itineraire.xml",
-        "source": "/home/clement/Groupe4/projet2/app/src/main/res/menu/itineraire.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/menu/activity_main_drawer.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/src/main/res/menu/activity_main_drawer.xml"
-=======
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/res/menu/main.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/activity_main_drawer.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/res/menu/activity_main_drawer.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/activity_itineraire_drawer.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/res/menu/activity_itineraire_drawer.xml"
->>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/activity_aide_drawer.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/res/menu/activity_aide_drawer.xml"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/activity_main_drawer.xml",
-        "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/src/main/res/menu/activity_main_drawer.xml"
-    },
-    {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/calendrier.xml",
-        "source": "/home/clement/Groupe4/projet2/app/src/main/res/menu/calendrier.xml"
-    },
-    {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/activity_calendrier_drawer.xml",
-        "source": "/home/clement/Groupe4/projet2/app/src/main/res/menu/activity_calendrier_drawer.xml"
-    },
-    {
         "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/activity_calendrier_drawer.xml",
         "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/src/main/res/menu/activity_calendrier_drawer.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/menu/activity_itineraire_drawer.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/src/main/res/menu/activity_itineraire_drawer.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/menu/itineraire.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/src/main/res/menu/itineraire.xml"
     },
     {
         "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/calendrier.xml",
@@ -66,6 +12,10 @@
         "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/src/main/res/menu/activity_aide_drawer.xml"
     },
     {
+        "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/activity_main_drawer.xml",
+        "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/src/main/res/menu/activity_main_drawer.xml"
+    },
+    {
         "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/activity_itineraire_drawer.xml",
         "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/src/main/res/menu/activity_itineraire_drawer.xml"
     },
@@ -74,51 +24,11 @@
         "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/src/main/res/menu/main.xml"
     },
     {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/menu/calendrier.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/src/main/res/menu/calendrier.xml"
-    },
-    {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/home/clement/Groupe4/projet2/app/src/main/res/menu/main.xml"
-    },
-    {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/activity_itineraire_drawer.xml",
-        "source": "/home/clement/Groupe4/projet2/app/src/main/res/menu/activity_itineraire_drawer.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/build/intermediates/res/merged/debug/menu/aide.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/projet2/app/src/main/res/menu/aide.xml"
-    },
-    {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/activity_aide_drawer.xml",
-        "source": "/home/clement/Groupe4/projet2/app/src/main/res/menu/activity_aide_drawer.xml"
-    },
-    {
         "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/itineraire.xml",
         "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/src/main/res/menu/itineraire.xml"
     },
     {
         "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/aide.xml",
         "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/src/main/res/menu/aide.xml"
-    },
-    {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/activity_main_drawer.xml",
-        "source": "/home/clement/Groupe4/projet2/app/src/main/res/menu/activity_main_drawer.xml"
-    },
-    {
-        "merged": "/home/clement/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/aide.xml",
-        "source": "/home/clement/Groupe4/projet2/app/src/main/res/menu/aide.xml"
-=======
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/itineraire.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/res/menu/itineraire.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/activity_calendrier_drawer.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/res/menu/activity_calendrier_drawer.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/aide.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/res/menu/aide.xml"
->>>>>>> 489a8e1a11ca4f30c1961a5be141a44e5bf4506c
     }
 ]
