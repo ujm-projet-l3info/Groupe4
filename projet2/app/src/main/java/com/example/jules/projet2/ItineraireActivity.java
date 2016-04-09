@@ -1,9 +1,9 @@
 package com.example.jules.projet2;
 
+import android.app.Activity;
 import android.content.res.XmlResourceParser;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,9 +16,8 @@ import android.view.MenuItem;
 import android.content.Intent;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.MultiAutoCompleteTextView;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -32,25 +31,22 @@ import graphe.Noeud;
 import parseur.ParseurGrapheXML;
 
 public class ItineraireActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     private Graphe g;
     private ParseurGrapheXML p;
     private String[] poiStr;
     private int[] poiInt;
 
-    public void recupererItineraire(View button) {
+    public void recupererItineraire() {
         final EditText dep = (EditText) findViewById(R.id.depart);
         String dep_str = dep.getText().toString();
 
         final EditText arr = (EditText) findViewById(R.id.arrivee);
         String arr_str = arr.getText().toString();
 
-        //final CheckBox pmr = (CheckBox) findViewById(R.id.PMR);
-        boolean bool_pmr = false;//pmr.isChecked();
-
-        Intent i = new Intent(ItineraireActivity.this, MapsActivity.class);
-        Bundle b = new Bundle();
+        final Switch pmr = (Switch) findViewById(R.id.PMR);
+        boolean bool_pmr = pmr.isChecked();
 
         int depInt = -1;
         int arrInt = -1;
@@ -66,14 +62,18 @@ public class ItineraireActivity extends AppCompatActivity
         }
 
         if(depInt != -1 && arrInt != -1) {
+            Intent i = new Intent();
+            Bundle b = new Bundle();
+
             b.putInt("depart", depInt);
             b.putInt("arrivee", arrInt);
             b.putBoolean("pmr", bool_pmr);
+
             i.putExtras(b);
+            setResult(Activity.RESULT_OK, i);
+            overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
 
-            startActivity(i);
-
-            this.finish();
+            finish();
         }else{
             TextView error = (TextView) findViewById(R.id.erreur);
 
@@ -101,6 +101,9 @@ public class ItineraireActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(this);
+
         // Charger graphe
         try {
             getXMLfromResource();
@@ -109,6 +112,7 @@ public class ItineraireActivity extends AppCompatActivity
         {
             e.printStackTrace();
         }
+
         chargerPoi();
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
@@ -119,6 +123,11 @@ public class ItineraireActivity extends AppCompatActivity
 
         AutoCompleteTextView deroule_arr = (AutoCompleteTextView) findViewById(R.id.arrivee);
         deroule_arr.setAdapter(adapter);
+    }
+
+    @Override
+    public void onClick(View view) {
+        recupererItineraire();
     }
 
     public void chargerPoi() {
@@ -153,7 +162,9 @@ public class ItineraireActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            Intent i = new Intent();
+            setResult(ItineraireActivity.this.RESULT_CANCELED, i);
+            finish();
         }
     }
 
@@ -182,22 +193,26 @@ public class ItineraireActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+
         if (id == R.id.nav_carte) {
-            Intent i = new Intent(ItineraireActivity.this, MapsActivity.class);
-            startActivity(i);
-            this.finish();
+            Intent i = new Intent();
+            setResult(ItineraireActivity.this.RESULT_CANCELED, i);
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+            finish();
         } else if (id == R.id.nav_Calendrier) {
             Intent i = new Intent(ItineraireActivity.this, CalendrierActivity.class);
             startActivity(i);
-            this.finish();
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            finish();
         } else if (id == R.id.nav_aide) {
             Intent i = new Intent(ItineraireActivity.this, AideActivity.class);
             startActivity(i);
-            this.finish();
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            finish();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 

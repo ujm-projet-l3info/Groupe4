@@ -1,5 +1,6 @@
 package com.example.jules.projet2;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.XmlResourceParser;
@@ -52,7 +53,8 @@ import graphe.*;
 
 
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback, View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, LocationListener {
+public class MapsActivity extends AppCompatActivity
+        implements OnMapReadyCallback, View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, LocationListener {
 
 
     private GoogleMap mMap;
@@ -102,75 +104,24 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     @Override
-    public void onClick(View view) {
-        Intent i = new Intent(MapsActivity.this, ItineraireActivity.class);
-        startActivity(i);
-        super.finish();
-    }
-
-    /*private void obtenirPosition() {
-        //on démarre le cercle de chargement
-        setProgressBarIndeterminateVisibility(true);
-
-        //On demande au service de localisation de nous notifier tout changement de position
-        //sur la source (le provider) choisie, toute les minutes (60000millisecondes).
-        //Le paramètre this spécifie que notre classe implémente LocationListener et recevra
-        //les notifications.
-        lManager.requestLocationUpdates(, 60000, 0, this);
-    }*/
-
-    public void onLocationChanged(Location location)
-    {
-        LatLng mapos=new LatLng(location.getLatitude(),location.getLongitude());
-        //marker.remove();
-        //marker = mMap.addMarker(new MarkerOptions().title("Vous êtes ici").position(mapos));
-        //marker.setPosition(mapos);
-        //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mapos, 18));
-        Toast.makeText(getApplicationContext(),
-                "Tu bouges !", Toast.LENGTH_SHORT)
-                .show();
-
-    }
-
-
-
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
-    @Override
-    public void onMapReady(GoogleMap googleMap) throws SecurityException{
-        mMap = googleMap;
-        mMap.setMyLocationEnabled(true);
-
-        LatLng fac = new LatLng(45.42291, 4.42566);
-
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(fac,18));
-        fac=new LatLng(45.4235668,4.4254605);
-        GroundOverlayOptions carteFac= new GroundOverlayOptions();
-        carteFac.image(BitmapDescriptorFactory.fromResource(R.drawable.calque0704));
-        carteFac.position(fac, 428.435f, 428.435f);
-        mMap.addGroundOverlay(carteFac);
-
-        /*mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-            @Override
-            public void onMapClick(LatLng latLng) {
-                mMap.addMarker(new MarkerOptions()
-                        .position(latLng)
-                        .title("Lat : " + latLng.latitude + " Lon : " + latLng.longitude));
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1) {
+            if(resultCode == Activity.RESULT_OK){
+                //overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                Bundle b = data.getExtras();
+                tracerItineraire(b);
             }
-        });*/
+            if (resultCode == Activity.RESULT_CANCELED) {
+                //overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        }
+    }
 
-        /* Test TAD graphe */
-
-        Bundle b = getIntent().getExtras();
-
+    public void tracerItineraire(Bundle b) {
         if(b != null) {
+            mMap.clear();
+            placerCalque();
+
             int depart = b.getInt("depart");
             int arrivee = b.getInt("arrivee");
             boolean pmr = b.getBoolean("pmr");
@@ -197,10 +148,82 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
 
             lineOptions.width(20);
-            lineOptions.color(Color.rgb((int)(Math.random() * 255), (int)(Math.random() * 255), ((int)Math.random() * 255)));
+            lineOptions.color(Color.rgb((int) (Math.random() * 255), (int) (Math.random() * 255), ((int) Math.random() * 255)));
 
             mMap.addPolyline(lineOptions);
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent i = new Intent(MapsActivity.this, ItineraireActivity.class);
+        startActivityForResult(i, 1);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    /*private void obtenirPosition() {
+        //on démarre le cercle de chargement
+        setProgressBarIndeterminateVisibility(true);
+
+        //On demande au service de localisation de nous notifier tout changement de position
+        //sur la source (le provider) choisie, toute les minutes (60000millisecondes).
+        //Le paramètre this spécifie que notre classe implémente LocationListener et recevra
+        //les notifications.
+        lManager.requestLocationUpdates(, 60000, 0, this);
+    }*/
+
+    public void onLocationChanged(Location location)
+    {
+        LatLng mapos=new LatLng(location.getLatitude(),location.getLongitude());
+        //marker.remove();
+        //marker = mMap.addMarker(new MarkerOptions().title("Vous êtes ici").position(mapos));
+        //marker.setPosition(mapos);
+        //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mapos, 18));
+        Toast.makeText(getApplicationContext(),
+                "Tu bouges !", Toast.LENGTH_SHORT)
+                .show();
+
+    }
+
+    public void placerCalque() {
+        LatLng fac = new LatLng(45.42291, 4.42566);
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(fac,18));
+
+        fac = new LatLng(45.4235668,4.4254605);
+        GroundOverlayOptions carteFac= new GroundOverlayOptions();
+        carteFac.image(BitmapDescriptorFactory.fromResource(R.drawable.calque0704));
+        carteFac.position(fac, 428.435f, 428.435f);
+
+        mMap.addGroundOverlay(carteFac);
+    }
+
+    /**
+     * Manipulates the map once available.
+     * This callback is triggered when the map is ready to be used.
+     * This is where we can add markers or lines, add listeners or move the camera. In this case,
+     * we just add a marker near Sydney, Australia.
+     * If Google Play services is not installed on the device, the user will be prompted to install
+     * it inside the SupportMapFragment. This method will only be triggered once the user has
+     * installed Google Play services and returned to the app.
+     */
+    @Override
+    public void onMapReady(GoogleMap googleMap) throws SecurityException{
+        mMap = googleMap;
+        mMap.setMyLocationEnabled(true);
+
+        placerCalque();
+
+        /*mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+            @Override
+            public void onMapClick(LatLng latLng) {
+                mMap.addMarker(new MarkerOptions()
+                        .position(latLng)
+                        .title("Lat : " + latLng.latitude + " Lon : " + latLng.longitude));
+            }
+        });*/
+
+        /* Test TAD graphe */
 
         /*for(int i = 0 ; i < g.noeuds.size() ; i++)
         {
@@ -225,8 +248,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         }*/
     }
-
-    /* MENU */
 
     @Override
     public void onBackPressed() {
@@ -264,22 +285,23 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_Calendrier) {
-            Intent i = new Intent(MapsActivity.this, CalendrierActivity.class);
-            startActivity(i);
-            this.finish();
-        } else if (id == R.id.nav_aide) {
-            Intent i = new Intent(MapsActivity.this, AideActivity.class);
-            startActivity(i);
-            this.finish();
-        } else if (id == R.id.nav_itineraire) {
-            Intent i = new Intent(MapsActivity.this, ItineraireActivity.class);
-            startActivity(i);
-            this.finish();
-        }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+
+        if (id == R.id.nav_Calendrier) {
+            Intent i = new Intent(MapsActivity.this, CalendrierActivity.class);
+            startActivityForResult(i, 1);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        } else if (id == R.id.nav_aide) {
+            Intent i = new Intent(MapsActivity.this, AideActivity.class);
+            startActivityForResult(i, 1);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        } else if (id == R.id.nav_itineraire) {
+            Intent i = new Intent(MapsActivity.this, ItineraireActivity.class);
+            startActivityForResult(i, 1);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }
+
         return true;
     }
 

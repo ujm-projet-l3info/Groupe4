@@ -168,22 +168,25 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+
         if (id == R.id.nav_carte) {
-            Intent i = new Intent(CalendrierActivity.this, MapsActivity.class);
-            startActivity(i);
-            this.finish();
+            Intent i = new Intent();
+            setResult(CalendrierActivity.this.RESULT_CANCELED, i);
+            finish();
         } else if (id == R.id.nav_aide) {
             Intent i = new Intent(CalendrierActivity.this, AideActivity.class);
             startActivity(i);
-            this.finish();
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            finish();
         } else if (id == R.id.nav_itineraire) {
             Intent i = new Intent(CalendrierActivity.this, ItineraireActivity.class);
             startActivity(i);
-            this.finish();
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            finish();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 }
