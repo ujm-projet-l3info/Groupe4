@@ -52,50 +52,6 @@ public final class R {
 		public static final int zOrderOnTop = 0x7f0100e2;
 	}
 	public static final class color {
-<<<<<<< HEAD
-		public static final int common_action_bar_splitter = 0x7f0d0018;
-		public static final int common_google_signin_btn_text_dark = 0x7f0d0079;
-		public static final int common_google_signin_btn_text_dark_default = 0x7f0d0019;
-		public static final int common_google_signin_btn_text_dark_disabled = 0x7f0d001a;
-		public static final int common_google_signin_btn_text_dark_focused = 0x7f0d001b;
-		public static final int common_google_signin_btn_text_dark_pressed = 0x7f0d001c;
-		public static final int common_google_signin_btn_text_light = 0x7f0d007a;
-		public static final int common_google_signin_btn_text_light_default = 0x7f0d001d;
-		public static final int common_google_signin_btn_text_light_disabled = 0x7f0d001e;
-		public static final int common_google_signin_btn_text_light_focused = 0x7f0d001f;
-		public static final int common_google_signin_btn_text_light_pressed = 0x7f0d0020;
-		public static final int common_plus_signin_btn_text_dark = 0x7f0d007b;
-		public static final int common_plus_signin_btn_text_dark_default = 0x7f0d0021;
-		public static final int common_plus_signin_btn_text_dark_disabled = 0x7f0d0022;
-		public static final int common_plus_signin_btn_text_dark_focused = 0x7f0d0023;
-		public static final int common_plus_signin_btn_text_dark_pressed = 0x7f0d0024;
-		public static final int common_plus_signin_btn_text_light = 0x7f0d007c;
-		public static final int common_plus_signin_btn_text_light_default = 0x7f0d0025;
-		public static final int common_plus_signin_btn_text_light_disabled = 0x7f0d0026;
-		public static final int common_plus_signin_btn_text_light_focused = 0x7f0d0027;
-		public static final int common_plus_signin_btn_text_light_pressed = 0x7f0d0028;
-		public static final int place_autocomplete_prediction_primary_text = 0x7f0d0049;
-		public static final int place_autocomplete_prediction_primary_text_highlight = 0x7f0d004a;
-		public static final int place_autocomplete_prediction_secondary_text = 0x7f0d004b;
-		public static final int place_autocomplete_search_hint = 0x7f0d004c;
-		public static final int place_autocomplete_search_text = 0x7f0d004d;
-		public static final int place_autocomplete_separator = 0x7f0d004e;
-		public static final int wallet_bright_foreground_disabled_holo_light = 0x7f0d0062;
-		public static final int wallet_bright_foreground_holo_dark = 0x7f0d0063;
-		public static final int wallet_bright_foreground_holo_light = 0x7f0d0064;
-		public static final int wallet_dim_foreground_disabled_holo_dark = 0x7f0d0065;
-		public static final int wallet_dim_foreground_holo_dark = 0x7f0d0066;
-		public static final int wallet_dim_foreground_inverse_disabled_holo_dark = 0x7f0d0067;
-		public static final int wallet_dim_foreground_inverse_holo_dark = 0x7f0d0068;
-		public static final int wallet_highlighted_text_holo_dark = 0x7f0d0069;
-		public static final int wallet_highlighted_text_holo_light = 0x7f0d006a;
-		public static final int wallet_hint_foreground_holo_dark = 0x7f0d006b;
-		public static final int wallet_hint_foreground_holo_light = 0x7f0d006c;
-		public static final int wallet_holo_blue_light = 0x7f0d006d;
-		public static final int wallet_link_text_light = 0x7f0d006e;
-		public static final int wallet_primary_text_holo_light = 0x7f0d007f;
-		public static final int wallet_secondary_text_holo_dark = 0x7f0d0080;
-=======
 		public static final int common_action_bar_splitter = 0x7f0d0019;
 		public static final int common_google_signin_btn_text_dark = 0x7f0d007a;
 		public static final int common_google_signin_btn_text_dark_default = 0x7f0d001a;
@@ -138,7 +94,6 @@ public final class R {
 		public static final int wallet_link_text_light = 0x7f0d006f;
 		public static final int wallet_primary_text_holo_light = 0x7f0d0080;
 		public static final int wallet_secondary_text_holo_dark = 0x7f0d0081;
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
 	}
 	public static final class dimen {
 		public static final int place_autocomplete_button_padding = 0x7f0a0071;

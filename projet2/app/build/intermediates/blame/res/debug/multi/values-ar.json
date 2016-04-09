@@ -1,10 +1,6 @@
 [
     {
-<<<<<<< HEAD
         "outputFile": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/values-ar/values-ar.xml",
-=======
-        "outputFile": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
         "map": [
             {
                 "to": {
@@ -15,11 +11,7 @@
                     "endOffset": 217
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -38,11 +30,7 @@
                     "endOffset": 325
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -61,11 +49,7 @@
                     "endOffset": 448
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -84,11 +68,7 @@
                     "endOffset": 552
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -107,11 +87,7 @@
                     "endOffset": 661
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -130,11 +106,7 @@
                     "endOffset": 743
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -153,11 +125,7 @@
                     "endOffset": 844
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -176,11 +144,7 @@
                     "endOffset": 958
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -199,11 +163,7 @@
                     "endOffset": 1037
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -222,11 +182,7 @@
                     "endOffset": 1116
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -245,11 +201,7 @@
                     "endOffset": 1195
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -268,11 +220,7 @@
                     "endOffset": 1300
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -291,11 +239,7 @@
                     "endOffset": 1401
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -314,11 +258,7 @@
                     "endOffset": 1497
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -337,11 +277,7 @@
                     "endOffset": 1605
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -360,11 +296,7 @@
                     "endOffset": 1708
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -383,11 +315,7 @@
                     "endOffset": 1811
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -406,11 +334,7 @@
                     "endOffset": 1930
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -429,11 +353,7 @@
                     "endOffset": 2027
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -452,11 +372,7 @@
                     "endOffset": 2282
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
@@ -475,11 +391,7 @@
                     "endOffset": 2407
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -498,11 +410,7 @@
                     "endOffset": 2583
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -521,11 +429,7 @@
                     "endOffset": 2707
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -544,11 +448,7 @@
                     "endOffset": 2838
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -567,11 +467,7 @@
                     "endOffset": 3041
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -590,11 +486,7 @@
                     "endOffset": 3252
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -613,11 +505,7 @@
                     "endOffset": 3382
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -636,11 +524,7 @@
                     "endOffset": 3557
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -659,11 +543,7 @@
                     "endOffset": 3676
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -682,11 +562,7 @@
                     "endOffset": 3834
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -705,11 +581,7 @@
                     "endOffset": 3958
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -728,11 +600,7 @@
                     "endOffset": 4094
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -751,11 +619,7 @@
                     "endOffset": 4261
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 28,
                         "startColumn": 4,
@@ -774,11 +638,7 @@
                     "endOffset": 4388
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 27,
                         "startColumn": 4,
@@ -797,11 +657,7 @@
                     "endOffset": 4564
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
@@ -820,11 +676,7 @@
                     "endOffset": 4689
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 25,
                         "startColumn": 4,
@@ -843,11 +695,7 @@
                     "endOffset": 4931
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-ar/common_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-ar/common_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -866,11 +714,7 @@
                     "endOffset": 5169
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -889,11 +733,7 @@
                     "endOffset": 5291
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -912,11 +752,7 @@
                     "endOffset": 5397
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -935,11 +771,7 @@
                     "endOffset": 5578
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -958,11 +790,7 @@
                     "endOffset": 5702
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -981,11 +809,7 @@
                     "endOffset": 5900
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -1004,11 +828,7 @@
                     "endOffset": 6036
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -1027,11 +847,7 @@
                     "endOffset": 6212
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -1050,11 +866,7 @@
                     "endOffset": 6305
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -1073,11 +885,7 @@
                     "endOffset": 6401
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 29,
                         "startColumn": 4,
@@ -1096,11 +904,7 @@
                     "endOffset": 6515
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/values-ar/base_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 30,
                         "startColumn": 4,
@@ -1119,11 +923,7 @@
                     "endOffset": 6621
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -1142,11 +942,7 @@
                     "endOffset": 6735
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -1165,11 +961,7 @@
                     "endOffset": 6836
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -1188,11 +980,7 @@
                     "endOffset": 6942
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -1211,11 +999,7 @@
                     "endOffset": 7065
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -1234,11 +1018,7 @@
                     "endOffset": 7166
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -1257,11 +1037,7 @@
                     "endOffset": 7261
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -1280,11 +1056,7 @@
                     "endOffset": 7380
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -1303,11 +1075,7 @@
                     "endOffset": 7483
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -1326,11 +1094,7 @@
                     "endOffset": 7569
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -1349,11 +1113,7 @@
                     "endOffset": 7663
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -1372,11 +1132,7 @@
                     "endOffset": 7763
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-ar/location_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-ar/location_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -1395,11 +1151,7 @@
                     "endOffset": 7858
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-ar/location_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-ar/location_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -1418,11 +1170,7 @@
                     "endOffset": 7959
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-ar/values-ar.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -1441,11 +1189,7 @@
                     "endOffset": 8066
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/res/values-ar/wallet_strings.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/res/values-ar/wallet_strings.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,

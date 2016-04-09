@@ -1,10 +1,6 @@
 [
     {
-<<<<<<< HEAD
         "outputFile": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/values-w820dp-v13/values-w820dp-v13.xml",
-=======
-        "outputFile": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/values-w820dp-v13/values-w820dp-v13.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
         "map": [
             {
                 "to": {
@@ -15,11 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/src/main/res/values-w820dp/dimens.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/res/values-w820dp/dimens.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

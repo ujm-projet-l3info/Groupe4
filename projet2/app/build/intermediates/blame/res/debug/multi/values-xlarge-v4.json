@@ -1,10 +1,6 @@
 [
     {
-<<<<<<< HEAD
         "outputFile": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/values-xlarge-v4/values-xlarge-v4.xml",
-=======
-        "outputFile": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/values-xlarge-v4/values-xlarge-v4.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
         "map": [
             {
                 "to": {
@@ -15,11 +11,7 @@
                     "endOffset": 127
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -38,11 +30,7 @@
                     "endOffset": 198
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -61,11 +49,7 @@
                     "endOffset": 269
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -84,11 +68,7 @@
                     "endOffset": 339
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -107,11 +87,7 @@
                     "endOffset": 409
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -130,11 +106,7 @@
                     "endOffset": 477
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -153,11 +125,7 @@
                     "endOffset": 545
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -176,11 +144,7 @@
                     "endOffset": 609
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -199,11 +163,7 @@
                     "endOffset": 664
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
-=======
-                    "file": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-xlarge-v4/values-xlarge-v4.xml",
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,

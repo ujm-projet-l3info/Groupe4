@@ -1,6 +1,5 @@
 [
     {
-<<<<<<< HEAD
         "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_clear_material.xml",
         "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_clear_material.xml"
     },
@@ -21,12 +20,12 @@
         "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_overflow_material.xml"
     },
     {
-        "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml",
-        "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml"
-    },
-    {
         "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_radio_on_mtrl.xml",
         "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_radio_on_mtrl.xml"
+    },
+    {
+        "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml",
+        "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml"
     },
     {
         "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_voice_search_api_material.xml",
@@ -55,61 +54,5 @@
     {
         "merged": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml",
         "source": "/home/arthur/Documents/Cours/Fac/Licence_Informatique/S6/Projet_de_Programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml"
-=======
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_overflow_material.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_overflow_material.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_radio_on_mtrl.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_radio_on_mtrl.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_go_search_api_material.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_go_search_api_material.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_checkbox_checked_mtrl.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_checkbox_checked_mtrl.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_voice_search_api_material.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_voice_search_api_material.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_paste_material.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_paste_material.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_radio_off_mtrl.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_radio_off_mtrl.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_ab_back_material.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_ab_back_material.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_selectall_material.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_selectall_material.xml"
-    },
-    {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_clear_material.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_clear_material.xml"
->>>>>>> 2c14f0ca584628e2420a30c24dea109b84a431de
     }
 ]

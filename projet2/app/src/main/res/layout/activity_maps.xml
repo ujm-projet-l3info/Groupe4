@@ -15,7 +15,7 @@ tools:openDrawer="start">
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.example.jules.projet2.MapsActivity" />
+        tools:context="com.example.jules.univLocation.MapsActivity" />
 
     <include
         layout="@layout/app_bar_main"

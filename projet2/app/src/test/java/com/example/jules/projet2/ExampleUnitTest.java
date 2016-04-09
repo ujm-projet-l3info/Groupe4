@@ -1,4 +1,4 @@
-package com.example.jules.projet2;
+package com.example.jules.univLocation;
 
 import org.junit.Test;
 
