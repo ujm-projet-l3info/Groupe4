@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/res/menu/main.xml"
-    },
-    {
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/calendrier.xml",
         "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/res/menu/calendrier.xml"
+    },
+    {
+        "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/src/main/res/menu/main.xml"
     },
     {
         "merged": "/home/yann/Documents/LICENCE/L3 Informatique/S6/Projet de programmation/Groupe4/projet2/app/build/intermediates/res/merged/debug/menu/activity_main_drawer.xml",
