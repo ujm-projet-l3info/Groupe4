@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/trouver_wc"
+        android:title="@string/trouver_toilettes"
+        android:icon="@drawable/ic_wc_white_48dp" />
+
+    <item android:id="@+id/trouver_distrib"
+        android:title="@string/trouver_distrib"
+        android:icon="@drawable/ic_free_breakfast_white_48dp" />
 </menu>

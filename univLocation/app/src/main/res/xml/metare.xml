@@ -753,12 +753,12 @@
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="41"> <!-- En allant vers Resto U -->
+    <noeud num="41"> <!-- En allant vers Resto'U -->
         <latitude>45.422482</latitude>
         <longitude>4.427030</longitude>
         <batiment>-</batiment>
         <liste_POI>
-            <POI>Intersection sortie Resto U montée vers Parking Sud</POI>
+            <POI>Intersection sortie Resto'U montée vers Parking Sud</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>42</voisin>
@@ -774,12 +774,12 @@
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="42"> <!-- Devant Resto U -->
+    <noeud num="42"> <!-- Devant Resto'U -->
         <latitude>45.422252</latitude>
         <longitude>4.427290</longitude>
         <batiment>-</batiment>
         <liste_POI>
-            <POI>Devant entrée Resto U</POI>
+            <POI>Devant entrée Resto'U</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>41</voisin>
@@ -1030,12 +1030,12 @@
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="54"> <!-- Devant descente vers Resto U parking -->
+    <noeud num="54"> <!-- Devant descente vers Resto'U parking -->
         <latitude>45.422275</latitude>
         <longitude>4.426635</longitude>
         <batiment>-</batiment>
         <liste_POI>
-            <POI>Intersection Parking Sud descente Resto U</POI>
+            <POI>Intersection Parking Sud descente Resto'U</POI>
             <POI>Parking Sud</POI>
         </liste_POI>
         <liste_voisins>
@@ -1217,9 +1217,9 @@
     <noeud num="64"> <!-- Cafet'U -->
         <latitude>45.422422</latitude>
         <longitude>4.427771</longitude>
-        <batiment>Cafet' U</batiment>
+        <batiment>Cafet'U</batiment>
         <liste_POI>
-            <POI>Entrée Cafet' U</POI>
+            <POI>Entrée Cafet'U</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>63</voisin>
@@ -1250,7 +1250,7 @@
         <longitude>4.426328</longitude>
         <batiment>-</batiment>
         <liste_POI>
-            <POI>Cafet'U</POI>
+            <POI>Vers bâtiment M</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>33</voisin>
@@ -1279,12 +1279,12 @@
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="68"> <!-- Dans batiment C vers Resto U -->
+    <noeud num="68"> <!-- Dans batiment C vers Resto'U -->
         <latitude>45.422471</latitude>
         <longitude>4.426847</longitude>
         <batiment>C</batiment>
         <liste_POI>
-            <POI>Sortie bâtiment C vers Resto U</POI>
+            <POI>Sortie bâtiment C vers Resto'U</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>79</voisin>
@@ -1490,12 +1490,12 @@
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="79"> <!-- Devant batiment C vers Resto U -->
+    <noeud num="79"> <!-- Devant batiment C vers Resto'U -->
         <latitude>45.422408</latitude>
         <longitude>4.426895</longitude>
         <batiment>-</batiment>
         <liste_POI>
-            <POI>Entrée bâtiment C vers Resto U</POI>
+            <POI>Entrée bâtiment C vers Resto'U</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>41</voisin>
@@ -1526,7 +1526,7 @@
         <longitude>4.425682</longitude>
         <batiment>-</batiment>
         <liste_POI>
-            <POI>En sortant batiment F vers BU</POI>
+            <POI>En sortant bâtiment F vers BU</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>34</voisin>
@@ -1623,13 +1623,13 @@
         </liste_voisins_PMR>
     </noeud>
 
-    <!-- RESTO U !!! -->
-    <noeud num="87"> <!-- Entree resto U -->
+    <!-- Resto'U !!! -->
+    <noeud num="87"> <!-- Entree Resto'U -->
         <latitude>45.422323</latitude>
         <longitude>4.427421</longitude>
-        <batiment>Resto U</batiment>
+        <batiment>Resto'U</batiment>
         <liste_POI>
-            <POI>Entrée Resto U</POI>
+            <POI>Entrée Resto'U</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>42</voisin>
@@ -1638,12 +1638,12 @@
             <voisin_PMR>42</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
-    <noeud num="88"> <!-- Sortie Resto U -->
+    <noeud num="88"> <!-- Sortie Resto'U -->
         <latitude>45.422531</latitude>
         <longitude>4.427131</longitude>
-        <batiment>Resto U</batiment>
+        <batiment>Resto'U</batiment>
         <liste_POI>
-            <POI>Sortie Resto U</POI>
+            <POI>Sortie Resto'U</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>41</voisin>
@@ -1651,12 +1651,12 @@
         <liste_voisins_PMR>
         </liste_voisins_PMR>
     </noeud>
-    <noeud num="89"> <!-- Sortie Cafet' U -->
+    <noeud num="89"> <!-- Sortie Cafet'U -->
         <latitude>45.422459</latitude>
         <longitude>4.427734</longitude>
-        <batiment>Cafet' U</batiment>
+        <batiment>Cafet'U</batiment>
         <liste_POI>
-            <POI>Sortie Cafet' U</POI>
+            <POI>Sortie Cafet'U</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>64</voisin>

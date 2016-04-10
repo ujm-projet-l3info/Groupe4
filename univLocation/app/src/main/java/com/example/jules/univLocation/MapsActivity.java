@@ -34,15 +34,13 @@ import java.util.ArrayList;
 
 import graphe.*;
 
-
-
-
 public class MapsActivity extends AppCompatActivity
         implements OnMapReadyCallback, View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
 
     private GoogleMap mMap;
     public static Graphe g;
+    private GroundOverlayOptions carteFac;
 
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -77,6 +75,11 @@ public class MapsActivity extends AppCompatActivity
         {
             e.printStackTrace();
         }
+
+        // Calque
+        carteFac = new GroundOverlayOptions();
+        carteFac.image(BitmapDescriptorFactory.fromResource(R.drawable.calque0704));
+        carteFac.position(new LatLng(45.4235668,4.4254605), 428.435f, 428.435f);
     }
 
     protected void onActivityResult(int requestCode , int resultCode , Intent data)
@@ -144,21 +147,12 @@ public class MapsActivity extends AppCompatActivity
 
     public void placerCalque()
     {
-        LatLng fac = new LatLng(45.42291, 4.42566);
-
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(fac,18));
-
-        fac = new LatLng(45.4235668,4.4254605);
-        GroundOverlayOptions carteFac= new GroundOverlayOptions();
-        carteFac.image(BitmapDescriptorFactory.fromResource(R.drawable.calque0704));
-        carteFac.position(fac, 428.435f, 428.435f);
-
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(45.42291, 4.42566),18));
         mMap.addGroundOverlay(carteFac);
     }
 
-    public void onMapReady(GoogleMap googleMap) throws SecurityException{
+    public void onMapReady(GoogleMap googleMap) throws SecurityException {
         mMap = googleMap;
-
         placerCalque();
     }
 

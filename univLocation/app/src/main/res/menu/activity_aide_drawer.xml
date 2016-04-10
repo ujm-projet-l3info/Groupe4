@@ -4,16 +4,16 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_carte"
-            android:icon="@drawable/ic_menu_carte"
-            android:title="Carte" />
+            android:icon="@drawable/ic_map_white_48dp"
+            android:title="@string/title_activity_maps" />
         <item
             android:id="@+id/nav_itineraire"
-            android:icon="@drawable/ic_menu_send"
-            android:title="Itinéraire" />
+            android:icon="@drawable/ic_room_white_48dp"
+            android:title="@string/title_activity_itineraire" />
         <item
             android:id="@+id/nav_Calendrier"
-            android:icon="@drawable/ic_menu_calendrier"
-            android:title="Calendrier" />
+            android:icon="@drawable/ic_event_white_48dp"
+            android:title="@string/title_activity_calendrier" />
     </group>
 
 </menu>
