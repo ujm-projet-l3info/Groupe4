@@ -78,8 +78,8 @@ public class MapsActivity extends AppCompatActivity
 
         // Calque
         carteFac = new GroundOverlayOptions();
-        carteFac.image(BitmapDescriptorFactory.fromResource(R.drawable.calque0704));
-        carteFac.position(new LatLng(45.4235668,4.4254605), 428.435f, 428.435f);
+        carteFac.image(BitmapDescriptorFactory.fromResource(R.drawable.calque0));
+        carteFac.position(new LatLng(45.4231698,4.4252605), 428.435f, 428.435f);
     }
 
     protected void onActivityResult(int requestCode , int resultCode , Intent data)
@@ -154,6 +154,18 @@ public class MapsActivity extends AppCompatActivity
     public void onMapReady(GoogleMap googleMap) throws SecurityException {
         mMap = googleMap;
         placerCalque();
+
+        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+            @Override
+            public void onMapClick(LatLng latLng) {
+                mMap.addMarker(new MarkerOptions().position(latLng).title("Lat :" +latLng.latitude + " Lon :"+latLng.longitude));
+            }
+        });
+
+        /*for(int i = 0; i < g.noeuds.size(); i++){
+            LatLng latLong = new LatLng(g.noeuds.get(i).getLat(), g.noeuds.get(i).getLon());
+            mMap.addMarker(new MarkerOptions().position(latLong).title(""+i));
+        }*/
     }
 
     public void onBackPressed()

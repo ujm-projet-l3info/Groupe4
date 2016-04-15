@@ -1,237 +1,246 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
+
+    <!-- NIVEAU 0 -->
+
+    <!-- ENTREE -->
+
     <noeud num="0"> <!-- Entrée principale du campus -->
         <latitude>45.422949</latitude>
         <longitude>4.425735</longitude>
         <batiment>-</batiment>
         <liste_POI>
             <POI>Entrée principale</POI>
+            <POI>Panneaux d'affichages</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>1</voisin>
-            <voisin>2</voisin>
-            <voisin>3</voisin>
-            <voisin>51</voisin>
+            <voisin>4</voisin>
+            <voisin>5</voisin>
+            <voisin>77</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
             <voisin_PMR>1</voisin_PMR>
-            <voisin_PMR>2</voisin_PMR>
-            <voisin_PMR>3</voisin_PMR>
-            <voisin_PMR>51</voisin_PMR>
+            <voisin_PMR>4</voisin_PMR>
+            <voisin_PMR>5</voisin_PMR>
+            <voisin_PMR>77</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="1"> <!-- Scolarité entrée intérieure -->
+    <noeud num="1"> <!-- Porte Scolarité -->
         <latitude>45.422871</latitude>
-        <longitude>4.425823</longitude>
+        <longitude>4.425816</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Entrée accueil et scolarité</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>0</voisin>
+            <voisin>2</voisin>
+            <voisin>4</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>0</voisin_PMR>
+            <voisin_PMR>2</voisin_PMR>
+            <voisin_PMR>4</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="2"> <!-- Scolarité -->
+        <latitude>45.422812</latitude>
+        <longitude>4.425877</longitude>
         <batiment>B</batiment>
         <liste_POI>
             <POI>Scolarité</POI>
+            <POI>Accueil FST</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>0</voisin>
-            <voisin>2</voisin>
+            <voisin>1</voisin>
             <voisin>3</voisin>
-            <voisin>56</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>0</voisin_PMR>
-            <voisin_PMR>2</voisin_PMR>
+            <voisin_PMR>1</voisin_PMR>
             <voisin_PMR>3</voisin_PMR>
-            <voisin_PMR>56</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="2"> <!-- Hall couloir vers C -->
-        <latitude>45.422896</latitude>
-        <longitude>4.425871</longitude>
+    <noeud num="3"> <!-- Porte Scolarité dehors -->
+        <latitude>45.422768</latitude>
+        <longitude>4.425920</longitude>
         <batiment>-</batiment>
         <liste_POI>
-            <POI>Couloir vers bâtiment C</POI>
+            <POI>Entrée accueil et scolarité</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>2</voisin>
+            <voisin>82</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>2</voisin_PMR>
+            <voisin_PMR>82</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="4"> <!-- Entrée couloir vers C -->
+        <latitude>45.422915</latitude>
+        <longitude>4.425885</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Entrée couloir vers C</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>0</voisin>
             <voisin>1</voisin>
-            <voisin>3</voisin>
-            <voisin>32</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>0</voisin_PMR>
-            <voisin_PMR>1</voisin_PMR>
-            <voisin_PMR>3</voisin_PMR>
-            <voisin_PMR>32</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="3"> <!-- Hall couloir vers  A -->
-        <latitude>45.423053</latitude>
-        <longitude>4.425698</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Couloir vers salles A</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>0</voisin>
-            <voisin>1</voisin>
-            <voisin>2</voisin>
-            <voisin>4</voisin>
-            <voisin>31</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>0</voisin_PMR>
-            <voisin_PMR>1</voisin_PMR>
-            <voisin_PMR>2</voisin_PMR>
-            <voisin_PMR>4</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="4"> <!-- Toilettes -->
-        <latitude>45.423097</latitude>
-        <longitude>4.425655</longitude>
-        <batiment>A</batiment>
-        <liste_POI>
-            <POI>Toilettes</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>3</voisin>
             <voisin>5</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>3</voisin_PMR>
-            <voisin_PMR>5</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="5"> <!-- A16 -->
-        <latitude>45.423137</latitude>
-        <longitude>4.425611</longitude>
-        <batiment>A</batiment>
-        <liste_POI>
-            <POI>A16</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>4</voisin>
-            <voisin>6</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>4</voisin_PMR>
-            <voisin_PMR>6</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="6"> <!-- A2 -->
-        <latitude>45.423165</latitude>
-        <longitude>4.425579</longitude>
-        <batiment>A</batiment>
-        <liste_POI>
-            <POI>A2</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>5</voisin>
-            <voisin>7</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>5</voisin_PMR>
-            <voisin_PMR>7</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="7"> <!-- A3 A15 -->
-        <latitude>45.423226</latitude>
-        <longitude>4.425520</longitude>
-        <batiment>A</batiment>
-        <liste_POI>
-            <POI>A3</POI>
-            <POI>A15</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>6</voisin>
-            <voisin>8</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>6</voisin_PMR>
-            <voisin_PMR>8</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="8"> <!-- A4 A14 -->
-        <latitude>45.423281</latitude>
-        <longitude>4.425461</longitude>
-        <batiment>A</batiment>
-        <liste_POI>
-            <POI>A4</POI>
-            <POI>A14</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>7</voisin>
-            <voisin>9</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>7</voisin_PMR>
-            <voisin_PMR>9</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="9"> <!-- A5 A13 -->
-        <latitude>45.423331</latitude>
-        <longitude>4.425409</longitude>
-        <batiment>A</batiment>
-        <liste_POI>
-            <POI>A5</POI>
-            <POI>A13</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>8</voisin>
             <voisin>10</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>8</voisin_PMR>
+            <voisin_PMR>0</voisin_PMR>
+            <voisin_PMR>1</voisin_PMR>
+            <voisin_PMR>5</voisin_PMR>
             <voisin_PMR>10</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="10"> <!-- A6 -->
-        <latitude>45.423383</latitude>
-        <longitude>4.425352</longitude>
-        <batiment>A</batiment>
+    <noeud num="5"> <!-- Entrée couloir vers A -->
+        <latitude>45.423050</latitude>
+        <longitude>4.425697</longitude>
+        <batiment>-</batiment>
         <liste_POI>
-            <POI>A6</POI>
+            <POI>Entrée couloir vers A</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>9</voisin>
+            <voisin>0</voisin>
+            <voisin>4</voisin>
+            <voisin>6</voisin>
             <voisin>11</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>9</voisin_PMR>
+            <voisin_PMR>0</voisin_PMR>
+            <voisin_PMR>4</voisin_PMR>
             <voisin_PMR>11</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="11"> <!-- A7 Departement de langue -->
-        <latitude>45.423428</latitude>
-        <longitude>4.425307</longitude>
-        <batiment>A</batiment>
+    <!-- COULOIR ASTRE -->
+
+    <noeud num="6"> <!-- ASTRE -->
+        <latitude>45.423116</latitude>
+        <longitude>4.425804</longitude>
+        <batiment>-</batiment>
         <liste_POI>
-            <POI>A7</POI>
-            <POI>Département de langue</POI>
+            <POI>ASTRE</POI>
         </liste_POI>
         <liste_voisins>
+            <voisin>5</voisin>
+            <voisin>7</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>7</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="7"> <!-- C2I -->
+        <latitude>45.423160</latitude>
+        <longitude>4.425884</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Bureau C2I</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>6</voisin>
+            <voisin>8</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>6</voisin_PMR>
+            <voisin_PMR>8</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="8"> <!-- Vie étudiante -->
+        <latitude>45.423216</latitude>
+        <longitude>4.425995</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Salle de vie étudiante</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>7</voisin>
+            <voisin>9</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>7</voisin_PMR>
+            <voisin_PMR>9</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="9"> <!-- Intersection vie étudiante D -->
+        <latitude>45.423227</latitude>
+        <longitude>4.426033</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Intersection D vie étudiante</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>8</voisin>
             <voisin>10</voisin>
+            <voisin>34</voisin>
+            <voisin>100</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>8</voisin_PMR>
+            <voisin_PMR>34</voisin_PMR>
+            <voisin_PMR>100</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <!-- BATIMENT C -->
+
+    <noeud num="10"> <!-- Machine à café C -->
+        <latitude>45.423067</latitude>
+        <longitude>4.426197</longitude>
+        <batiment>C</batiment>
+        <liste_POI>
+            <POI>Distributeurs</POI>
+            <POI>Département mathématiques</POI>
+            <POI>Equipe d'analyse numérique</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>4</voisin>
+            <voisin>9</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>4</voisin_PMR>
+            <voisin_PMR>9</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <!-- BATIMENT A -->
+
+    <noeud num="11"> <!-- Toilettes début A -->
+        <latitude>45.423099</latitude>
+        <longitude>4.425645</longitude>
+        <batiment>A</batiment>
+        <liste_POI>
+            <POI>Toilettes</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>5</voisin>
             <voisin>12</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>10</voisin_PMR>
+            <voisin_PMR>5</voisin_PMR>
             <voisin_PMR>12</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="12"> <!-- A8 Toilettes -->
-        <latitude>45.423483</latitude>
-        <longitude>4.425249</longitude>
+    <noeud num="12"> <!-- A16 -->
+        <latitude>45.423133</latitude>
+        <longitude>4.425609</longitude>
         <batiment>A</batiment>
         <liste_POI>
-            <POI>A8</POI>
-            <POI>Toilettes</POI>
+            <POI>A16</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>11</voisin>
@@ -243,65 +252,66 @@
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="13"> <!-- Fin couloir A côté F -->
-        <latitude>45.423507</latitude>
-        <longitude>4.425237</longitude>
+    <noeud num="13"> <!-- A2 -->
+        <latitude>45.423173</latitude>
+        <longitude>4.425565</longitude>
         <batiment>A</batiment>
         <liste_POI>
-            <POI>Fin des salles A</POI>
+            <POI>A2</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>12</voisin>
             <voisin>14</voisin>
-            <voisin>37</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
             <voisin_PMR>12</voisin_PMR>
+            <voisin_PMR>14</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="14"> <!-- A24 -->
-        <latitude>45.423544</latitude>
-        <longitude>4.425316</longitude>
+    <noeud num="14"> <!-- A3 A15 -->
+        <latitude>45.423228</latitude>
+        <longitude>4.425511</longitude>
         <batiment>A</batiment>
         <liste_POI>
-            <POI>A24</POI>
+            <POI>A3</POI>
+            <POI>A15</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>13</voisin>
             <voisin>15</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
+            <voisin_PMR>13</voisin_PMR>
             <voisin_PMR>15</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="15"> <!-- A24 -->
-        <latitude>45.423595</latitude>
-        <longitude>4.425415</longitude>
+    <noeud num="15"> <!-- A4 A14 -->
+        <latitude>45.423284</latitude>
+        <longitude>4.425454</longitude>
         <batiment>A</batiment>
         <liste_POI>
-            <POI>A24</POI>
+            <POI>A4</POI>
+            <POI>A14</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>14</voisin>
             <voisin>16</voisin>
-            <voisin>37</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
             <voisin_PMR>14</voisin_PMR>
             <voisin_PMR>16</voisin_PMR>
-            <voisin_PMR>37</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="16"> <!-- F101 Salle de réunion -->
-        <latitude>45.423650</latitude>
-        <longitude>4.425511</longitude>
-        <batiment>F</batiment>
+    <noeud num="16"> <!-- A5 A13 -->
+        <latitude>45.423332</latitude>
+        <longitude>4.425401</longitude>
+        <batiment>A</batiment>
         <liste_POI>
-            <POI>F101</POI>
-            <POI>Salle de réunion</POI>
+            <POI>A5</POI>
+            <POI>A13</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>15</voisin>
@@ -313,18 +323,16 @@
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="17"> <!-- Fin F côté snack vers BU Toilettes -->
-        <latitude>45.423681</latitude>
-        <longitude>4.425577</longitude>
-        <batiment>F</batiment>
+    <noeud num="17"> <!-- A6 -->
+        <latitude>45.423383</latitude>
+        <longitude>4.425346</longitude>
+        <batiment>A</batiment>
         <liste_POI>
-            <POI>F101</POI>
-            <POI>Toilettes</POI>
+            <POI>A6</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>16</voisin>
             <voisin>18</voisin>
-            <voisin>34</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
             <voisin_PMR>16</voisin_PMR>
@@ -332,13 +340,12 @@
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="18"> <!-- Snack -->
-        <latitude>45.423602</latitude>
-        <longitude>4.425649</longitude>
-        <batiment>D</batiment>
+    <noeud num="18"> <!-- Bureau langues -->
+        <latitude>45.423404</latitude>
+        <longitude>4.425326</longitude>
+        <batiment>A</batiment>
         <liste_POI>
-            <POI>Snack</POI>
-            <POI>Distributeurs</POI>
+            <POI>Bureau des langues</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>17</voisin>
@@ -350,13 +357,12 @@
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="19"> <!-- Salle à manger -->
-        <latitude>45.423545</latitude>
-        <longitude>4.425709</longitude>
-        <batiment>D</batiment>
+    <noeud num="19"> <!-- A7 -->
+        <latitude>45.423431</latitude>
+        <longitude>4.425296</longitude>
+        <batiment>A</batiment>
         <liste_POI>
-            <POI>Salle de repas</POI>
-            <POI>Tables à pique-nique</POI>
+            <POI>A7</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>18</voisin>
@@ -368,13 +374,12 @@
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="20"> <!-- Toilettes -->
-        <latitude>45.423506</latitude>
-        <longitude>4.425750</longitude>
-        <batiment>D</batiment>
+    <noeud num="20"> <!-- Toilettes fin A -->
+        <latitude>45.423461</latitude>
+        <longitude>4.425266</longitude>
+        <batiment>A</batiment>
         <liste_POI>
             <POI>Toilettes</POI>
-            <POI>Tables à pique-nique</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>19</voisin>
@@ -386,105 +391,99 @@
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="21"> <!-- Croisement salle à manger D203-D205 -->
-        <latitude>45.423470</latitude>
-        <longitude>4.425794</longitude>
-        <batiment>D</batiment>
+    <noeud num="21"> <!-- A8 -->
+        <latitude>45.423485</latitude>
+        <longitude>4.425239</longitude>
+        <batiment>A</batiment>
         <liste_POI>
-            <POI>Salle de repas</POI>
-            <POI>Tables à pique-nique</POI>
+            <POI>A8</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>20</voisin>
             <voisin>22</voisin>
-            <voisin>25</voisin>
-            <voisin>82</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
             <voisin_PMR>20</voisin_PMR>
             <voisin_PMR>22</voisin_PMR>
-            <voisin_PMR>25</voisin_PMR>
-            <voisin_PMR>82</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="22"> <!-- D203 -->
-        <latitude>45.423530</latitude>
-        <longitude>4.425884</longitude>
-        <batiment>D</batiment>
+    <noeud num="22"> <!-- Fin couloir A -->
+        <latitude>45.423532</latitude>
+        <longitude>4.425238</longitude>
+        <batiment>A</batiment>
         <liste_POI>
-            <POI>D203</POI>
+            <POI>Fin couloir A sortie vers parrking Nord</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>21</voisin>
             <voisin>23</voisin>
-            <voisin>82</voisin>
+            <voisin>44</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
             <voisin_PMR>21</voisin_PMR>
-            <voisin_PMR>23</voisin_PMR>
-            <voisin_PMR>82</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="23"> <!-- D204 -->
-        <latitude>45.423585</latitude>
-        <longitude>4.425985</longitude>
-        <batiment>D</batiment>
+    <noeud num="23"> <!-- A24 (1) -->
+        <latitude>45.423546</latitude>
+        <longitude>4.425315</longitude>
+        <batiment>A</batiment>
         <liste_POI>
-            <POI>D204</POI>
+            <POI>A24</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>22</voisin>
             <voisin>24</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>22</voisin_PMR>
             <voisin_PMR>24</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="24"> <!-- D205 ascenseur -->
-        <latitude>45.423629</latitude>
-        <longitude>4.426079</longitude>
-        <batiment>D</batiment>
+    <noeud num="24"> <!-- A24 (2) -->
+        <latitude>45.423593</latitude>
+        <longitude>4.425406</longitude>
+        <batiment>A</batiment>
         <liste_POI>
-            <POI>D205</POI>
+            <POI>A24</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>23</voisin>
-            <voisin>83</voisin>
+            <voisin>25</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>23</voisin_PMR>
-            <voisin_PMR>83</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="25"> <!-- D202 -->
-        <latitude>45.423443</latitude>
-        <longitude>4.425819</longitude>
-        <batiment>D</batiment>
+    <noeud num="25"> <!-- Sortie PMR bâtiment A -->
+        <latitude>45.423614</latitude>
+        <longitude>4.425448</longitude>
+        <batiment>A</batiment>
         <liste_POI>
-            <POI>D202</POI>
+            <POI>Sortie PMR bâtiment A</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>21</voisin>
+            <voisin>24</voisin>
             <voisin>26</voisin>
+            <voisin>46</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>21</voisin_PMR>
+            <voisin_PMR>24</voisin_PMR>
             <voisin_PMR>26</voisin_PMR>
+            <voisin_PMR>46</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="26"> <!-- D201 D202 -->
-        <latitude>45.423351</latitude>
-        <longitude>4.425911</longitude>
-        <batiment>D</batiment>
+    <!-- BATIMENT F -->
+
+    <noeud num="26"> <!-- F101 Toilettes (1) -->
+        <latitude>45.423646</latitude>
+        <longitude>4.425505</longitude>
+        <batiment>F</batiment>
         <liste_POI>
-            <POI>D201</POI>
-            <POI>D202</POI>
+            <POI>F101</POI>
+            <POI>Toilettes</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>25</voisin>
@@ -496,66 +495,68 @@
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="27"> <!-- D201 -->
-        <latitude>45.423269</latitude>
-        <longitude>4.426005</longitude>
-        <batiment>D</batiment>
+    <noeud num="27"> <!-- F101 Toilettes (2) intersection -->
+        <latitude>45.423683</latitude>
+        <longitude>4.425578</longitude>
+        <batiment>F</batiment>
         <liste_POI>
-            <POI>D201</POI>
+            <POI>F101</POI>
+            <POI>Toilettes</POI>
+            <POI>Intersection bâtiment F Snack</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>26</voisin>
             <voisin>28</voisin>
+            <voisin>29</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
             <voisin_PMR>26</voisin_PMR>
-            <voisin_PMR>28</voisin_PMR>
+            <voisin_PMR>29</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="28"> <!-- Début D vers Vie Etudiante -->
-        <latitude>45.423226</latitude>
-        <longitude>4.426039</longitude>
-        <batiment>-</batiment>
+    <noeud num="28"> <!-- Début passerelle vers F -->
+        <latitude>45.423703</latitude>
+        <longitude>4.425612</longitude>
+        <batiment>F</batiment>
         <liste_POI>
-            <POI>Intersection bâtiment D et salle de vie étudiante</POI>
+            <POI>Début passerelle F</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>27</voisin>
-            <voisin>29</voisin>
-            <voisin>32</voisin>
-            <voisin>33</voisin>
+            <voisin>39</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>27</voisin_PMR>
-            <voisin_PMR>29</voisin_PMR>
-            <voisin_PMR>32</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="29"> <!-- Vie Etudiante -->
-        <latitude>45.423211</latitude>
-        <longitude>4.426002</longitude>
-        <batiment>-</batiment>
+    <!-- BATIMENT D -->
+
+    <noeud num="29"> <!-- Snack -->
+        <latitude>45.423610</latitude>
+        <longitude>4.425647</longitude>
+        <batiment>D</batiment>
         <liste_POI>
-            <POI>Salle de vie étudiante</POI>
+            <POI>Snack</POI>
+            <POI>Distributeurs</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>28</voisin>
+            <voisin>27</voisin>
             <voisin>30</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>28</voisin_PMR>
+            <voisin_PMR>27</voisin_PMR>
             <voisin_PMR>30</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="30"> <!-- Bureau C2I... -->
-        <latitude>45.423155</latitude>
-        <longitude>4.425891</longitude>
-        <batiment>-</batiment>
+    <noeud num="30"> <!-- Tables à pique nique Salle à manger -->
+        <latitude>45.423545</latitude>
+        <longitude>4.425715</longitude>
+        <batiment>D</batiment>
         <liste_POI>
-            <POI>Bureau C2I</POI>
+            <POI>Salle à manger D</POI>
+            <POI>Tables à pique-nique</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>29</voisin>
@@ -567,939 +568,694 @@
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="31"> <!-- ASTRE -->
-        <latitude>45.423123</latitude>
-        <longitude>4.425832</longitude>
-        <batiment>-</batiment>
+    <noeud num="31"> <!-- Toilettes -->
+        <latitude>45.423506</latitude>
+        <longitude>4.425749</longitude>
+        <batiment>D</batiment>
         <liste_POI>
-            <POI>ASTRE</POI>
+            <POI>Toilettes</POI>
+            <POI>Tables à pique-nique</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>3</voisin>
             <voisin>30</voisin>
+            <voisin>32</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
             <voisin_PMR>30</voisin_PMR>
+            <voisin_PMR>32</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="32"> <!-- Machine à café vers C -->
-        <latitude>45.423061</latitude>
-        <longitude>4.426199</longitude>
-        <batiment>C</batiment>
+    <noeud num="32"> <!-- Salle à manger couloir D -->
+        <latitude>45.423472</latitude>
+        <longitude>4.425792</longitude>
+        <batiment>D</batiment>
         <liste_POI>
-            <POI>Distributeurs</POI>
-            <POI>Intersection hall d'entrée bâtiment C</POI>
+            <POI>Salle à manger</POI>
+            <POI>Tables à pique-nique</POI>
+            <POI>Intersectin couloir D</POI>
+            <POI>D202</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>2</voisin>
-            <voisin>28</voisin>
+            <voisin>31</voisin>
+            <voisin>33</voisin>
+            <voisin>35</voisin>
+            <voisin>38</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>2</voisin_PMR>
+            <voisin_PMR>31</voisin_PMR>
+            <voisin_PMR>33</voisin_PMR>
+            <voisin_PMR>35</voisin_PMR>
+            <voisin_PMR>38</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="33"> <!-- Dehors côté début de D -->
-        <latitude>45.423322</latitude>
-        <longitude>4.426271</longitude>
-        <batiment>-</batiment>
+    <noeud num="33"> <!-- D202 D201 -->
+        <latitude>45.423354</latitude>
+        <longitude>4.425911</longitude>
+        <batiment>D</batiment>
         <liste_POI>
-            <POI>Dehors sortie après salle de vie étudiante</POI>
+            <POI>D201</POI>
+            <POI>D202</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>28</voisin>
-            <voisin>40</voisin>
-            <voisin>66</voisin>
-            <voisin>78</voisin>
+            <voisin>32</voisin>
+            <voisin>34</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>40</voisin_PMR>
-            <voisin_PMR>66</voisin_PMR>
-            <voisin_PMR>78</voisin_PMR>
+            <voisin_PMR>32</voisin_PMR>
+            <voisin_PMR>34</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="34"> <!-- Escaliers vers F101 pour BU et Bâtiment H -->
-        <latitude>45.423694</latitude>
-        <longitude>4.425613</longitude>
-        <batiment>F</batiment>
+    <noeud num="34"> <!-- D201 -->
+        <latitude>45.423256</latitude>
+        <longitude>4.426004</longitude>
+        <batiment>D</batiment>
         <liste_POI>
-            <POI>Intersection passerelle vers bâtiments H F et BU</POI>
+            <POI>D201</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>17</voisin>
-            <voisin>46</voisin>
-            <voisin>81</voisin>
+            <voisin>9</voisin>
+            <voisin>33</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>17</voisin_PMR>
+            <voisin_PMR>9</voisin_PMR>
+            <voisin_PMR>33</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="35"> <!-- En allant vers BU -->
-        <latitude>45.423927</latitude>
-        <longitude>4.425686</longitude>
-        <batiment>-</batiment>
+    <noeud num="35"> <!-- D203 -->
+        <latitude>45.423540</latitude>
+        <longitude>4.425886</longitude>
+        <batiment>D</batiment>
         <liste_POI>
-            <POI>Chemin vers la BU</POI>
+            <POI>D203</POI>
         </liste_POI>
         <liste_voisins>
+            <voisin>32</voisin>
             <voisin>36</voisin>
-            <voisin>81</voisin>
+            <voisin>38</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
+            <voisin_PMR>32</voisin_PMR>
+            <voisin_PMR>36</voisin_PMR>
+            <voisin_PMR>38</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="36"> <!-- BU -->
-        <latitude>45.423904</latitude>
-        <longitude>4.425993</longitude>
-        <batiment>-</batiment>
+    <noeud num="36"> <!-- D204 -->
+        <latitude>45.423587</latitude>
+        <longitude>4.425981</longitude>
+        <batiment>D</batiment>
         <liste_POI>
-            <POI>Bibliothèque universitaire</POI>
+            <POI>D204</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>35</voisin>
+            <voisin>37</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>35</voisin_PMR>
+            <voisin_PMR>37</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="37"> <!-- D205 -->
+        <latitude>45.423631</latitude>
+        <longitude>4.426071</longitude>
+        <batiment>D</batiment>
+        <liste_POI>
+            <POI>D205</POI>
+            <POI>Ascenseur</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>36</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>36</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="38"> <!-- Escalier D niveau 2 -->
+        <latitude>45.423523</latitude>
+        <longitude>4.425905</longitude>
+        <batiment>D</batiment>
+        <liste_POI>
+            <POI>Escalier D niveau 2</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>32</voisin>
+            <voisin>35</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>32</voisin_PMR>
+            <voisin_PMR>35</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <!-- EN ALLANT VERS BU -->
+
+    <noeud num="39"> <!-- En haut chemin vers BU -->
+        <latitude>45.423737</latitude>
+        <longitude>4.425674</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Début chemin vers BU</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>28</voisin>
             <voisin>40</voisin>
-            <voisin>43</voisin>
-            <voisin>80</voisin>
+            <voisin>41</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
             <voisin_PMR>40</voisin_PMR>
-            <voisin_PMR>43</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="37"> <!-- Place des fumeurs fin A -->
-        <latitude>45.423593</latitude>
-        <longitude>4.425145</longitude>
+    <noeud num="40"> <!-- Tables à pique nique dehors D -->
+        <latitude>45.423659</latitude>
+        <longitude>4.425740</longitude>
         <batiment>-</batiment>
         <liste_POI>
-            <POI>Petite place en sortant du bâtiment A vers H J K L</POI>
+            <POI>Tables à pique nique</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>13</voisin>
-            <voisin>15</voisin>
-            <voisin>38</voisin>
-            <voisin>52</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>15</voisin_PMR>
-            <voisin_PMR>38</voisin_PMR>
-            <voisin_PMR>52</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="38"> <!-- En bas des escaliers direction H J K L -->
-        <latitude>45.423746</latitude>
-        <longitude>4.424981</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>En bas des escaliers après bâtiment A</POI>
-            <POI>Parking Nord</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>37</voisin>
             <voisin>39</voisin>
-            <voisin>43</voisin>
-            <voisin>44</voisin>
-            <voisin>45</voisin>
-            <voisin>49</voisin>
-            <voisin>76</voisin>
-            <voisin>77</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
             <voisin_PMR>39</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="41"> <!-- En allant vers BU -->
+        <latitude>45.423916</latitude>
+        <longitude>4.425651</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Chemin vers BU</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>39</voisin>
+            <voisin>42</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="42"> <!-- Devant BU -->
+        <latitude>45.423878</latitude>
+        <longitude>4.426025</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Devant BU</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>43</voisin>
+            <voisin>101</voisin>
+            <voisin>102</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
             <voisin_PMR>43</voisin_PMR>
-            <voisin_PMR>44</voisin_PMR>
-            <voisin_PMR>45</voisin_PMR>
-            <voisin_PMR>49</voisin_PMR>
-            <voisin_PMR>76</voisin_PMR>
-            <voisin_PMR>77</voisin_PMR>
+            <voisin_PMR>101</voisin_PMR>
+            <voisin_PMR>102</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="39"> <!-- F101 -->
-        <latitude>45.423739</latitude>
-        <longitude>4.425144</longitude>
-        <batiment>F</batiment>
+    <noeud num="43"> <!-- BU -->
+        <latitude>45.423919</latitude>
+        <longitude>4.426113</longitude>
+        <batiment>BU</batiment>
         <liste_POI>
-            <POI>F101</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>38</voisin>
-            <voisin>86</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>38</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="40"> <!-- Derrière le campus côté Bâtiment D -->
-        <latitude>45.423432</latitude>
-        <longitude>4.426484</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Intersection derrière bâtiment D</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>33</voisin>
-            <voisin>36</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>33</voisin_PMR>
-            <voisin_PMR>36</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="41"> <!-- En allant vers Resto'U -->
-        <latitude>45.422482</latitude>
-        <longitude>4.427030</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Intersection sortie Resto'U montée vers Parking Sud</POI>
+            <POI>BU</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>42</voisin>
-            <voisin>66</voisin>
-            <voisin>79</voisin>
-            <voisin>88</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>33</voisin_PMR>
             <voisin_PMR>42</voisin_PMR>
-            <voisin_PMR>66</voisin_PMR>
-            <voisin_PMR>88</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="42"> <!-- Devant Resto'U -->
-        <latitude>45.422252</latitude>
-        <longitude>4.427290</longitude>
+    <!-- DEHORS PLACE DES FUMEURS -->
+
+    <noeud num="44"> <!-- Place des fumeurs fin A -->
+        <latitude>45.423578</latitude>
+        <longitude>4.425196</longitude>
         <batiment>-</batiment>
         <liste_POI>
-            <POI>Devant entrée Resto'U</POI>
+            <POI>Place des fumeurs</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>41</voisin>
-            <voisin>63</voisin>
-            <voisin>87</voisin>
+            <voisin>22</voisin>
+            <voisin>45</voisin>
+            <voisin>78</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>41</voisin_PMR>
-            <voisin_PMR>63</voisin_PMR>
-            <voisin_PMR>87</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="43"> <!-- Derrière le campus côté Bâtiment H -->
-        <latitude>45.424130</latitude>
-        <longitude>4.425741</longitude>
+    <noeud num="45"> <!-- Milieu des escaliers vers H -->
+        <latitude>45.423626</latitude>
+        <longitude>4.425146</longitude>
         <batiment>-</batiment>
         <liste_POI>
-            <POI>Intersection parking Est et Nord et BU</POI>
-            <POI>Parking Est</POI>
+            <POI>Milieu des escaliers vers parking Nord</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>36</voisin>
-            <voisin>38</voisin>
-            <voisin>61</voisin>
-            <voisin>72</voisin>
+            <voisin>44</voisin>
+            <voisin>47</voisin>
+            <voisin>48</voisin>
+            <voisin>51</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>36</voisin_PMR>
-            <voisin_PMR>38</voisin_PMR>
-            <voisin_PMR>61</voisin_PMR>
-            <voisin_PMR>72</voisin_PMR>
+            <voisin_PMR>47</voisin_PMR>
+            <voisin_PMR>48</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="44"> <!-- Devant DSI -->
-        <latitude>45.423896</latitude>
-        <longitude>4.424955</longitude>
+    <noeud num="46"> <!-- Chemin PMR (1) -->
+        <latitude>45.423634</latitude>
+        <longitude>4.425417</longitude>
         <batiment>-</batiment>
         <liste_POI>
-            <POI>Entrée DSI</POI>
-            <POI>Parking Nord</POI>
+            <POI>Chemin PMR F101 parking Nord</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>38</voisin>
+            <voisin>25</voisin>
+            <voisin>47</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>25</voisin_PMR>
+            <voisin_PMR>47</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="47"> <!-- Chemin PMR (2) -->
+        <latitude>45.423608</latitude>
+        <longitude>4.425321</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Chemin PMR F101 parking Nord</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>45</voisin>
+            <voisin>46</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>45</voisin_PMR>
+            <voisin_PMR>46</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="48"> <!-- Chemin PMR (3) -->
+        <latitude>45.423581</latitude>
+        <longitude>4.424885</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Chemin PMR F101 parking Nord</POI>
+        </liste_POI>
+        <liste_voisins>
             <voisin>45</voisin>
             <voisin>49</voisin>
-            <voisin>73</voisin>
-            <voisin>76</voisin>
-            <voisin>77</voisin>
+            <voisin>78</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>38</voisin_PMR>
             <voisin_PMR>45</voisin_PMR>
             <voisin_PMR>49</voisin_PMR>
-            <voisin_PMR>73</voisin_PMR>
-            <voisin_PMR>76</voisin_PMR>
-            <voisin_PMR>77</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="45"> <!-- Place devant H et J -->
-        <latitude>45.424082</latitude>
-        <longitude>4.424762</longitude>
+    <noeud num="49"> <!-- Chemin PMR (4) -->
+        <latitude>45.423646</latitude>
+        <longitude>4.424939</longitude>
         <batiment>-</batiment>
         <liste_POI>
-            <POI>Petite place devant bâtiments H et J</POI>
+            <POI>Chemin PMR F101 parking Nord</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>48</voisin>
+            <voisin>50</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin>48</voisin>
+            <voisin>50</voisin>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="50"> <!-- Chemin PMR (5) -->
+        <latitude>45.423638</latitude>
+        <longitude>4.424805</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Chemin PMR F101 parking Nord</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>49</voisin>
+            <voisin>54</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>49</voisin_PMR>
+            <voisin_PMR>54</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="51"> <!-- En bas des escaliers vers parking Nord -->
+        <latitude>45.423725</latitude>
+        <longitude>4.425037</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>En bas des escaliers vers parking Nord</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>45</voisin>
+            <voisin>52</voisin>
+            <voisin>53</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>52</voisin_PMR>
+            <voisin_PMR>53</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="52"> <!-- F101 -->
+        <latitude>45.423734</latitude>
+        <longitude>4.425146</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>F101</POI>
+            <POI>F001</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>51</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>51</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <!-- PARKING NORD -->
+
+    <noeud num="53"> <!-- Début parking Nord -->
+        <latitude>45.423758</latitude>
+        <longitude>4.425001</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
             <POI>Parking Nord</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>38</voisin>
-            <voisin>44</voisin>
-            <voisin>49</voisin>
+            <voisin>54</voisin>
             <voisin>60</voisin>
-            <voisin>74</voisin>
-            <voisin>75</voisin>
-            <voisin>76</voisin>
-            <voisin>77</voisin>
+            <voisin>102</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>38</voisin_PMR>
-            <voisin_PMR>44</voisin_PMR>
-            <voisin_PMR>49</voisin_PMR>
+            <voisin_PMR>54</voisin_PMR>
             <voisin_PMR>60</voisin_PMR>
-            <voisin_PMR>74</voisin_PMR>
-            <voisin_PMR>75</voisin_PMR>
-            <voisin_PMR>76</voisin_PMR>
-            <voisin_PMR>77</voisin_PMR>
+            <voisin_PMR>102</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="46"> <!-- Dans batiment H -->
-        <latitude>45.424199</latitude>
-        <longitude>4.425079</longitude>
-        <batiment>H</batiment>
+    <noeud num="54"> <!-- Parking Nord -->
+        <latitude>45.423666</latitude>
+        <longitude>4.424787</longitude>
+        <batiment>-</batiment>
         <liste_POI>
-            <POI>Sortie bâtiment H</POI>
-            <POI>Intersection salles H200 et passerelle vers F</POI>
+            <POI>Parking Nord</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>34</voisin>
-            <voisin>71</voisin>
-            <voisin>74</voisin>
+            <voisin>50</voisin>
+            <voisin>53</voisin>
+            <voisin>55</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>71</voisin_PMR>
-            <voisin_PMR>74</voisin_PMR>
+            <voisin_PMR>50</voisin_PMR>
+            <voisin_PMR>53</voisin_PMR>
+            <voisin_PMR>55</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="47"> <!-- Dans batiment J -->
-        <latitude>45.424280</latitude>
-        <longitude>4.424802</longitude>
-        <batiment>J</batiment>
+    <noeud num="55"> <!-- Parking Nord -->
+        <latitude>45.423907</latitude>
+        <longitude>4.424542</longitude>
+        <batiment>-</batiment>
         <liste_POI>
-            <POI>Sortie bâtiment J</POI>
+            <POI>Parking Nord</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>75</voisin>
+            <voisin>54</voisin>
+            <voisin>56</voisin>
+            <voisin>57</voisin>
+            <voisin>58</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>75</voisin_PMR>
+            <voisin_PMR>54</voisin_PMR>
+            <voisin_PMR>56</voisin_PMR>
+            <voisin_PMR>57</voisin_PMR>
+            <voisin_PMR>58</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="48"> <!-- Entrée K -->
-        <latitude>45.423961</latitude>
-        <longitude>4.424314</longitude>
-        <batiment>K</batiment>
-        <liste_POI>
-            <POI>Entrée bâtiment K</POI> <!-- A CHANGER -->
-        </liste_POI>
-        <liste_voisins>
-            <voisin>76</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>76</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="49"> <!-- Portail vers Bâtiment K -->
-        <latitude>45.423824</latitude>
-        <longitude>4.424332</longitude>
+    <noeud num="56"> <!-- Portail Nord -->
+        <latitude>45.423833</latitude>
+        <longitude>4.424337</longitude>
         <batiment>-</batiment>
         <liste_POI>
             <POI>Portail Nord</POI>
             <POI>Parking Nord</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>38</voisin>
-            <voisin>44</voisin>
-            <voisin>45</voisin>
-            <voisin>52</voisin>
-            <voisin>60</voisin>
-            <voisin>69</voisin>
-            <voisin>74</voisin>
-            <voisin>75</voisin>
-            <voisin>76</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>38</voisin_PMR>
-            <voisin_PMR>44</voisin_PMR>
-            <voisin_PMR>45</voisin_PMR>
-            <voisin_PMR>60</voisin_PMR>
-            <voisin_PMR>69</voisin_PMR>
-            <voisin_PMR>74</voisin_PMR>
-            <voisin_PMR>75</voisin_PMR>
-            <voisin_PMR>76</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="50"> <!-- Portail principal -->
-        <latitude>45.422774</latitude>
-        <longitude>4.425412</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Portail principal</POI>
-            <POI>Arrêt de bus 11 et 19</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>51</voisin>
             <voisin>55</voisin>
-            <voisin>70</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>55</voisin_PMR>
-            <voisin_PMR>70</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="51"> <!-- Place devant l'entrée principale -->
-        <latitude>45.422827</latitude>
-        <longitude>4.425545</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Place devant l'entrée principale</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>0</voisin>
-            <voisin>50</voisin>
-            <voisin>52</voisin>
-            <voisin>53</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>0</voisin_PMR>
-            <voisin_PMR>52</voisin_PMR>
-            <voisin_PMR>53</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="52"> <!-- Coin pique-nique vers fin Bâtiment A -->
-        <latitude>45.423442</latitude>
-        <longitude>4.425034</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Tables à pique-nique</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>37</voisin>
-            <voisin>49</voisin>
-            <voisin>51</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>37</voisin_PMR>
-            <voisin_PMR>49</voisin_PMR>
-            <voisin_PMR>51</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="53"> <!-- Début parking côté Scolarité -->
-        <latitude>45.422644</latitude>
-        <longitude>4.425761</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Parking Sud</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>51</voisin>
-            <voisin>54</voisin>
-            <voisin>55</voisin>
-            <voisin>56</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>51</voisin_PMR>
-            <voisin_PMR>54</voisin_PMR>
-            <voisin_PMR>55</voisin_PMR>
-            <voisin_PMR>56</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="54"> <!-- Devant descente vers Resto'U parking -->
-        <latitude>45.422275</latitude>
-        <longitude>4.426635</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Intersection Parking Sud descente Resto'U</POI>
-            <POI>Parking Sud</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>53</voisin>
-            <voisin>55</voisin>
-            <voisin>56</voisin>
-            <voisin>79</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>53</voisin_PMR>
-            <voisin_PMR>55</voisin_PMR>
-            <voisin_PMR>56</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="55"> <!-- Entrée fin parking côté City stade -->
-        <latitude>45.421820</latitude>
-        <longitude>4.426541</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Portail Sud</POI>
-            <POI>Parking Sud</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>50</voisin>
-            <voisin>53</voisin>
-            <voisin>54</voisin>
-            <voisin>56</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>50</voisin_PMR>
-            <voisin_PMR>53</voisin_PMR>
-            <voisin_PMR>54</voisin_PMR>
-            <voisin_PMR>56</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="56"> <!-- Entrée scolarité depuis parking -->
-        <latitude>45.422771</latitude>
-        <longitude>4.425922</longitude>
-        <batiment>B</batiment>
-        <liste_POI>
-            <POI>Scolarité</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>1</voisin>
-            <voisin>53</voisin>
-            <voisin>54</voisin>
-            <voisin>55</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>1</voisin_PMR>
-            <voisin_PMR>53</voisin_PMR>
-            <voisin_PMR>54</voisin_PMR>
-            <voisin_PMR>55</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="57"> <!-- Coin pique-nique vers le Snack -->
-        <latitude>45.423640</latitude>
-        <longitude>4.425716</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Tables à pique-nique</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>81</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="58"> <!-- H202 (Salle serverurs) H206 Toilettes -->
-        <latitude>45.424265</latitude>
-        <longitude>4.425121</longitude>
-        <batiment>H</batiment>
-        <liste_POI>
-            <POI>H202</POI>
-            <POI>H206</POI>
-            <POI>Toilettes</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>59</voisin>
             <voisin>71</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>59</voisin_PMR>
+            <voisin_PMR>55</voisin_PMR>
             <voisin_PMR>71</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="59"> <!-- H203 H204 H205 (Salle libre accès) -->
-        <latitude>45.424355</latitude>
-        <longitude>4.425282</longitude>
-        <batiment>H</batiment>
+    <noeud num="57"> <!-- Devant bâtiment K -->
+        <latitude>45.423961</latitude>
+        <longitude>4.424358</longitude>
+        <batiment>-</batiment>
         <liste_POI>
-            <POI>H203</POI>
-            <POI>H204</POI>
-            <POI>H205</POI>
+            <POI>Devant bâtiment K</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>55</voisin>
+            <voisin>107</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="58"> <!-- Parking Nord -->
+        <latitude>45.423989</latitude>
+        <longitude>4.424693</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Parking Nord</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>55</voisin>
+            <voisin>59</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>55</voisin_PMR>
+            <voisin_PMR>59</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="59"> <!-- Parking Nord -->
+        <latitude>45.424025</latitude>
+        <longitude>4.424775</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Parking Nord</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>58</voisin>
+            <voisin>60</voisin>
             <voisin>62</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>58</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="60"> <!-- Passage à côté de H -->
-        <latitude>45.424131</latitude>
-        <longitude>4.425094</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Passage à côté du bâtiment H</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>45</voisin>
-            <voisin>49</voisin>
-            <voisin>72</voisin>
-            <voisin>74</voisin>
-            <voisin>76</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>45</voisin_PMR>
-            <voisin_PMR>49</voisin_PMR>
-            <voisin_PMR>74</voisin_PMR>
-            <voisin_PMR>76</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="61"> <!-- Parking après la BU -->
-        <latitude>45.424337</latitude>
-        <longitude>4.426141</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Parking Est</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>43</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>43</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="62"> <!-- Sortie derrière H -->
-        <latitude>45.424399</latitude>
-        <longitude>4.425364</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Sortie derrière bâtiment H</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>59</voisin>
-            <voisin>72</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>72</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="63"> <!-- En allant vers la cafette -->
-        <latitude>45.422237</latitude>
-        <longitude>4.427421</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>En allant vers la cafet'U</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>42</voisin>
-            <voisin>64</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>42</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="64"> <!-- Cafet'U -->
-        <latitude>45.422422</latitude>
-        <longitude>4.427771</longitude>
-        <batiment>Cafet'U</batiment>
-        <liste_POI>
-            <POI>Entrée Cafet'U</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>63</voisin>
-            <voisin>89</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>89</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="65"> <!-- Batiment M -->
-        <latitude>45.423235</latitude>
-        <longitude>4.426413</longitude>
-        <batiment>M</batiment>
-        <liste_POI>
-            <POI>Sortie bâtiment M</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>78</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>78</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="66"> <!-- Devant bâtiment M -->
-        <latitude>45.423240</latitude>
-        <longitude>4.426328</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Vers bâtiment M</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>33</voisin>
-            <voisin>41</voisin>
-            <voisin>78</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>33</voisin_PMR>
-            <voisin_PMR>41</voisin_PMR>
-            <voisin_PMR>78</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="67"> <!-- Dans batiment L -->
-        <latitude>45.424591</latitude>
-        <longitude>4.423820</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Sortie bâtiment L</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>77</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>77</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="68"> <!-- Dans batiment C vers Resto'U -->
-        <latitude>45.422471</latitude>
-        <longitude>4.426847</longitude>
-        <batiment>C</batiment>
-        <liste_POI>
-            <POI>Sortie bâtiment C vers Resto'U</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>79</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>79</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="69"> <!-- Sur la route 1 -->
-        <latitude>45.423166</latitude>
-        <longitude>4.424994</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Montée rue du Dr. Paul Michelon</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>49</voisin>
             <voisin>70</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>49</voisin_PMR>
+            <voisin_PMR>58</voisin_PMR>
+            <voisin_PMR>60</voisin_PMR>
+            <voisin_PMR>62</voisin_PMR>
             <voisin_PMR>70</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="70"> <!-- Sur la route 2 -->
-        <latitude>45.422863</latitude>
-        <longitude>4.425151</longitude>
+    <noeud num="60"> <!-- Devant DSI -->
+        <latitude>45.423887</latitude>
+        <longitude>4.424921</longitude>
         <batiment>-</batiment>
         <liste_POI>
-            <POI>Jardin Walt Disney</POI>
-            <POI>Arrêt de bus 4 et 9</POI>
+            <POI>Devant DSI</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>50</voisin>
-            <voisin>69</voisin>
+            <voisin>53</voisin>
+            <voisin>59</voisin>
+            <voisin>61</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>50</voisin_PMR>
-            <voisin_PMR>69</voisin_PMR>
+            <voisin_PMR>53</voisin_PMR>
+            <voisin_PMR>59</voisin_PMR>
+            <voisin_PMR>61</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="71"> <!-- Distributeurs batiment H -->
-        <latitude>45.424229</latitude>
-        <longitude>4.425047</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Distributeurs</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>46</voisin>
-            <voisin>58</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>46</voisin_PMR>
-            <voisin_PMR>58</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="72"> <!-- Entree derriere H, vers BU et en dessous de passage H -->
-        <latitude>45.424313</latitude>
-        <longitude>4.425478</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Parking Est vers sortie arrière bâtiment H</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>43</voisin>
-            <voisin>60</voisin>
-            <voisin>62</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>43</voisin_PMR>
-            <voisin_PMR>62</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="73"> <!-- Dans la DSI -->
-        <latitude>45.423928</latitude>
-        <longitude>4.425015</longitude>
+    <noeud num="61"> <!-- DSI -->
+        <latitude>45.423926</latitude>
+        <longitude>4.425006</longitude>
         <batiment>DSI</batiment>
         <liste_POI>
-            <POI>Sortie DSI</POI>
+            <POI>DSI</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>44</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>44</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="74"> <!-- Devant batiment H -->
-        <latitude>45.424164</latitude>
-        <longitude>4.425027</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Entrée bâtiment H</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>45</voisin>
-            <voisin>46</voisin>
             <voisin>60</voisin>
-            <voisin>75</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>45</voisin_PMR>
-            <voisin_PMR>46</voisin_PMR>
-            <voisin_PMR>60</voisin_PMR>
-            <voisin_PMR>75</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="75"> <!-- Devant batiment J -->
-        <latitude>45.424253</latitude>
-        <longitude>4.424833</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Entrée bâtiment J</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>45</voisin>
-            <voisin>47</voisin>
-            <voisin>49</voisin>
-            <voisin>74</voisin>
-            <voisin>76</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>45</voisin_PMR>
-            <voisin_PMR>49</voisin_PMR>
-            <voisin_PMR>47</voisin_PMR>
-            <voisin_PMR>74</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="76"> <!-- Devant batiment L -->
-        <latitude>45.423941</latitude>
-        <longitude>4.424347</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Entrée bâtiment K</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>38</voisin>
-            <voisin>44</voisin>
-            <voisin>45</voisin>
-            <voisin>48</voisin>
-            <voisin>49</voisin>
-            <voisin>52</voisin>
             <voisin>60</voisin>
-            <voisin>75</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>38</voisin_PMR>
-            <voisin_PMR>44</voisin_PMR>
-            <voisin_PMR>45</voisin_PMR>
-            <voisin_PMR>48</voisin_PMR>
-            <voisin_PMR>49</voisin_PMR>
-            <voisin_PMR>60</voisin_PMR>
-            <voisin_PMR>75</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="77"> <!-- Devant batiment L -->
-        <latitude>45.424565</latitude>
-        <longitude>4.423852</longitude>
+    <noeud num="62"> <!-- PLace devant H et J -->
+        <latitude>45.424143</latitude>
+        <longitude>4.424891</longitude>
         <batiment>-</batiment>
         <liste_POI>
-            <POI>Entrée bâtiment L</POI>
+            <POI>PLace devant bâtiments H et J</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>38</voisin>
-            <voisin>44</voisin>
-            <voisin>45</voisin>
-            <voisin>67</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>38</voisin_PMR>
-            <voisin_PMR>44</voisin_PMR>
-            <voisin_PMR>45</voisin_PMR>
-            <voisin_PMR>67</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="78"> <!-- Devant batiment M 2 -->
-        <latitude>45.423258</latitude>
-        <longitude>4.426388</longitude>
-        <batiment>-</batiment>
-        <liste_POI>
-            <POI>Entrée bâtiment M</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>33</voisin>
+            <voisin>59</voisin>
+            <voisin>63</voisin>
             <voisin>65</voisin>
-            <voisin>66</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>33</voisin_PMR>
+            <voisin_PMR>59</voisin_PMR>
+            <voisin_PMR>63</voisin_PMR>
             <voisin_PMR>65</voisin_PMR>
-            <voisin_PMR>66</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="79"> <!-- Devant batiment C vers Resto'U -->
-        <latitude>45.422408</latitude>
-        <longitude>4.426895</longitude>
+    <noeud num="63"> <!-- Devant bâtiment H -->
+        <latitude>45.424166</latitude>
+        <longitude>4.425010</longitude>
         <batiment>-</batiment>
         <liste_POI>
-            <POI>Entrée bâtiment C vers Resto'U</POI>
+            <POI>Devant bâtiment H</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>41</voisin>
-            <voisin>54</voisin>
+            <voisin>62</voisin>
+            <voisin>65</voisin>
+            <voisin>116</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>62</voisin_PMR>
+            <voisin_PMR>65</voisin_PMR>
+            <voisin_PMR>116</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="64"> <!-- Devant bâtiment J -->
+        <latitude>45.424247</latitude>
+        <longitude>4.424803</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Devant bâtiment J</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>62</voisin>
+            <voisin>125</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>62</voisin_PMR>
+            <voisin_PMR>125</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="65"> <!-- Passage vers H -->
+        <latitude>45.424119</latitude>
+        <longitude>4.425061</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Passage à côté de H</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>62</voisin>
+            <voisin>63</voisin>
+            <voisin>104</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin>62</voisin>
+            <voisin>63</voisin>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="66"> <!-- Parking Nord -->
+        <latitude>45.424286</latitude>
+        <longitude>4.424194</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Parking Nord</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>55</voisin>
+            <voisin>67</voisin>
+            <voisin>68</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin>55</voisin>
+            <voisin>67</voisin>
+            <voisin>68</voisin>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="67"> <!-- Devant bâtiment K derière -->
+        <latitude>45.424244</latitude>
+        <longitude>4.424117</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Devant bâtiment K</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>66</voisin>
+            <voisin>114</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>66</voisin_PMR>
+            <voisin_PMR>114</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="68"> <!-- Parking Nord -->
+        <latitude>45.424579</latitude>
+        <longitude>4.423904</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Parking Nord</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>66</voisin>
+            <voisin>69</voisin>
+            <voisin>70</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>66</voisin_PMR>
+            <voisin_PMR>69</voisin_PMR>
+            <voisin_PMR>70</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="69"> <!-- Devant bâtiment L -->
+        <latitude>45.424550</latitude>
+        <longitude>4.423841</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Devant bâtiment L</POI>
+        </liste_POI>
+        <liste_voisins>
             <voisin>68</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
@@ -1507,166 +1263,1201 @@
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="80"> <!-- Dans BU -->
-        <latitude>45.423955</latitude>
-        <longitude>4.426080</longitude>
-        <batiment>BU</batiment>
-        <liste_POI>
-            <POI>Sortie BU</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>36</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <noeud num="81"> <!-- En sortant batiment F-->
-        <latitude>45.423723</latitude>
-        <longitude>4.425682</longitude>
+    <noeud num="70"> <!-- Paking Nord -->
+        <latitude>45.424681</latitude>
+        <longitude>4.424097</longitude>
         <batiment>-</batiment>
         <liste_POI>
-            <POI>En sortant bâtiment F vers BU</POI>
+            <POI>Parking Nord</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>34</voisin>
-            <voisin>35</voisin>
-            <voisin>57</voisin>
+            <voisin>59</voisin>
+            <voisin>68</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
+            <voisin>59</voisin>
+            <voisin>68</voisin>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="82"> <!-- Devant escalier batiment D-->
-        <latitude>45.423515</latitude>
-        <longitude>4.425907</longitude>
-        <batiment>D</batiment>
+    <!-- RUE PAUL MICHELON -->
+
+    <noeud num="71"> <!-- Rue Paul Michelon -->
+        <latitude>45.423814</latitude>
+        <longitude>4.424301</longitude>
+        <batiment>-</batiment>
         <liste_POI>
-            <POI>En haut escalier bâtiment D</POI>
-            <POI>D203</POI>
+            <POI>Rue du Dr. Paul Michelon</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>21</voisin>
-            <voisin>22</voisin>
+            <voisin>56</voisin>
+            <voisin>72</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>56</voisin_PMR>
+            <voisin_PMR>72</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="72"> <!-- Rue Paul Michelon -->
+        <latitude>45.423163</latitude>
+        <longitude>4.424982</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Rue du Dr. Paul Michelon</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>71</voisin>
+            <voisin>73</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin>71</voisin>
+            <voisin>73</voisin>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="73"> <!-- Rue Paul Michelon -->
+        <latitude>45.422854</latitude>
+        <longitude>4.425149</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Rue du Dr. Paul Michelon</POI>
+            <POI>Arrêt de bus 4 et 9</POI>
+            <POI>Jardin Walt Disney</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>72</voisin>
+            <voisin>74</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin>72</voisin>
+            <voisin>74</voisin>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="74"> <!-- Portail Principal -->
+        <latitude>45.422796</latitude>
+        <longitude>4.425362</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Rue du Dr. Paul Michelon</POI>
+            <POI>Portail principal</POI>
+            <POI>Arrêt de bus 11 et 19</POI>
+            <POI>Jardin Walt Disney</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>73</voisin>
+            <voisin>75</voisin>
+            <voisin>79</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>73</voisin_PMR>
+            <voisin_PMR>75</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="75"> <!-- Rue Paul Michelon -->
+        <latitude>45.421811</latitude>
+        <longitude>4.426505</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Rue du Dr. Paul Michelon</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>74</voisin>
+            <voisin>76</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>74</voisin_PMR>
+            <voisin_PMR>76</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="76"> <!-- Portail Sud -->
+        <latitude>45.421823</latitude>
+        <longitude>4.426532</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Portail Sud</POI>
+            <POI>Parking Sud</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>75</voisin>
+            <voisin>84</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>75</voisin_PMR>
+            <voisin_PMR>84</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <!-- DEVANT ENTREE PRINCIPALE -->
+
+    <noeud num="77"> <!-- Place principale -->
+        <latitude>45.422884</latitude>
+        <longitude>4.425578</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Place devant l'entrée principale</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>0</voisin>
+            <voisin>78</voisin>
+            <voisin>79</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>0</voisin_PMR>
+            <voisin_PMR>78</voisin_PMR>
+            <voisin_PMR>79</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="78"> <!-- Tables à pique nique -->
+        <latitude>45.423471</latitude>
+        <longitude>4.425010</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Tables à pique-nique</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>44</voisin>
+            <voisin>48</voisin>
+            <voisin>77</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin>44</voisin>
+            <voisin>77</voisin>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="79"> <!-- En bas des escaliers entrée principale -->
+        <latitude>45.422856</latitude>
+        <longitude>4.425497</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Place devant l'entrée principale</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>74</voisin>
+            <voisin>77</voisin>
+            <voisin>80</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>77</voisin_PMR>
+            <voisin_PMR>80</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="80"> <!-- Parking Sud -->
+        <latitude>45.422660</latitude>
+        <longitude>4.425751</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Parking Sud</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>79</voisin>
+            <voisin>81</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>79</voisin_PMR>
+            <voisin_PMR>81</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="81"> <!-- Parking Sud -->
+        <latitude>45.422659</latitude>
+        <longitude>4.425896</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Parking Sud</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>3</voisin>
+            <voisin>80</voisin>
+            <voisin>82</voisin>
+            <voisin>84</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>3</voisin_PMR>
+            <voisin_PMR>80</voisin_PMR>
+            <voisin_PMR>82</voisin_PMR>
+            <voisin_PMR>84</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="82"> <!-- Parking Sud -->
+        <latitude>45.422712</latitude>
+        <longitude>4.425997</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Parking Sud</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>3</voisin>
+            <voisin>81</voisin>
             <voisin>83</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>21</voisin_PMR>
-            <voisin_PMR>22</voisin_PMR>
+            <voisin_PMR>3</voisin_PMR>
+            <voisin_PMR>81</voisin_PMR>
+            <voisin_PMR>83</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <!-- NIVEAU -1 -->
-
-    <noeud num="83"> <!-- En bas escalier batiment D -->
-        <latitude>45.423597</latitude>
-        <longitude>4.426063</longitude>
-        <batiment>D</batiment>
+    <noeud num="83"> <!-- Parking Sud -->
+        <latitude>45.422759</latitude>
+        <longitude>4.426109</longitude>
+        <batiment>-</batiment>
         <liste_POI>
-            <POI>En bas escalier bâtiment D</POI>
+            <POI>Parking Sud</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>24</voisin>
             <voisin>82</voisin>
-            <voisin>84</voisin>
+            <voisin>87</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>82</voisin_PMR>
+            <voisin_PMR>87</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="84"> <!-- Parking Sud -->
+        <latitude>45.421902</latitude>
+        <longitude>4.426723</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Parking Sud</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>76</voisin>
+            <voisin>81</voisin>
             <voisin>85</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>24</voisin_PMR>
-            <voisin_PMR>84</voisin_PMR>
+            <voisin_PMR>76</voisin_PMR>
+            <voisin_PMR>81</voisin_PMR>
             <voisin_PMR>85</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="84"> <!-- Devant couloir D100 -->
-        <latitude>45.423614</latitude>
-        <longitude>4.426046</longitude>
-        <batiment>D</batiment>
+    <noeud num="85"> <!-- Parking Sud -->
+        <latitude>45.421993</latitude>
+        <longitude>4.426935</longitude>
+        <batiment>-</batiment>
         <liste_POI>
-            <POI>Début couloir D100</POI>
+            <POI>Parking Sud</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>84</voisin>
+            <voisin>86</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>84</voisin_PMR>
+            <voisin_PMR>86</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="86"> <!-- Parking Sud -->
+        <latitude>45.422276</latitude>
+        <longitude>4.426649</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Parking Sud</POI>
+            <POI>Escaliers vers Resto'U</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>85</voisin>
+            <voisin>87</voisin>
+            <voisin>88</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>85</voisin_PMR>
+            <voisin_PMR>87</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="87"> <!-- Parking Sud -->
+        <latitude>45.422533</latitude>
+        <longitude>4.426368</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Parking Sud</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>83</voisin>
+            <voisin>86</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
             <voisin_PMR>83</voisin_PMR>
+            <voisin_PMR>86</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="85"> <!-- Département Info, bureau Ezequel -->
-        <latitude>45.423393</latitude>
-        <longitude>4.426280</longitude>
-        <batiment>D</batiment>
+    <!-- VERS RESTO'U -->
+
+    <noeud num="88"> <!-- Escaliers vers Resto'U -->
+        <latitude>45.422418</latitude>
+        <longitude>4.426871</longitude>
+        <batiment>-</batiment>
         <liste_POI>
-            <POI>Département Informatique</POI>
-            <POI>Bureau M. Ézéquel, M. Bernard</POI>
+            <POI>Devant bâtiment C vers Resto'U</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>83</voisin>
+            <voisin>86</voisin>
+            <voisin>89</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin_PMR>83</voisin_PMR>
+            <voisin>89</voisin>
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="86"> <!-- F001 -->
-        <latitude>45.423739</latitude>
-        <longitude>4.425241</longitude>
-        <batiment>F</batiment>
-        <liste_POI>
-            <POI>F001</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>39</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-
-    <!-- Resto'U !!! -->
-    <noeud num="87"> <!-- Entree Resto'U -->
-        <latitude>45.422323</latitude>
-        <longitude>4.427421</longitude>
-        <batiment>Resto'U</batiment>
-        <liste_POI>
-            <POI>Entrée Resto'U</POI>
-        </liste_POI>
-        <liste_voisins>
-            <voisin>42</voisin>
-        </liste_voisins>
-        <liste_voisins_PMR>
-            <voisin_PMR>42</voisin_PMR>
-        </liste_voisins_PMR>
-    </noeud>
-    <noeud num="88"> <!-- Sortie Resto'U -->
-        <latitude>45.422531</latitude>
-        <longitude>4.427131</longitude>
-        <batiment>Resto'U</batiment>
+    <noeud num="89"> <!-- En allant vers Resto'U -->
+        <latitude>45.422491</latitude>
+        <longitude>4.427010</longitude>
+        <batiment>-</batiment>
         <liste_POI>
             <POI>Sortie Resto'U</POI>
         </liste_POI>
         <liste_voisins>
-            <voisin>41</voisin>
+            <voisin>88</voisin>
+            <voisin>90</voisin>
+            <voisin>96</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>88</voisin_PMR>
+            <voisin_PMR>90</voisin_PMR>
+            <voisin_PMR>96</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="90"> <!-- Devant Resto'U -->
+        <latitude>45.422257</latitude>
+        <longitude>4.427291</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Devant Resto'U</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>89</voisin>
+            <voisin>91</voisin>
+            <voisin>92</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>89</voisin_PMR>
+            <voisin_PMR>91</voisin_PMR>
+            <voisin_PMR>92</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="91"> <!-- Resto'U -->
+        <latitude>45.422320</latitude>
+        <longitude>4.427409</longitude>
+        <batiment>Resto'U</batiment>
+        <liste_POI>
+            <POI>Resto'U</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>90</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>90</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="92"> <!-- Chemin vers Cafet'U -->
+        <latitude>45.422206</latitude>
+        <longitude>4.427334</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Chemin vers Cafet'U</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>90</voisin>
+            <voisin>93</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin>90</voisin>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="93"> <!-- Chemin vers Cafet'U -->
+        <latitude>45.422464</latitude>
+        <longitude>4.427824</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Chemin vers Cafet'U</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>92</voisin>
+            <voisin>94</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>94</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="94"> <!-- Devant Cafet'U -->
+        <latitude>45.422538</latitude>
+        <longitude>4.427755</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Devant Cafet'U</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>93</voisin>
+            <voisin>95</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>93</voisin_PMR>
+            <voisin_PMR>95</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="95"> <!-- Cafet'U -->
+        <latitude>45.422503</latitude>
+        <longitude>4.427687</longitude>
+        <batiment>Cafet'U</batiment>
+        <liste_POI>
+            <POI>Cafet'U</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>94</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>94</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <!-- ENTRE RESTO'U ET D -->
+
+    <noeud num="96"> <!-- Chemin vers Resto'U -->
+        <latitude>45.422932</latitude>
+        <longitude>4.426594</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Chemin vers Resto'U</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>89</voisin>
+            <voisin>97</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>89</voisin_PMR>
+            <voisin_PMR>97</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="97"> <!-- Devant bâtiment M -->
+        <latitude>45.423254</latitude>
+        <longitude>4.426312</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Devant bâtiment M (Ingéniérie des matériaux polymères)</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>96</voisin>
+            <voisin>98</voisin>
+            <voisin>99</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>96</voisin_PMR>
+            <voisin_PMR>98</voisin_PMR>
+            <voisin_PMR>99</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="98"> <!-- Devant bâtiment M -->
+        <latitude>45.423276</latitude>
+        <longitude>4.426367</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Devant bâtiment M (Ingéniérie des matériaux polymères)</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>97</voisin>
+            <voisin>99</voisin>
+            <voisin>136</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>97</voisin_PMR>
+            <voisin_PMR>99</voisin_PMR>
+            <voisin_PMR>136</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="99"> <!-- En bas des escaliers sortie D M -->
+        <latitude>45.423326</latitude>
+        <longitude>4.426273</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>En bas des escaliers sortie bâtiment D et M</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>97</voisin>
+            <voisin>98</voisin>
+            <voisin>100</voisin>
+            <voisin>101</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>97</voisin_PMR>
+            <voisin_PMR>98</voisin_PMR>
+            <voisin_PMR>101</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="100"> <!-- Sortie bâtiment D vers M -->
+        <latitude>45.423243</latitude>
+        <longitude>4.426086</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Sortie bâtiment D vers bâtiment M</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>9</voisin>
+            <voisin>99</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin>9</voisin>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="101"> <!-- Derrière bâtiment M -->
+        <latitude>45.423436</latitude>
+        <longitude>4.426473</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Derrière bâtiment M</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>42</voisin>
+            <voisin>99</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin>42</voisin>
+            <voisin>99</voisin>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <!-- PARKING EST -->
+
+    <noeud num="102"> <!-- Parking Est -->
+        <latitude>45.424130</latitude>
+        <longitude>4.425746</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Parking Est</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>42</voisin>
+            <voisin>53</voisin>
+            <voisin>103</voisin>
+            <voisin>104</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>42</voisin_PMR>
+            <voisin_PMR>53</voisin_PMR>
+            <voisin_PMR>103</voisin_PMR>
+            <voisin_PMR>104</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="103"> <!-- Derrière BU -->
+        <latitude>45.424337</latitude>
+        <longitude>4.426142</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Entrepôt derrière BU</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>102</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>102</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="104"> <!-- Parking Est -->
+        <latitude>45.424335</latitude>
+        <longitude>4.425514</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Parking Est</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>65</voisin>
+            <voisin>102</voisin>
+            <voisin>105</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>102</voisin_PMR>
+            <voisin_PMR>105</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="105"> <!-- Parking Est -->
+        <latitude>45.424419</latitude>
+        <longitude>4.425428</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Parking Est</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>104</voisin>
+            <voisin>106</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>104</voisin_PMR>
+            <voisin_PMR>106</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="106"> <!-- Devant bâtiment H -->
+        <latitude>45.424387</latitude>
+        <longitude>4.425365</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>Devant bâtiment H</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>105</voisin>
+            <voisin>124</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
         </liste_voisins_PMR>
     </noeud>
-    <noeud num="89"> <!-- Sortie Cafet'U -->
-        <latitude>45.422459</latitude>
-        <longitude>4.427734</longitude>
-        <batiment>Cafet'U</batiment>
+
+    <!-- BATIMENT K -->
+
+    <noeud num="107"> <!-- Bâtiment K -->
+        <latitude>45.423985</latitude>
+        <longitude>4.424337</longitude>
+        <batiment>K</batiment>
         <liste_POI>
-            <POI>Sortie Cafet'U</POI>
+            <POI>Bâtiment K</POI>
+            <POI>Bureau MADE</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>57</voisin>
+            <voisin>108</voisin>
+            <voisin>109</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>57</voisin_PMR>
+            <voisin_PMR>108</voisin_PMR>
+            <voisin_PMR>109</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="108"> <!-- Escaliers bâtiment K -->
+        <latitude>45.423999</latitude>
+        <longitude>4.424385</longitude>
+        <batiment>K</batiment>
+        <liste_POI>
+            <POI>Escaliers bâtiment K</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>107</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>107</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="109"> <!-- Début couloir K -->
+        <latitude>45.423976</latitude>
+        <longitude>4.424283</longitude>
+        <batiment>K</batiment>
+        <liste_POI>
+            <POI>Toilettes</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>107</voisin>
+            <voisin>110</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>107</voisin_PMR>
+            <voisin_PMR>110</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="110"> <!-- Bureau MADE -->
+        <latitude>45.424008</latitude>
+        <longitude>4.424254</longitude>
+        <batiment>K</batiment>
+        <liste_POI>
+            <POI>Bureau MADE</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>109</voisin>
+            <voisin>111</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin>109</voisin>
+            <voisin>111</voisin>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="111"> <!-- K017 -->
+        <latitude>45.424056</latitude>
+        <longitude>4.424204</longitude>
+        <batiment>K</batiment>
+        <liste_POI>
+            <POI>K017</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>110</voisin>
+            <voisin>112</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>110</voisin_PMR>
+            <voisin_PMR>112</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="112"> <!-- K018 -->
+        <latitude>45.424112</latitude>
+        <longitude>4.424147</longitude>
+        <batiment>K</batiment>
+        <liste_POI>
+            <POI>K018</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>111</voisin>
+            <voisin>113</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>111</voisin_PMR>
+            <voisin_PMR>113</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="113"> <!-- K019 -->
+        <latitude>45.424167</latitude>
+        <longitude>4.424090</longitude>
+        <batiment>K</batiment>
+        <liste_POI>
+            <POI>K019</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>112</voisin>
+            <voisin>114</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>112</voisin_PMR>
+            <voisin_PMR>114</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="114"> <!-- Bâtiment H -->
+        <latitude>45.424201</latitude>
+        <longitude>4.424045</longitude>
+        <batiment>K</batiment>
+        <liste_POI>
+            <POI>Bâtiment K</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>67</voisin>
+            <voisin>113</voisin>
+            <voisin>115</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>67</voisin_PMR>
+            <voisin_PMR>113</voisin_PMR>
+            <voisin_PMR>115</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="115"> <!-- Labo  -->
+        <latitude>45.424174</latitude>
+        <longitude>4.423993</longitude>
+        <batiment>K</batiment>
+        <liste_POI>
+            <POI>Laboratoire</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>114</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>114</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <!-- BATIMENT H -->
+
+    <noeud num="116"> <!-- Bâtiment H -->
+        <latitude>45.424198</latitude>
+        <longitude>4.425075</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>Bâtiment H</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>28</voisin>
+            <voisin>63</voisin>
+            <voisin>117</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>63</voisin_PMR>
+            <voisin_PMR>117</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="117"> <!-- Distributeurs -->
+        <latitude>45.424229</latitude>
+        <longitude>4.425042</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>Distributeurs</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>116</voisin>
+            <voisin>118</voisin>
+            <voisin>119</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>116</voisin_PMR>
+            <voisin_PMR>118</voisin_PMR>
+            <voisin_PMR>119</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="118"> <!-- Bâtiment H -->
+        <latitude>45.424284</latitude>
+        <longitude>4.425000</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>Bâtiment H</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>117</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>117</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="119"> <!-- Toilettes -->
+        <latitude>45.424253</latitude>
+        <longitude>4.425095</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>Toilettes</POI>
+            <POI>Ascenseur</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>117</voisin>
+            <voisin>120</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin>117</voisin>
+            <voisin>120</voisin>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="120"> <!-- H206 H202 -->
+        <latitude>45.424270</latitude>
+        <longitude>4.425132</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>H202</POI>
+            <POI>H206</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>119</voisin>
+            <voisin>121</voisin>
+            <voisin>122</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>119</voisin_PMR>
+            <voisin_PMR>121</voisin_PMR>
+            <voisin_PMR>122</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="121"> <!-- Escaliers bâtiment H -->
+        <latitude>45.424282</latitude>
+        <longitude>4.425175</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>Escaliers bâtiment H niveau 2</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>120</voisin>
+            <voisin>122</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>120</voisin_PMR>
+            <voisin_PMR>122</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="122"> <!-- Couloir bâtiment H -->
+        <latitude>45.424295</latitude>
+        <longitude>4.425156</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>Couloir bâtiment H</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>120</voisin>
+            <voisin>121</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin>120</voisin>
+            <voisin>121</voisin>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="123"> <!-- Libre accès -->
+        <latitude>45.424359</latitude>
+        <longitude>4.425291</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>H203</POI>
+            <POI>H204</POI>
+            <POI>H205 (Salle libre accès)</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>122</voisin>
+            <voisin>124</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>122</voisin_PMR>
+            <voisin_PMR>124</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="124"> <!-- Escaliers bâtiment H -->
+        <latitude>45.424375</latitude>
+        <longitude>4.425335</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>Escaliers bâtiment H </POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>106</voisin>
+            <voisin>123</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>123</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <!-- BATIMENT J -->
+
+    <noeud num="125"> <!-- Bâtiment J -->
+        <latitude>45.424268</latitude>
+        <longitude>4.424782</longitude>
+        <batiment>J</batiment>
+        <liste_POI>
+            <POI>J108</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>64</voisin>
+            <voisin>126</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
             <voisin_PMR>64</voisin_PMR>
+            <voisin_PMR>126</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
-    <!-- !!!!!!! -->
 
-    <!-- 90 -->
+    <noeud num="126"> <!-- J106 -->
+        <latitude>45.424371</latitude>
+        <longitude>4.424676</longitude>
+        <batiment>J</batiment>
+        <liste_POI>
+            <POI>J106</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>125</voisin>
+            <voisin>127</voisin>
+            <voisin>129</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>125</voisin_PMR>
+            <voisin_PMR>127</voisin_PMR>
+            <voisin_PMR>129</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="127"> <!-- Ascenseur J -->
+        <latitude>45.424405</latitude>
+        <longitude>4.424736</longitude>
+        <batiment>-</batiment>
+        <liste_POI>
+            <POI>J108</POI>
+            <POI>J109</POI>
+            <POI>Ascenseur</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>126</voisin>
+            <voisin>128</voisin>
+            <voisin>129</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>126</voisin_PMR>
+            <voisin_PMR>128</voisin_PMR>
+            <voisin_PMR>129</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="128"> <!-- Escaliers J -->
+        <latitude>45.424423</latitude>
+        <longitude>4.424788</longitude>
+        <batiment>J</batiment>
+        <liste_POI>
+            <POI>Escaliers bâtiment J</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>127</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>127</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="129"> <!--  -->
+        <latitude>45.424433</latitude>
+        <longitude>4.424705</longitude>
+        <batiment>J</batiment>
+        <liste_POI>
+            <POI>J107</POI>
+            <POI>J109</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>126</voisin>
+            <voisin>127</voisin>
+            <voisin>130</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="130"> <!-- Toilettes -->
+        <latitude>45.424466</latitude>
+        <longitude>4.424674</longitude>
+        <batiment>J</batiment>
+        <liste_POI>
+            <POI>Toilettes</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>129</voisin>
+            <voisin>131</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin>129</voisin>
+            <voisin>131</voisin>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="131"> <!-- J109 -->
+        <latitude>45.424492</latitude>
+        <longitude>4.424649</longitude>
+        <batiment>J</batiment>
+        <liste_POI>
+            <POI>J109</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>130</voisin>
+            <voisin>132</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>130</voisin_PMR>
+            <voisin_PMR>132</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="132"> <!-- J103 J110 -->
+        <latitude>45.424525</latitude>
+        <longitude>4.424613</longitude>
+        <batiment>J</batiment>
+        <liste_POI>
+            <POI>J103</POI>
+            <POI>J110</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>131</voisin>
+            <voisin>133</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>131</voisin_PMR>
+            <voisin_PMR>133</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="133"> <!-- J102 J110 -->
+        <latitude>45.424576</latitude>
+        <longitude>4.424561</longitude>
+        <batiment>J</batiment>
+        <liste_POI>
+            <POI>J102</POI>
+            <POI>J110</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>132</voisin>
+            <voisin>134</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>132</voisin_PMR>
+            <voisin_PMR>134</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="134"> <!-- J101 -->
+        <latitude>45.424621</latitude>
+        <longitude>4.424518</longitude>
+        <batiment>J</batiment>
+        <liste_POI>
+            <POI>J101</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>133</voisin>
+            <voisin>135</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>133</voisin_PMR>
+            <voisin_PMR>135</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="135"> <!-- Escaliers J -->
+        <latitude>45.424643</latitude>
+        <longitude>4.424559</longitude>
+        <batiment>J</batiment>
+        <liste_POI>
+            <POI>Escaliers bâtiment J</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>133</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>133</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <!-- BATIMENT M -->
+
+    <noeud num="136"> <!-- Bâtiment M -->
+        <latitude>45.423229</latitude>
+        <longitude>4.426415</longitude>
+        <batiment>M</batiment>
+        <liste_POI>
+            <POI>Bâtiment M</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>98</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>98</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <!-- NIVEAU 1 -->
+
+    <!-- NIVEAU -1 -->
+
+    <!-- NIVEAU -2 -->
 
 </resources>

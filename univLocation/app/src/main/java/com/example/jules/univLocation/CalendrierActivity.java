@@ -15,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.text.Format;
@@ -72,7 +73,7 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
         Button b = (Button)findViewById(R.id.suivant);
         b.setOnClickListener(this);
 
-        b = (Button)findViewById(R.id.precedent);
+        b = (Button) findViewById(R.id.precedent);
         b.setOnClickListener(this);
 
         if(!mCursor.isLast())
