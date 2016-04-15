@@ -194,6 +194,7 @@ public class Graphe {
                 }
             }
 
+            System.out.println(s1);
             s1 = trouveMin(); // Selection du noeud le plus proche (iteration suivante)
         }
 

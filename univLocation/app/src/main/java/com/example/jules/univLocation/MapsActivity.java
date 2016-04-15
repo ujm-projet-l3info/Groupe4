@@ -162,10 +162,10 @@ public class MapsActivity extends AppCompatActivity
             }
         });
 
-        /*for(int i = 0; i < g.noeuds.size(); i++){
+        for(int i = 0; i < g.noeuds.size(); i++){
             LatLng latLong = new LatLng(g.noeuds.get(i).getLat(), g.noeuds.get(i).getLon());
             mMap.addMarker(new MarkerOptions().position(latLong).title(""+i));
-        }*/
+        }
     }
 
     public void onBackPressed()

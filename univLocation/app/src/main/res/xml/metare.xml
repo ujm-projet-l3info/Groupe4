@@ -137,6 +137,7 @@
             <voisin>7</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
+            <voisin_PMR>5</voisin_PMR>
             <voisin_PMR>7</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
@@ -453,6 +454,8 @@
             <voisin>25</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
+            <voisin_PMR>23</voisin_PMR>
+            <voisin_PMR>25</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -525,6 +528,7 @@
         <liste_voisins>
             <voisin>27</voisin>
             <voisin>39</voisin>
+            <voisin>116</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
         </liste_voisins_PMR>
@@ -898,8 +902,8 @@
             <voisin>50</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>48</voisin>
-            <voisin>50</voisin>
+            <voisin_PMR>48</voisin_PMR>
+            <voisin_PMR>50</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -1045,6 +1049,8 @@
             <voisin>107</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
+            <voisin_PMR>55</voisin_PMR>
+            <voisin_PMR>107</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -1076,12 +1082,14 @@
             <voisin>58</voisin>
             <voisin>60</voisin>
             <voisin>62</voisin>
+            <voisin>65</voisin>
             <voisin>70</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
             <voisin_PMR>58</voisin_PMR>
             <voisin_PMR>60</voisin_PMR>
             <voisin_PMR>62</voisin_PMR>
+            <voisin_PMR>65</voisin_PMR>
             <voisin_PMR>70</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
@@ -1116,7 +1124,7 @@
             <voisin>60</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>60</voisin>
+            <voisin_PMR>60</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -1130,11 +1138,13 @@
         <liste_voisins>
             <voisin>59</voisin>
             <voisin>63</voisin>
+            <voisin>64</voisin>
             <voisin>65</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
             <voisin_PMR>59</voisin_PMR>
             <voisin_PMR>63</voisin_PMR>
+            <voisin_PMR>64</voisin_PMR>
             <voisin_PMR>65</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
@@ -1183,13 +1193,15 @@
             <POI>Passage à côté de H</POI>
         </liste_POI>
         <liste_voisins>
+            <voisin>59</voisin>
             <voisin>62</voisin>
             <voisin>63</voisin>
             <voisin>104</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>62</voisin>
-            <voisin>63</voisin>
+            <voisin_PMR>59</voisin_PMR>
+            <voisin_PMR>62</voisin_PMR>
+            <voisin_PMR>63</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -1206,9 +1218,9 @@
             <voisin>68</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>55</voisin>
-            <voisin>67</voisin>
-            <voisin>68</voisin>
+            <voisin_PMR>55</voisin_PMR>
+            <voisin_PMR>67</voisin_PMR>
+            <voisin_PMR>68</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -1275,8 +1287,8 @@
             <voisin>68</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>59</voisin>
-            <voisin>68</voisin>
+            <voisin_PMR>59</voisin_PMR>
+            <voisin_PMR>68</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -1311,8 +1323,8 @@
             <voisin>73</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>71</voisin>
-            <voisin>73</voisin>
+            <voisin_PMR>71</voisin_PMR>
+            <voisin_PMR>73</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -1330,8 +1342,8 @@
             <voisin>74</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>72</voisin>
-            <voisin>74</voisin>
+            <voisin_PMR>72</voisin_PMR>
+            <voisin_PMR>74</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -1425,8 +1437,8 @@
             <voisin>77</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>44</voisin>
-            <voisin>77</voisin>
+            <voisin_PMR>44</voisin_PMR>
+            <voisin_PMR>77</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -1608,7 +1620,7 @@
             <voisin>89</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>89</voisin>
+            <voisin_PMR>89</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -1677,7 +1689,7 @@
             <voisin>93</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>90</voisin>
+            <voisin_PMR>90</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -1818,7 +1830,7 @@
             <voisin>99</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>9</voisin>
+            <voisin_PMR>9</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -1834,8 +1846,8 @@
             <voisin>99</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>42</voisin>
-            <voisin>99</voisin>
+            <voisin_PMR>42</voisin_PMR>
+            <voisin_PMR>99</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -1924,6 +1936,7 @@
             <voisin>124</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
+            <voisin_PMR>105</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -1993,8 +2006,8 @@
             <voisin>111</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>109</voisin>
-            <voisin>111</voisin>
+            <voisin_PMR>109</voisin_PMR>
+            <voisin_PMR>111</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -2150,8 +2163,8 @@
             <voisin>120</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>117</voisin>
-            <voisin>120</voisin>
+            <voisin_PMR>117</voisin_PMR>
+            <voisin_PMR>120</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -2204,8 +2217,8 @@
             <voisin>121</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>120</voisin>
-            <voisin>121</voisin>
+            <voisin_PMR>120</voisin_PMR>
+            <voisin_PMR>121</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -2318,7 +2331,7 @@
         </liste_voisins_PMR>
     </noeud>
 
-    <noeud num="129"> <!--  -->
+    <noeud num="129"> <!--J107 109  -->
         <latitude>45.424433</latitude>
         <longitude>4.424705</longitude>
         <batiment>J</batiment>
@@ -2332,6 +2345,9 @@
             <voisin>130</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
+            <voisin_PMR>126</voisin_PMR>
+            <voisin_PMR>127</voisin_PMR>
+            <voisin_PMR>130</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
@@ -2347,8 +2363,8 @@
             <voisin>131</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>129</voisin>
-            <voisin>131</voisin>
+            <voisin_PMR>129</voisin_PMR>
+            <voisin_PMR>131</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
