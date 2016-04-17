@@ -18,6 +18,8 @@
         android:layout_height="wrap_content"
         android:text="Bienvenue sur Univ&apos;Location !"
         android:id="@+id/text_aide"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorText"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
