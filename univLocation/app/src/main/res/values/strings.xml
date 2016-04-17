@@ -15,4 +15,16 @@
 
     <string name="trouver_toilettes">Toilettes</string>
     <string name="trouver_distrib">Distributeurs</string>
+
+    <string name="PMR">Personne à mobilité réduite</string>
+    <string name="entree_principale">Entrée principale</string>
+    <string name="depart">Départ :</string>
+    <string name="arrivee">Arrivée :</string>
+    <string name="etape">Étape :</string>
+
+    <string name="satellite">Satellite</string>
+    <string name="plan">Plan</string>
+
+    <string name="etage_plus">+</string>
+    <string name="etage_moins">-</string>
 </resources>

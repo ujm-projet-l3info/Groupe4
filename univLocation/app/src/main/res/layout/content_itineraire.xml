@@ -22,56 +22,78 @@
         android:layout_alignParentEnd="true">
 
         <TextView
-            android:layout_marginTop="50px"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Départ :"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/depart"
             android:textColor="@color/colorText"
             android:id="@+id/text_depart" />
 
         <AutoCompleteTextView
-            android:layout_marginTop="10px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorText"
+            android:imeOptions="actionNext"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:singleLine="true"
             android:id="@+id/depart"
-            android:text="Entrée principale" />
+            android:text="@string/entree_principale" />
 
         <TextView
-            android:layout_marginTop="50px"
+            android:layout_marginTop="7dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Arrivée :"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/etape"
+            android:textColor="@color/colorText"
+            android:id="@+id/etape_label" />
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            android:id="@+id/etape"
+            android:text="" />
+
+        <TextView
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/arrivee"
             android:textColor="@color/colorText"
             android:id="@+id/text_arrivee" />
 
         <AutoCompleteTextView
-            android:layout_marginTop="10px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorText"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             android:id="@+id/arrivee" />
 
         <Switch
-            android:layout_marginTop="50px"
-            android:layout_width="match_parent"
+            android:layout_marginTop="7dp"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
-            android:text=""
+            android:text="@string/PMR"
             android:id="@+id/PMR"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center_horizontal|end"
             android:textColor="@color/colorText"
             android:checked="false" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="?android:attr/textAppearanceSmall"
             android:text=""
             android:id="@+id/erreur"
-            android:layout_marginTop="250px"
-            android:textSize="14dp"
+            android:layout_marginTop="30dp"
+            android:textSize="16sp"
             android:textColor="@color/colorError"
             android:layout_gravity="center_horizontal" />
 

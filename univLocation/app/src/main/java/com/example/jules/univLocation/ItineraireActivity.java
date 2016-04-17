@@ -1,8 +1,10 @@
 package com.example.jules.univLocation;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.view.KeyEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,6 +15,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
+import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
@@ -30,25 +35,43 @@ public class ItineraireActivity extends AppCompatActivity
     {
         final EditText dep = (EditText) findViewById(R.id.depart);
         final EditText arr = (EditText) findViewById(R.id.arrivee);
+        final EditText etape = (EditText) findViewById(R.id.etape);
         final Switch pmr = (Switch) findViewById(R.id.PMR);
 
         boolean bool_pmr = pmr.isChecked();
 
+        boolean presenceEtape;
+        if(etape.getText().toString().equals(""))
+            presenceEtape = false;
+        else
+            presenceEtape = true;
+
         ArrayList<Integer> listeNoeudsDep = MapsActivity.g.cherchePOI(dep.getText().toString());
         ArrayList<Integer> listeNoeudsArr = MapsActivity.g.cherchePOI(arr.getText().toString());
+        ArrayList<Integer> listeNoeudsEtape = null;
 
-        if((!listeNoeudsArr.isEmpty()) && (!listeNoeudsDep.isEmpty()))
+        if(presenceEtape)
+            listeNoeudsEtape = MapsActivity.g.cherchePOI(etape.getText().toString());
+        else
+            listeNoeudsEtape = new ArrayList<Integer>();
+
+        if((!listeNoeudsArr.isEmpty()) && (!listeNoeudsDep.isEmpty()) && (!listeNoeudsEtape.isEmpty() || !presenceEtape))
         {
             Intent i = new Intent();
             Bundle b = new Bundle();
 
             b.putInt("depart", listeNoeudsDep.get(0));
             b.putInt("arrivee", listeNoeudsArr.get(0));
+
+            if(presenceEtape)
+                b.putInt("etape", listeNoeudsEtape.get(0));
+            else
+                b.putInt("etape", -1);
+
             b.putBoolean("pmr", bool_pmr);
 
             i.putExtras(b);
             setResult(Activity.RESULT_OK, i);
-            overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
 
             finish();
         }
@@ -56,11 +79,14 @@ public class ItineraireActivity extends AppCompatActivity
         {
             TextView error = (TextView) findViewById(R.id.erreur);
 
-            if(listeNoeudsDep.isEmpty())
-                error.setText(dep.getText().toString() + "' introuvable");
-
             if(listeNoeudsArr.isEmpty())
-                error.setText(arr.getText().toString() + "' introuvable");
+                error.setText("'" + arr.getText().toString() + "' introuvable");
+
+            if(presenceEtape && listeNoeudsEtape.isEmpty())
+                error.setText("'" + etape.getText().toString() + "' introuvable");
+
+            if(listeNoeudsDep.isEmpty())
+                error.setText("'" + dep.getText().toString() + "' introuvable");
         }
     }
 
@@ -83,7 +109,6 @@ public class ItineraireActivity extends AppCompatActivity
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(this);
 
-
         chargerPoi();
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_dropdown_item_1line, poiStr);
@@ -91,8 +116,26 @@ public class ItineraireActivity extends AppCompatActivity
         AutoCompleteTextView deroule_dep = (AutoCompleteTextView) findViewById(R.id.depart);
         deroule_dep.setAdapter(adapter);
 
-        AutoCompleteTextView deroule_arr = (AutoCompleteTextView) findViewById(R.id.arrivee);
+        AutoCompleteTextView deroule_etape = (AutoCompleteTextView) findViewById(R.id.etape);
+        deroule_etape.setAdapter(adapter);
+
+        final AutoCompleteTextView deroule_arr = (AutoCompleteTextView) findViewById(R.id.arrivee);
         deroule_arr.setAdapter(adapter);
+
+        deroule_arr.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    InputMethodManager inputMethodManager = (InputMethodManager) ItineraireActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
+                    inputMethodManager.hideSoftInputFromWindow(deroule_arr.getWindowToken(), 0);
+
+                    recupererItineraire();
+
+                    return true;
+                }
+                return false;
+            }
+        });
     }
 
     public void onClick(View view)
