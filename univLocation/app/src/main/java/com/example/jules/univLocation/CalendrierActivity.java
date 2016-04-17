@@ -65,7 +65,7 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
 
         mCursor.moveToFirst();
         Long mtn = (new Date()).getTime();
-        while(mCursor.getLong(1) < mtn || mCursor.getString(4).equals("Numéros de semaine") || mCursor.getString(4).equals("Jours feriés en France")) {
+        while(mCursor.getLong(1) < mtn || mCursor.getString(3).equals("")) {
             if(!mCursor.isLast())
                 mCursor.moveToNext();
         }
@@ -100,20 +100,18 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
             case R.id.suivant:
                 do
                     mCursor.moveToNext();
-                while((mCursor.getString(4).equals("Numéros de semaine") || mCursor.getString(4).equals("Jours feriés en France")) &&
-                        !mCursor.isLast());
+                while(mCursor.getString(3).equals("") && !mCursor.isLast());
 
-                if(mCursor.getString(4).equals("Numéros de semaine") || mCursor.getString(4).equals("Jours feriés en France"))
+                if(mCursor.getString(3).equals(""))
                     mCursor.moveToPrevious();
 
                 break;
             case R.id.precedent:
                 do
                     mCursor.moveToPrevious();
-                while((mCursor.getString(4).equals("Numéros de semaine") || mCursor.getString(4).equals("Jours feriés en France")) &&
-                        !mCursor.isFirst());
+                while(mCursor.getString(3).equals("") && !mCursor.isFirst());
 
-                if(mCursor.getString(4).equals("Numéros de semaine") || mCursor.getString(4).equals("Jours feriés en France"))
+                if(mCursor.getString(3).equals(""))
                     mCursor.moveToNext();
 
                 break;
