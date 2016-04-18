@@ -2,6 +2,7 @@ package com.example.jules.univLocation;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.view.KeyEvent;
@@ -106,8 +107,19 @@ public class ItineraireActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(this);
+
+        final Switch pmr = (Switch) findViewById(R.id.PMR);
+        pmr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(pmr.isChecked())
+                    fab.setImageResource(R.drawable.ic_accessible_white_48dp);
+                else
+                    fab.setImageResource(R.drawable.ic_directions_walk_white_48dp);
+            }
+        });
 
         chargerPoi();
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,

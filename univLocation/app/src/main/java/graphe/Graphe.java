@@ -94,6 +94,7 @@ public class Graphe {
             }
         }
 
+        //System.out.println("le plus proche est " + k + "\n");
         return k;
     }
 
@@ -148,29 +149,30 @@ public class Graphe {
         }
 
 
+        //System.out.println("on cherche le plus proche de " + src + " ce sera s1");
         s1 = trouveMin(); // Selection du noeud le plus proche de src actuellement (init : src lui-meme)
 
         while((!isVide()) && (s1 != trouveNoeud(dest))) // Tant que l'on est pas sur dest ou qu'il reste des sommets a visiter
         {
             noeuds.get(s1).setUtile(false); // 'Suppression'/'Visite' de ce noeud
 
-
             if(isPMR) // Parcours des voisins adaptes
             {
                 for(int j = 0 ; j < noeuds.get(s1).voisinsPMR.size() ; j++) // Parcours des voisins de s1
                 {
-
                     voisin = noeuds.get(s1).voisinsPMR.get(j); // Recuperation indice voisin n°j
 
-                    d = noeuds.get(voisin).getDistance(); // Distance actuelle pour atteindre voisin
+                    if(noeuds.get(voisin).isUtile()) {
+                        d = noeuds.get(voisin).getDistance(); // Distance actuelle pour atteindre voisin
 
-                    p = noeuds.get(s1).distance(noeuds.get(voisin)) + // Poids entre s1 et voisins
-                            noeuds.get(s1).getDistance();                 // + distance pour atteindre s1
+                        p = noeuds.get(s1).distance(noeuds.get(voisin)) + // Poids entre s1 et voisins
+                                noeuds.get(s1).getDistance();                 // + distance pour atteindre s1
 
-                    if((p <= d) || (d == -1) || (d + p == 0)) // Si il est mieux d'emprunter s1 pour atteindre voisin
-                    {
-                        noeuds.get(voisin).setPredecesseur(s1); // On passe par s1 pour atteindre voisin
-                        noeuds.get(voisin).setDistance(p); // MaJ de la distance de voisin
+                        if ((p <= d) || (d == -1) || (d + p == 0)) // Si il est mieux d'emprunter s1 pour atteindre voisin
+                        {
+                            noeuds.get(voisin).setPredecesseur(s1); // On passe par s1 pour atteindre voisin
+                            noeuds.get(voisin).setDistance(p); // MaJ de la distance de voisin
+                        }
                     }
                 }
             }
@@ -178,40 +180,50 @@ public class Graphe {
             {
                 for(int j = 0 ; j < noeuds.get(s1).voisins.size() ; j++) // Parcours des voisins de s1
                 {
-
                     voisin = noeuds.get(s1).voisins.get(j); // Recuperation indice voisin n°j
+                    //System.out.println("  visite voisin " + voisin + " de " + s1);
 
-                    d = noeuds.get(voisin).getDistance(); // Distance actuelle pour atteindre voisin
+                    if(noeuds.get(voisin).isUtile()) {
+                        d = noeuds.get(voisin).getDistance(); // Distance actuelle pour atteindre voisin
+                        //System.out.println("  il est a une distance " + d + " de " + src);
 
-                    p = noeuds.get(s1).distance(noeuds.get(voisin)) + // Poids entre s1 et voisins
-                            noeuds.get(s1).getDistance();                 // + distance pour atteindre s1
+                        p = noeuds.get(s1).distance(noeuds.get(voisin)) + // Poids entre s1 et voisins
+                                noeuds.get(s1).getDistance();                 // + distance pour atteindre s1
+                        //System.out.println("  distance totale " + p);
 
-                    if((p <= d) || (d == -1) || (d + p == 0)) // Si il est mieux d'emprunter s1 pour atteindre voisin
-                    {
-                        noeuds.get(voisin).setPredecesseur(s1); // On passe par s1 pour atteindre voisin
-                        noeuds.get(voisin).setDistance(p); // MaJ de la distance de voisin
+                        if ((p <= d) || (d == -1) || (d + p == 0)) // Si il est mieux d'emprunter s1 pour atteindre voisin
+                        {
+                            //System.out.println("  -> il est mieux d'emprunter " + s1 + " pour atteindre " + voisin);
+                            noeuds.get(voisin).setPredecesseur(s1); // On passe par s1 pour atteindre voisin
+                            noeuds.get(voisin).setDistance(p); // MaJ de la distance de voisin
+                        }
                     }
                 }
             }
 
-            System.out.println(s1);
             s1 = trouveMin(); // Selection du noeud le plus proche (iteration suivante)
+            //System.out.println("nouveau s1: " + s1);
         }
 
 
         /* Recuperer le chemin */
 
+        //System.out.println("CHEMIN TROUVE");
+
         ArrayList<Integer> chemin = new ArrayList<Integer>();
         int s;
 
         s = noeuds.indexOf(dest);
+        //System.out.println("on part de " + s);
 
         while(s != noeuds.indexOf(src))
         {
             chemin.add(0 , s); // Ajout du sommet au chemin
+            //System.out.println("on ajoute " + s);
             s = noeuds.get(s).getPredecesseur(); // Passage au predecesseur
         }
         chemin.add(0 , s); // Ajout sommet source
+        //System.out.println("on ajoute le dernier " + s);
 
         return chemin;
     }

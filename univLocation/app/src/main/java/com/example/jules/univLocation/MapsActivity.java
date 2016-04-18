@@ -158,11 +158,6 @@ public class MapsActivity extends AppCompatActivity
 
     public void onClick(View view)
     {
-        depart = -1;
-        arrivee = -1;
-        etape = -1;
-        ligne = null;
-
         Intent i = new Intent(MapsActivity.this, ItineraireActivity.class);
         startActivityForResult(i, 1);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
@@ -194,7 +189,7 @@ public class MapsActivity extends AppCompatActivity
             public void onClick(View v) {
                 if(changer_type.getText().equals("Satellite")){
                     mMap.clear();
-                    mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+                    mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
                     if(ligne != null)
                         mMap.addPolyline(ligne);
                     if(depart != -1){
@@ -346,6 +341,7 @@ public class MapsActivity extends AppCompatActivity
         String POI = "";
         int voisin = -1;
         int voisin_pmr = -1;
+        int niveau = 99;
 
         int eventType = xpp.getEventType();
 
@@ -360,6 +356,7 @@ public class MapsActivity extends AppCompatActivity
                 else if(xpp.getName().equals("POI")) { xpp.next(); POI = xpp.getText(); }
                 else if(xpp.getName().equals("voisin")) { xpp.next(); voisin = Integer.parseInt(xpp.getText()); }
                 else if(xpp.getName().equals("voisin_PMR")) { xpp.next(); voisin_pmr = Integer.parseInt(xpp.getText()); }
+                else if(xpp.getName().equals("niveau")) { xpp.next(); niveau = Integer.parseInt(xpp.getText()); }
             }
             else if(eventType == XmlPullParser.END_TAG)
             {
@@ -370,6 +367,7 @@ public class MapsActivity extends AppCompatActivity
                 else if(xpp.getName().equals("POI")) { n.ajouterPOI(POI); }
                 else if(xpp.getName().equals("voisin")) { n.ajouterVoisin(voisin); }
                 else if(xpp.getName().equals("voisin_PMR")) { n.ajouterVoisinPMR(voisin_pmr); }
+                else if(xpp.getName().equals("niveau")) { n.setNiveau(niveau); }
             }
 
             eventType = xpp.next();

@@ -7,6 +7,7 @@ package graphe;
 import java.util.ArrayList;
 
 public class Noeud {
+    private int niveau;
     private float latitude;
     private float longitude;
     private char batiment;
@@ -108,6 +109,15 @@ public class Noeud {
 
     /* Accesseurs / Mutateurs */
 
+    public float getNiveau()
+    {
+        /* Renvoit le niveau
+           du noeud courant
+        */
+
+        return this.niveau;
+    }
+
     public float getLat()
     {
         /* Renvoit la latitude
@@ -155,6 +165,15 @@ public class Noeud {
         */
 
         return this.predecesseur;
+    }
+
+    public void setNiveau(int n)
+    {
+        /* MaJ du niveau du
+           Noeud actuel
+        */
+
+        this.niveau = n;
     }
 
     public void setLatitude(float lat)
@@ -219,7 +238,9 @@ public class Noeud {
            au noeud courant
         */
 
-        return ((this.getLat() == n.getLat()) && (this.getLon() == n.getLon()));
+        return ((this.getLat() == n.getLat()) &&
+                (this.getLon() == n.getLon()) &&
+                (this.getNiveau() == n.getNiveau()));
     }
 }
 

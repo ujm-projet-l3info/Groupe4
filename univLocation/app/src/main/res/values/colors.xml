@@ -12,4 +12,6 @@
     <color name="colorBackgroundCalendar">#606060</color>
 
     <color name="colorError">#ef00ac</color>
+
+    <color name="fond_pmr">#63c1ba</color>
 </resources>

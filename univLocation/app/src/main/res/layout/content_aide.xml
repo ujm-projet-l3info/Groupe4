@@ -16,7 +16,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenue sur Univ&apos;Location !"
+        android:text=""
+        android:scrollbars = "vertical"
+        android:maxLines = "1000"
         android:id="@+id/text_aide"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@color/colorText"
@@ -25,7 +27,5 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
-
-        <!--\n\nCette application mobile vous permettra de vous repérer dans le campus de la Métare sans aucune difficulté !\n\nVous pouvez accéder au menu latéral des fonctionnalités en glissant votre doigt depuis le bord gauche de l&apos;écran, ou en cliquant sur les trois barres de menu en haut à gauche.\n\nDepuis ce menu, 4 possibilités s&apos;offrent à vous :\n - Carte : vous affiche la carte\n - Calendrier : vous affiche votre emploi du temps des prochaines heures à venir\n - Aide : vous affiche cette aide\n - Itinéraire : vous affiche le formulaire par lequel vous pouvez trouver un itinéraire dans le campus\n\nBonne navigation !\n\nL&apos;équipe d&apos;Univ&apos;Location"-->
 
 </RelativeLayout>
