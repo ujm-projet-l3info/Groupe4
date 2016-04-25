@@ -50,6 +50,7 @@ public class MapsActivity extends AppCompatActivity
     private int arrivee = -1;
     private int etape = -1;
     private int niveau = 0;
+    public static Bundle b = null;
 
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -88,22 +89,14 @@ public class MapsActivity extends AppCompatActivity
 
     protected void onActivityResult(int requestCode , int resultCode , Intent data)
     {
-        if (requestCode == 1)
+        if(b != null)
         {
-            if(resultCode == Activity.RESULT_OK)
-            {
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                Bundle b = data.getExtras();
-                tracerItineraire(b);
-            }
-            if (resultCode == Activity.RESULT_CANCELED)
-            {
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-            }
+            tracerItineraire();
+            b = null;
         }
     }
 
-    public void tracerItineraire(Bundle b)
+    public void tracerItineraire()
     {
         if(b != null)
         {

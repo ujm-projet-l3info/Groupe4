@@ -26,6 +26,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public class ItineraireActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
@@ -58,21 +59,16 @@ public class ItineraireActivity extends AppCompatActivity
 
         if((!listeNoeudsArr.isEmpty()) && (!listeNoeudsDep.isEmpty()) && (!listeNoeudsEtape.isEmpty() || !presenceEtape))
         {
-            Intent i = new Intent();
-            Bundle b = new Bundle();
-
-            b.putInt("depart", listeNoeudsDep.get(0));
-            b.putInt("arrivee", listeNoeudsArr.get(0));
+            MapsActivity.b = new Bundle();
+            MapsActivity.b.putInt("depart", listeNoeudsDep.get(0));
+            MapsActivity.b.putInt("arrivee", listeNoeudsArr.get(0));
 
             if(presenceEtape)
-                b.putInt("etape", listeNoeudsEtape.get(0));
+                MapsActivity.b.putInt("etape", listeNoeudsEtape.get(0));
             else
-                b.putInt("etape", -1);
+                MapsActivity.b.putInt("etape", -1);
 
-            b.putBoolean("pmr", bool_pmr);
-
-            i.putExtras(b);
-            setResult(Activity.RESULT_OK, i);
+            MapsActivity.b.putBoolean("pmr", bool_pmr);
 
             finish();
         }
