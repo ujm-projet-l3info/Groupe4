@@ -52,6 +52,29 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
         navigationView.setNavigationItemSelectedListener(this);
 
         recupererCalendrier();
+
+        Button itineraire = (Button) findViewById(R.id.y_aller);
+        itineraire.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView tvSalle = (TextView)findViewById(R.id.salle);
+
+                if(tvSalle != null){
+                    if(!tvSalle.getText().toString().equals("")){
+                        Intent i = new Intent(CalendrierActivity.this, ItineraireActivity.class);
+                        Bundle b = new Bundle();
+
+                        b.putString("arrivee", tvSalle.getText().toString());
+
+                        i.putExtras(b);
+
+                        startActivity(i);
+                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                        finish();
+                    }
+                }
+            }
+        });
     }
 
     private void recupererCalendrier() {
@@ -65,10 +88,12 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
 
         mCursor.moveToFirst();
         Long mtn = (new Date()).getTime();
-        while(mCursor.getLong(1) < mtn || mCursor.getString(3).equals("")) {
+        while(mCursor.getLong(1) < mtn){
             if(!mCursor.isLast())
                 mCursor.moveToNext();
         }
+
+        mCursor.moveToPrevious();
 
         Button b = (Button)findViewById(R.id.suivant);
         b.setOnClickListener(this);
@@ -76,9 +101,7 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
         b = (Button) findViewById(R.id.precedent);
         b.setOnClickListener(this);
 
-        if(!mCursor.isLast())
-            mCursor.moveToNext();
-        onClick(findViewById(R.id.precedent));
+        onClick(findViewById(R.id.suivant));
     }
 
 
@@ -96,40 +119,78 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
         Format df = DateFormat.getDateFormat(this);
         Format tf = DateFormat.getTimeFormat(this);
 
-        switch(v.getId()) {
-            case R.id.suivant:
-                do
-                    mCursor.moveToNext();
-                while(mCursor.getString(3).equals("") && !mCursor.isLast());
+        int tmp1 = mCursor.getPosition();
+        System.out.println("pos1:" + tmp1);
 
-                if(mCursor.getString(3).equals(""))
-                    mCursor.moveToPrevious();
-
-                break;
-            case R.id.precedent:
-                do
-                    mCursor.moveToPrevious();
-                while(mCursor.getString(3).equals("") && !mCursor.isFirst());
-
-                if(mCursor.getString(3).equals(""))
+        if(v.getId() == R.id.suivant) {
+            if(!mCursor.isLast()) {
+                do{
                     mCursor.moveToNext();
 
-                break;
+                    if(!mCursor.isLast()) {
+                        System.out.println(mCursor.getString(0));
+                        if(mCursor.getString(3) != null) {
+                            if(!mCursor.getString(3).equals(""))
+                                break;
+                        }
+                    }
+                }while(!mCursor.isLast());
+
+                System.out.println("pos2:" + mCursor.getPosition());
+
+                if(mCursor.isLast()) {
+                    System.out.println("jen suis au dernier");
+                    if (mCursor.getString(3) != null) {
+                        if (mCursor.getString(3).equals(""))
+                            mCursor.moveToPosition(tmp1);
+                    } else {
+                        mCursor.moveToPosition(tmp1);
+                    }
+                    System.out.println("pos3:" + mCursor.getPosition());
+                }
+            }
+        }else if(v.getId() == R.id.precedent){
+            if (!mCursor.isFirst()) {
+                do {
+                    mCursor.moveToPrevious();
+
+                    if (!mCursor.isFirst()) {
+                        if (mCursor.getString(3) != null) {
+                            if (!mCursor.getString(3).equals(""))
+                                break;
+                        }
+                    }
+                } while (!mCursor.isFirst());
+
+                if (mCursor.isFirst()){
+                    if(mCursor.getString(3) != null) {
+                        if(mCursor.getString(3).equals(""))
+                            mCursor.moveToPosition(tmp1);
+                    }else{
+                        mCursor.moveToPosition(tmp1);
+                    }
+                }
+            }
         }
 
-        try {
-            nom = mCursor.getString(0);
-            debut = mCursor.getLong(1);
-            fin = mCursor.getLong(2);
-            salle = mCursor.getString(3);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        int tmp2 = mCursor.getPosition();
 
-        tvNom.setText(nom);
-        tvSalle.setText(salle);
-        tvDate.setText(df.format(debut));
-        tvHeure.setText(tf.format(debut) + " - " + tf.format(fin));
+        if(tmp1 != tmp2) {
+            System.out.println("ESSAYE");
+            try {
+                nom = mCursor.getString(0);
+                debut = mCursor.getLong(1);
+                fin = mCursor.getLong(2);
+                salle = mCursor.getString(3);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            tvNom.setText(nom);
+            tvSalle.setText(salle);
+            tvDate.setText(df.format(debut));
+            tvHeure.setText(tf.format(debut) + " - " + tf.format(fin));
+        }
     }
 
     @Override

@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -98,96 +99,93 @@ public class MapsActivity extends AppCompatActivity
 
     public void tracerItineraire()
     {
-        if(b != null)
-        {
-            mMap.clear();
+        mMap.clear();
 
-            Button changer_type = (Button) findViewById(R.id.type_carte);
-            if(changer_type.getText().equals("Satellite"))
-                placerCalque();
+        Button changer_type = (Button) findViewById(R.id.type_carte);
+        if(changer_type.getText().equals("Satellite"))
+            placerCalque();
 
-            depart = b.getInt("depart");
-            arrivee = b.getInt("arrivee");
-            etape = b.getInt("etape");
-            boolean pmr = b.getBoolean("pmr");
+        depart = b.getInt("depart");
+        arrivee = b.getInt("arrivee");
+        etape = b.getInt("etape");
+        boolean pmr = b.getBoolean("pmr");
 
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()),18));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()),18));
 
-            ArrayList<Integer> l = new ArrayList<>(); // Ajout de checkpoint pour itineraire
+        ArrayList<Integer> l = new ArrayList<>(); // Ajout de checkpoint pour itineraire
 
-            l.add(depart);
+        l.add(depart);
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()))
+                .title(g.noeuds.get(depart).POIs.get(0)));
+
+        if(etape != -1) {
+            l.add(etape);
             mMap.addMarker(new MarkerOptions()
-                    .position(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()))
-                    .title(g.noeuds.get(depart).POIs.get(0)));
-
-            if(etape != -1) {
-                l.add(etape);
-                mMap.addMarker(new MarkerOptions()
-                        .position(new LatLng(g.noeuds.get(etape).getLat(), g.noeuds.get(etape).getLon()))
-                        .title(g.noeuds.get(etape).POIs.get(0)));
-            }
-
-            l.add(arrivee);
-            mMap.addMarker(new MarkerOptions()
-                    .position(new LatLng(g.noeuds.get(arrivee).getLat(), g.noeuds.get(arrivee).getLon()))
-                    .title(g.noeuds.get(arrivee).POIs.get(0)));
-
-            Chemin chemin = g.itineraireMultiple(l, pmr); // Calcul itineraire le plus court
-
-            PolylineOptions ligne = new PolylineOptions();
-            int n = g.noeuds.get(chemin.noeuds.get(0)).getNiveau();
-            for (int i = 0; i < chemin.noeuds.size(); i++)
-            {
-                int j = chemin.noeuds.get(i);
-                if(g.noeuds.get(j).getNiveau() != n)
-                {
-                    switch(n) {
-                        case -2:
-                            ligne.color(Color.rgb(0 , 0 , 0));
-                            break;
-                        case -1:
-                            ligne.color(Color.rgb(64 , 64 , 64));
-                            break;
-                        case 0:
-                            ligne.color(Color.rgb(128 , 128 , 128));
-                            break;
-                        case 1:
-                            ligne.color(Color.rgb(192 , 192 , 192));
-                            break;
-                    }
-
-                    ligne.width(10);
-                    lignes.add(ligne);
-                    mMap.addPolyline(ligne);
-                    n = g.noeuds.get(j).getNiveau();
-                    ligne = new PolylineOptions();
-                    ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()));
-                }
-                else
-                {
-                    ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()));
-                }
-            }
-
-            switch(n) {
-                case -2:
-                    ligne.color(Color.rgb(0 , 0 , 0));
-                    break;
-                case -1:
-                    ligne.color(Color.rgb(64 , 64 , 64));
-                    break;
-                case 0:
-                    ligne.color(Color.rgb(128 , 128 , 128));
-                    break;
-                case 1:
-                    ligne.color(Color.rgb(192 , 192 , 192));
-                    break;
-            }
-
-            ligne.width(10);
-            lignes.add(ligne);
-            mMap.addPolyline(ligne);
+                    .position(new LatLng(g.noeuds.get(etape).getLat(), g.noeuds.get(etape).getLon()))
+                    .title(g.noeuds.get(etape).POIs.get(0)));
         }
+
+        l.add(arrivee);
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(g.noeuds.get(arrivee).getLat(), g.noeuds.get(arrivee).getLon()))
+                .title(g.noeuds.get(arrivee).POIs.get(0)));
+
+        Chemin chemin = g.itineraireMultiple(l, pmr); // Calcul itineraire le plus court
+
+        PolylineOptions ligne = new PolylineOptions();
+        int n = g.noeuds.get(chemin.noeuds.get(0)).getNiveau();
+        for (int i = 0; i < chemin.noeuds.size(); i++)
+        {
+            int j = chemin.noeuds.get(i);
+            if(g.noeuds.get(j).getNiveau() != n)
+            {
+                switch(n) {
+                    case -2:
+                        ligne.color(Color.rgb(0 , 0 , 0));
+                        break;
+                    case -1:
+                        ligne.color(Color.rgb(64 , 64 , 64));
+                        break;
+                    case 0:
+                        ligne.color(Color.rgb(128 , 128 , 128));
+                        break;
+                    case 1:
+                        ligne.color(Color.rgb(192 , 192 , 192));
+                        break;
+                }
+
+                ligne.width(10);
+                lignes.add(ligne);
+                mMap.addPolyline(ligne);
+                n = g.noeuds.get(j).getNiveau();
+                ligne = new PolylineOptions();
+                ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()));
+            }
+            else
+            {
+                ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()));
+            }
+        }
+
+        switch(n) {
+            case -2:
+                ligne.color(Color.rgb(0 , 0 , 0));
+                break;
+            case -1:
+                ligne.color(Color.rgb(64 , 64 , 64));
+                break;
+            case 0:
+                ligne.color(Color.rgb(128 , 128 , 128));
+                break;
+            case 1:
+                ligne.color(Color.rgb(192 , 192 , 192));
+                break;
+        }
+
+        ligne.width(10);
+        lignes.add(ligne);
+        mMap.addPolyline(ligne);
     }
 
     public void onClick(View view)
@@ -215,6 +213,10 @@ public class MapsActivity extends AppCompatActivity
         carteFac.image(BitmapDescriptorFactory.fromResource(R.drawable.calque0));
         carteFac.position(new LatLng(45.4231698,4.4252605), 428.435f, 428.435f);
         placerCalque();
+
+        // Etage
+        TextView tv = (TextView) findViewById(R.id.etage);
+        tv.setText("Niveau : " + niveau);
 
         //Type de carte
         final Button changer_type = (Button) findViewById(R.id.type_carte);

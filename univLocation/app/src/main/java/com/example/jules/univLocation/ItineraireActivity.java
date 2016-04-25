@@ -144,6 +144,10 @@ public class ItineraireActivity extends AppCompatActivity
                 return false;
             }
         });
+
+        Bundle b = getIntent().getExtras();
+        if(b != null)
+            deroule_arr.setText(b.getString("arrivee"));
     }
 
     public void onClick(View view)
