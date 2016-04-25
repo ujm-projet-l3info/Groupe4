@@ -131,6 +131,7 @@ public class MapsActivity extends AppCompatActivity
 
         Chemin chemin = g.itineraireMultiple(l, pmr); // Calcul itineraire le plus court
 
+        lignes = new ArrayList<>();
         PolylineOptions ligne = new PolylineOptions();
         int n = g.noeuds.get(chemin.noeuds.get(0)).getNiveau();
         for (int i = 0; i < chemin.noeuds.size(); i++)
@@ -152,7 +153,7 @@ public class MapsActivity extends AppCompatActivity
                         ligne.color(Color.rgb(192 , 192 , 192));
                         break;
                 }
-
+                ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()));
                 ligne.width(10);
                 lignes.add(ligne);
                 mMap.addPolyline(ligne);
