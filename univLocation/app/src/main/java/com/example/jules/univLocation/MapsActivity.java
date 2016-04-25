@@ -44,11 +44,12 @@ public class MapsActivity extends AppCompatActivity
     private GoogleMap mMap;
     public static Graphe g;
     private GroundOverlayOptions carteFac;
-    private PolylineOptions ligne = null;
+    private ArrayList<PolylineOptions> lignes = new ArrayList<PolylineOptions>();
     private int depart = -1;
     private int arrivee = -1;
     private int etape = -1;
     private int niveau = 0;
+    public static Bundle b = null;
 
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -87,10 +88,14 @@ public class MapsActivity extends AppCompatActivity
 
     protected void onActivityResult(int requestCode , int resultCode , Intent data)
     {
-
+        if(b != null)
+        {
+            tracerItineraire();
+            b = null;
+        }
     }
 
-    public void tracerItineraire(Bundle b)
+    public void tracerItineraire()
     {
         if(b != null)
         {
@@ -128,17 +133,58 @@ public class MapsActivity extends AppCompatActivity
 
             Chemin chemin = g.itineraireMultiple(l, pmr); // Calcul itineraire le plus court
 
-            ligne = new PolylineOptions();
-
+            PolylineOptions ligne = new PolylineOptions();
+            int n = g.noeuds.get(chemin.noeuds.get(0)).getNiveau();
             for (int i = 0; i < chemin.noeuds.size(); i++)
             {
                 int j = chemin.noeuds.get(i);
-                ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()));
+                if(g.noeuds.get(j).getNiveau() != n)
+                {
+                    switch(n) {
+                        case -2:
+                            ligne.color(Color.rgb(0 , 0 , 0));
+                            break;
+                        case -1:
+                            ligne.color(Color.rgb(64 , 64 , 64));
+                            break;
+                        case 0:
+                            ligne.color(Color.rgb(128 , 128 , 128));
+                            break;
+                        case 1:
+                            ligne.color(Color.rgb(192 , 192 , 192));
+                            break;
+                    }
+
+                    ligne.width(10);
+                    lignes.add(ligne);
+                    mMap.addPolyline(ligne);
+                    n = g.noeuds.get(j).getNiveau();
+                    ligne = new PolylineOptions();
+                    ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()));
+                }
+                else
+                {
+                    ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()));
+                }
             }
 
-            ligne.color(Color.BLUE);
-            ligne.width(10);
+            switch(n) {
+                case -2:
+                    ligne.color(Color.rgb(0 , 0 , 0));
+                    break;
+                case -1:
+                    ligne.color(Color.rgb(64 , 64 , 64));
+                    break;
+                case 0:
+                    ligne.color(Color.rgb(128 , 128 , 128));
+                    break;
+                case 1:
+                    ligne.color(Color.rgb(192 , 192 , 192));
+                    break;
+            }
 
+            ligne.width(10);
+            lignes.add(ligne);
             mMap.addPolyline(ligne);
         }
     }
@@ -179,8 +225,13 @@ public class MapsActivity extends AppCompatActivity
                 if(changer_type.getText().equals("Satellite")){
                     mMap.clear();
                     mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-                    if(ligne != null)
-                        mMap.addPolyline(ligne);
+                    if(!lignes.isEmpty())
+                    {
+                        for(int i = 0 ; i < lignes.size() ; i++)
+                        {
+                            mMap.addPolyline(lignes.get(i));
+                        }
+                    }
                     if(depart != -1){
                         mMap.addMarker(new MarkerOptions()
                                 .position(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()))

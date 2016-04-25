@@ -305,8 +305,13 @@ public class Graphe {
         {
             for(int j = 0 ; j < noeuds.get(i).POIs.size() ; j++)
             {
+<<<<<<< HEAD
                 if(noeuds.get(i).POIs.get(j).toLowerCase().matches(" *" + poi.toLowerCase() + " *") ||
                         poi.toLowerCase().matches(" *" + noeuds.get(i).POIs.get(j).toLowerCase() + " *")) // Si POI correspond a REGEXP
+=======
+                if((noeuds.get(i).POIs.get(j).toLowerCase().matches("(.*)"+poi.toLowerCase()+"(.*)")) ||
+                        (poi.toLowerCase().matches("(.*)" + noeuds.get(i).POIs.get(j).toLowerCase() + "(.*)")))// Si POI correspond a REGEXP
+>>>>>>> efbbfd7cae16f0230db194a183715914f3a20191
                 {
                     l.add(i);
                     break;
