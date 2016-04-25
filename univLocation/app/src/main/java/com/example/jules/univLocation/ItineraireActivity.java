@@ -58,23 +58,7 @@ public class ItineraireActivity extends AppCompatActivity
 
         if((!listeNoeudsArr.isEmpty()) && (!listeNoeudsDep.isEmpty()) && (!listeNoeudsEtape.isEmpty() || !presenceEtape))
         {
-            Intent i = new Intent();
-            Bundle b = new Bundle();
 
-            b.putInt("depart", listeNoeudsDep.get(0));
-            b.putInt("arrivee", listeNoeudsArr.get(0));
-
-            if(presenceEtape)
-                b.putInt("etape", listeNoeudsEtape.get(0));
-            else
-                b.putInt("etape", -1);
-
-            b.putBoolean("pmr", bool_pmr);
-
-            i.putExtras(b);
-            setResult(Activity.RESULT_OK, i);
-
-            finish();
         }
         else
         {
@@ -148,6 +132,10 @@ public class ItineraireActivity extends AppCompatActivity
                 return false;
             }
         });
+
+        Bundle b = getIntent().getExtras();
+        if(b != null)
+            deroule_arr.setText(b.getString("arrivee"));
     }
 
     public void onClick(View view)

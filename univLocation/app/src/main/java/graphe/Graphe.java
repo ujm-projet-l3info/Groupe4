@@ -154,15 +154,16 @@ public class Graphe {
 
         while((!isVide()) && (s1 != trouveNoeud(dest))) // Tant que l'on est pas sur dest ou qu'il reste des sommets a visiter
         {
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" + s1);
             noeuds.get(s1).setUtile(false); // 'Suppression'/'Visite' de ce noeud
 
-            if(isPMR) // Parcours des voisins adaptes
+            if (isPMR) // Parcours des voisins adaptes
             {
-                for(int j = 0 ; j < noeuds.get(s1).voisinsPMR.size() ; j++) // Parcours des voisins de s1
+                for (int j = 0; j < noeuds.get(s1).voisinsPMR.size(); j++) // Parcours des voisins de s1
                 {
                     voisin = noeuds.get(s1).voisinsPMR.get(j); // Recuperation indice voisin n°j
 
-                    if(noeuds.get(voisin).isUtile()) {
+                    if (noeuds.get(voisin).isUtile()) {
                         d = noeuds.get(voisin).getDistance(); // Distance actuelle pour atteindre voisin
 
                         p = noeuds.get(s1).distance(noeuds.get(voisin)) + // Poids entre s1 et voisins
@@ -175,15 +176,13 @@ public class Graphe {
                         }
                     }
                 }
-            }
-            else
-            {
-                for(int j = 0 ; j < noeuds.get(s1).voisins.size() ; j++) // Parcours des voisins de s1
+            } else {
+                for (int j = 0; j < noeuds.get(s1).voisins.size(); j++) // Parcours des voisins de s1
                 {
                     voisin = noeuds.get(s1).voisins.get(j); // Recuperation indice voisin n°j
                     //System.out.println("  visite voisin " + voisin + " de " + s1);
 
-                    if(noeuds.get(voisin).isUtile()) {
+                    if (noeuds.get(voisin).isUtile()) {
                         d = noeuds.get(voisin).getDistance(); // Distance actuelle pour atteindre voisin
                         //System.out.println("  il est a une distance " + d + " de " + src);
 
@@ -202,7 +201,7 @@ public class Graphe {
             }
 
             s1 = trouveMin(); // Selection du noeud le plus proche (iteration suivante)
-            //System.out.println("nouveau s1: " + s1);
+            System.out.println("nouveau s1: " + s1);
         }
 
 
@@ -306,7 +305,8 @@ public class Graphe {
         {
             for(int j = 0 ; j < noeuds.get(i).POIs.size() ; j++)
             {
-                if(noeuds.get(i).POIs.get(j).toLowerCase().matches(" *"+poi.toLowerCase()+" *")) // Si POI correspond a REGEXP
+                if(noeuds.get(i).POIs.get(j).toLowerCase().matches(" *" + poi.toLowerCase() + " *") ||
+                        poi.toLowerCase().matches(" *" + noeuds.get(i).POIs.get(j).toLowerCase() + " *")) // Si POI correspond a REGEXP
                 {
                     l.add(i);
                     break;

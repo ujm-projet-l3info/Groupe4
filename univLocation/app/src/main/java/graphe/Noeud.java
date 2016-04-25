@@ -109,7 +109,7 @@ public class Noeud {
 
     /* Accesseurs / Mutateurs */
 
-    public float getNiveau()
+    public int getNiveau()
     {
         /* Renvoit le niveau
            du noeud courant

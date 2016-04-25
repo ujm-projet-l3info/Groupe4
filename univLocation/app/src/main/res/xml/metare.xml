@@ -2053,7 +2053,6 @@
     </liste_POI>
     <liste_voisins>
       <voisin>105</voisin>
-      <voisin>124</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
       <voisin_PMR>105</voisin_PMR>
@@ -2292,15 +2291,16 @@
     <batiment>H</batiment>
     <liste_POI>
       <POI>Toilettes</POI>
-      <POI>Ascenseur</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>117</voisin>
       <voisin>120</voisin>
+        <voisin>202</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
       <voisin_PMR>117</voisin_PMR>
       <voisin_PMR>120</voisin_PMR>
+      <voisin_PMR>202</voisin_PMR>
     </liste_voisins_PMR>
   </noeud>
 
@@ -2325,17 +2325,18 @@
     </liste_voisins_PMR>
   </noeud>
 
-  <noeud num="121"> <!-- Escaliers bâtiment H -->
+  <noeud num="121"> <!-- Devant escaliers bâtiment H -->
     <niveau>0</niveau>
     <latitude>45.424282</latitude>
     <longitude>4.425175</longitude>
     <batiment>H</batiment>
     <liste_POI>
-      <POI>Escaliers bâtiment H niveau 2</POI>
+      <POI>Devant escaliers bâtiment H niveau 2</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>120</voisin>
       <voisin>122</voisin>
+        <voisin>193</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
       <voisin_PMR>120</voisin_PMR>
@@ -2390,8 +2391,8 @@
       <POI>Escaliers bâtiment H niveau 2</POI>
     </liste_POI>
     <liste_voisins>
-      <voisin>106</voisin>
       <voisin>123</voisin>
+      <voisin>195</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
       <voisin_PMR>123</voisin_PMR>
@@ -3686,6 +3687,210 @@
       <voisin_PMR>191</voisin_PMR>
     </liste_voisins_PMR>
   </noeud>
+
+  <!-- BATIMENT H -->
+
+  <noeud num="193"> <!-- En bas des escaliers H niveau 1 -->
+      <niveau>-1</niveau>
+      <latitude>45.424317</latitude>
+      <longitude>4.425235</longitude>
+      <batiment>H</batiment>
+      <liste_POI>
+          <POI>H105</POI>
+          <POI>Devant escaliers bâtiment H niveau 1</POI>
+      </liste_POI>
+      <liste_voisins>
+          <voisin>121</voisin>
+          <voisin>194</voisin>
+          <voisin>196</voisin>
+          <voisin>198</voisin>
+          <voisin>199</voisin>
+      </liste_voisins>
+      <liste_voisins_PMR>
+          <voisin_PMR>194</voisin_PMR>
+          <voisin_PMR>196</voisin_PMR>
+          <voisin_PMR>198</voisin_PMR>
+          <voisin_PMR>199</voisin_PMR>
+      </liste_voisins_PMR>
+  </noeud>
+
+    <noeud num="194"> <!-- Devant escaliers bâtiment H niveau 1 -->
+        <niveau>-1</niveau>
+        <latitude>45.424341</latitude>
+        <longitude>4.425270</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>H106</POI>
+            <POI>Devant escaliers bâtiment H niveau 1</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>193</voisin>
+            <voisin>195</voisin>
+            <voisin>198</voisin>
+            <voisin>199</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>193</voisin_PMR>
+            <voisin_PMR>195</voisin_PMR>
+            <voisin_PMR>198</voisin_PMR>
+            <voisin_PMR>199</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="195"> <!-- Escaliers bâtiment H -->
+        <niveau>-1</niveau>
+        <latitude>45.424375001</latitude>
+        <longitude>4.425335001</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>Escaliers bâtiment H niveau 1</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>124</voisin>
+            <voisin>194</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>194</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="196"> <!-- H111 -->
+        <niveau>-1</niveau>
+        <latitude>45.424318</latitude>
+        <longitude>4.425199</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>H111</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>193</voisin>
+            <voisin>197</voisin>
+            <voisin>200</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>193</voisin_PMR>
+            <voisin_PMR>197</voisin_PMR>
+            <voisin_PMR>200</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="197"> <!-- H110 -->
+        <niveau>-1</niveau>
+        <latitude>45.424334</latitude>
+        <longitude>4.425180</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>H110</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>196</voisin>
+            <voisin>198</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>196</voisin_PMR>
+            <voisin_PMR>198</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="198"> <!-- H109 -->
+        <niveau>-1</niveau>
+        <latitude>45.424349</latitude>
+        <longitude>4.425203</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>H109</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>193</voisin>
+            <voisin>197</voisin>
+            <voisin>198</voisin>
+            <voisin>199</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>193</voisin_PMR>
+            <voisin_PMR>197</voisin_PMR>
+            <voisin_PMR>198</voisin_PMR>
+            <voisin_PMR>199</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="199"> <!-- H108 H107 -->
+        <niveau>-1</niveau>
+        <latitude>45.424362</latitude>
+        <longitude>4.425230</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>H107</POI>
+            <POI>H108</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>193</voisin>
+            <voisin>194</voisin>
+            <voisin>198</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>193</voisin_PMR>
+            <voisin_PMR>194</voisin_PMR>
+            <voisin_PMR>198</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="200"> <!-- Toilettes -->
+        <niveau>-1</niveau>
+        <latitude>45.424264</latitude>
+        <longitude>4.425104</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>Toilettes</POI>
+            <POI>H105</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>196</voisin>
+            <voisin>201</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>196</voisin_PMR>
+            <voisin_PMR>201</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <noeud num="201"> <!-- Ascenseur -->
+        <niveau>-1</niveau>
+        <latitude>45.424262001</latitude>
+        <longitude>4.425062001</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>Ascenseur</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>200</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>200</voisin_PMR>
+            <voisin_PMR>202</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <!-- OUBLI ASCENSEUR H NIVEAU 2 -->
+
+    <noeud num="202"> <!-- Ascenseur bâtiment H niveau 2 -->
+        <niveau>0</niveau>
+        <latitude>45.424262</latitude>
+        <longitude>4.425062</longitude>
+        <batiment>H</batiment>
+        <liste_POI>
+            <POI>Ascenseur</POI>
+        </liste_POI>
+        <liste_voisins>
+            <voisin>119</voisin>
+        </liste_voisins>
+        <liste_voisins_PMR>
+            <voisin_PMR>119</voisin_PMR>
+            <voisin_PMR>201</voisin_PMR>
+        </liste_voisins_PMR>
+    </noeud>
+
+    <!-- BATIMENT J -->
 
   <!-- NIVEAU -2 -->
 
