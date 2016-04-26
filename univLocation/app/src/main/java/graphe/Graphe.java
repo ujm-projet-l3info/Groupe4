@@ -4,6 +4,7 @@ package graphe;
  * Created by arthur on 07/04/16.
  */
 
+import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashSet;
@@ -317,7 +318,15 @@ public class Graphe {
         {
             for(int j = 0 ; j < noeuds.get(i).POIs.size() ; j++)
             {
-                if(noeuds.get(i).POIs.get(j).toLowerCase().equals(poi.toLowerCase()))// Si POI correspond a REGEXP
+                String str = noeuds.get(i).POIs.get(j).toLowerCase();
+                str = Normalizer.normalize(str, Normalizer.Form.NFD);
+                str = str.replaceAll("[^\\p{ASCII}]", "");
+
+                poi = poi.toLowerCase();
+                poi = Normalizer.normalize(poi, Normalizer.Form.NFD);
+                poi = poi.replaceAll("[^\\p{ASCII}]", "");
+
+                if(str.equals(poi))
                 {
                     l.add(i);
                     break;
@@ -329,10 +338,18 @@ public class Graphe {
         {
             for(int j = 0 ; j < noeuds.get(i).POIs.size() ; j++)
             {
-                if(!noeuds.get(i).POIs.get(j).toLowerCase().equals(poi.toLowerCase()))
+                String str = noeuds.get(i).POIs.get(j).toLowerCase();
+                str = Normalizer.normalize(str, Normalizer.Form.NFD);
+                str = str.replaceAll("[^\\p{ASCII}]", "");
+
+                poi = poi.toLowerCase();
+                poi = Normalizer.normalize(poi, Normalizer.Form.NFD);
+                poi = poi.replaceAll("[^\\p{ASCII}]", "");
+
+                if(!str.equals(poi))
                 {
-                    if ((noeuds.get(i).POIs.get(j).toLowerCase().matches("(.*)" + poi.toLowerCase() + "(.*)")) ||
-                            (poi.toLowerCase().matches("(.*)" + noeuds.get(i).POIs.get(j).toLowerCase() + "(.*)")))// Si POI correspond a REGEXP
+                    if ((str.matches("(.*)" + poi + "(.*)")) ||
+                            (poi.matches("(.*)" + str + "(.*)")))// Si POI correspond a REGEXP
                     {
                         l.add(i);
                         break;
