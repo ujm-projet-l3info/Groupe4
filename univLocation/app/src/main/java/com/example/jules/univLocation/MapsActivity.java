@@ -136,7 +136,7 @@ public class MapsActivity extends AppCompatActivity
 
         if(chemin.noeuds.size() == 1 && pmr)
         {
-            Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas d'itineraire PMR pour cette destination").show();
+            Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas d'itinéraire PMR pour cette destination").show();
         }
 
 
