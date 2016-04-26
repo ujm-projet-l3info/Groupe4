@@ -152,7 +152,7 @@ public class Graphe {
         //System.out.println("on cherche le plus proche de " + src + " ce sera s1");
         s1 = trouveMin(); // Selection du noeud le plus proche de src actuellement (init : src lui-meme)
 
-        while((!isVide()) && (s1 != trouveNoeud(dest))) // Tant que l'on est pas sur dest ou qu'il reste des sommets a visiter
+        while((!isVide()) && (s1 != trouveNoeud(dest)) && (s1 != -1)) // Tant que l'on est pas sur dest ou qu'il reste des sommets a visiter
         {
             System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" + s1);
             noeuds.get(s1).setUtile(false); // 'Suppression'/'Visite' de ce noeud
@@ -211,6 +211,13 @@ public class Graphe {
 
         ArrayList<Integer> chemin = new ArrayList<Integer>();
         int s;
+
+        if(s1 == -1)
+        {
+            s = noeuds.indexOf(src);
+            chemin.add(s);
+            return chemin;
+        }
 
         s = noeuds.indexOf(dest);
         //System.out.println("on part de " + s);

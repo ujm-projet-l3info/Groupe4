@@ -1,15 +1,18 @@
 package com.example.jules.univLocation;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.res.XmlResourceParser;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -130,6 +133,12 @@ public class MapsActivity extends AppCompatActivity
                 .title(g.noeuds.get(arrivee).POIs.get(0)));
 
         Chemin chemin = g.itineraireMultiple(l, pmr); // Calcul itineraire le plus court
+
+        if(chemin.noeuds.size() == 1 && pmr)
+        {
+            Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas d'itineraire PMR pour cette destination").show();
+        }
+
 
         lignes = new ArrayList<>();
         PolylineOptions ligne = new PolylineOptions();
