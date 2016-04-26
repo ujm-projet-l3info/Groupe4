@@ -2331,7 +2331,6 @@
     <longitude>4.425175</longitude>
     <batiment>H</batiment>
     <liste_POI>
-        <POI>caca</POI>
       <POI>Devant escaliers bâtiment H niveau 2</POI>
     </liste_POI>
     <liste_voisins>
@@ -2356,10 +2355,12 @@
     <liste_voisins>
       <voisin>120</voisin>
       <voisin>121</voisin>
+      <voisin>123</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
       <voisin_PMR>120</voisin_PMR>
       <voisin_PMR>121</voisin_PMR>
+      <voisin_PMR>123</voisin_PMR>
     </liste_voisins_PMR>
   </noeud>
 

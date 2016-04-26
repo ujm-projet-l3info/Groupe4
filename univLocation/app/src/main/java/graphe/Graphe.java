@@ -155,7 +155,6 @@ public class Graphe {
 
         while((!isVide()) && (s1 != trouveNoeud(dest)) && (s1 != -1)) // Tant que l'on est pas sur dest ou qu'il reste des sommets a visiter
         {
-            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" + s1);
             noeuds.get(s1).setUtile(false); // 'Suppression'/'Visite' de ce noeud
 
             if (isPMR) // Parcours des voisins adaptes
@@ -202,7 +201,7 @@ public class Graphe {
             }
 
             s1 = trouveMin(); // Selection du noeud le plus proche (iteration suivante)
-            System.out.println("nouveau s1: " + s1);
+            //System.out.println("nouveau s1: " + s1);
         }
 
 
