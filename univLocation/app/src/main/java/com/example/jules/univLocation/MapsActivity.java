@@ -136,7 +136,7 @@ public class MapsActivity extends AppCompatActivity
 
         if(chemin.noeuds.size() == 1 && pmr)
         {
-            Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas d'itineraire PMR pour cette destination").show();
+            Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas d'itinéraire PMR pour cette destination").show();
         }
 
 
@@ -146,9 +146,11 @@ public class MapsActivity extends AppCompatActivity
         for (int i = 0; i < chemin.noeuds.size(); i++)
         {
             int j = chemin.noeuds.get(i);
+
             ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon())); // Ajout noeud dans ligne en cours
 
             if(g.noeuds.get(j).getNiveau() != n) // Si en plus changment de niveau
+
             {
                 switch(n) {
                     case -2:
@@ -164,12 +166,14 @@ public class MapsActivity extends AppCompatActivity
                         ligne.color(Color.rgb(192 , 192 , 192));
                         break;
                 }
-                ligne.width(10);
+
+                ligne.width(15);
                 lignes.add(ligne);
                 mMap.addPolyline(ligne); // Tracer ligne
 
                 n = g.noeuds.get(j).getNiveau(); // Changement de niveau
                 ligne = new PolylineOptions(); // Initialisation ligne suivante
+
                 ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()));
             }
         }
@@ -189,7 +193,7 @@ public class MapsActivity extends AppCompatActivity
                 break;
         }
 
-        ligne.width(10);
+        ligne.width(15);
         lignes.add(ligne);
         mMap.addPolyline(ligne);
     }
@@ -308,13 +312,18 @@ public class MapsActivity extends AppCompatActivity
                 }
             }
         });
-    /*
-        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+
+        /*mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {
                 mMap.addMarker(new MarkerOptions().position(latLng).title("Lat :" +latLng.latitude + " Lon :"+latLng.longitude));
             }
-        });*/
+        });
+
+        for(int i = 215; i < g.noeuds.size(); i++){
+            LatLng latLong = new LatLng(g.noeuds.get(i).getLat(), g.noeuds.get(i).getLon());
+            mMap.addMarker(new MarkerOptions().position(latLong).title("" + i));
+        }*/
     }
 
     public void onBackPressed()
