@@ -741,7 +741,7 @@
   </noeud>
 
   <noeud num="38"> <!-- Devant escaliers D niveau 2 -->
-    <niveau>0</niveau>
+    <niveau>-1</niveau>
     <latitude>45.423523</latitude>
     <longitude>4.425905</longitude>
     <batiment>D</batiment>
@@ -2331,6 +2331,7 @@
     <longitude>4.425175</longitude>
     <batiment>H</batiment>
     <liste_POI>
+        <POI>caca</POI>
       <POI>Devant escaliers bâtiment H niveau 2</POI>
     </liste_POI>
     <liste_voisins>
@@ -3475,7 +3476,7 @@
     <batiment>C</batiment>
     <liste_POI>
       <POI>C208</POI>
-      <POI>Devant escaliers bâtiment C niveau 2 xxx</POI>
+      <POI>Devant escaliers bâtiment C niveau 2</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>180</voisin>
@@ -4298,8 +4299,8 @@
             <voisin>223</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>221</voisin>
-            <voisin>223</voisin>
+            <voisin_PMR>221</voisin_PMR>
+            <voisin_PMR>223</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
