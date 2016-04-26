@@ -164,7 +164,7 @@ public class MapsActivity extends AppCompatActivity
                         ligne.color(Color.rgb(192 , 192 , 192));
                         break;
                 }
-                ligne.width(10);
+                ligne.width(15);
                 lignes.add(ligne);
                 mMap.addPolyline(ligne);
 
@@ -189,7 +189,7 @@ public class MapsActivity extends AppCompatActivity
                 break;
         }
 
-        ligne.width(10);
+        ligne.width(15);
         lignes.add(ligne);
         mMap.addPolyline(ligne);
     }
