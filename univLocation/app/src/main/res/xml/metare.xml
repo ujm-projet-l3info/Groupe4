@@ -726,7 +726,7 @@
     <niveau>0</niveau>
     <latitude>45.423631</latitude>
     <longitude>4.426071</longitude>
-    <batiment>D</batiment>
+    <batiment>0</batiment>
     <liste_POI>
       <POI>D205</POI>
     </liste_POI>
@@ -4149,7 +4149,7 @@
     <!-- BATIMENT J -->
 
     <noeud num="215"> <!-- Escaliers bâtiment H niveau 0 -->
-        <niveau>-1</niveau>
+        <niveau>-2</niveau>
         <latitude>45.424375002</latitude>
         <longitude>4.425335002</longitude>
         <batiment>J</batiment>
@@ -4166,7 +4166,7 @@
     </noeud>
     
     <noeud num="216"> <!-- Devant escaliers bâtiment H niveau 0 -->
-        <niveau>-1</niveau>
+        <niveau>-2</niveau>
         <latitude>45.424315</latitude>
         <longitude>4.425236</longitude>
         <batiment>J</batiment>
@@ -4190,7 +4190,7 @@
     </noeud>
     
     <noeud num="217"> <!-- H009 H010 -->
-        <niveau>-1</niveau>
+        <niveau>-2</niveau>
         <latitude>45.424325</latitude>
         <longitude>4.425220</longitude>
         <batiment>J</batiment>
@@ -4209,7 +4209,7 @@
     </noeud>
 
     <noeud num="218"> <!-- H006 H007 -->
-        <niveau>-1</niveau>
+        <niveau>-2</niveau>
         <latitude>45.424290</latitude>
         <longitude>4.425257</longitude>
         <batiment>J</batiment>
@@ -4228,7 +4228,7 @@
     </noeud>
 
     <noeud num="219"> <!-- H004 H005 -->
-        <niveau>-1</niveau>
+        <niveau>-2</niveau>
         <latitude>45.424249</latitude>
         <longitude>4.425181</longitude>
         <batiment>J</batiment>
@@ -4242,13 +4242,13 @@
             <voisin>220</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
-            <voisin>218</voisin>
-            <voisin>220</voisin>
+            <voisin_PMR>218</voisin_PMR>
+            <voisin_PMR>220</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
 
     <noeud num="220"> <!-- Toilettes -->
-        <niveau>-1</niveau>
+        <niveau>-2</niveau>
         <latitude>45.424266</latitude>
         <longitude>4.425161</longitude>
         <batiment>J</batiment>
@@ -4266,7 +4266,7 @@
     </noeud>
 
     <noeud num="221"> <!-- H001 -->
-        <niveau>-1</niveau>
+        <niveau>-2</niveau>
         <latitude>45.424284</latitude>
         <longitude>4.425142</longitude>
         <batiment>J</batiment>
@@ -4286,7 +4286,7 @@
     </noeud>
 
     <noeud num="222"> <!-- H011 H012 -->
-        <niveau>-1</niveau>
+        <niveau>-2</niveau>
         <latitude>45.424296</latitude>
         <longitude>4.425119</longitude>
         <batiment>J</batiment>
@@ -4305,7 +4305,7 @@
     </noeud>
 
     <noeud num="223"> <!-- Ascenseur bâtiment H niveau 0 -->
-        <niveau>-1</niveau>
+        <niveau>-2</niveau>
         <latitude>45.424262002</latitude>
         <longitude>4.425062002</longitude>
         <batiment>J</batiment>

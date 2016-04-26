@@ -146,6 +146,8 @@ public class MapsActivity extends AppCompatActivity
         for (int i = 0; i < chemin.noeuds.size(); i++)
         {
             int j = chemin.noeuds.get(i);
+            ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()));
+
             if(g.noeuds.get(j).getNiveau() != n)
             {
                 switch(n) {
@@ -162,16 +164,12 @@ public class MapsActivity extends AppCompatActivity
                         ligne.color(Color.rgb(192 , 192 , 192));
                         break;
                 }
-                ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()));
                 ligne.width(10);
                 lignes.add(ligne);
                 mMap.addPolyline(ligne);
+
                 n = g.noeuds.get(j).getNiveau();
                 ligne = new PolylineOptions();
-                ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()));
-            }
-            else
-            {
                 ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()));
             }
         }
