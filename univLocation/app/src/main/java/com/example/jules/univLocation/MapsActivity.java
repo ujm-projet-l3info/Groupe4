@@ -236,9 +236,11 @@ public class MapsActivity extends AppCompatActivity
         for (int i = 0; i < chemin.noeuds.size(); i++)
         {
             int j = chemin.noeuds.get(i);
-            ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()));
 
-            if(g.noeuds.get(j).getNiveau() != n)
+            ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon())); // Ajout noeud dans ligne en cours
+
+            if(g.noeuds.get(j).getNiveau() != n) // Si en plus changment de niveau
+
             {
                 switch(n) {
                     case -2:
@@ -254,12 +256,14 @@ public class MapsActivity extends AppCompatActivity
                         ligne.color(Color.rgb(192 , 192 , 192));
                         break;
                 }
+
                 ligne.width(15);
                 lignes.add(ligne);
-                mMap.addPolyline(ligne);
+                mMap.addPolyline(ligne); // Tracer ligne
 
-                n = g.noeuds.get(j).getNiveau();
-                ligne = new PolylineOptions();
+                n = g.noeuds.get(j).getNiveau(); // Changement de niveau
+                ligne = new PolylineOptions(); // Initialisation ligne suivante
+
                 ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon()));
             }
         }
