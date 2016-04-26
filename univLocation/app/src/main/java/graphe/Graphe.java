@@ -4,6 +4,7 @@ package graphe;
  * Created by arthur on 07/04/16.
  */
 
+import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashSet;
@@ -152,7 +153,7 @@ public class Graphe {
         //System.out.println("on cherche le plus proche de " + src + " ce sera s1");
         s1 = trouveMin(); // Selection du noeud le plus proche de src actuellement (init : src lui-meme)
 
-        while((!isVide()) && (s1 != trouveNoeud(dest))) // Tant que l'on est pas sur dest ou qu'il reste des sommets a visiter
+        while((!isVide()) && (s1 != trouveNoeud(dest)) && (s1 != -1)) // Tant que l'on est pas sur dest ou qu'il reste des sommets a visiter
         {
             System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" + s1);
             noeuds.get(s1).setUtile(false); // 'Suppression'/'Visite' de ce noeud
@@ -211,6 +212,13 @@ public class Graphe {
 
         ArrayList<Integer> chemin = new ArrayList<Integer>();
         int s;
+
+        if(s1 == -1)
+        {
+            s = noeuds.indexOf(src);
+            chemin.add(s);
+            return chemin;
+        }
 
         s = noeuds.indexOf(dest);
         //System.out.println("on part de " + s);
@@ -301,15 +309,51 @@ public class Graphe {
 
         ArrayList<Integer> l = new ArrayList<Integer>();
 
+        if(poi.equals("") || poi.matches("( *)"))
+        {
+            return  l;
+        }
+
         for(int i = 0 ; i < noeuds.size() ; i++)
         {
             for(int j = 0 ; j < noeuds.get(i).POIs.size() ; j++)
             {
-                if((noeuds.get(i).POIs.get(j).toLowerCase().matches("(.*)"+poi.toLowerCase()+"(.*)")) ||
-                        (poi.toLowerCase().matches("(.*)" + noeuds.get(i).POIs.get(j).toLowerCase() + "(.*)")))// Si POI correspond a REGEXP
+                String str = noeuds.get(i).POIs.get(j).toLowerCase();
+                str = Normalizer.normalize(str, Normalizer.Form.NFD);
+                str = str.replaceAll("[^\\p{ASCII}]", "");
+
+                poi = poi.toLowerCase();
+                poi = Normalizer.normalize(poi, Normalizer.Form.NFD);
+                poi = poi.replaceAll("[^\\p{ASCII}]", "");
+
+                if(str.equals(poi))
                 {
                     l.add(i);
                     break;
+                }
+            }
+        }
+
+        for(int i = 0 ; i < noeuds.size() ; i++)
+        {
+            for(int j = 0 ; j < noeuds.get(i).POIs.size() ; j++)
+            {
+                String str = noeuds.get(i).POIs.get(j).toLowerCase();
+                str = Normalizer.normalize(str, Normalizer.Form.NFD);
+                str = str.replaceAll("[^\\p{ASCII}]", "");
+
+                poi = poi.toLowerCase();
+                poi = Normalizer.normalize(poi, Normalizer.Form.NFD);
+                poi = poi.replaceAll("[^\\p{ASCII}]", "");
+
+                if(!str.equals(poi))
+                {
+                    if ((str.matches("(.*)" + poi + "(.*)")) ||
+                            (poi.matches("(.*)" + str + "(.*)")))// Si POI correspond a REGEXP
+                    {
+                        l.add(i);
+                        break;
+                    }
                 }
             }
         }
