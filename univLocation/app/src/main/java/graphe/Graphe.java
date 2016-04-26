@@ -301,15 +301,35 @@ public class Graphe {
 
         ArrayList<Integer> l = new ArrayList<Integer>();
 
+        if(poi.equals("") || poi.matches("( *)"))
+        {
+            return  l;
+        }
+
         for(int i = 0 ; i < noeuds.size() ; i++)
         {
             for(int j = 0 ; j < noeuds.get(i).POIs.size() ; j++)
             {
-                if((noeuds.get(i).POIs.get(j).toLowerCase().matches("(.*)"+poi.toLowerCase()+"(.*)")) ||
-                        (poi.toLowerCase().matches("(.*)" + noeuds.get(i).POIs.get(j).toLowerCase() + "(.*)")))// Si POI correspond a REGEXP
+                if(noeuds.get(i).POIs.get(j).toLowerCase().equals(poi.toLowerCase()))// Si POI correspond a REGEXP
                 {
                     l.add(i);
                     break;
+                }
+            }
+        }
+
+        for(int i = 0 ; i < noeuds.size() ; i++)
+        {
+            for(int j = 0 ; j < noeuds.get(i).POIs.size() ; j++)
+            {
+                if(!noeuds.get(i).POIs.get(j).toLowerCase().equals(poi.toLowerCase()))
+                {
+                    if ((noeuds.get(i).POIs.get(j).toLowerCase().matches("(.*)" + poi.toLowerCase() + "(.*)")) ||
+                            (poi.toLowerCase().matches("(.*)" + noeuds.get(i).POIs.get(j).toLowerCase() + "(.*)")))// Si POI correspond a REGEXP
+                    {
+                        l.add(i);
+                        break;
+                    }
                 }
             }
         }
