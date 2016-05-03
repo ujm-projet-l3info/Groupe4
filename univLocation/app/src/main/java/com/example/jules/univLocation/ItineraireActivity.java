@@ -48,8 +48,26 @@ public class ItineraireActivity extends AppCompatActivity
         else
             presenceEtape = true;
 
-        ArrayList<Integer> listeNoeudsDep = MapsActivity.g.cherchePOI(dep.getText().toString());
-        ArrayList<Integer> listeNoeudsArr = MapsActivity.g.cherchePOI(arr.getText().toString());
+        ArrayList<Integer> listeNoeudsDep;
+        ArrayList<Integer> listeNoeudsArr;
+        
+        if(dep.getText().toString().equals("Ma Position")) {
+            listeNoeudsDep = new ArrayList<>();
+            listeNoeudsDep.add(-2);
+        }
+        else {
+            listeNoeudsDep = MapsActivity.g.cherchePOI(dep.getText().toString());
+        }
+
+        if(arr.getText().toString().equals("Ma Position"))
+        {
+            listeNoeudsArr = MapsActivity.g.cherchePOI(arr.getText().toString());
+        }
+        else {
+            listeNoeudsArr = new ArrayList<>();
+            listeNoeudsArr.add(-2);
+        }
+
         ArrayList<Integer> listeNoeudsEtape = null;
 
         if(presenceEtape)
