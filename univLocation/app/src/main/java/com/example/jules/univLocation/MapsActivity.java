@@ -1,7 +1,5 @@
 package com.example.jules.univLocation;
 
-import android.app.Activity;
-import android.app.Dialog;
 import android.content.Intent;
 import android.content.res.XmlResourceParser;
 import android.graphics.Color;
@@ -12,7 +10,6 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
