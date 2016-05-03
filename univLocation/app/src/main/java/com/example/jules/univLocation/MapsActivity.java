@@ -43,7 +43,8 @@ public class MapsActivity extends AppCompatActivity
 
     private GoogleMap mMap;
     public static Graphe g;
-    private GroundOverlayOptions carteFac;
+    private GroundOverlayOptions calqueOptions;
+    private GroundOverlay calqueFac;
     private ArrayList<PolylineOptions> lignes = new ArrayList<PolylineOptions>();
     private int depart = -1;
     private int arrivee = -1;
@@ -86,6 +87,90 @@ public class MapsActivity extends AppCompatActivity
         }
     }
 
+    public void onMapReady(GoogleMap googleMap) throws SecurityException {
+        mMap = googleMap;
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(45.422949, 4.425735), 18));
+
+        // Calque
+        creerCalque(0);
+
+        // Etage
+        TextView tv = (TextView) findViewById(R.id.etage);
+        tv.setText("Niveau : " + niveau);
+
+        //Type de carte
+        final Button changer_type = (Button) findViewById(R.id.type_carte);
+        changer_type.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(changer_type.getText().equals("Satellite")){
+                    mMap.clear();
+                    calqueFac.remove();
+                    mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+                    if(!lignes.isEmpty())
+                    {
+                        for(int i = 0 ; i < lignes.size() ; i++)
+                        {
+                            mMap.addPolyline(lignes.get(i));
+                        }
+                    }
+                    if(depart != -1){
+                        mMap.addMarker(new MarkerOptions()
+                                .position(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()))
+                                .title(g.noeuds.get(depart).POIs.get(0)));
+                    }
+                    if(arrivee != -1){
+                        mMap.addMarker(new MarkerOptions()
+                                .position(new LatLng(g.noeuds.get(arrivee).getLat(), g.noeuds.get(arrivee).getLon()))
+                                .title(g.noeuds.get(arrivee).POIs.get(0)));
+                    }
+                    if(etape != -1){
+                        mMap.addMarker(new MarkerOptions()
+                                .position(new LatLng(g.noeuds.get(etape).getLat(), g.noeuds.get(etape).getLon()))
+                                .title(g.noeuds.get(etape).POIs.get(0)));
+                    }
+                    changer_type.setText(R.string.plan);
+                }else{
+                    mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                    creerCalque(niveau);
+                    changer_type.setText(R.string.satellite);
+                }
+            }
+        });
+
+        Button monter = (Button) findViewById(R.id.monter);
+        monter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(niveau < 1 && mMap.getMapType() == GoogleMap.MAP_TYPE_NORMAL)
+                    setCalqueNiveau(niveau + 1);
+            }
+        });
+
+        Button descendre = (Button) findViewById(R.id.descendre);
+        descendre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(niveau > -2 && mMap.getMapType() == GoogleMap.MAP_TYPE_NORMAL)
+                    setCalqueNiveau(niveau - 1);
+            }
+        });
+
+        /*mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+            @Override
+            public void onMapClick(LatLng latLng) {
+                mMap.addMarker(new MarkerOptions().position(latLng).title("Lat :" +latLng.latitude + " Lon :"+latLng.longitude));
+            }
+        });
+
+        for(int i = 215; i < g.noeuds.size(); i++){
+            LatLng latLong = new LatLng(g.noeuds.get(i).getLat(), g.noeuds.get(i).getLon());
+            mMap.addMarker(new MarkerOptions().position(latLong).title("" + i));
+        }*/
+    }
+
     protected void onActivityResult(int requestCode , int resultCode , Intent data)
     {
         if(b != null)
@@ -98,10 +183,6 @@ public class MapsActivity extends AppCompatActivity
     public void tracerItineraire()
     {
         mMap.clear();
-
-        Button changer_type = (Button) findViewById(R.id.type_carte);
-        if(changer_type.getText().equals("Satellite"))
-            placerCalque();
 
         depart = b.getInt("depart");
         arrivee = b.getInt("arrivee");
@@ -132,14 +213,23 @@ public class MapsActivity extends AppCompatActivity
         Chemin chemin = g.itineraireMultiple(l, pmr); // Calcul itineraire le plus court
 
         if(chemin.noeuds.size() == 1 && pmr)
-        {
             Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas d'itinéraire PMR pour cette destination").show();
-        }
-
 
         lignes = new ArrayList<>();
         PolylineOptions ligne = new PolylineOptions();
         int n = g.noeuds.get(chemin.noeuds.get(0)).getNiveau();
+
+        Button changer_type = (Button) findViewById(R.id.type_carte);
+        if(changer_type.getText().equals("Satellite")) {
+            if(n != niveau) {
+                creerCalque(n);
+                TextView tv = (TextView) findViewById(R.id.etage);
+                tv.setText("Niveau : " + niveau);
+            }else {
+                creerCalque(niveau);
+            }
+        }
+
         for (int i = 0; i < chemin.noeuds.size(); i++)
         {
             int j = chemin.noeuds.get(i);
@@ -195,132 +285,52 @@ public class MapsActivity extends AppCompatActivity
         mMap.addPolyline(ligne);
     }
 
+    public void creerCalque(int n) {
+        calqueOptions = new GroundOverlayOptions();
+        niveau = n;
+        switch (niveau){
+            case -2:
+                calqueOptions.image(BitmapDescriptorFactory.fromResource(R.drawable.calque_2));
+                break;
+            case -1:
+                calqueOptions.image(BitmapDescriptorFactory.fromResource(R.drawable.calque_1));
+                break;
+            case 0:
+                calqueOptions.image(BitmapDescriptorFactory.fromResource(R.drawable.calque0));
+                break;
+            case 1:
+                calqueOptions.image(BitmapDescriptorFactory.fromResource(R.drawable.calque1));
+                break;
+        }
+        calqueOptions.position(new LatLng(45.4231698,4.4252605), 428.435f, 428.435f);
+        calqueFac = mMap.addGroundOverlay(calqueOptions);
+    }
+
+    public void setCalqueNiveau(int n) {
+        niveau = n;
+        TextView tv = (TextView) findViewById(R.id.etage);
+        tv.setText("Niveau : " + niveau);
+        switch (niveau){
+            case -2:
+                calqueFac.setImage(BitmapDescriptorFactory.fromResource(R.drawable.calque_2));
+                break;
+            case -1:
+                calqueFac.setImage(BitmapDescriptorFactory.fromResource(R.drawable.calque_1));
+                break;
+            case 0:
+                calqueFac.setImage(BitmapDescriptorFactory.fromResource(R.drawable.calque0));
+                break;
+            case 1:
+                calqueFac.setImage(BitmapDescriptorFactory.fromResource(R.drawable.calque1));
+                break;
+        }
+    }
+
     public void onClick(View view)
     {
         Intent i = new Intent(MapsActivity.this, ItineraireActivity.class);
         startActivityForResult(i, 1);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-    }
-
-    public void placerCalque()
-    {
-        mMap.addGroundOverlay(carteFac);
-    }
-
-    public void onMapReady(GoogleMap googleMap) throws SecurityException {
-        mMap = googleMap;
-        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(45.422949, 4.425735), 18));
-
-        // Calque
-        carteFac = new GroundOverlayOptions();
-        carteFac.image(BitmapDescriptorFactory.fromResource(R.drawable.calque0));
-        carteFac.position(new LatLng(45.4231698,4.4252605), 428.435f, 428.435f);
-        placerCalque();
-
-        // Etage
-        TextView tv = (TextView) findViewById(R.id.etage);
-        tv.setText("Niveau : " + niveau);
-
-        //Type de carte
-        final Button changer_type = (Button) findViewById(R.id.type_carte);
-        changer_type.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(changer_type.getText().equals("Satellite")){
-                    mMap.clear();
-                    mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-                    if(!lignes.isEmpty())
-                    {
-                        for(int i = 0 ; i < lignes.size() ; i++)
-                        {
-                            mMap.addPolyline(lignes.get(i));
-                        }
-                    }
-                    if(depart != -1){
-                        mMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()))
-                                .title(g.noeuds.get(depart).POIs.get(0)));
-                    }
-                    if(arrivee != -1){
-                        mMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(g.noeuds.get(arrivee).getLat(), g.noeuds.get(arrivee).getLon()))
-                                .title(g.noeuds.get(arrivee).POIs.get(0)));
-                    }
-                    if(etape != -1){
-                        mMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(g.noeuds.get(etape).getLat(), g.noeuds.get(etape).getLon()))
-                                .title(g.noeuds.get(etape).POIs.get(0)));
-                    }
-                    changer_type.setText(R.string.plan);
-                }else{
-                    mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                    placerCalque();
-                    changer_type.setText(R.string.satellite);
-                }
-            }
-        });
-
-        Button monter = (Button) findViewById(R.id.monter);
-        monter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(niveau < 1 && mMap.getMapType() == GoogleMap.MAP_TYPE_NORMAL){
-                    GroundOverlay calque = mMap.addGroundOverlay(carteFac);
-                    niveau++;
-                    TextView tv = (TextView) findViewById(R.id.etage);
-                    tv.setText("Niveau : " + niveau);
-                    switch (niveau){
-                        case -1:
-                            calque.setImage(BitmapDescriptorFactory.fromResource(R.drawable.calque_1));
-                            break;
-                        case 0:
-                            calque.setImage(BitmapDescriptorFactory.fromResource(R.drawable.calque0));
-                            break;
-                        case 1:
-                            calque.setImage(BitmapDescriptorFactory.fromResource(R.drawable.calque1));
-                            break;
-                    }
-                }
-            }
-        });
-
-        Button descendre = (Button) findViewById(R.id.descendre);
-        descendre.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(niveau > -2 && mMap.getMapType() == GoogleMap.MAP_TYPE_NORMAL){
-                    GroundOverlay calque = mMap.addGroundOverlay(carteFac);
-                    niveau--;
-                    TextView tv = (TextView) findViewById(R.id.etage);
-                    tv.setText("Niveau : " + niveau);
-                    switch (niveau){
-                        case -2:
-                            calque.setImage(BitmapDescriptorFactory.fromResource(R.drawable.calque_2));
-                            break;
-                        case -1:
-                            calque.setImage(BitmapDescriptorFactory.fromResource(R.drawable.calque_1));
-                            break;
-                        case 0:
-                            calque.setImage(BitmapDescriptorFactory.fromResource(R.drawable.calque0));
-                            break;
-                    }
-                }
-            }
-        });
-
-        /*mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-            @Override
-            public void onMapClick(LatLng latLng) {
-                mMap.addMarker(new MarkerOptions().position(latLng).title("Lat :" +latLng.latitude + " Lon :"+latLng.longitude));
-            }
-        });
-
-        for(int i = 215; i < g.noeuds.size(); i++){
-            LatLng latLong = new LatLng(g.noeuds.get(i).getLat(), g.noeuds.get(i).getLon());
-            mMap.addMarker(new MarkerOptions().position(latLong).title("" + i));
-        }*/
     }
 
     public void onBackPressed()
