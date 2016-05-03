@@ -94,7 +94,10 @@ public class MapsActivity extends AppCompatActivity
         mMap = googleMap;
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(45.422949, 4.425735), 18));
+        LatLng maPos= new LatLng(mMap.getMyLocation().getLatitude(),mMap.getMyLocation().getLongitude());
+
+        //new LatLng(45.422949, 4.425735)
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(maPos, 18));
 
         // Calque
         creerCalque(0);
@@ -196,6 +199,10 @@ public class MapsActivity extends AppCompatActivity
 
         ArrayList<Integer> l = new ArrayList<>(); // Ajout de checkpoint pour itineraire
 
+        if(depart==-2)
+        {
+            depart=g.recollerGraphe(mMap.getMyLocation().getLatitude(), mMap.getMyLocation().getLongitude());
+        }
         l.add(depart);
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()))
@@ -208,6 +215,10 @@ public class MapsActivity extends AppCompatActivity
                     .title(g.noeuds.get(etape).POIs.get(0)));
         }
 
+        if(arrivee==-2)
+        {
+            arrivee=g.recollerGraphe(mMap.getMyLocation().getLatitude(), mMap.getMyLocation().getLongitude());
+        }
         l.add(arrivee);
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(g.noeuds.get(arrivee).getLat(), g.noeuds.get(arrivee).getLon()))
