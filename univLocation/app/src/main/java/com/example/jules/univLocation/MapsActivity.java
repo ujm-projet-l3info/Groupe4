@@ -3,6 +3,7 @@ package com.example.jules.univLocation;
 import android.content.Intent;
 import android.content.res.XmlResourceParser;
 import android.graphics.Color;
+import android.location.Location;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -18,6 +19,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -38,7 +42,7 @@ import java.util.ArrayList;
 import graphe.*;
 
 public class MapsActivity extends AppCompatActivity
-        implements OnMapReadyCallback, View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
+        implements OnMapReadyCallback, View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
 
     private GoogleMap mMap;
@@ -51,6 +55,9 @@ public class MapsActivity extends AppCompatActivity
     private int etape = -1;
     private int niveau = 0;
     public static Bundle b = null;
+    public GoogleApiClient mGoogleApiClient;
+    public double latitude;
+    public double longitude;
 
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -85,13 +92,21 @@ public class MapsActivity extends AppCompatActivity
         {
             e.printStackTrace();
         }
+
+        if (mGoogleApiClient == null) {
+            mGoogleApiClient = new GoogleApiClient.Builder(this)
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this)
+                    .addApi(LocationServices.API)
+                    .build();
+        }
     }
 
     public void onMapReady(GoogleMap googleMap) throws SecurityException {
         mMap = googleMap;
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
-        LatLng maPos= new LatLng(mMap.getMyLocation().getLatitude(),mMap.getMyLocation().getLongitude());
+        LatLng maPos= new LatLng(latitude,longitude);
 
         //new LatLng(45.422949, 4.425735)
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(maPos, 18));
@@ -108,34 +123,32 @@ public class MapsActivity extends AppCompatActivity
         changer_type.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(changer_type.getText().equals("Satellite")){
+                if (changer_type.getText().equals("Satellite")) {
                     mMap.clear();
                     calqueFac.remove();
                     mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-                    if(!lignes.isEmpty())
-                    {
-                        for(int i = 0 ; i < lignes.size() ; i++)
-                        {
+                    if (!lignes.isEmpty()) {
+                        for (int i = 0; i < lignes.size(); i++) {
                             mMap.addPolyline(lignes.get(i));
                         }
                     }
-                    if(depart != -1){
+                    if (depart != -1) {
                         mMap.addMarker(new MarkerOptions()
                                 .position(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()))
                                 .title(g.noeuds.get(depart).POIs.get(0)));
                     }
-                    if(arrivee != -1){
+                    if (arrivee != -1) {
                         mMap.addMarker(new MarkerOptions()
                                 .position(new LatLng(g.noeuds.get(arrivee).getLat(), g.noeuds.get(arrivee).getLon()))
                                 .title(g.noeuds.get(arrivee).POIs.get(0)));
                     }
-                    if(etape != -1){
+                    if (etape != -1) {
                         mMap.addMarker(new MarkerOptions()
                                 .position(new LatLng(g.noeuds.get(etape).getLat(), g.noeuds.get(etape).getLon()))
                                 .title(g.noeuds.get(etape).POIs.get(0)));
                     }
                     changer_type.setText(R.string.plan);
-                }else{
+                } else {
                     mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
                     creerCalque(niveau);
                     changer_type.setText(R.string.satellite);
@@ -147,7 +160,7 @@ public class MapsActivity extends AppCompatActivity
         monter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(niveau < 1 && mMap.getMapType() == GoogleMap.MAP_TYPE_NORMAL)
+                if (niveau < 1 && mMap.getMapType() == GoogleMap.MAP_TYPE_NORMAL)
                     setCalqueNiveau(niveau + 1);
             }
         });
@@ -198,7 +211,7 @@ public class MapsActivity extends AppCompatActivity
 
         if(depart==-2)
         {
-            depart=g.recollerGraphe(mMap.getMyLocation().getLatitude(), mMap.getMyLocation().getLongitude());
+            depart=g.recollerGraphe(latitude, longitude);
         }
         l.add(depart);
         mMap.addMarker(new MarkerOptions()
@@ -214,7 +227,7 @@ public class MapsActivity extends AppCompatActivity
 
         if(arrivee==-2)
         {
-            arrivee=g.recollerGraphe(mMap.getMyLocation().getLatitude(), mMap.getMyLocation().getLongitude());
+            arrivee=g.recollerGraphe(latitude, longitude);
         }
         l.add(arrivee);
         mMap.addMarker(new MarkerOptions()
@@ -446,4 +459,36 @@ public class MapsActivity extends AppCompatActivity
 
         xpp.close();
     }
+
+    @Override
+    public void onConnected(Bundle bundle) throws SecurityException{
+        Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation( mGoogleApiClient);
+        if (mLastLocation != null) {
+            latitude = mLastLocation.getLatitude();
+            longitude =mLastLocation.getLongitude();
+            System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&\n&&&&&&&&&&&&&&&&&&&&&&&&&&\n&&&&&&&\n&&&&&&&&&&&&&&&&&&&&&&");
+            System.out.println(latitude +" : "+ longitude);
+        }
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+
+    }
+
+    protected void onStart() {
+        mGoogleApiClient.connect();
+        super.onStart();
+    }
+
+    protected void onStop() {
+        mGoogleApiClient.disconnect();
+        super.onStop();
+    }
+
 }
