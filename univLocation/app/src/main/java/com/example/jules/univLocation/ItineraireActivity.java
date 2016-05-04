@@ -51,7 +51,7 @@ public class ItineraireActivity extends AppCompatActivity
         ArrayList<Integer> listeNoeudsDep;
         ArrayList<Integer> listeNoeudsArr;
         
-        if(dep.getText().toString().equals("Ma Position")) {
+        if(dep.getText().toString().equals("Ma position")) {
             listeNoeudsDep = new ArrayList<>();
             listeNoeudsDep.add(-2);
         }
@@ -59,7 +59,7 @@ public class ItineraireActivity extends AppCompatActivity
             listeNoeudsDep = MapsActivity.g.cherchePOI(dep.getText().toString());
         }
 
-        if(arr.getText().toString().equals("Ma Position"))
+        if(arr.getText().toString().equals("Ma position"))
         {
             listeNoeudsArr = MapsActivity.g.cherchePOI(arr.getText().toString());
         }
@@ -237,6 +237,7 @@ public class ItineraireActivity extends AppCompatActivity
     public void chargerPoi()
     {
         ArrayList<String> listePOIs = MapsActivity.g.getPOIS();
+        listePOIs.add("Ma position");
 
         poiStr = new String[listePOIs.size()];
 

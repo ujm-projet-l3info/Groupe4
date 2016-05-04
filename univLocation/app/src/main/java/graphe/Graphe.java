@@ -255,7 +255,7 @@ public class Graphe {
 
     /* Methodes supplementaires */
 
-    public int recollerGraphe(float lat , float lon)
+    public int recollerGraphe(double lat , double lon)
     {
         /* Renvoit l'indice du sommet
            du graphe le plus proche
@@ -276,6 +276,7 @@ public class Graphe {
             }
         }
 
+        System.out.println("coucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\n");
         return k;
     }
 

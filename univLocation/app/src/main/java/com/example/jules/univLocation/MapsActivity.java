@@ -196,7 +196,7 @@ public class MapsActivity extends AppCompatActivity
         }
     }
 
-    public void tracerItineraire()
+    public void tracerItineraire() throws SecurityException
     {
         mMap.clear();
 
@@ -205,7 +205,13 @@ public class MapsActivity extends AppCompatActivity
         etape = b.getInt("etape");
         boolean pmr = b.getBoolean("pmr");
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()),18));
+        Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+        if (mLastLocation != null) {
+            latitude = mLastLocation.getLatitude();
+            longitude = mLastLocation.getLongitude();
+            //System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&\n&&&&&&&&&&&&&&&&&&&&&&&&&&\n&&&&&&&\n&&&&&&&&&&&&&&&&&&&&&&");
+            //System.out.println(latitude +" : "+ longitude);
+        }
 
         ArrayList<Integer> l = new ArrayList<>(); // Ajout de checkpoint pour itineraire
 
@@ -307,6 +313,8 @@ public class MapsActivity extends AppCompatActivity
         ligne.width(15);
         lignes.add(ligne);
         mMap.addPolyline(ligne);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()), 18));
+
     }
 
     public void creerCalque(int n) {
@@ -465,9 +473,9 @@ public class MapsActivity extends AppCompatActivity
         Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation( mGoogleApiClient);
         if (mLastLocation != null) {
             latitude = mLastLocation.getLatitude();
-            longitude =mLastLocation.getLongitude();
-            System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&\n&&&&&&&&&&&&&&&&&&&&&&&&&&\n&&&&&&&\n&&&&&&&&&&&&&&&&&&&&&&");
-            System.out.println(latitude +" : "+ longitude);
+            longitude = mLastLocation.getLongitude();
+            //System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&\n&&&&&&&&&&&&&&&&&&&&&&&&&&\n&&&&&&&\n&&&&&&&&&&&&&&&&&&&&&&");
+            //System.out.println(latitude +" : "+ longitude);
         }
     }
 

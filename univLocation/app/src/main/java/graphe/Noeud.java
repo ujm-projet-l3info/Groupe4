@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 public class Noeud {
     private int niveau;
-    private float latitude;
-    private float longitude;
+    private double latitude;
+    private double longitude;
     private char batiment;
     private double distance;
     private boolean utile;
@@ -25,7 +25,7 @@ public class Noeud {
         this.voisinsPMR = new ArrayList<Integer>();
     }
 
-    public Noeud(float lat , float lon)
+    public Noeud(double lat , double lon)
     {
         this.latitude = lat;
         this.longitude = lon;
@@ -37,7 +37,7 @@ public class Noeud {
         this.predecesseur = -1;
     }
 
-    public Noeud(float lat , float lon , char bat)
+    public Noeud(double lat , double lon , char bat)
     {
         this(lat , lon);
         this.batiment = bat;
@@ -118,7 +118,7 @@ public class Noeud {
         return this.niveau;
     }
 
-    public float getLat()
+    public double getLat()
     {
         /* Renvoit la latitude
            du noeud courant
@@ -127,7 +127,7 @@ public class Noeud {
         return this.latitude;
     }
 
-    public float getLon()
+    public double getLon()
     {
         /* Renvoit la latitude
            du noeud courant
@@ -176,7 +176,7 @@ public class Noeud {
         this.niveau = n;
     }
 
-    public void setLatitude(float lat)
+    public void setLatitude(double lat)
     {
         /* MaJ de la latitude du
            Noeud actuel
@@ -185,7 +185,7 @@ public class Noeud {
         this.latitude = lat;
     }
 
-    public void setLongitude(float lon)
+    public void setLongitude(double lon)
     {
         /* MaJ de la longitude du
            Noeud actuel

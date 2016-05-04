@@ -18,6 +18,7 @@
 
     <string name="PMR">Personne à mobilité réduite</string>
     <string name="entree_principale">Entrée principale</string>
+    <string name="ma_position">Ma position</string>
     <string name="depart">Départ :</string>
     <string name="arrivee">Arrivée :</string>
     <string name="etape">Étape :</string>

@@ -37,7 +37,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:singleLine="true"
             android:id="@+id/depart"
-            android:text="@string/entree_principale" />
+            android:text="@string/ma_position" />
 
         <TextView
             android:layout_marginTop="7dp"
