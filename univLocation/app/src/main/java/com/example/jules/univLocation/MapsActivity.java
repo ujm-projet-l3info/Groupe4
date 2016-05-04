@@ -56,8 +56,8 @@ public class MapsActivity extends AppCompatActivity
     private int niveau = 0;
     public static Bundle b = null;
     public GoogleApiClient mGoogleApiClient;
-    public double latitude;
-    public double longitude;
+    public static double latitude;
+    public static double longitude;
 
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -105,11 +105,6 @@ public class MapsActivity extends AppCompatActivity
     public void onMapReady(GoogleMap googleMap) throws SecurityException {
         mMap = googleMap;
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-
-        LatLng maPos= new LatLng(latitude,longitude);
-
-        //new LatLng(45.422949, 4.425735)
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(maPos, 18));
 
         // Calque
         creerCalque(0);
@@ -185,6 +180,8 @@ public class MapsActivity extends AppCompatActivity
             LatLng latLong = new LatLng(g.noeuds.get(i).getLat(), g.noeuds.get(i).getLon());
             mMap.addMarker(new MarkerOptions().position(latLong).title("" + i));
         }*/
+
+        mMap.setMyLocationEnabled(true);
     }
 
     protected void onActivityResult(int requestCode , int resultCode , Intent data)
@@ -209,8 +206,6 @@ public class MapsActivity extends AppCompatActivity
         if (mLastLocation != null) {
             latitude = mLastLocation.getLatitude();
             longitude = mLastLocation.getLongitude();
-            //System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&\n&&&&&&&&&&&&&&&&&&&&&&&&&&\n&&&&&&&\n&&&&&&&&&&&&&&&&&&&&&&");
-            //System.out.println(latitude +" : "+ longitude);
         }
 
         ArrayList<Integer> l = new ArrayList<>(); // Ajout de checkpoint pour itineraire
@@ -470,12 +465,17 @@ public class MapsActivity extends AppCompatActivity
 
     @Override
     public void onConnected(Bundle bundle) throws SecurityException{
-        Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation( mGoogleApiClient);
+        Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
         if (mLastLocation != null) {
             latitude = mLastLocation.getLatitude();
             longitude = mLastLocation.getLongitude();
-            //System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&\n&&&&&&&&&&&&&&&&&&&&&&&&&&\n&&&&&&&\n&&&&&&&&&&&&&&&&&&&&&&");
-            //System.out.println(latitude +" : "+ longitude);
+
+            Noeud n = g.noeuds.get(g.recollerGraphe(latitude, longitude));
+
+            LatLng maPos = new LatLng(n.getLat(), n.getLon());
+
+            //new LatLng(45.422949, 4.425735)
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(maPos, 18));
         }
     }
 

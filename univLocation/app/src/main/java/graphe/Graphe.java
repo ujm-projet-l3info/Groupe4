@@ -4,6 +4,8 @@ package graphe;
  * Created by arthur on 07/04/16.
  */
 
+import com.example.jules.univLocation.MapsActivity;
+
 import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.Set;
@@ -276,7 +278,6 @@ public class Graphe {
             }
         }
 
-        System.out.println("coucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\ncoucou\n");
         return k;
     }
 
@@ -302,62 +303,84 @@ public class Graphe {
         return new ArrayList<String>(hashList);
     }
 
-    public ArrayList<Integer> cherchePOI(String poi)
-    {
+    public ArrayList<Integer> cherchePOI(String poi) {
         /* Renvoit la liste des Noeuds correspondant
          au POI poi */
 
         ArrayList<Integer> l = new ArrayList<Integer>();
 
-        if(poi.equals("") || poi.matches("( *)"))
-        {
-            return  l;
+        if (poi.equals("") || poi.matches("( *)")) {
+            return l;
         }
 
-        for(int i = 0 ; i < noeuds.size() ; i++)
-        {
-            for(int j = 0 ; j < noeuds.get(i).POIs.size() ; j++)
-            {
+        if (poi.equals("Ma position")) {
+            l.add(-2);
+            return l;
+        }
+
+        for (int i = 0; i < noeuds.size(); i++) {
+            for (int j = 0; j < noeuds.get(i).POIs.size(); j++) {
                 String str = noeuds.get(i).POIs.get(j).toLowerCase();
-                str = Normalizer.normalize(str, Normalizer.Form.NFD);
-                str = str.replaceAll("[^\\p{ASCII}]", "");
+                //str = Normalizer.normalize(str, Normalizer.Form.NFD);
+                //str = str.replaceAll("[^\\p{ASCII}]", "");
 
                 poi = poi.toLowerCase();
-                poi = Normalizer.normalize(poi, Normalizer.Form.NFD);
-                poi = poi.replaceAll("[^\\p{ASCII}]", "");
+                //poi = Normalizer.normalize(poi, Normalizer.Form.NFD);
+                //poi = poi.replaceAll("[^\\p{ASCII}]", "");
 
-                if(str.equals(poi))
-                {
+                if (str.equals(poi)) {
+                    System.out.println("equals OK");
                     l.add(i);
                     break;
                 }
             }
         }
 
-        for(int i = 0 ; i < noeuds.size() ; i++)
-        {
-            for(int j = 0 ; j < noeuds.get(i).POIs.size() ; j++)
-            {
-                String str = noeuds.get(i).POIs.get(j).toLowerCase();
-                str = Normalizer.normalize(str, Normalizer.Form.NFD);
-                str = str.replaceAll("[^\\p{ASCII}]", "");
+        if (l.isEmpty()) {
+            for (int i = 0; i < noeuds.size(); i++) {
+                for (int j = 0; j < noeuds.get(i).POIs.size(); j++) {
+                    String str = noeuds.get(i).POIs.get(j).toLowerCase();
+                    str = Normalizer.normalize(str, Normalizer.Form.NFD);
+                    str = str.replaceAll("[^\\p{ASCII}]", "");
 
-                poi = poi.toLowerCase();
-                poi = Normalizer.normalize(poi, Normalizer.Form.NFD);
-                poi = poi.replaceAll("[^\\p{ASCII}]", "");
+                    poi = poi.toLowerCase();
+                    poi = Normalizer.normalize(poi, Normalizer.Form.NFD);
+                    poi = poi.replaceAll("[^\\p{ASCII}]", "");
 
-                if(!str.equals(poi))
-                {
-                    if ((str.matches("(.*)" + poi + "(.*)")) ||
-                            (poi.matches("(.*)" + str + "(.*)")))// Si POI correspond a REGEXP
-                    {
-                        l.add(i);
-                        break;
+                    if (!str.equals(poi)) {
+                        if ((str.matches("(.*)" + poi + "(.*)")) ||
+                                (poi.matches("(.*)" + str + "(.*)")))// Si POI correspond a REGEXP
+                        {
+                            l.add(i);
+                            break;
+                        }
                     }
                 }
             }
         }
 
+        System.out.println("Taille de l : " + l.size());
+
+        Noeud tmp = noeuds.get(recollerGraphe(MapsActivity.latitude , MapsActivity.longitude));
+
+        double d = tmp.distance(noeuds.get(l.get(0)));
+
+        System.out.println("d init : " + d);
+        for(int i = 1 ; i < l.size() ; i++)
+        {
+            int n = l.get(i);
+
+            if(tmp.distance(noeuds.get(n)) < d)
+            {
+                d = tmp.distance(noeuds.get(n));
+                System.out.println("Nouveau plus proche : " + n + "d : " + d);
+                l.set(0 , n);
+                //i++;
+
+            }
+        }
+
+        System.out.println("Taille de l : " + l.size());
         return l;
     }
 

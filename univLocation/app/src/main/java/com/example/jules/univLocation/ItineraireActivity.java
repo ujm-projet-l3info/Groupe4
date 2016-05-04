@@ -1,8 +1,6 @@
 package com.example.jules.univLocation;
 
-import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.view.KeyEvent;
@@ -48,27 +46,12 @@ public class ItineraireActivity extends AppCompatActivity
         else
             presenceEtape = true;
 
-        ArrayList<Integer> listeNoeudsDep;
-        ArrayList<Integer> listeNoeudsArr;
-        
-        if(dep.getText().toString().equals("Ma position")) {
-            listeNoeudsDep = new ArrayList<>();
-            listeNoeudsDep.add(-2);
-        }
-        else {
-            listeNoeudsDep = MapsActivity.g.cherchePOI(dep.getText().toString());
-        }
-
-        if(arr.getText().toString().equals("Ma position"))
-        {
-            listeNoeudsArr = MapsActivity.g.cherchePOI(arr.getText().toString());
-        }
-        else {
-            listeNoeudsArr = new ArrayList<>();
-            listeNoeudsArr.add(-2);
-        }
-
+        ArrayList<Integer> listeNoeudsDep = null;
+        ArrayList<Integer> listeNoeudsArr = null;
         ArrayList<Integer> listeNoeudsEtape = null;
+        
+        listeNoeudsDep = MapsActivity.g.cherchePOI(dep.getText().toString());
+        listeNoeudsArr = MapsActivity.g.cherchePOI(arr.getText().toString());
 
         if(presenceEtape)
             listeNoeudsEtape = MapsActivity.g.cherchePOI(etape.getText().toString());
