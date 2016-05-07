@@ -64,7 +64,6 @@ public class MapsActivity extends AppCompatActivity
     public GoogleApiClient mGoogleApiClient;
     public static double latitude;
     public static double longitude;
-
     public ArrayList<Marker> marqueurs;
 
     protected void onCreate(Bundle savedInstanceState)
@@ -108,9 +107,6 @@ public class MapsActivity extends AppCompatActivity
                     .addApi(LocationServices.API)
                     .build();
         }
-
-        /* Ajout marqueurs */
-
     }
 
     public void onMapReady(GoogleMap googleMap) throws SecurityException {
@@ -120,8 +116,10 @@ public class MapsActivity extends AppCompatActivity
         // Checker gps
         LocationManager mlocManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
 
-        if(!mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER))
+        if(!mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
             showDialogGPS();
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(45.422949, 4.425735), 18));
+        }
 
         // Calque
         creerCalque(0);
@@ -261,8 +259,8 @@ public class MapsActivity extends AppCompatActivity
         PolylineOptions ligne = new PolylineOptions();
         int n = g.noeuds.get(chemin.noeuds.get(0)).getNiveau();
 
-        Button changer_type = (Button) findViewById(R.id.type_carte);
-        if(changer_type.getText().equals("Satellite")) {
+        Button changerType = (Button) findViewById(R.id.type_carte);
+        if(changerType.getText().equals("Satellite")) {
             if(n != niveau) {
                 creerCalque(n);
                 TextView tv = (TextView) findViewById(R.id.etage);
@@ -330,6 +328,8 @@ public class MapsActivity extends AppCompatActivity
     }
 
     public void creerCalque(int n) {
+        effacerMarqueurs();
+
         calqueOptions = new GroundOverlayOptions();
         niveau = n;
         switch (niveau){
@@ -346,14 +346,13 @@ public class MapsActivity extends AppCompatActivity
                 calqueOptions.image(BitmapDescriptorFactory.fromResource(R.drawable.calque1));
                 break;
         }
+
         calqueOptions.position(new LatLng(45.4231698,4.4252605), 428.435f, 428.435f);
         calqueFac = mMap.addGroundOverlay(calqueOptions);
     }
 
     public void setCalqueNiveau(int n) {
-        if(marqueurs != null)
-            for(int i = 0 ; i < marqueurs.size() ; i++)
-                marqueurs.get(i).remove();
+        effacerMarqueurs();
 
         niveau = n;
         TextView tv = (TextView) findViewById(R.id.etage);
@@ -401,19 +400,22 @@ public class MapsActivity extends AppCompatActivity
 
         return true;
     }
-/*
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        return super.onOptionsItemSelected(item);
+
+    public void effacerMarqueurs() {
+        if(marqueurs != null) {
+            for (int i = 0; i < marqueurs.size(); i++)
+                marqueurs.get(i).remove();
+        }
     }
-*/
-    public  boolean onOptionsItemSelected(MenuItem item)
-    {
+
+    public  boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.trouver_wc)
         {
             int nb = 0;
             LatLng l;
             ArrayList<Integer> listeToilettes = g.chercheToilettes();
+
+            effacerMarqueurs();
 
             marqueurs = new ArrayList<>();
 
@@ -433,13 +435,15 @@ public class MapsActivity extends AppCompatActivity
             }
 
             if(nb == 0)
-                Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas de toilettes au niveau  " + niveau).show();
+                Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas de toilettes au niveau " + niveau).show();
         }
         else if(item.getItemId() == R.id.trouver_distrib)
         {
             int nb = 0;
             LatLng l;
             ArrayList<Integer> listeDistributeurs = g.chercheDistributeurs();
+
+            effacerMarqueurs();
 
             marqueurs = new ArrayList<>();
 
@@ -465,8 +469,7 @@ public class MapsActivity extends AppCompatActivity
         return true;
     }
 
-    public boolean onNavigationItemSelected(MenuItem item)
-    {
+    public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -494,8 +497,73 @@ public class MapsActivity extends AppCompatActivity
         return true;
     }
 
-    private void parseGraphe() throws IOException, XmlPullParserException
-    {
+    @Override
+    public void onConnected(Bundle bundle) throws SecurityException {
+        Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+        if (mLastLocation != null) {
+            latitude = mLastLocation.getLatitude();
+            longitude = mLastLocation.getLongitude();
+
+            Noeud n = g.noeuds.get(g.recollerGraphe(latitude, longitude));
+
+            LatLng maPos = new LatLng(n.getLat(), n.getLon());
+
+            //new LatLng(45.422949, 4.425735)
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(maPos, 18));
+        }
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+
+    }
+
+    protected void onStart() {
+        mGoogleApiClient.connect();
+        super.onStart();
+    }
+
+    protected void onStop() {
+        mGoogleApiClient.disconnect();
+        super.onStop();
+    }
+
+    /* Localisation */
+    @Override
+    public void onLocationChanged(Location loc) {
+        // called when the listener is notified with a location update from the GPS
+        System.out.println("Nouvelle loc : (" + loc.getLatitude() + ";" + loc.getLongitude() + ")");
+    }
+
+    private void showDialogGPS() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setTitle("Localisation désactivée");
+        builder.setMessage("Activez votre localisation");
+        builder.setInverseBackgroundForced(false);
+
+        builder.setPositiveButton("Activer", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+            }
+        });
+
+        builder.setNegativeButton("Ignorer", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+
+    private void parseGraphe() throws IOException, XmlPullParserException {
         XmlResourceParser xpp = getResources().getXml(R.xml.metare);
 
         g = new Graphe();
@@ -540,73 +608,5 @@ public class MapsActivity extends AppCompatActivity
         }
 
         xpp.close();
-    }
-
-    @Override
-    public void onConnected(Bundle bundle) throws SecurityException{
-        Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-        if (mLastLocation != null) {
-            latitude = mLastLocation.getLatitude();
-            longitude = mLastLocation.getLongitude();
-
-            Noeud n = g.noeuds.get(g.recollerGraphe(latitude, longitude));
-
-            LatLng maPos = new LatLng(n.getLat(), n.getLon());
-
-            //new LatLng(45.422949, 4.425735)
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(maPos, 18));
-        }
-    }
-
-    @Override
-    public void onConnectionSuspended(int i) {
-
-    }
-
-    @Override
-    public void onConnectionFailed(ConnectionResult connectionResult) {
-
-    }
-
-    protected void onStart() {
-        mGoogleApiClient.connect();
-        super.onStart();
-    }
-
-    protected void onStop() {
-        mGoogleApiClient.disconnect();
-        super.onStop();
-    }
-
-    /* Localisation */
-    @Override
-    public void onLocationChanged(Location loc) {
-        // called when the listener is notified with a location update from the GPS
-        System.out.println("####################################Nouvelle loc : (" + loc.getLatitude() + ";" + loc.getLongitude() + ")\n################");
-    }
-
-    private void showDialogGPS()
-    {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(false);
-        builder.setTitle("Localisation désactivée");
-        builder.setMessage("Activez votre localisation");
-        builder.setInverseBackgroundForced(true);
-
-        builder.setPositiveButton("Activer", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                startActivity(
-                        new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
-            }
-        });
-
-        builder.setNegativeButton("Ignorer", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-
-        AlertDialog alert = builder.create();
-        alert.show();
     }
 }

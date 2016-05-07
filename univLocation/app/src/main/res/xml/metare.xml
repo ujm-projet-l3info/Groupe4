@@ -506,14 +506,13 @@
 
   <!-- BATIMENT F -->
 
-  <noeud num="26"> <!-- F101 Toilettes (1) -->
+  <noeud num="26"> <!-- F101 -->
     <niveau>0</niveau>
     <latitude>45.423646</latitude>
     <longitude>4.425505</longitude>
     <batiment>F</batiment>
     <liste_POI>
       <POI>F101</POI>
-      <POI>Toilettes</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>25</voisin>
@@ -525,7 +524,7 @@
     </liste_voisins_PMR>
   </noeud>
 
-  <noeud num="27"> <!-- F101 Toilettes (2) intersection -->
+  <noeud num="27"> <!-- F101 Toilettes et intersection -->
     <niveau>0</niveau>
     <latitude>45.423683</latitude>
     <longitude>4.425578</longitude>

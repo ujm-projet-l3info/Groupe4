@@ -28,4 +28,68 @@
 
     <string name="etage_plus">+</string>
     <string name="etage_moins">-</string>
+
+    <string name="aide">
+<![CDATA[
+<html>
+    <head></head>
+    <body style="text-align:center;background-color:#404040;">
+        <h2 style="color:#993299;font-weight:bold;">Bienvenue sur Univ\'Location</h2>
+        <div style="background:#606060;border-style:solid;border-color:#606060;border-width:2px;border-radius:10px;">
+            <span style="padding:5px;color:#b055b0">À quoi me sert cette application ?</span>
+            <br/><br/>
+            <span style="color:#aaaaaa">Univ\'Location vous permet de vous repérer et vous diriger dans le campus de la Faculté des Sciences. Elle vous permet aussi de consulter votre emploi du temps.</span>
+        </div>
+        <br/>
+        <div style="background:#505050;border-style:solid;border-color:#505050;border-width:2px;border-radius:10px;">
+            <span style="padding:5px;color:#b055b0">Comment me rendre où je le souhaite ?</span>
+            <br/><br/>
+            <span style="color:#aaaaaa">Pour vous rendre à un certain endroit, vous devez passer par le formulaire d\'itinéraire accessible depuis le menu de navigation ou depuis la carte en appuyant sur le bouton en bas. Vous pouvez y préciser le départ, l\'arrivée ainsi qu\'une éventuelle étape. Veillez à avoir activé votre localisation.</span>
+        </div>
+        <br/>
+        <div style="background:#606060;border-style:solid;border-color:#606060;border-width:2px;border-radius:10px;">
+            <span style="padding:5px;color:#b055b0">Je suis une personne à mobilité réduite</span>
+            <br/><br/>
+            <span style="color:#aaaaaa">Pas de panique, il existe une option PMR dans le choix d\'un itinéraire.</span>
+        </div>
+        <br/>
+        <div style="background:#505050;border-style:solid;border-color:#505050;border-width:2px;border-radius:10px;">
+            <span style="padding:5px;color:#b055b0">Mon itinéraire me fait changer d\'étage</span>
+            <br/><br/>
+            <span style="color:#aaaaaa">En cas d\'itinéraire muti-étages, vous pouvez utiliser les boutons \'+\' et \'-\' de la carte pour afficher les différents niveaux. Sur le tracé du chemin, les portions de niveaux différents sont représentées par des nuances de gris : du plus foncé (niveau -2) au plus clair (niveau 1).</span>
+        </div>
+        <br/>
+        <div style="background:#606060;border-style:solid;border-color:#606060;border-width:2px;border-radius:10px;">
+            <span style="padding:5px;color:#b055b0">Comment vite aller aux toilettes ?</span>
+            <br/><br/>
+            <span style="color:#aaaaaa">Une option permet de montrer directement l\'emplacement des toilettes du niveau auquel vous êtes. Elle se trouve dans le menu déroulant en haut à droite de la page \'Carte\'.</span>
+        </div>
+        <br/>
+        <div style="background:#505050;border-style:solid;border-color:#505050;border-width:2px;border-radius:10px;">
+            <span style="padding:5px;color:#b055b0">J\'ai une petite faim</span>
+            <br/><br/>
+            <span style="color:#aaaaaa">Il y a une option similaire à celle de l\'affichage des toilettes, mais pour afficher l\'emplacement des distributeurs et machines à café.<span>
+        </div>
+        <br/>
+        <div style="background:#606060;border-style:solid;border-color:#606060;border-width:2px;border-radius:10px;">
+            <span style="padding:5px;color:#b055b0">Comment visualiser mon emploi du temps ?</span>
+            <br/><br/>
+            <span style="color:#aaaaaa">Il suffit de vous rendre dans \'Calendrier\' depuis le menu de navigation. Le calendrier affiché doit avoir été au préalable importé dans votre appareil, via le clonage à un compte ou directement depuis l\'URL récupérée sur l\'ENT de l\'UJM. Attention, l\'application récupère tous les événements stockés dans l\'appareil qui ont un lieu. Il se peut que d\'autres événements ne concernant pas votre emploi du temps y apparaissent.</span>
+        </div>
+        <br/>
+        <div style="background:#505050;border-style:solid;border-color:#505050;border-width:2px;border-radius:10px;">
+            <span style="padding:5px;color:#b055b0">Je ne suis pas à l\'aise avec le plan</span>
+            <br/><br/>
+            <span style="color:#aaaaaa">Une vue satellite vous est proposée si celle-ci vous convient mieux.</span>
+        </div>
+        <br/>
+        <div style="background:#606060;border-style:solid;border-color:#606060;border-width:2px;border-radius:10px;">
+            <span style="padding:5px;color:#b055b0">J\'ai d\'autres questions</span>
+            <br/><br/>
+            <span style="color:#aaaaaa">Pour tout autre question ou précision, veuillez nous contacter par mail à l\'adresse <span style="color:#63c1ba;text-decoration:underline;">yanndroy@yahoo.fr</span></span>
+        </div>
+    </body>
+</html>
+]]>
+</string>
 </resources>
