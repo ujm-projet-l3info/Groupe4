@@ -329,7 +329,6 @@ public class Graphe {
                 //poi = poi.replaceAll("[^\\p{ASCII}]", "");
 
                 if (str.equals(poi)) {
-                    System.out.println("equals OK");
                     l.add(i);
                     break;
                 }
@@ -359,13 +358,10 @@ public class Graphe {
             }
         }
 
-        System.out.println("Taille de l : " + l.size());
-
         Noeud tmp = noeuds.get(recollerGraphe(MapsActivity.latitude , MapsActivity.longitude));
 
         double d = tmp.distance(noeuds.get(l.get(0)));
 
-        System.out.println("d init : " + d);
         for(int i = 1 ; i < l.size() ; i++)
         {
             int n = l.get(i);
@@ -373,14 +369,13 @@ public class Graphe {
             if(tmp.distance(noeuds.get(n)) < d)
             {
                 d = tmp.distance(noeuds.get(n));
-                System.out.println("Nouveau plus proche : " + n + "d : " + d);
+                //System.out.println("Nouveau plus proche : " + n + "d : " + d);
                 l.set(0 , n);
                 //i++;
 
             }
         }
 
-        System.out.println("Taille de l : " + l.size());
         return l;
     }
 

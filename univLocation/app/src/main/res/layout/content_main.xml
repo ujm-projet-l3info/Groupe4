@@ -13,59 +13,6 @@
     tools:context="com.example.jules.univLocation.MapsActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <!--<LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:weightSum="1">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/satellite"
-            android:background="@drawable/bouton"
-            android:textColor="@color/colorText"
-            android:id="@+id/type_carte" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimaryDark"
-            android:textStyle="bold"
-            android:layout_gravity="end"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text=""
-            android:id="@+id/etage" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.75" />
-
-        <Button
-            android:layout_marginTop="30dp"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:text="@string/etage_plus"
-            android:background="@drawable/bouton"
-            android:textColor="@color/colorText"
-            android:id="@+id/monter" />
-
-        <Button
-            android:layout_marginTop="5dp"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:text="@string/etage_moins"
-            android:background="@drawable/bouton"
-            android:textColor="@color/colorText"
-            android:id="@+id/descendre" />
-
-    </LinearLayout>-->
-
 
     <GridLayout
         android:layout_width="match_parent"

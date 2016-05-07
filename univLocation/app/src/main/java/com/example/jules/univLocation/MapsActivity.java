@@ -1,9 +1,12 @@
 package com.example.jules.univLocation;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.XmlResourceParser;
 import android.graphics.Color;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -11,6 +14,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -21,6 +25,7 @@ import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -30,6 +35,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.GroundOverlay;
 import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
@@ -42,14 +48,14 @@ import java.util.ArrayList;
 import graphe.*;
 
 public class MapsActivity extends AppCompatActivity
-        implements OnMapReadyCallback, View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+        implements OnMapReadyCallback, View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
 
     private GoogleMap mMap;
     public static Graphe g;
     private GroundOverlayOptions calqueOptions;
     private GroundOverlay calqueFac;
-    private ArrayList<PolylineOptions> lignes = new ArrayList<PolylineOptions>();
+    private ArrayList<PolylineOptions> lignes = new ArrayList<>();
     private int depart = -1;
     private int arrivee = -1;
     private int etape = -1;
@@ -58,6 +64,8 @@ public class MapsActivity extends AppCompatActivity
     public GoogleApiClient mGoogleApiClient;
     public static double latitude;
     public static double longitude;
+
+    public ArrayList<Marker> marqueurs;
 
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -100,11 +108,20 @@ public class MapsActivity extends AppCompatActivity
                     .addApi(LocationServices.API)
                     .build();
         }
+
+        /* Ajout marqueurs */
+
     }
 
     public void onMapReady(GoogleMap googleMap) throws SecurityException {
         mMap = googleMap;
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
+        // Checker gps
+        LocationManager mlocManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+
+        if(!mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER))
+            showDialogGPS();
 
         // Calque
         creerCalque(0);
@@ -334,6 +351,10 @@ public class MapsActivity extends AppCompatActivity
     }
 
     public void setCalqueNiveau(int n) {
+        if(marqueurs != null)
+            for(int i = 0 ; i < marqueurs.size() ; i++)
+                marqueurs.get(i).remove();
+
         niveau = n;
         TextView tv = (TextView) findViewById(R.id.etage);
         tv.setText("Niveau : " + niveau);
@@ -380,10 +401,68 @@ public class MapsActivity extends AppCompatActivity
 
         return true;
     }
-
+/*
     public boolean onOptionsItemSelected(MenuItem item)
     {
         return super.onOptionsItemSelected(item);
+    }
+*/
+    public  boolean onOptionsItemSelected(MenuItem item)
+    {
+        if(item.getItemId() == R.id.trouver_wc)
+        {
+            int nb = 0;
+            LatLng l;
+            ArrayList<Integer> listeToilettes = g.chercheToilettes();
+
+            marqueurs = new ArrayList<>();
+
+            for(int i = 0 ; i < listeToilettes.size() ; i++)
+            {
+                Noeud n = g.noeuds.get(listeToilettes.get(i));
+                if(niveau == n.getNiveau()) {
+                    l = new LatLng(n.getLat(), n.getLon());
+
+                    MarkerOptions options = new MarkerOptions()
+                            .title("Toilettes")
+                            .position(l);
+
+                    marqueurs.add(mMap.addMarker(options));
+                    nb++;
+                }
+            }
+
+            if(nb == 0)
+                Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas de toilettes au niveau  " + niveau).show();
+        }
+        else if(item.getItemId() == R.id.trouver_distrib)
+        {
+            int nb = 0;
+            LatLng l;
+            ArrayList<Integer> listeDistributeurs = g.chercheDistributeurs();
+
+            marqueurs = new ArrayList<>();
+
+            for(int i = 0 ; i < listeDistributeurs.size() ; i++)
+            {
+                Noeud n = g.noeuds.get(listeDistributeurs.get(i));
+                if(niveau == n.getNiveau()) {
+                    l = new LatLng(n.getLat(), n.getLon());
+
+                    MarkerOptions options = new MarkerOptions()
+                            .title("Distributeurs")
+                            .position(l);
+
+                    marqueurs.add(mMap.addMarker(options));
+                    nb++;
+                }
+            }
+
+            if(nb == 0)
+                Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas de distributeurs au niveau  " + niveau).show();
+        }
+
+        return true;
     }
 
     public boolean onNavigationItemSelected(MenuItem item)
@@ -499,4 +578,35 @@ public class MapsActivity extends AppCompatActivity
         super.onStop();
     }
 
+    /* Localisation */
+    @Override
+    public void onLocationChanged(Location loc) {
+        // called when the listener is notified with a location update from the GPS
+        System.out.println("####################################Nouvelle loc : (" + loc.getLatitude() + ";" + loc.getLongitude() + ")\n################");
+    }
+
+    private void showDialogGPS()
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setTitle("Localisation désactivée");
+        builder.setMessage("Activez votre localisation");
+        builder.setInverseBackgroundForced(true);
+
+        builder.setPositiveButton("Activer", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                startActivity(
+                        new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+            }
+        });
+
+        builder.setNegativeButton("Ignorer", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
 }
