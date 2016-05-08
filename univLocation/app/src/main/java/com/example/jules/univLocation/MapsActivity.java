@@ -1,5 +1,6 @@
 package com.example.jules.univLocation;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,13 +15,13 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -31,6 +32,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.GroundOverlay;
 import com.google.android.gms.maps.model.GroundOverlayOptions;
@@ -55,7 +57,7 @@ public class MapsActivity extends AppCompatActivity
     public static Graphe g;
     private GroundOverlayOptions calqueOptions;
     private GroundOverlay calqueFac;
-    private ArrayList<PolylineOptions> lignes = new ArrayList<>();
+    private ArrayList<PolylineOptions> lignes = new ArrayList<PolylineOptions>();
     private int depart = -1;
     private int arrivee = -1;
     private int etape = -1;
@@ -64,7 +66,7 @@ public class MapsActivity extends AppCompatActivity
     public GoogleApiClient mGoogleApiClient;
     public static double latitude;
     public static double longitude;
-    public ArrayList<Marker> marqueurs;
+    public ArrayList<Marker> marqueurs = new ArrayList<Marker>();
 
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -121,6 +123,24 @@ public class MapsActivity extends AppCompatActivity
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(45.422949, 4.425735), 18));
         }
 
+        // Localisation utilisateur
+        mMap.setMyLocationEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(false);
+
+        FloatingActionButton maLoc = (FloatingActionButton) findViewById(R.id.ma_localisation);
+        maLoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) throws SecurityException {
+                Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+
+                if(mLastLocation != null){
+                    latitude = mLastLocation.getLatitude();
+                    longitude = mLastLocation.getLongitude();
+                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), 18));
+                }
+            }
+        });
+
         // Calque
         creerCalque(0);
 
@@ -129,11 +149,11 @@ public class MapsActivity extends AppCompatActivity
         tv.setText("Niveau : " + niveau);
 
         //Type de carte
-        final Button changer_type = (Button) findViewById(R.id.type_carte);
-        changer_type.setOnClickListener(new View.OnClickListener() {
+        final Button changerType = (Button) findViewById(R.id.type_carte);
+        changerType.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (changer_type.getText().equals("Satellite")) {
+                if (changerType.getText().equals("Satellite")) {
                     mMap.clear();
                     calqueFac.remove();
                     mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
@@ -145,27 +165,31 @@ public class MapsActivity extends AppCompatActivity
                     if (depart != -1) {
                         mMap.addMarker(new MarkerOptions()
                                 .position(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()))
-                                .title(g.noeuds.get(depart).POIs.get(0)));
-                    }
-                    if (arrivee != -1) {
-                        mMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(g.noeuds.get(arrivee).getLat(), g.noeuds.get(arrivee).getLon()))
-                                .title(g.noeuds.get(arrivee).POIs.get(0)));
+                                .title("Départ")
+                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE)));
                     }
                     if (etape != -1) {
                         mMap.addMarker(new MarkerOptions()
                                 .position(new LatLng(g.noeuds.get(etape).getLat(), g.noeuds.get(etape).getLon()))
-                                .title(g.noeuds.get(etape).POIs.get(0)));
+                                .title("Étape")
+                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
                     }
-                    changer_type.setText(R.string.plan);
+                    if (arrivee != -1) {
+                        mMap.addMarker(new MarkerOptions()
+                                .position(new LatLng(g.noeuds.get(arrivee).getLat(), g.noeuds.get(arrivee).getLon()))
+                                .title("Arrivée")
+                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+                    }
+                    changerType.setText(R.string.plan);
                 } else {
                     mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
                     creerCalque(niveau);
-                    changer_type.setText(R.string.satellite);
+                    changerType.setText(R.string.satellite);
                 }
             }
         });
 
+        // Changer niveau
         Button monter = (Button) findViewById(R.id.monter);
         monter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -195,8 +219,6 @@ public class MapsActivity extends AppCompatActivity
             LatLng latLong = new LatLng(g.noeuds.get(i).getLat(), g.noeuds.get(i).getLon());
             mMap.addMarker(new MarkerOptions().position(latLong).title("" + i));
         }*/
-
-        mMap.setMyLocationEnabled(true);
     }
 
     protected void onActivityResult(int requestCode , int resultCode , Intent data)
@@ -211,6 +233,7 @@ public class MapsActivity extends AppCompatActivity
     public void tracerItineraire() throws SecurityException
     {
         mMap.clear();
+        marqueurs = new ArrayList<Marker>();
 
         depart = b.getInt("depart");
         arrivee = b.getInt("arrivee");
@@ -225,38 +248,41 @@ public class MapsActivity extends AppCompatActivity
 
         ArrayList<Integer> l = new ArrayList<>(); // Ajout de checkpoint pour itineraire
 
-        if(depart==-2)
-        {
-            depart=g.recollerGraphe(latitude, longitude);
-        }
+        if(depart == -2)
+            depart = g.recollerGraphe(latitude, longitude);
         l.add(depart);
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()))
-                .title(g.noeuds.get(depart).POIs.get(0)));
+                .title("Départ")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE)));
 
         if(etape != -1) {
+            if(etape == -2)
+                etape = g.recollerGraphe(latitude, longitude);
             l.add(etape);
             mMap.addMarker(new MarkerOptions()
                     .position(new LatLng(g.noeuds.get(etape).getLat(), g.noeuds.get(etape).getLon()))
-                    .title(g.noeuds.get(etape).POIs.get(0)));
+                    .title("Étape")
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
         }
 
-        if(arrivee==-2)
-        {
-            arrivee=g.recollerGraphe(latitude, longitude);
-        }
+        if(arrivee == -2)
+            arrivee = g.recollerGraphe(latitude, longitude);
         l.add(arrivee);
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(g.noeuds.get(arrivee).getLat(), g.noeuds.get(arrivee).getLon()))
-                .title(g.noeuds.get(arrivee).POIs.get(0)));
+                .title("Arrivée")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
 
         Chemin chemin = g.itineraireMultiple(l, pmr); // Calcul itineraire le plus court
 
         if(chemin.noeuds.size() == 1 && pmr)
             Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas d'itinéraire PMR pour cette destination").show();
 
-        lignes = new ArrayList<>();
+        lignes = new ArrayList<PolylineOptions>();
+
         PolylineOptions ligne = new PolylineOptions();
+
         int n = g.noeuds.get(chemin.noeuds.get(0)).getNiveau();
 
         Button changerType = (Button) findViewById(R.id.type_carte);
@@ -324,7 +350,6 @@ public class MapsActivity extends AppCompatActivity
         lignes.add(ligne);
         mMap.addPolyline(ligne);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()), 18));
-
     }
 
     public void creerCalque(int n) {
@@ -390,7 +415,17 @@ public class MapsActivity extends AppCompatActivity
         }
         else
         {
-            super.onBackPressed();
+            if(!marqueurs.isEmpty()){
+                effacerMarqueurs();
+                marqueurs = new ArrayList<Marker>();
+            }else if(!lignes.isEmpty()) {
+                mMap.clear();
+                creerCalque(niveau);
+
+                lignes = new ArrayList<PolylineOptions>();
+            }else{
+                super.onBackPressed();
+            }
         }
     }
 
@@ -417,7 +452,7 @@ public class MapsActivity extends AppCompatActivity
 
             effacerMarqueurs();
 
-            marqueurs = new ArrayList<>();
+            marqueurs = new ArrayList<Marker>();
 
             for(int i = 0 ; i < listeToilettes.size() ; i++)
             {
@@ -427,7 +462,8 @@ public class MapsActivity extends AppCompatActivity
 
                     MarkerOptions options = new MarkerOptions()
                             .title("Toilettes")
-                            .position(l);
+                            .position(l)
+                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
 
                     marqueurs.add(mMap.addMarker(options));
                     nb++;
@@ -445,7 +481,7 @@ public class MapsActivity extends AppCompatActivity
 
             effacerMarqueurs();
 
-            marqueurs = new ArrayList<>();
+            marqueurs = new ArrayList<Marker>();
 
             for(int i = 0 ; i < listeDistributeurs.size() ; i++)
             {
@@ -455,7 +491,8 @@ public class MapsActivity extends AppCompatActivity
 
                     MarkerOptions options = new MarkerOptions()
                             .title("Distributeurs")
-                            .position(l);
+                            .position(l)
+                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
 
                     marqueurs.add(mMap.addMarker(options));
                     nb++;
@@ -500,7 +537,8 @@ public class MapsActivity extends AppCompatActivity
     @Override
     public void onConnected(Bundle bundle) throws SecurityException {
         Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-        if (mLastLocation != null) {
+
+        if(mLastLocation != null){
             latitude = mLastLocation.getLatitude();
             longitude = mLastLocation.getLongitude();
 
@@ -541,11 +579,10 @@ public class MapsActivity extends AppCompatActivity
     }
 
     private void showDialogGPS() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, AlertDialog.THEME_DEVICE_DEFAULT_DARK);
         builder.setCancelable(false);
         builder.setTitle("Localisation désactivée");
         builder.setMessage("Activez votre localisation");
-        builder.setInverseBackgroundForced(false);
 
         builder.setPositiveButton("Activer", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {

@@ -41,8 +41,8 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text=""
             android:id="@+id/etage"
-            android:layout_row="0"
-            android:layout_column="9"/>
+            android:layout_row="1"
+            android:layout_column="0"/>
 
         <Button
             android:layout_width="50dp"

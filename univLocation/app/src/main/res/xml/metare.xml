@@ -570,8 +570,8 @@
     <longitude>4.425647</longitude>
     <batiment>D</batiment>
     <liste_POI>
-      <POI>Snack</POI>
       <POI>Distributeurs</POI>
+      <POI>Snack</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>27</voisin>

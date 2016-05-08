@@ -1,7 +1,9 @@
 package com.example.jules.univLocation;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.content.DialogInterface;
 import android.support.design.widget.FloatingActionButton;
 import android.view.KeyEvent;
 import android.view.View;
@@ -14,7 +16,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
-import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
@@ -24,7 +25,6 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Map;
 
 public class ItineraireActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
@@ -78,13 +78,16 @@ public class ItineraireActivity extends AppCompatActivity
             TextView error = (TextView) findViewById(R.id.erreur);
 
             if(listeNoeudsArr.isEmpty())
-                error.setText("'" + arr.getText().toString() + "' introuvable");
+                showDialogGPS(2, arr.getText().toString());
+                //error.setText("'" + arr.getText().toString() + "' introuvable");
 
             if(presenceEtape && listeNoeudsEtape.isEmpty())
-                error.setText("'" + etape.getText().toString() + "' introuvable");
+                showDialogGPS(1, etape.getText().toString());
+                //error.setText("'" + etape.getText().toString() + "' introuvable");
 
             if(listeNoeudsDep.isEmpty())
-                error.setText("'" + dep.getText().toString() + "' introuvable");
+                showDialogGPS(1, dep.getText().toString());
+                //error.setText("'" + dep.getText().toString() + "' introuvable");
         }
     }
 
@@ -241,5 +244,30 @@ public class ItineraireActivity extends AppCompatActivity
                 }
             }
         }
+    }
+
+    private void showDialogGPS(int i, String lieu) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, AlertDialog.THEME_DEVICE_DEFAULT_DARK);
+        builder.setCancelable(false);
+
+        if(lieu.equals("") && i != 1) {
+            builder.setTitle("Erreur d'itinéraire");
+            if(i == 0)
+                builder.setMessage("Veuillez entrer un lieu de départ");
+            if(i == 2)
+                builder.setMessage("Veuillez entrer un lieu d'arrivée");
+        }else{
+            builder.setTitle("Erreur d'itinéraire");
+            builder.setMessage("'" + lieu + " n'a pas été trouvé");
+        }
+
+        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }
