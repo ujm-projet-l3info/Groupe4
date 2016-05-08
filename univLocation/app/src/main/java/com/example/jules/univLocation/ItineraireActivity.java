@@ -40,55 +40,57 @@ public class ItineraireActivity extends AppCompatActivity
 
         boolean bool_pmr = pmr.isChecked();
 
-        boolean presenceEtape;
-        if(etape.getText().toString().equals(""))
-            presenceEtape = false;
-        else
-            presenceEtape = true;
-
-        ArrayList<Integer> listeNoeudsDep = null;
-        ArrayList<Integer> listeNoeudsArr = null;
-        ArrayList<Integer> listeNoeudsEtape = null;
-        
-        listeNoeudsDep = MapsActivity.g.cherchePOI(dep.getText().toString());
-        listeNoeudsArr = MapsActivity.g.cherchePOI(arr.getText().toString());
-
-        if(presenceEtape)
-            listeNoeudsEtape = MapsActivity.g.cherchePOI(etape.getText().toString());
-        else
-            listeNoeudsEtape = new ArrayList<Integer>();
-
-        if((!listeNoeudsArr.isEmpty()) && (!listeNoeudsDep.isEmpty()) && (!listeNoeudsEtape.isEmpty() || !presenceEtape))
-        {
-            MapsActivity.b = new Bundle();
-            MapsActivity.b.putInt("depart", listeNoeudsDep.get(0));
-            MapsActivity.b.putInt("arrivee", listeNoeudsArr.get(0));
-
-            if(presenceEtape)
-                MapsActivity.b.putInt("etape", listeNoeudsEtape.get(0));
+        if(!dep.getText().toString().equals(arr.getText().toString())) {
+            boolean presenceEtape;
+            if (etape.getText().toString().equals(""))
+                presenceEtape = false;
             else
-                MapsActivity.b.putInt("etape", -1);
+                presenceEtape = true;
 
-            MapsActivity.b.putBoolean("pmr", bool_pmr);
+            ArrayList<Integer> listeNoeudsDep = null;
+            ArrayList<Integer> listeNoeudsArr = null;
+            ArrayList<Integer> listeNoeudsEtape = null;
 
-            finish();
-            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-        }
-        else
-        {
-            TextView error = (TextView) findViewById(R.id.erreur);
+            listeNoeudsDep = MapsActivity.g.cherchePOI(dep.getText().toString());
+            listeNoeudsArr = MapsActivity.g.cherchePOI(arr.getText().toString());
 
-            if(listeNoeudsArr.isEmpty())
-                showDialogGPS(2, arr.getText().toString());
+            if (presenceEtape)
+                listeNoeudsEtape = MapsActivity.g.cherchePOI(etape.getText().toString());
+            else
+                listeNoeudsEtape = new ArrayList<Integer>();
+
+            if ((!listeNoeudsArr.isEmpty()) && (!listeNoeudsDep.isEmpty()) && (!listeNoeudsEtape.isEmpty() || !presenceEtape)) {
+                MapsActivity.b = new Bundle();
+                MapsActivity.b.putInt("depart", listeNoeudsDep.get(0));
+                MapsActivity.b.putInt("arrivee", listeNoeudsArr.get(0));
+
+                if (presenceEtape)
+                    MapsActivity.b.putInt("etape", listeNoeudsEtape.get(0));
+                else
+                    MapsActivity.b.putInt("etape", -1);
+
+                MapsActivity.b.putBoolean("pmr", bool_pmr);
+
+                finish();
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            } else {
+                TextView error = (TextView) findViewById(R.id.erreur);
+
+                if (listeNoeudsArr.isEmpty())
+                    showDialogGPS(2, arr.getText().toString());
                 //error.setText("'" + arr.getText().toString() + "' introuvable");
 
-            if(presenceEtape && listeNoeudsEtape.isEmpty())
-                showDialogGPS(1, etape.getText().toString());
+                if (presenceEtape && listeNoeudsEtape.isEmpty())
+                    showDialogGPS(1, etape.getText().toString());
                 //error.setText("'" + etape.getText().toString() + "' introuvable");
 
-            if(listeNoeudsDep.isEmpty())
-                showDialogGPS(0, dep.getText().toString());
+                if (listeNoeudsDep.isEmpty())
+                    showDialogGPS(0, dep.getText().toString());
                 //error.setText("'" + dep.getText().toString() + "' introuvable");
+            }
+        }else{
+            showDialogGPS(-1, "Les points de départ et d'arrivée doivent être différents");
+            //error.setText("Départ et arrivée doivent être différents");
         }
     }
 
@@ -252,15 +254,17 @@ public class ItineraireActivity extends AppCompatActivity
         AlertDialog.Builder builder = new AlertDialog.Builder(this, AlertDialog.THEME_DEVICE_DEFAULT_DARK);
         builder.setCancelable(false);
 
+        builder.setTitle("Erreur d'itinéraire");
+
         if(lieu.equals("") && i != 1) {
-            builder.setTitle("Erreur d'itinéraire");
             if(i == 0)
                 builder.setMessage("Veuillez entrer un lieu de départ");
             if(i == 2)
                 builder.setMessage("Veuillez entrer un lieu d'arrivée");
+        }else if(i == -1) {
+            builder.setMessage(lieu);
         }else{
-            builder.setTitle("Erreur d'itinéraire");
-            builder.setMessage("'" + lieu + " n'a pas été trouvé");
+            builder.setMessage("'" + lieu + "' n'a pas été trouvé");
         }
 
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {

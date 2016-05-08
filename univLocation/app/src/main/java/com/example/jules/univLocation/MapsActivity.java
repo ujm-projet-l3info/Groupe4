@@ -215,9 +215,9 @@ public class MapsActivity extends AppCompatActivity
             public void onMapClick(LatLng latLng) {
                 mMap.addMarker(new MarkerOptions().position(latLng).title("Lat :" +latLng.latitude + " Lon :"+latLng.longitude));
             }
-        });*/
+        });
 
-        /*for(int i = 0; i < g.noeuds.size(); i++){
+        for(int i = 0; i < g.noeuds.size(); i++){
             LatLng latLong = new LatLng(g.noeuds.get(i).getLat(), g.noeuds.get(i).getLon());
             mMap.addMarker(new MarkerOptions().position(latLong).title("" + i));
         }*/
@@ -280,6 +280,9 @@ public class MapsActivity extends AppCompatActivity
 
         if(chemin.noeuds.size() == 1 && pmr)
             Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas d'itinéraire PMR pour cette destination").show();
+
+        if(chemin.noeuds.size() == 1 && !pmr)
+            Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas d'itinéraire pour cette destination").show();
 
         lignes = new ArrayList<PolylineOptions>();
 

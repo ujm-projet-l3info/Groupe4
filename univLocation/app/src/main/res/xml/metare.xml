@@ -812,8 +812,8 @@
 
   <noeud num="42"> <!-- Devant BU -->
     <niveau>0</niveau>
-    <latitude>45.423914</latitude>
-    <longitude>4.425985</longitude>
+    <latitude>45.423901</latitude>
+    <longitude>4.425999</longitude>
     <batiment>-</batiment>
     <liste_POI>
       <POI>Devant BU</POI>
@@ -1000,13 +1000,12 @@
     </liste_voisins_PMR>
   </noeud>
 
-  <noeud num="52"> <!-- F101 -->
+  <noeud num="52"> <!-- F001 -->
     <niveau>0</niveau>
     <latitude>45.423734</latitude>
     <longitude>4.425146</longitude>
     <batiment>-</batiment>
     <liste_POI>
-      <POI>F101</POI>
       <POI>F001</POI>
     </liste_POI>
     <liste_voisins>
@@ -1028,11 +1027,13 @@
       <POI>Parking Nord</POI>
     </liste_POI>
     <liste_voisins>
+      <voisin>51</voisin>
       <voisin>54</voisin>
       <voisin>60</voisin>
       <voisin>102</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
+      <voisin_PMR>51</voisin_PMR>
       <voisin_PMR>54</voisin_PMR>
       <voisin_PMR>60</voisin_PMR>
       <voisin_PMR>102</voisin_PMR>
@@ -1149,6 +1150,7 @@
       <voisin>60</voisin>
       <voisin>62</voisin>
       <voisin>63</voisin>
+      <voisin>64</voisin>
       <voisin>65</voisin>
       <voisin>70</voisin>
     </liste_voisins>
@@ -1157,6 +1159,7 @@
       <voisin_PMR>60</voisin_PMR>
       <voisin_PMR>62</voisin_PMR>
       <voisin_PMR>63</voisin_PMR>
+      <voisin_PMR>64</voisin_PMR>
       <voisin_PMR>65</voisin_PMR>
       <voisin_PMR>70</voisin_PMR>
     </liste_voisins_PMR>
@@ -1231,12 +1234,14 @@
     <liste_voisins>
       <voisin>59</voisin>
       <voisin>62</voisin>
+      <voisin>64</voisin>
       <voisin>65</voisin>
       <voisin>116</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
       <voisin_PMR>59</voisin_PMR>
       <voisin_PMR>62</voisin_PMR>
+      <voisin_PMR>64</voisin_PMR>
       <voisin_PMR>65</voisin_PMR>
       <voisin_PMR>116</voisin_PMR>
     </liste_voisins_PMR>
@@ -1251,11 +1256,15 @@
       <POI>Devant bâtiment J</POI>
     </liste_POI>
     <liste_voisins>
+      <voisin>59</voisin>
       <voisin>62</voisin>
+      <voisin>63</voisin>
       <voisin>125</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
+      <voisin_PMR>59</voisin_PMR>
       <voisin_PMR>62</voisin_PMR>
+      <voisin_PMR>63</voisin_PMR>
       <voisin_PMR>125</voisin_PMR>
     </liste_voisins_PMR>
   </noeud>
@@ -1662,10 +1671,12 @@
     <liste_voisins>
       <voisin>84</voisin>
       <voisin>86</voisin>
+      <voisin>224</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
       <voisin_PMR>84</voisin_PMR>
       <voisin_PMR>86</voisin_PMR>
+      <voisin_PMR>224</voisin_PMR>
     </liste_voisins_PMR>
   </noeud>
 
@@ -1796,6 +1807,7 @@
     <liste_voisins>
       <voisin>90</voisin>
       <voisin>93</voisin>
+      <voisin>225</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
       <voisin_PMR>90</voisin_PMR>
@@ -1813,9 +1825,11 @@
     <liste_voisins>
       <voisin>92</voisin>
       <voisin>94</voisin>
+      <voisin>232</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
       <voisin_PMR>94</voisin_PMR>
+      <voisin_PMR>232</voisin_PMR>
     </liste_voisins_PMR>
   </noeud>
 
@@ -4328,5 +4342,171 @@
             <voisin_PMR>222</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>
+
+  <!-- ALLER VERS CAFET'U PAR LA ROUTE -->
+
+  <noeud num="224"> <!--  -->
+    <niveau>0</niveau>
+    <latitude>45.422039</latitude>
+    <longitude>4.427147</longitude>
+    <batiment>-</batiment>
+    <liste_POI>
+      <POI>Route vers Cafet'U PMR</POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin>85</voisin>
+      <voisin>225</voisin>
+    </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>85</voisin_PMR>
+      <voisin_PMR>225</voisin_PMR>
+    </liste_voisins_PMR>
+  </noeud>
+
+  <noeud num="225"> <!--  -->
+    <niveau>0</niveau>
+    <latitude>45.422019</latitude>
+    <longitude>4.427384</longitude>
+    <batiment>-</batiment>
+    <liste_POI>
+      <POI>Résidence étudiante</POI>
+      <POI>Route vers Cafet'U PMR</POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin>92</voisin>
+      <voisin>224</voisin>
+      <voisin>226</voisin>
+    </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>224</voisin_PMR>
+      <voisin_PMR>226</voisin_PMR>
+    </liste_voisins_PMR>
+  </noeud>
+
+  <noeud num="226"> <!--  -->
+    <niveau>0</niveau>
+    <latitude>45.421758</latitude>
+    <longitude>4.428523</longitude>
+    <batiment>-</batiment>
+    <liste_POI>
+      <POI>Route vers Cafet'U PMR</POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin>225</voisin>
+      <voisin>227</voisin>
+    </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>225</voisin_PMR>
+      <voisin_PMR>227</voisin_PMR>
+    </liste_voisins_PMR>
+  </noeud>
+
+  <noeud num="227"> <!--  -->
+    <niveau>0</niveau>
+    <latitude>45.421743</latitude>
+    <longitude>4.429018</longitude>
+    <batiment>-</batiment>
+    <liste_POI>
+      <POI>Route vers Cafet'U PMR</POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin>226</voisin>
+      <voisin>228</voisin>
+    </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>226</voisin_PMR>
+      <voisin_PMR>228</voisin_PMR>
+    </liste_voisins_PMR>
+  </noeud>
+
+  <noeud num="228"> <!--  -->
+    <niveau>0</niveau>
+    <latitude>45.421823</latitude>
+    <longitude>4.429112</longitude>
+    <batiment>-</batiment>
+    <liste_POI>
+      <POI>Route vers Cafet'U PMR</POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin>227</voisin>
+      <voisin>229</voisin>
+    </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>227</voisin_PMR>
+      <voisin_PMR>229</voisin_PMR>
+    </liste_voisins_PMR>
+  </noeud>
+
+  <noeud num="229"> <!--  -->
+    <niveau>0</niveau>
+    <latitude>45.421900</latitude>
+    <longitude>4.429070</longitude>
+    <batiment>-</batiment>
+    <liste_POI>
+      <POI>Route vers Cafet'U PMR</POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin>228</voisin>
+      <voisin>230</voisin>
+    </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>228</voisin_PMR>
+      <voisin_PMR>230</voisin_PMR>
+    </liste_voisins_PMR>
+  </noeud>
+
+  <noeud num="230"> <!--  -->
+    <niveau>0</niveau>
+    <latitude>45.421928</latitude>
+    <longitude>4.428981</longitude>
+    <batiment>-</batiment>
+    <liste_POI>
+      <POI>Route vers Cafet'U PMR</POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin>229</voisin>
+      <voisin>231</voisin>
+    </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>229</voisin_PMR>
+      <voisin_PMR>231</voisin_PMR>
+    </liste_voisins_PMR>
+  </noeud>
+
+  <noeud num="231"> <!--  -->
+    <niveau>0</niveau>
+    <latitude>45.422015</latitude>
+    <longitude>4.428387</longitude>
+    <batiment>-</batiment>
+    <liste_POI>
+      <POI>Route vers Cafet'U PMR</POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin>230</voisin>
+      <voisin>232</voisin>
+    </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>230</voisin_PMR>
+      <voisin_PMR>232</voisin_PMR>
+    </liste_voisins_PMR>
+  </noeud>
+
+  <noeud num="232"> <!--  -->
+    <niveau>0</niveau>
+    <latitude>45.422066</latitude>
+    <longitude>4.428281</longitude>
+    <batiment>-</batiment>
+    <liste_POI>
+      <POI>Route vers Cafet'U PMR</POI>
+    </liste_POI>
+    <liste_voisins>
+      <voisin>93</voisin>
+      <voisin>231</voisin>
+    </liste_voisins>
+    <liste_voisins_PMR>
+      <voisin_PMR>93</voisin_PMR>
+      <voisin_PMR>231</voisin_PMR>
+    </liste_voisins_PMR>
+  </noeud>
 
 </resources>
