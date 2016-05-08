@@ -63,7 +63,7 @@ public class MapsActivity extends AppCompatActivity
     private int etape = -1;
     private int niveau = 0;
     public static Bundle b = null;
-    public GoogleApiClient mGoogleApiClient;
+    public GoogleApiClient mGoogleApiClient = null;
     public static double latitude;
     public static double longitude;
     public ArrayList<Marker> marqueurs = new ArrayList<Marker>();
@@ -108,6 +108,7 @@ public class MapsActivity extends AppCompatActivity
                     .addOnConnectionFailedListener(this)
                     .addApi(LocationServices.API)
                     .build();
+            mGoogleApiClient.connect();
         }
     }
 
@@ -127,6 +128,7 @@ public class MapsActivity extends AppCompatActivity
         mMap.setMyLocationEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
 
+        // Bouton localisation
         FloatingActionButton maLoc = (FloatingActionButton) findViewById(R.id.ma_localisation);
         maLoc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -213,9 +215,9 @@ public class MapsActivity extends AppCompatActivity
             public void onMapClick(LatLng latLng) {
                 mMap.addMarker(new MarkerOptions().position(latLng).title("Lat :" +latLng.latitude + " Lon :"+latLng.longitude));
             }
-        });
+        });*/
 
-        for(int i = 215; i < g.noeuds.size(); i++){
+        /*for(int i = 0; i < g.noeuds.size(); i++){
             LatLng latLong = new LatLng(g.noeuds.get(i).getLat(), g.noeuds.get(i).getLon());
             mMap.addMarker(new MarkerOptions().position(latLong).title("" + i));
         }*/
@@ -349,6 +351,7 @@ public class MapsActivity extends AppCompatActivity
         ligne.width(15);
         lignes.add(ligne);
         mMap.addPolyline(ligne);
+
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()), 18));
     }
 
@@ -492,7 +495,7 @@ public class MapsActivity extends AppCompatActivity
                     MarkerOptions options = new MarkerOptions()
                             .title("Distributeurs")
                             .position(l)
-                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
 
                     marqueurs.add(mMap.addMarker(options));
                     nb++;
@@ -504,6 +507,76 @@ public class MapsActivity extends AppCompatActivity
         }
 
         return true;
+    }
+
+    @Override
+    public void onConnected(Bundle bundle) throws SecurityException {
+        Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+
+        if(mLastLocation != null){
+            latitude = mLastLocation.getLatitude();
+            longitude = mLastLocation.getLongitude();
+
+            if(depart == -1 && etape == -1 && arrivee == -1) {
+                Noeud n = g.noeuds.get(g.recollerGraphe(latitude, longitude));
+
+                LatLng maPos = new LatLng(n.getLat(), n.getLon());
+
+                //new LatLng(45.422949, 4.425735)
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(maPos, 18));
+            }
+        }
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+
+    }
+
+    protected void onStart() {
+        mGoogleApiClient.connect();
+        super.onStart();
+    }
+
+    protected void onStop() {
+        mGoogleApiClient.disconnect();
+        super.onStop();
+    }
+
+    /* Localisation */
+    @Override
+    public void onLocationChanged(Location loc) {
+        latitude = loc.getLatitude();
+        longitude = loc.getLongitude();
+
+        System.out.println("Nouvelle loc : (" + loc.getLatitude() + ";" + loc.getLongitude() + ")");
+    }
+
+    private void showDialogGPS() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, AlertDialog.THEME_DEVICE_DEFAULT_DARK);
+        builder.setCancelable(false);
+        builder.setTitle("Localisation désactivée");
+        builder.setMessage("Activez votre localisation");
+
+        builder.setPositiveButton("Activer", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+            }
+        });
+
+        builder.setNegativeButton("Ignorer", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -532,72 +605,6 @@ public class MapsActivity extends AppCompatActivity
         }
 
         return true;
-    }
-
-    @Override
-    public void onConnected(Bundle bundle) throws SecurityException {
-        Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-
-        if(mLastLocation != null){
-            latitude = mLastLocation.getLatitude();
-            longitude = mLastLocation.getLongitude();
-
-            Noeud n = g.noeuds.get(g.recollerGraphe(latitude, longitude));
-
-            LatLng maPos = new LatLng(n.getLat(), n.getLon());
-
-            //new LatLng(45.422949, 4.425735)
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(maPos, 18));
-        }
-    }
-
-    @Override
-    public void onConnectionSuspended(int i) {
-
-    }
-
-    @Override
-    public void onConnectionFailed(ConnectionResult connectionResult) {
-
-    }
-
-    protected void onStart() {
-        mGoogleApiClient.connect();
-        super.onStart();
-    }
-
-    protected void onStop() {
-        mGoogleApiClient.disconnect();
-        super.onStop();
-    }
-
-    /* Localisation */
-    @Override
-    public void onLocationChanged(Location loc) {
-        // called when the listener is notified with a location update from the GPS
-        System.out.println("Nouvelle loc : (" + loc.getLatitude() + ";" + loc.getLongitude() + ")");
-    }
-
-    private void showDialogGPS() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this, AlertDialog.THEME_DEVICE_DEFAULT_DARK);
-        builder.setCancelable(false);
-        builder.setTitle("Localisation désactivée");
-        builder.setMessage("Activez votre localisation");
-
-        builder.setPositiveButton("Activer", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
-            }
-        });
-
-        builder.setNegativeButton("Ignorer", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-
-        AlertDialog alert = builder.create();
-        alert.show();
     }
 
     private void parseGraphe() throws IOException, XmlPullParserException {

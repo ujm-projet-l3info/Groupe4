@@ -72,6 +72,7 @@ public class ItineraireActivity extends AppCompatActivity
             MapsActivity.b.putBoolean("pmr", bool_pmr);
 
             finish();
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         }
         else
         {
@@ -86,7 +87,7 @@ public class ItineraireActivity extends AppCompatActivity
                 //error.setText("'" + etape.getText().toString() + "' introuvable");
 
             if(listeNoeudsDep.isEmpty())
-                showDialogGPS(1, dep.getText().toString());
+                showDialogGPS(0, dep.getText().toString());
                 //error.setText("'" + dep.getText().toString() + "' introuvable");
         }
     }
@@ -172,6 +173,7 @@ public class ItineraireActivity extends AppCompatActivity
             Intent i = new Intent();
             setResult(ItineraireActivity.this.RESULT_CANCELED, i);
             finish();
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         }
     }
 
@@ -199,8 +201,8 @@ public class ItineraireActivity extends AppCompatActivity
         {
             Intent i = new Intent();
             setResult(ItineraireActivity.this.RESULT_CANCELED, i);
-            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
             finish();
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         }
         else if (id == R.id.nav_Calendrier)
         {

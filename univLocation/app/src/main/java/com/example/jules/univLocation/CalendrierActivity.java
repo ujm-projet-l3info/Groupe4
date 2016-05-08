@@ -24,14 +24,13 @@ import java.util.Date;
 public class CalendrierActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     private Cursor mCursor = null;
-    private static final String[] ATTRIBUTS = new String[]
-            {
-                    CalendarContract.Events.TITLE,
-                    CalendarContract.Events.DTSTART,
-                    CalendarContract.Events.DTEND,
-                    CalendarContract.Events.EVENT_LOCATION,
-                    CalendarContract.Events.CALENDAR_DISPLAY_NAME
-            };
+    private static final String[] ATTRIBUTS = new String[] {
+            CalendarContract.Events.TITLE,
+            CalendarContract.Events.DTSTART,
+            CalendarContract.Events.DTEND,
+            CalendarContract.Events.EVENT_LOCATION,
+            CalendarContract.Events.CALENDAR_DISPLAY_NAME
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,7 +119,6 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
         Format tf = DateFormat.getTimeFormat(this);
 
         int tmp1 = mCursor.getPosition();
-        System.out.println("pos1:" + tmp1);
 
         if(v.getId() == R.id.suivant) {
             if(!mCursor.isLast()) {
@@ -136,17 +134,13 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
                     }
                 }while(!mCursor.isLast());
 
-                System.out.println("pos2:" + mCursor.getPosition());
-
                 if(mCursor.isLast()) {
-                    System.out.println("jen suis au dernier");
                     if (mCursor.getString(3) != null) {
                         if (mCursor.getString(3).equals(""))
                             mCursor.moveToPosition(tmp1);
                     } else {
                         mCursor.moveToPosition(tmp1);
                     }
-                    System.out.println("pos3:" + mCursor.getPosition());
                 }
             }
         }else if(v.getId() == R.id.precedent){
@@ -176,7 +170,6 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
         int tmp2 = mCursor.getPosition();
 
         if(tmp1 != tmp2) {
-            System.out.println("ESSAYE");
             try {
                 nom = mCursor.getString(0);
                 debut = mCursor.getLong(1);
@@ -199,25 +192,21 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            finish();
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.calendrier, menu);
+
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
 
         return super.onOptionsItemSelected(item);
     }
@@ -225,7 +214,6 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -235,6 +223,7 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
             Intent i = new Intent();
             setResult(CalendrierActivity.this.RESULT_CANCELED, i);
             finish();
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         } else if (id == R.id.nav_aide) {
             Intent i = new Intent(CalendrierActivity.this, AideActivity.class);
             startActivity(i);

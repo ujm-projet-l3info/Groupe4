@@ -331,10 +331,14 @@ public class Graphe {
                     String str = noeuds.get(i).POIs.get(j).toLowerCase();
                     str = Normalizer.normalize(str, Normalizer.Form.NFD);
                     str = str.replaceAll("[^\\p{ASCII}]", "");
+                    str = str.replaceAll("salle", "");
 
                     poi = poi.toLowerCase();
                     poi = Normalizer.normalize(poi, Normalizer.Form.NFD);
                     poi = poi.replaceAll("[^\\p{ASCII}]", "");
+                    poi = poi.replaceAll("salle", "");
+
+                    System.out.println("on compare " + poi + " et " + str);
 
                     if (!str.equals(poi)) {
                         if ((str.matches("(.*)" + poi + "(.*)")) ||

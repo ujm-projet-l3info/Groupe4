@@ -547,8 +547,8 @@
 
   <noeud num="28"> <!-- Début passerelle vers F -->
     <niveau>0</niveau>
-    <latitude>45.423703</latitude>
-    <longitude>4.425612</longitude>
+    <latitude>45.423698</latitude>
+    <longitude>4.425608</longitude>
     <batiment>F</batiment>
     <liste_POI>
       <POI>Début passerelle F</POI>
@@ -762,8 +762,8 @@
 
   <noeud num="39"> <!-- En haut chemin vers BU -->
     <niveau>0</niveau>
-    <latitude>45.423737</latitude>
-    <longitude>4.425674</longitude>
+    <latitude>45.423719</latitude>
+    <longitude>4.425652</longitude>
     <batiment>-</batiment>
     <liste_POI>
       <POI>Début chemin vers BU</POI>
@@ -796,8 +796,8 @@
 
   <noeud num="41"> <!-- En allant vers BU -->
     <niveau>0</niveau>
-    <latitude>45.423916</latitude>
-    <longitude>4.425651</longitude>
+    <latitude>45.423912</latitude>
+    <longitude>4.425677</longitude>
     <batiment>-</batiment>
     <liste_POI>
       <POI>Chemin vers BU</POI>
@@ -812,8 +812,8 @@
 
   <noeud num="42"> <!-- Devant BU -->
     <niveau>0</niveau>
-    <latitude>45.423878</latitude>
-    <longitude>4.426025</longitude>
+    <latitude>45.423914</latitude>
+    <longitude>4.425985</longitude>
     <batiment>-</batiment>
     <liste_POI>
       <POI>Devant BU</POI>
@@ -832,8 +832,8 @@
 
   <noeud num="43"> <!-- BU -->
     <niveau>0</niveau>
-    <latitude>45.423919</latitude>
-    <longitude>4.426113</longitude>
+    <latitude>45.423950</latitude>
+    <longitude>4.426091</longitude>
     <batiment>BU</batiment>
     <liste_POI>
       <POI>BU</POI>
@@ -850,8 +850,8 @@
 
   <noeud num="44"> <!-- Place des fumeurs fin A -->
     <niveau>0</niveau>
-    <latitude>45.423578</latitude>
-    <longitude>4.425196</longitude>
+    <latitude>45.423595</latitude>
+    <longitude>4.425176</longitude>
     <batiment>-</batiment>
     <liste_POI>
       <POI>Place des fumeurs</POI>
@@ -859,9 +859,11 @@
     <liste_voisins>
       <voisin>22</voisin>
       <voisin>45</voisin>
+      <voisin>48</voisin>
       <voisin>78</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
+      <voisin_PMR>48</voisin_PMR>
       <voisin_PMR>78</voisin_PMR>
     </liste_voisins_PMR>
   </noeud>
@@ -877,13 +879,11 @@
     <liste_voisins>
       <voisin>44</voisin>
       <voisin>47</voisin>
-      <voisin>48</voisin>
       <voisin>51</voisin>
       <voisin>78</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
       <voisin_PMR>47</voisin_PMR>
-      <voisin_PMR>48</voisin_PMR>
       <voisin_PMR>78</voisin_PMR>
       <voisin_PMR>78</voisin_PMR>
     </liste_voisins_PMR>
@@ -927,19 +927,19 @@
 
   <noeud num="48"> <!-- Chemin PMR (3) -->
     <niveau>0</niveau>
-    <latitude>45.423581</latitude>
-    <longitude>4.424885</longitude>
+    <latitude>45.423521</latitude>
+    <longitude>4.424847</longitude>
     <batiment>-</batiment>
     <liste_POI>
       <POI>Chemin PMR F101 parking Nord</POI>
     </liste_POI>
     <liste_voisins>
-      <voisin>45</voisin>
+      <voisin>44</voisin>
       <voisin>49</voisin>
       <voisin>78</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
-      <voisin_PMR>45</voisin_PMR>
+      <voisin_PMR>44</voisin_PMR>
       <voisin_PMR>49</voisin_PMR>
       <voisin_PMR>78</voisin_PMR>
     </liste_voisins_PMR>
@@ -947,8 +947,8 @@
 
   <noeud num="49"> <!-- Chemin PMR (4) -->
     <niveau>0</niveau>
-    <latitude>45.423646</latitude>
-    <longitude>4.424939</longitude>
+    <latitude>45.423616</latitude>
+    <longitude>4.425011</longitude>
     <batiment>-</batiment>
     <liste_POI>
       <POI>Chemin PMR F101 parking Nord</POI>
@@ -965,8 +965,8 @@
 
   <noeud num="50"> <!-- Chemin PMR (5) -->
     <niveau>0</niveau>
-    <latitude>45.423638</latitude>
-    <longitude>4.424805</longitude>
+    <latitude>45.423585</latitude>
+    <longitude>4.424766</longitude>
     <batiment>-</batiment>
     <liste_POI>
       <POI>Chemin PMR F101 parking Nord</POI>
@@ -1120,8 +1120,8 @@
 
   <noeud num="58"> <!-- Parking Nord -->
     <niveau>0</niveau>
-    <latitude>45.423989</latitude>
-    <longitude>4.424693</longitude>
+    <latitude>45.423945</latitude>
+    <longitude>4.424653</longitude>
     <batiment>-</batiment>
     <liste_POI>
       <POI>Parking Nord</POI>
@@ -1148,6 +1148,7 @@
       <voisin>58</voisin>
       <voisin>60</voisin>
       <voisin>62</voisin>
+      <voisin>63</voisin>
       <voisin>65</voisin>
       <voisin>70</voisin>
     </liste_voisins>
@@ -1155,6 +1156,7 @@
       <voisin_PMR>58</voisin_PMR>
       <voisin_PMR>60</voisin_PMR>
       <voisin_PMR>62</voisin_PMR>
+      <voisin_PMR>63</voisin_PMR>
       <voisin_PMR>65</voisin_PMR>
       <voisin_PMR>70</voisin_PMR>
     </liste_voisins_PMR>
@@ -1227,11 +1229,13 @@
       <POI>Devant bâtiment H</POI>
     </liste_POI>
     <liste_voisins>
+      <voisin>59</voisin>
       <voisin>62</voisin>
       <voisin>65</voisin>
       <voisin>116</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
+      <voisin_PMR>59</voisin_PMR>
       <voisin_PMR>62</voisin_PMR>
       <voisin_PMR>65</voisin_PMR>
       <voisin_PMR>116</voisin_PMR>
@@ -2052,9 +2056,11 @@
     </liste_POI>
     <liste_voisins>
       <voisin>105</voisin>
+      <voisin>215</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
       <voisin_PMR>105</voisin_PMR>
+      <voisin_PMR>215</voisin_PMR>
     </liste_voisins_PMR>
   </noeud>
 
@@ -2228,8 +2234,8 @@
 
   <noeud num="116"> <!-- Bâtiment H -->
     <niveau>0</niveau>
-    <latitude>45.424198</latitude>
-    <longitude>4.425075</longitude>
+    <latitude>45.424201</latitude>
+    <longitude>4.425086</longitude>
     <batiment>H</batiment>
     <liste_POI>
       <POI>Bâtiment H</POI>
@@ -2247,8 +2253,8 @@
 
   <noeud num="117"> <!-- Distributeurs -->
     <niveau>0</niveau>
-    <latitude>45.424229</latitude>
-    <longitude>4.425042</longitude>
+    <latitude>45.424231</latitude>
+    <longitude>4.425054</longitude>
     <batiment>H</batiment>
     <liste_POI>
       <POI>Distributeurs</POI>
@@ -4157,10 +4163,12 @@
             <POI>Escaliers bâtiment H niveau 0</POI>
         </liste_POI>
         <liste_voisins>
+          <voisin>106</voisin>
           <voisin>124</voisin>
           <voisin>216</voisin>
         </liste_voisins>
         <liste_voisins_PMR>
+          <voisin_PMR>106</voisin_PMR>
           <voisin_PMR>216</voisin_PMR>
         </liste_voisins_PMR>
     </noeud>

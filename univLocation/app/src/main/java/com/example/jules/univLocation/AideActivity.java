@@ -50,7 +50,8 @@ public class AideActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            finish();
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         }
     }
 
@@ -77,6 +78,7 @@ public class AideActivity extends AppCompatActivity
             Intent i = new Intent();
             setResult(AideActivity.this.RESULT_CANCELED, i);
             finish();
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         } else if (id == R.id.nav_Calendrier) {
             Intent i = new Intent(AideActivity.this, CalendrierActivity.class);
             startActivity(i);
