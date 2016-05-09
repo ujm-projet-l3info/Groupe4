@@ -10,7 +10,7 @@
 
     <color name="colorText">#eeeeee</color>
 
-    <color name="colorTransparent" type="color">#00FFFFFF</color>
+    <color name="colorTransparent">#00FFFFFF</color>
 
     <color name="colorBackgroundCalendar">#606060</color>
 

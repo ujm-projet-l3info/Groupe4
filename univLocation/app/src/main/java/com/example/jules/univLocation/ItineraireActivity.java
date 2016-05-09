@@ -2,6 +2,7 @@ package com.example.jules.univLocation;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.content.DialogInterface;
 import android.support.design.widget.FloatingActionButton;
@@ -24,6 +25,9 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.model.LatLng;
+
 import java.util.ArrayList;
 
 public class ItineraireActivity extends AppCompatActivity
@@ -40,7 +44,12 @@ public class ItineraireActivity extends AppCompatActivity
 
         boolean bool_pmr = pmr.isChecked();
 
-        if(!dep.getText().toString().equals(arr.getText().toString())) {
+        LocationManager mlocManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+
+        if(!mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER) && (dep.getText().toString().equals("Ma position") || etape.getText().toString().equals("Ma position") || arr.getText().toString().equals("Ma position"))){
+            showDialogError(-2, "Veuillez activer votre localisation pour utiliser votre position");
+            //error.setText("Activez votre localisation");
+        }else if(!dep.getText().toString().equals(arr.getText().toString())) {
             boolean presenceEtape;
             if (etape.getText().toString().equals(""))
                 presenceEtape = false;
@@ -77,19 +86,19 @@ public class ItineraireActivity extends AppCompatActivity
                 TextView error = (TextView) findViewById(R.id.erreur);
 
                 if (listeNoeudsArr.isEmpty())
-                    showDialogGPS(2, arr.getText().toString());
+                    showDialogError(2, arr.getText().toString());
                 //error.setText("'" + arr.getText().toString() + "' introuvable");
 
                 if (presenceEtape && listeNoeudsEtape.isEmpty())
-                    showDialogGPS(1, etape.getText().toString());
+                    showDialogError(1, etape.getText().toString());
                 //error.setText("'" + etape.getText().toString() + "' introuvable");
 
                 if (listeNoeudsDep.isEmpty())
-                    showDialogGPS(0, dep.getText().toString());
+                    showDialogError(0, dep.getText().toString());
                 //error.setText("'" + dep.getText().toString() + "' introuvable");
             }
         }else{
-            showDialogGPS(-1, "Les points de départ et d'arrivée doivent être différents");
+            showDialogError(-1, "Les points de départ et d'arrivée doivent être différents");
             //error.setText("Départ et arrivée doivent être différents");
         }
     }
@@ -250,28 +259,46 @@ public class ItineraireActivity extends AppCompatActivity
         }
     }
 
-    private void showDialogGPS(int i, String lieu) {
+    private void showDialogError(int i, String s) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this, AlertDialog.THEME_DEVICE_DEFAULT_DARK);
         builder.setCancelable(false);
 
-        builder.setTitle("Erreur d'itinéraire");
-
-        if(lieu.equals("") && i != 1) {
+        if(s.equals("") && i != 1) {
+            builder.setTitle("Erreur d'itinéraire");
             if(i == 0)
                 builder.setMessage("Veuillez entrer un lieu de départ");
             if(i == 2)
                 builder.setMessage("Veuillez entrer un lieu d'arrivée");
         }else if(i == -1) {
-            builder.setMessage(lieu);
+            builder.setTitle("Erreur d'itinéraire");
+            builder.setMessage(s);
+        }else if(i == -2){
+            builder.setTitle("Localisation désactivée");
+            builder.setMessage(s);
+
+            builder.setPositiveButton("Activer", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                }
+            });
+
+            builder.setNegativeButton("Ignorer", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
         }else{
-            builder.setMessage("'" + lieu + "' n'a pas été trouvé");
+            builder.setTitle("Erreur d'itinéraire");
+            builder.setMessage("'" + s + "' n'a pas été trouvé");
         }
 
-        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
+        if(i != -2) {
+            builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+        }
 
         AlertDialog alert = builder.create();
         alert.show();

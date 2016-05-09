@@ -17,22 +17,22 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.GroundOverlay;
 import com.google.android.gms.maps.model.GroundOverlayOptions;
@@ -54,19 +54,20 @@ public class MapsActivity extends AppCompatActivity
 
 
     private GoogleMap mMap;
-    public static Graphe g;
     private GroundOverlayOptions calqueOptions;
     private GroundOverlay calqueFac;
+    private ArrayList<Marker> marqueurs = new ArrayList<Marker>();
     private ArrayList<PolylineOptions> lignes = new ArrayList<PolylineOptions>();
     private int depart = -1;
     private int arrivee = -1;
     private int etape = -1;
     private int niveau = 0;
+    public static Graphe g;
     public static Bundle b = null;
-    public GoogleApiClient mGoogleApiClient = null;
     public static double latitude;
     public static double longitude;
-    public ArrayList<Marker> marqueurs = new ArrayList<Marker>();
+    public GoogleApiClient mGoogleApiClient = null;
+    public LocationRequest mLocationRequest = null;
 
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -102,13 +103,20 @@ public class MapsActivity extends AppCompatActivity
             e.printStackTrace();
         }
 
-        if (mGoogleApiClient == null) {
+        if(mGoogleApiClient == null){
             mGoogleApiClient = new GoogleApiClient.Builder(this)
                     .addConnectionCallbacks(this)
                     .addOnConnectionFailedListener(this)
                     .addApi(LocationServices.API)
                     .build();
-            mGoogleApiClient.connect();
+        }
+
+        if(mLocationRequest == null){
+            mLocationRequest = new LocationRequest();
+
+            mLocationRequest.setInterval(2000);
+            mLocationRequest.setFastestInterval(100);
+            mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         }
     }
 
@@ -134,13 +142,8 @@ public class MapsActivity extends AppCompatActivity
             @Override
             public void onClick(View v) throws SecurityException {
                 Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-
-                if(mLastLocation != null){
-                    latitude = mLastLocation.getLatitude();
-                    longitude = mLastLocation.getLongitude();
-
+                if (mLastLocation != null)
                     mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), mMap.getCameraPosition().zoom));
-                }
             }
         });
 
@@ -160,28 +163,30 @@ public class MapsActivity extends AppCompatActivity
                     mMap.clear();
                     calqueFac.remove();
                     mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+
                     if (!lignes.isEmpty()) {
                         for (int i = 0; i < lignes.size(); i++) {
                             mMap.addPolyline(lignes.get(i));
                         }
-                    }
-                    if (depart != -1) {
-                        mMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()))
-                                .title("Départ")
-                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE)));
-                    }
-                    if (etape != -1) {
-                        mMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(g.noeuds.get(etape).getLat(), g.noeuds.get(etape).getLon()))
-                                .title("Étape")
-                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
-                    }
-                    if (arrivee != -1) {
-                        mMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(g.noeuds.get(arrivee).getLat(), g.noeuds.get(arrivee).getLon()))
-                                .title("Arrivée")
-                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+
+                        if (depart != -1) {
+                            mMap.addMarker(new MarkerOptions()
+                                    .position(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()))
+                                    .title("Départ")
+                                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE)));
+                        }
+                        if (etape != -1) {
+                            mMap.addMarker(new MarkerOptions()
+                                    .position(new LatLng(g.noeuds.get(etape).getLat(), g.noeuds.get(etape).getLon()))
+                                    .title("Étape")
+                                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
+                        }
+                        if (arrivee != -1) {
+                            mMap.addMarker(new MarkerOptions()
+                                    .position(new LatLng(g.noeuds.get(arrivee).getLat(), g.noeuds.get(arrivee).getLon()))
+                                    .title("Arrivée")
+                                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+                        }
                     }
                     changerType.setText(R.string.plan);
                 } else {
@@ -243,11 +248,11 @@ public class MapsActivity extends AppCompatActivity
         etape = b.getInt("etape");
         boolean pmr = b.getBoolean("pmr");
 
-        Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+        /*Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
         if (mLastLocation != null) {
             latitude = mLastLocation.getLatitude();
             longitude = mLastLocation.getLongitude();
-        }
+        }*/
 
         ArrayList<Integer> l = new ArrayList<>(); // Ajout de checkpoint pour itineraire
 
@@ -515,6 +520,11 @@ public class MapsActivity extends AppCompatActivity
 
     @Override
     public void onConnected(Bundle bundle) throws SecurityException {
+        LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
+        updateLocation();
+    }
+
+    public void updateLocation() throws SecurityException {
         Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
 
         if(mLastLocation != null){
@@ -534,40 +544,38 @@ public class MapsActivity extends AppCompatActivity
 
     @Override
     public void onConnectionSuspended(int i) {
-
+        Log.d("log : ", " connexion suspendue avec GoogleApiClient");
     }
 
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
-
+        Log.d("log :", " connexion échouée avec GoogleApiClient");
     }
 
     protected void onStart() {
-        mGoogleApiClient.connect();
         super.onStart();
+        mGoogleApiClient.connect();
     }
 
     protected void onStop() {
-        mGoogleApiClient.disconnect();
         super.onStop();
+        mGoogleApiClient.disconnect();
     }
 
-    /* Localisation */
     @Override
     public void onLocationChanged(Location loc) {
         latitude = loc.getLatitude();
         longitude = loc.getLongitude();
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), mMap.getCameraPosition().zoom));
-
-        System.out.println("Nouvelle loc : (" + loc.getLatitude() + ";" + loc.getLongitude() + ")");
+        //System.out.println("Nouvelle loc : (" + loc.getLatitude() + ";" + loc.getLongitude() + ")");
     }
 
     private void showDialogGPS() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this, AlertDialog.THEME_DEVICE_DEFAULT_DARK);
         builder.setCancelable(false);
+
         builder.setTitle("Localisation désactivée");
-        builder.setMessage("Activez votre localisation");
+        builder.setMessage("Voulez-vous activer la localisation ?");
 
         builder.setPositiveButton("Activer", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
