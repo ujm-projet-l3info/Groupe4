@@ -261,7 +261,7 @@ public class ItineraireActivity extends AppCompatActivity
 
     private void showDialogError(int i, String s) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this, AlertDialog.THEME_DEVICE_DEFAULT_DARK);
-        builder.setCancelable(false);
+        builder.setCancelable(true);
 
         if(s.equals("") && i != 1) {
             builder.setTitle("Erreur d'itinéraire");
@@ -301,6 +301,9 @@ public class ItineraireActivity extends AppCompatActivity
         }
 
         AlertDialog alert = builder.create();
+
+        alert.setCanceledOnTouchOutside(true);
+
         alert.show();
     }
 }

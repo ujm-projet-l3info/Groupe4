@@ -26,8 +26,7 @@
     <string name="arrivee">Arrivée :</string>
     <string name="etape">Étape :</string>
 
-    <string name="satellite">Satellite</string>
-    <string name="plan">Plan</string>
+    <string name="changer_vue">Plan/Satellite</string>
 
     <string name="etage_plus">+</string>
     <string name="etage_moins">-</string>
@@ -45,7 +44,7 @@
         </div>
         <br/>
         <div style="background:#505050;border-style:solid;border-color:#505050;border-width:2px;border-radius:10px;">
-            <span style="padding:5px;color:#b055b0">Comment me rendre où je le souhaite ?</span>
+            <span style="padding:5px;color:#b055b0">Comment me rendre où je souhaite ?</span>
             <br/><br/>
             <span style="color:#aaaaaa">Pour vous rendre à un certain endroit, vous devez passer par le formulaire d\'itinéraire accessible depuis le menu de navigation ou depuis la carte en appuyant sur le bouton en bas. Vous pouvez y préciser le départ, l\'arrivée ainsi qu\'une éventuelle étape. Veillez à avoir activé votre localisation.</span>
         </div>
@@ -59,7 +58,7 @@
         <div style="background:#505050;border-style:solid;border-color:#505050;border-width:2px;border-radius:10px;">
             <span style="padding:5px;color:#b055b0">Mon itinéraire me fait changer d\'étage</span>
             <br/><br/>
-            <span style="color:#aaaaaa">En cas d\'itinéraire muti-étages, vous pouvez utiliser les boutons \'+\' et \'-\' de la carte pour afficher les différents niveaux. Sur le tracé du chemin, les portions de niveaux différents sont représentées par des nuances de gris : du plus foncé (niveau -2) au plus clair (niveau 1).</span>
+            <span style="color:#aaaaaa">En cas d\'itinéraire muti-étages, vous pouvez utiliser les boutons \'+\' et \'-\' de la carte pour afficher les différents niveaux. Sur le tracé du chemin, les portions de niveaux différents sont représentées par des nuances de gris : du plus foncé (niveau -2) au plus clair (niveau 1). Le niveau auquel vous êtes est écrit en haut de l\'écran.</span>
         </div>
         <br/>
         <div style="background:#606060;border-style:solid;border-color:#606060;border-width:2px;border-radius:10px;">
@@ -93,6 +92,12 @@
         </div>
         <br/>
         <div style="background:#505050;border-style:solid;border-color:#505050;border-width:2px;border-radius:10px;">
+            <span style="padding:5px;color:#b055b0">Je suis presque en retard</span>
+            <br/><br/>
+            <span style="color:#aaaaaa">Une option \'prochain cours\' est accessible et vous permet de directement afficher un itinéraire vers votre prochain cours.</span>
+        </div>
+        <br/>
+        <div style="background:#606060;border-style:solid;border-color:#606060;border-width:2px;border-radius:10px;">
             <span style="padding:5px;color:#b055b0">J\'ai d\'autres questions</span>
             <br/><br/>
             <span style="color:#aaaaaa">Pour tout autre question ou précision, veuillez nous contacter par mail à l\'adresse <span style="color:#63c1ba;text-decoration:underline;">support@univlocation.com</span></span>
