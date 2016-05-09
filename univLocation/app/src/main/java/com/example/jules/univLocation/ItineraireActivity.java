@@ -31,12 +31,77 @@ import com.google.android.gms.maps.model.LatLng;
 import java.util.ArrayList;
 
 public class ItineraireActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     private String[] poiStr;
 
-    public void recupererItineraire()
-    {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_itineraire);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                recupererItineraire();
+            }
+        });
+
+        final Switch pmr = (Switch) findViewById(R.id.PMR);
+        pmr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(pmr.isChecked())
+                    fab.setImageResource(R.drawable.ic_accessible_white_48dp);
+                else
+                    fab.setImageResource(R.drawable.ic_directions_walk_white_48dp);
+            }
+        });
+
+        poiStr = chargerPoi();
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, poiStr);
+
+        AutoCompleteTextView deroule_dep = (AutoCompleteTextView) findViewById(R.id.depart);
+        deroule_dep.setAdapter(adapter);
+
+        AutoCompleteTextView deroule_etape = (AutoCompleteTextView) findViewById(R.id.etape);
+        deroule_etape.setAdapter(adapter);
+
+        final AutoCompleteTextView deroule_arr = (AutoCompleteTextView) findViewById(R.id.arrivee);
+        deroule_arr.setAdapter(adapter);
+
+        deroule_arr.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    InputMethodManager inputMethodManager = (InputMethodManager) ItineraireActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
+                    inputMethodManager.hideSoftInputFromWindow(deroule_arr.getWindowToken(), 0);
+
+                    recupererItineraire();
+
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        Bundle b = getIntent().getExtras();
+        if(b != null)
+            deroule_arr.setText(b.getString("arrivee"));
+    }
+
+    public void recupererItineraire() {
         final EditText dep = (EditText) findViewById(R.id.depart);
         final EditText arr = (EditText) findViewById(R.id.arrivee);
         final EditText etape = (EditText) findViewById(R.id.etape);
@@ -103,76 +168,7 @@ public class ItineraireActivity extends AppCompatActivity
         }
     }
 
-    protected void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_itineraire);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
-        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(this);
-
-        final Switch pmr = (Switch) findViewById(R.id.PMR);
-        pmr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(pmr.isChecked())
-                    fab.setImageResource(R.drawable.ic_accessible_white_48dp);
-                else
-                    fab.setImageResource(R.drawable.ic_directions_walk_white_48dp);
-            }
-        });
-
-        chargerPoi();
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_dropdown_item_1line, poiStr);
-
-        AutoCompleteTextView deroule_dep = (AutoCompleteTextView) findViewById(R.id.depart);
-        deroule_dep.setAdapter(adapter);
-
-        AutoCompleteTextView deroule_etape = (AutoCompleteTextView) findViewById(R.id.etape);
-        deroule_etape.setAdapter(adapter);
-
-        final AutoCompleteTextView deroule_arr = (AutoCompleteTextView) findViewById(R.id.arrivee);
-        deroule_arr.setAdapter(adapter);
-
-        deroule_arr.setOnEditorActionListener(new EditText.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    InputMethodManager inputMethodManager = (InputMethodManager) ItineraireActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
-                    inputMethodManager.hideSoftInputFromWindow(deroule_arr.getWindowToken(), 0);
-
-                    recupererItineraire();
-
-                    return true;
-                }
-                return false;
-            }
-        });
-
-        Bundle b = getIntent().getExtras();
-        if(b != null)
-            deroule_arr.setText(b.getString("arrivee"));
-    }
-
-    public void onClick(View view)
-    {
-        recupererItineraire();
-    }
-
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         if(drawer.isDrawerOpen(GravityCompat.START))
@@ -188,21 +184,17 @@ public class ItineraireActivity extends AppCompatActivity
         }
     }
 
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.itineraire, menu);
 
         return true;
     }
 
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
+    public boolean onOptionsItemSelected(MenuItem item) {
         return super.onOptionsItemSelected(item);
     }
 
-    public boolean onNavigationItemSelected(MenuItem item)
-    {
-        // Handle navigation view item clicks here.
+    public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -233,12 +225,11 @@ public class ItineraireActivity extends AppCompatActivity
         return true;
     }
 
-    public void chargerPoi()
-    {
+    public static String[] chargerPoi() {
         ArrayList<String> listePOIs = MapsActivity.g.getPOIS();
         listePOIs.add("Ma position");
 
-        poiStr = new String[listePOIs.size()];
+        String[] poiStr = new String[listePOIs.size()];
 
         for(int i = 0; i < listePOIs.size(); i++) // Recuperation dans tableau
         {
@@ -257,6 +248,8 @@ public class ItineraireActivity extends AppCompatActivity
                 }
             }
         }
+
+        return poiStr;
     }
 
     private void showDialogError(int i, String s) {

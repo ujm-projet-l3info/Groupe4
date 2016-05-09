@@ -27,6 +27,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -57,8 +59,11 @@ import java.util.Date;
 
 import graphe.*;
 
-public class MapsActivity extends AppCompatActivity
-        implements OnMapReadyCallback, View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,
+        NavigationView.OnNavigationItemSelectedListener,
+        GoogleApiClient.ConnectionCallbacks,
+        GoogleApiClient.OnConnectionFailedListener,
+        LocationListener {
 
 
     private GoogleMap mMap;
@@ -79,22 +84,31 @@ public class MapsActivity extends AppCompatActivity
     public GoogleApiClient mGoogleApiClient = null;
     public LocationRequest mLocationRequest = null;
 
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Map
         setContentView(R.layout.activity_maps);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        // Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // Bouton itineraire
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(this);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MapsActivity.this, ItineraireActivity.class);
+                startActivityForResult(i, 1);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
 
+        // Volet de navigation
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -107,12 +121,11 @@ public class MapsActivity extends AppCompatActivity
         // Charger graphe
         try {
             parseGraphe();
-        }
-        catch (IOException | XmlPullParserException e)
-        {
+        } catch (IOException | XmlPullParserException e) {
             e.printStackTrace();
         }
 
+        // API Client localisation
         if(mGoogleApiClient == null){
             mGoogleApiClient = new GoogleApiClient.Builder(this)
                     .addConnectionCallbacks(this)
@@ -142,10 +155,6 @@ public class MapsActivity extends AppCompatActivity
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(45.422949, 4.425735), 18));
         }
 
-        // Localisation utilisateur
-        mMap.setMyLocationEnabled(true);
-        mMap.getUiSettings().setMyLocationButtonEnabled(false);
-
         // Bouton localisation
         FloatingActionButton maLoc = (FloatingActionButton) findViewById(R.id.ma_localisation);
         maLoc.setOnClickListener(new View.OnClickListener() {
@@ -156,6 +165,10 @@ public class MapsActivity extends AppCompatActivity
                     mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), mMap.getCameraPosition().zoom));
             }
         });
+
+        // Localisation utilisateur
+        mMap.setMyLocationEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(false);
 
         // Calque
         creerCalque(0);
@@ -196,17 +209,14 @@ public class MapsActivity extends AppCompatActivity
         }*/
     }
 
-    protected void onActivityResult(int requestCode , int resultCode , Intent data)
-    {
-        if(b != null)
-        {
+    protected void onActivityResult(int requestCode , int resultCode , Intent data) {
+        if(b != null){
             tracerItineraire();
             b = null;
         }
     }
 
-    public void tracerItineraire() throws SecurityException
-    {
+    public void tracerItineraire() throws SecurityException {
         mMap.clear();
         marqueurs = new ArrayList<Marker>();
 
@@ -249,16 +259,19 @@ public class MapsActivity extends AppCompatActivity
                 .title("Arrivée")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
 
-        Chemin chemin = g.itineraireMultiple(l, pmr); // Calcul itineraire le plus court
+        // Calcul itineraire le plus court
+        Chemin chemin = g.itineraireMultiple(l, pmr);
 
-        if(chemin.noeuds.size() == 1 && pmr)
-            Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas d'itinéraire PMR pour cette destination").show();
-
-        if(chemin.noeuds.size() == 1 && !pmr)
-            Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas d'itinéraire pour cette destination").show();
+        if(chemin.noeuds.size() == 1) {
+            if(pmr)
+                Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas d'itinéraire PMR pour cette destination").show();
+            else
+                Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas d'itinéraire pour cette destination").show();
+        }
 
         lignes = new ArrayList<PolylineOptions>();
 
+        // Tracage de l'itineraire
         PolylineOptions ligne = new PolylineOptions();
 
         int n = g.noeuds.get(chemin.noeuds.get(0)).getNiveau();
@@ -273,15 +286,13 @@ public class MapsActivity extends AppCompatActivity
             }
         }
 
-        for (int i = 0; i < chemin.noeuds.size(); i++)
-        {
+        for (int i = 0; i < chemin.noeuds.size(); i++) {
             int j = chemin.noeuds.get(i);
 
             ligne.add(new LatLng(g.noeuds.get(j).getLat(), g.noeuds.get(j).getLon())); // Ajout noeud dans ligne en cours
 
-            if(g.noeuds.get(j).getNiveau() != n) // Si en plus changment de niveau
-
-            {
+            // Si en plus changment de niveau
+            if(g.noeuds.get(j).getNiveau() != n) {
                 switch(n) {
                     case -2:
                         ligne.color(Color.rgb(0 , 0 , 0));
@@ -376,15 +387,7 @@ public class MapsActivity extends AppCompatActivity
         }
     }
 
-    public void onClick(View view)
-    {
-        Intent i = new Intent(MapsActivity.this, ItineraireActivity.class);
-        startActivityForResult(i, 1);
-        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-    }
-
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         if (drawer.isDrawerOpen(GravityCompat.START))
@@ -407,8 +410,7 @@ public class MapsActivity extends AppCompatActivity
         }
     }
 
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
 
         return true;
@@ -423,146 +425,175 @@ public class MapsActivity extends AppCompatActivity
 
     public  boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.trouver_wc)
-        {
-            int nb = 0;
-            LatLng l;
-            ArrayList<Integer> listeToilettes = g.chercheToilettes();
-
-            effacerMarqueurs();
-
-            marqueurs = new ArrayList<Marker>();
-
-            Noeud n = new Noeud();
-            for(int i = 0 ; i < listeToilettes.size() ; i++)
-            {
-                n = g.noeuds.get(listeToilettes.get(i));
-                if(niveau == n.getNiveau()) {
-                    l = new LatLng(n.getLat(), n.getLon());
-
-                    MarkerOptions options = new MarkerOptions()
-                            .title("Toilettes")
-                            .position(l)
-                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
-
-                    marqueurs.add(mMap.addMarker(options));
-                    nb++;
-                }
-            }
-
-            if(nb == 0)
-                Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas de toilettes au niveau " + niveau).show();
-            else
-                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(n.getLat(), n.getLon()), 18));
-        }
+            toilettes();
         else if(item.getItemId() == R.id.trouver_distrib)
-        {
-            LatLng l;
-            ArrayList<Integer> listeDistributeurs = g.chercheDistributeurs();
-
-            effacerMarqueurs();
-
-            marqueurs = new ArrayList<Marker>();
-
-            Noeud n = new Noeud();
-            for(int i = 0 ; i < listeDistributeurs.size() ; i++)
-            {
-                n = g.noeuds.get(listeDistributeurs.get(i));
-                l = new LatLng(n.getLat(), n.getLon());
-
-                MarkerOptions options = new MarkerOptions()
-                        .title("Distributeurs (niveau " + n.getNiveau() + ")")
-                        .position(l)
-                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
-
-                marqueurs.add(mMap.addMarker(options));
-            }
-
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(n.getLat(), n.getLon()), 18));
-        }
+            distributeurs();
         else if(item.getItemId() == R.id.trouver_manger)
+            restauration();
+        else if(item.getItemId() == R.id.trouver_prochain_cours)
+            itineraireProchainCours();
+        else if(item.getItemId() == R.id.recherche)
+            recherche();
+        else if(item.getItemId() == R.id.changer_vue)
+            changerVue();
+
+        return true;
+    }
+
+    public void itineraireProchainCours() throws SecurityException {
+        Cursor mCursor = null;
+
+        String[] ATTRIBUTS = new String[] {
+                CalendarContract.Events.TITLE,
+                CalendarContract.Events.DTSTART,
+                CalendarContract.Events.DTEND,
+                CalendarContract.Events.EVENT_LOCATION,
+                CalendarContract.Events.CALENDAR_DISPLAY_NAME
+        };
+
+        try {
+            mCursor = getContentResolver().query(CalendarContract.Events.CONTENT_URI, ATTRIBUTS, null, null, CalendarContract.Events.DTSTART + " ASC");
+        } catch(SecurityException e){
+            e.printStackTrace();
+        }
+
+        mCursor = CalendrierActivity.prochainCours(mCursor);
+
+        ArrayList<Integer> listeNoeudsArr = MapsActivity.g.cherchePOI(mCursor.getString(3));
+
+        b = new Bundle();
+
+        Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+        if (mLastLocation != null)
+            b.putInt("depart", -2);
+        else
+            b.putInt("depart", 0);
+
+        b.putInt("etape", -1);
+        b.putInt("arrivee", listeNoeudsArr.get(0));
+
+        tracerItineraire();
+
+        b = null;
+    }
+
+    public void toilettes() {
+        int nb = 0;
+        LatLng l;
+        ArrayList<Integer> listeToilettes = g.chercheToilettes();
+
+        effacerMarqueurs();
+
+        marqueurs = new ArrayList<Marker>();
+
+        Noeud n = new Noeud();
+        for(int i = 0 ; i < listeToilettes.size() ; i++)
         {
-            LatLng l;
-            ArrayList<Integer> listeManger = new ArrayList<Integer>();
-
-            listeManger.add(29);
-            listeManger.add(91);
-            listeManger.add(95);
-
-            effacerMarqueurs();
-
-            marqueurs = new ArrayList<Marker>();
-
-            Noeud n = new Noeud();
-            for(int i = 0 ; i < listeManger.size() ; i++)
-            {
-                n = g.noeuds.get(listeManger.get(i));
+            n = g.noeuds.get(listeToilettes.get(i));
+            if(niveau == n.getNiveau()) {
                 l = new LatLng(n.getLat(), n.getLon());
 
                 MarkerOptions options = new MarkerOptions()
-                        .title(n.POIs.get(0) + " (niveau " + n.getNiveau() + ")")
+                        .title("Toilettes")
                         .position(l)
-                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
 
                 marqueurs.add(mMap.addMarker(options));
+                nb++;
             }
+        }
 
+        if(nb == 0)
+            Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas de toilettes au niveau " + niveau).show();
+        else
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(n.getLat(), n.getLon()), 18));
-        }
-        else if(item.getItemId() == R.id.trouver_prochain_cours)
+    }
+
+    public void distributeurs() {
+        LatLng l;
+        ArrayList<Integer> listeDistributeurs = g.chercheDistributeurs();
+
+        effacerMarqueurs();
+
+        marqueurs = new ArrayList<Marker>();
+
+        Noeud n = new Noeud();
+        for(int i = 0 ; i < listeDistributeurs.size() ; i++)
         {
-            Cursor mCursor = null;
+            n = g.noeuds.get(listeDistributeurs.get(i));
+            l = new LatLng(n.getLat(), n.getLon());
 
-            String[] ATTRIBUTS = new String[] {
-                    CalendarContract.Events.TITLE,
-                    CalendarContract.Events.DTSTART,
-                    CalendarContract.Events.DTEND,
-                    CalendarContract.Events.EVENT_LOCATION,
-                    CalendarContract.Events.CALENDAR_DISPLAY_NAME
-            };
+            MarkerOptions options = new MarkerOptions()
+                    .title("Distributeurs (niveau " + n.getNiveau() + ")")
+                    .position(l)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
 
-            try {
-                mCursor = getContentResolver().query(CalendarContract.Events.CONTENT_URI, ATTRIBUTS, null, null, CalendarContract.Events.DTSTART + " ASC");
-            } catch(SecurityException e){
-                e.printStackTrace();
-            }
-
-            mCursor = CalendrierActivity.prochainCours(mCursor);
-
-            ArrayList<Integer> listeNoeudsArr = MapsActivity.g.cherchePOI(mCursor.getString(3));
-
-            b = new Bundle();
-            b.putInt("depart", -2);
-            b.putInt("etape", -1);
-            b.putInt("arrivee", listeNoeudsArr.get(0));
-
-            tracerItineraire();
-
-            b = null;
+            marqueurs.add(mMap.addMarker(options));
         }
-        else if(item.getItemId() == R.id.recherche)
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(n.getLat(), n.getLon()), 18));
+    }
+
+    public void restauration() {
+        LatLng l;
+        ArrayList<Integer> listeManger = new ArrayList<Integer>();
+
+        listeManger.add(29);
+        listeManger.add(91);
+        listeManger.add(95);
+
+        effacerMarqueurs();
+
+        marqueurs = new ArrayList<Marker>();
+
+        Noeud n = new Noeud();
+        for(int i = 0 ; i < listeManger.size() ; i++)
         {
-            final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this, AlertDialog.THEME_DEVICE_DEFAULT_DARK);
-            alertDialogBuilder.setTitle("Rechercher un lieu");
+            n = g.noeuds.get(listeManger.get(i));
+            l = new LatLng(n.getLat(), n.getLon());
 
-            alertDialogBuilder.setCancelable(true);
+            MarkerOptions options = new MarkerOptions()
+                    .title(n.POIs.get(0) + " (niveau " + n.getNiveau() + ")")
+                    .position(l)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
 
-            final EditText recherche = new EditText(this);
-            recherche.setTextColor(Color.parseColor("#63c1ba"));
-            recherche.setSingleLine(true);
-            recherche.setImeActionLabel("Ok", KeyEvent.KEYCODE_ENTER);
+            marqueurs.add(mMap.addMarker(options));
+        }
 
-            alertDialogBuilder.setView(recherche);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(n.getLat(), n.getLon()), 18));
+    }
 
-            alertDialogBuilder.setPositiveButton("Rechercher", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int id) {
-                    if(!recherche.getText().toString().equals("") && !recherche.getText().toString().matches(" *")) {
-                        ArrayList<Integer> liste = MapsActivity.g.cherchePOI(recherche.getText().toString());
+    public void recherche() {
+        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this, AlertDialog.THEME_DEVICE_DEFAULT_DARK);
+        alertDialogBuilder.setTitle("Rechercher un lieu");
 
-                        if(!liste.isEmpty()) {
-                            effacerMarqueurs();
-                            marqueurs = new ArrayList<Marker>();
+        alertDialogBuilder.setCancelable(true);
 
-                            Noeud n = g.noeuds.get(liste.get(0));
+        //final AutoCompleteTextView recherche = new AutoCompleteTextView(this);
+        final EditText recherche = new EditText(this);
+        recherche.setTextColor(Color.parseColor("#63c1ba"));
+
+        recherche.setSingleLine(true);
+        recherche.setImeActionLabel("Ok", KeyEvent.KEYCODE_ENTER);
+
+        /*String[] poi = ItineraireActivity.chargerPoi();
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, poi);
+        recherche.setAdapter(adapter);*/
+
+        alertDialogBuilder.setView(recherche);
+
+        alertDialogBuilder.setPositiveButton("Rechercher", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                if(!recherche.getText().toString().equals("") && !recherche.getText().toString().matches(" *")) {
+                    ArrayList<Integer> liste = MapsActivity.g.cherchePOI(recherche.getText().toString());
+
+                    if(!liste.isEmpty()) {
+                        effacerMarqueurs();
+                        marqueurs = new ArrayList<Marker>();
+
+                        Noeud n = new Noeud();
+                        for(int i = 0; i < liste.size(); i++) {
+                            n = g.noeuds.get(liste.get(i));
                             LatLng l = new LatLng(n.getLat(), n.getLon());
 
                             MarkerOptions options = new MarkerOptions()
@@ -571,75 +602,73 @@ public class MapsActivity extends AppCompatActivity
                                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
 
                             marqueurs.add(mMap.addMarker(options));
-
-                            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(n.getLat(), n.getLon()), 18));
                         }
+
+                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(n.getLat(), n.getLon()), 18));
                     }
                 }
-            });
-
-            alertDialogBuilder.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss();
-                }
-            });
-
-            final AlertDialog alertDialog = alertDialogBuilder.create();
-            recherche.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                @Override
-                public void onFocusChange(View v, boolean hasFocus) {
-                    if (hasFocus) {
-                        alertDialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
-                    }
-                }
-            });
-
-            alertDialog.setCanceledOnTouchOutside(true);
-
-            alertDialog.show();
-        }
-        else if(item.getItemId() == R.id.changer_vue)
-        {
-            if (vue == 0) {
-                mMap.clear();
-                calqueFac.remove();
-                mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-
-                if(!lignes.isEmpty()) {
-                    for (int i = 0; i < lignes.size(); i++) {
-                        mMap.addPolyline(lignes.get(i));
-                    }
-
-                    if(depart != -1) {
-                        mMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()))
-                                .title("Départ")
-                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE)));
-                    }
-                    if(etape != -1) {
-                        mMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(g.noeuds.get(etape).getLat(), g.noeuds.get(etape).getLon()))
-                                .title("Étape")
-                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
-                    }
-                    if(arrivee != -1) {
-                        mMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(g.noeuds.get(arrivee).getLat(), g.noeuds.get(arrivee).getLon()))
-                                .title("Arrivée")
-                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
-                    }
-                }
-
-                vue = 1;
-            } else {
-                mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                creerCalque(niveau);
-                vue = 0;
             }
-        }
+        });
 
-        return true;
+        alertDialogBuilder.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        final AlertDialog alertDialog = alertDialogBuilder.create();
+        recherche.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    alertDialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+                }
+            }
+        });
+
+        alertDialog.setCanceledOnTouchOutside(true);
+
+        alertDialog.show();
+    }
+
+    public void changerVue() {
+        if (vue == 0) {
+            mMap.clear();
+            calqueFac.remove();
+            mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+
+            if(!lignes.isEmpty()) {
+                for (int i = 0; i < lignes.size(); i++) {
+                    mMap.addPolyline(lignes.get(i));
+                }
+
+                if(depart != -1) {
+                    mMap.addMarker(new MarkerOptions()
+                            .position(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()))
+                            .title("Départ")
+                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE)));
+                }
+                if(etape != -1) {
+                    mMap.addMarker(new MarkerOptions()
+                            .position(new LatLng(g.noeuds.get(etape).getLat(), g.noeuds.get(etape).getLon()))
+                            .title("Étape")
+                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
+                }
+                if(arrivee != -1) {
+                    mMap.addMarker(new MarkerOptions()
+                            .position(new LatLng(g.noeuds.get(arrivee).getLat(), g.noeuds.get(arrivee).getLon()))
+                            .title("Arrivée")
+                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+                }
+            }
+
+            vue = 1;
+        } else {
+            mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+            creerCalque(niveau);
+            vue = 0;
+        }
     }
 
     @Override

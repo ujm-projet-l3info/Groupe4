@@ -437,7 +437,7 @@
     <longitude>4.425238</longitude>
     <batiment>A</batiment>
     <liste_POI>
-      <POI>Fin couloir A sortie vers parrking Nord</POI>
+      <POI>Sortie</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>21</voisin>
@@ -490,7 +490,7 @@
     <longitude>4.425448</longitude>
     <batiment>A</batiment>
     <liste_POI>
-      <POI>Sortie PMR bâtiment A</POI>
+      <POI>Sortie PMR</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>24</voisin>
@@ -506,13 +506,13 @@
 
   <!-- BATIMENT F -->
 
-  <noeud num="26"> <!-- F101 -->
+  <noeud num="26"> <!-- Salle de réunion -->
     <niveau>0</niveau>
     <latitude>45.423646</latitude>
     <longitude>4.425505</longitude>
     <batiment>F</batiment>
     <liste_POI>
-      <POI>F101</POI>
+      <POI>Salle de réunion</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>25</voisin>
@@ -532,7 +532,7 @@
     <liste_POI>
       <POI>F101</POI>
       <POI>Toilettes</POI>
-      <POI>Intersection bâtiment F Snack</POI>
+      <POI>Intersection F101 Snack</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>26</voisin>
@@ -745,7 +745,7 @@
     <longitude>4.425905</longitude>
     <batiment>D</batiment>
     <liste_POI>
-      <POI>Devant escaliers bâtiment D niveau 2</POI>
+      <POI>Devant escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>32</voisin>
@@ -895,7 +895,7 @@
     <longitude>4.425417</longitude>
     <batiment>-</batiment>
     <liste_POI>
-      <POI>Chemin PMR F101 parking Nord</POI>
+      <POI>Chemin PMR</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>25</voisin>
@@ -913,7 +913,7 @@
     <longitude>4.425321</longitude>
     <batiment>-</batiment>
     <liste_POI>
-      <POI>Chemin PMR F101 parking Nord</POI>
+      <POI>Chemin PMR</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>45</voisin>
@@ -931,7 +931,7 @@
     <longitude>4.424847</longitude>
     <batiment>-</batiment>
     <liste_POI>
-      <POI>Chemin PMR F101 parking Nord</POI>
+      <POI>Chemin PMR</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>44</voisin>
@@ -951,7 +951,7 @@
     <longitude>4.425011</longitude>
     <batiment>-</batiment>
     <liste_POI>
-      <POI>Chemin PMR F101 parking Nord</POI>
+      <POI>Chemin PMR</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>48</voisin>
@@ -969,7 +969,7 @@
     <longitude>4.424766</longitude>
     <batiment>-</batiment>
     <liste_POI>
-      <POI>Chemin PMR F101 parking Nord</POI>
+      <POI>Chemin PMR</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>49</voisin>
@@ -987,7 +987,7 @@
     <longitude>4.425037</longitude>
     <batiment>-</batiment>
     <liste_POI>
-      <POI>En bas des grands escaliers vers parking Nord</POI>
+      <POI>Escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>45</voisin>
@@ -1201,13 +1201,13 @@
     </liste_voisins_PMR>
   </noeud>
 
-  <noeud num="62"> <!-- PLace devant H et J -->
+  <noeud num="62"> <!-- Pace devant H et J -->
     <niveau>0</niveau>
     <latitude>45.424143</latitude>
     <longitude>4.424891</longitude>
     <batiment>-</batiment>
     <liste_POI>
-      <POI>PLace devant bâtiments H et J</POI>
+      <POI>Place devant bâtiments H et J</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>59</voisin>
@@ -1706,6 +1706,7 @@
     <longitude>4.426290</longitude>
     <batiment>-</batiment>
     <liste_POI>
+      <POI>Devant bâtiment C</POI>
       <POI>Parking Sud</POI>
     </liste_POI>
     <liste_voisins>
@@ -1935,7 +1936,7 @@
     <longitude>4.426273</longitude>
     <batiment>-</batiment>
     <liste_POI>
-      <POI>Escaliers sortie bâtiment D et M niveau bâtiment M</POI>
+      <POI>Sortie</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>97</voisin>
@@ -1956,7 +1957,7 @@
     <longitude>4.426086</longitude>
     <batiment>-</batiment>
     <liste_POI>
-      <POI>Sortie bâtiment D vers bâtiment M</POI>
+      <POI>Sortie</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>9</voisin>
@@ -2109,7 +2110,7 @@
     <longitude>4.424389</longitude>
     <batiment>K</batiment>
     <liste_POI>
-      <POI>Escaliers bâtiment K niveau 0</POI>
+      <POI>Escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>107</voisin>
@@ -2352,7 +2353,7 @@
     <longitude>4.425175</longitude>
     <batiment>H</batiment>
     <liste_POI>
-      <POI>Devant escaliers bâtiment H niveau 2</POI>
+      <POI>Devant escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>120</voisin>
@@ -2371,7 +2372,7 @@
     <longitude>4.425156</longitude>
     <batiment>H</batiment>
     <liste_POI>
-      <POI>Couloir bâtiment H</POI>
+      <POI>Couloir</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>120</voisin>
@@ -2411,7 +2412,7 @@
     <longitude>4.425335</longitude>
     <batiment>H</batiment>
     <liste_POI>
-      <POI>Escaliers bâtiment H niveau 2</POI>
+      <POI>Escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>123</voisin>
@@ -2494,7 +2495,7 @@
     <longitude>4.424810</longitude>
     <batiment>J</batiment>
     <liste_POI>
-      <POI>Escaliers bâtiment J niveau 1</POI>
+      <POI>Escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>127</voisin>
@@ -2627,7 +2628,7 @@
     <longitude>4.424576</longitude>
     <batiment>J</batiment>
     <liste_POI>
-      <POI>Escaliers bâtiment J niveau 1</POI>
+      <POI>Escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>134</voisin>
@@ -2666,7 +2667,7 @@
     <longitude>4.424389001</longitude>
     <batiment>K</batiment>
     <liste_POI>
-      <POI>Escaliers bâtiment K niveau 1</POI>
+      <POI>Escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>108</voisin>
@@ -2831,7 +2832,7 @@
     <longitude>4.424576001</longitude>
     <batiment>J</batiment>
     <liste_POI>
-      <POI>Escaliers bâtiment J niveau 2</POI>
+      <POI>Escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>135</voisin>
@@ -2849,7 +2850,7 @@
     <longitude>4.424515001</longitude>
     <batiment>J</batiment>
     <liste_POI>
-      <POI>Devant escaliers bâtiment J niveau 2</POI>
+      <POI>Devant escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>146</voisin>
@@ -2983,7 +2984,7 @@
     <longitude>4.424712</longitude>
     <batiment>J</batiment>
     <liste_POI>
-      <POI>Ascenseur bâtiment J niveau 2</POI>
+      <POI>Ascenseur</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>153</voisin>
@@ -3002,7 +3003,7 @@
     <longitude>4.424751001</longitude>
     <batiment>J</batiment>
     <liste_POI>
-      <POI>Devant escaliers bâtiment J niveau 2</POI>
+      <POI>Devant escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>153</voisin>
@@ -3024,7 +3025,7 @@
     <longitude>4.424810001</longitude>
     <batiment>J</batiment>
     <liste_POI>
-      <POI>Escaliers bâtiment J niveau 2</POI>
+      <POI>Escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>128</voisin>
@@ -3114,7 +3115,7 @@
     <longitude>4.424712001</longitude>
     <batiment>J</batiment>
     <liste_POI>
-      <POI>Ascenseur bâtiment J niveau 1</POI>
+      <POI>Ascenseur</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>126</voisin>
@@ -3138,7 +3139,7 @@
     <longitude>4.426213</longitude>
     <batiment>C</batiment>
     <liste_POI>
-      <POI>Devant escaliers bâtiment C niveau 1</POI>
+      <POI>Devant escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>10</voisin>
@@ -3156,7 +3157,7 @@
     <longitude>4.426247</longitude>
     <batiment>C</batiment>
     <liste_POI>
-      <POI>Escaliers bâtiment C niveau 1</POI>
+      <POI>Escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>162</voisin>
@@ -3173,7 +3174,7 @@
     <longitude>4.426819</longitude>
     <batiment>C</batiment>
     <liste_POI>
-      <POI>Devant escaliers bâtiment C niveau 0</POI>
+      <POI>Devant escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>88</voisin>
@@ -3191,7 +3192,7 @@
     <longitude>4.426767</longitude>
     <batiment>C</batiment>
     <liste_POI>
-      <POI>Escaliers bâtiment C niveau 1</POI>
+      <POI>Escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>164</voisin>
@@ -3208,7 +3209,8 @@
     <longitude>4.426485</longitude>
     <batiment>C</batiment>
     <liste_POI>
-      <POI>Escaliers bâtiment C niveau 0</POI>
+      <POI>Bâtiment C</POI>
+      <POI>Escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>87</voisin>
@@ -3227,7 +3229,7 @@
     <longitude>4.426247001</longitude>
     <batiment>C</batiment>
     <liste_POI>
-      <POI>Escaliers bâtiment C niveau 2</POI>
+      <POI>Escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>163</voisin>
@@ -3244,7 +3246,7 @@
     <longitude>4.426213001</longitude>
     <batiment>C</batiment>
     <liste_POI>
-      <POI>Devant escaliers bâtiment C niveau 2</POI>
+      <POI>Devant escaliers</POI>
       <POI>Département Mathématiques</POI>
     </liste_POI>
     <liste_voisins>
@@ -3263,7 +3265,7 @@
     <longitude>4.426248</longitude>
     <batiment>C</batiment>
     <liste_POI>
-      <POI>Couloir bâtiment C</POI>
+      <POI>Couloir</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>168</voisin>
@@ -3377,7 +3379,7 @@
     <longitude>4.426539001</longitude>
     <batiment>C</batiment>
     <liste_POI>
-      <POI>Devant escaliers bâtiment C niveau 2</POI>
+      <POI>Devant escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>174</voisin>
@@ -3397,7 +3399,7 @@
     <longitude>4.426485</longitude>
     <batiment>C</batiment>
     <liste_POI>
-      <POI>Escaliers bâtiment C niveau 2</POI>
+      <POI>Escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>166</voisin>
@@ -3498,7 +3500,7 @@
     <batiment>C</batiment>
     <liste_POI>
       <POI>C208</POI>
-      <POI>Devant escaliers bâtiment C niveau 2</POI>
+      <POI>Devant escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>180</voisin>
@@ -3516,7 +3518,7 @@
     <longitude>4.426767001</longitude>
     <batiment>C</batiment>
     <liste_POI>
-      <POI>Escaliers bâtiment C niveau 2</POI>
+      <POI>Escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>165</voisin>
@@ -3537,7 +3539,7 @@
     <longitude>4.426045</longitude>
     <batiment>D</batiment>
     <liste_POI>
-      <POI>Devant escaliers bâtiment D niveau 1</POI>
+      <POI>Devant escaliers</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>38</voisin>
@@ -3683,7 +3685,7 @@
     <longitude>4.426077001</longitude>
     <batiment>D</batiment>
     <liste_POI>
-      <POI>Ascenseur bâtiment D niveau 1</POI>
+      <POI>Ascenseur</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>183</voisin>
@@ -3704,7 +3706,7 @@
     <longitude>4.426077</longitude>
     <batiment>D</batiment>
     <liste_POI>
-      <POI>Ascenseur bâtiment D niveau 2</POI>
+      <POI>Ascenseur</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>37</voisin>
@@ -3724,7 +3726,7 @@
       <batiment>H</batiment>
       <liste_POI>
           <POI>H105</POI>
-          <POI>Devant escaliers bâtiment H niveau 1</POI>
+          <POI>Devant escaliers</POI>
       </liste_POI>
       <liste_voisins>
           <voisin>121</voisin>
@@ -3748,7 +3750,7 @@
         <batiment>H</batiment>
         <liste_POI>
             <POI>H106</POI>
-            <POI>Devant escaliers bâtiment H niveau 1</POI>
+            <POI>Devant escaliers</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>193</voisin>
@@ -3770,7 +3772,7 @@
         <longitude>4.425335001</longitude>
         <batiment>H</batiment>
         <liste_POI>
-            <POI>Escaliers bâtiment H niveau 1</POI>
+            <POI>Escaliers</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>124</voisin>
@@ -3887,7 +3889,7 @@
         <longitude>4.425062001</longitude>
         <batiment>H</batiment>
         <liste_POI>
-            <POI>Ascenseur bâtiment H niveau 1</POI>
+            <POI>Ascenseur</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>200</voisin>
@@ -3907,7 +3909,7 @@
         <longitude>4.425062</longitude>
         <batiment>H</batiment>
         <liste_POI>
-            <POI>Ascenseur bâtiment H niveau 2</POI>
+            <POI>Ascenseur</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>119</voisin>
@@ -3951,7 +3953,7 @@
         <longitude>4.424576002</longitude>
         <batiment>J</batiment>
         <liste_POI>
-            <POI>Escaliers bâtiment J niveau 0</POI>
+            <POI>Escaliers</POI>
         </liste_POI>
         <liste_voisins>
           <voisin>146</voisin>
@@ -3968,7 +3970,7 @@
         <longitude>4.424515002</longitude>
         <batiment>J</batiment>
         <liste_POI>
-            <POI>Devant scaliers bâtiment J niveau 0</POI>
+            <POI>Devant escaliers</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>203</voisin>
@@ -4062,7 +4064,7 @@
         <longitude>4.424751002</longitude>
         <batiment>J</batiment>
         <liste_POI>
-            <POI>Devant escaliers bâtiment J niveau -1</POI>
+            <POI>Devant escaliers</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>208</voisin>
@@ -4084,7 +4086,7 @@
         <longitude>4.424810002</longitude>
         <batiment>J</batiment>
         <liste_POI>
-            <POI>Escaliers bâtiment J niveau -1</POI>
+            <POI>Escaliers</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>128</voisin>
@@ -4101,7 +4103,7 @@
         <longitude>4.424712002</longitude>
         <batiment>J</batiment>
         <liste_POI>
-            <POI>Ascenseur bâtiment J niveau 0</POI>
+            <POI>Ascenseur</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>209</voisin>
@@ -4176,7 +4178,7 @@
         <longitude>4.425335002</longitude>
         <batiment>J</batiment>
         <liste_POI>
-            <POI>Escaliers bâtiment H niveau 0</POI>
+            <POI>Escaliers</POI>
         </liste_POI>
         <liste_voisins>
           <voisin>106</voisin>
@@ -4195,7 +4197,7 @@
         <longitude>4.425236</longitude>
         <batiment>J</batiment>
         <liste_POI>
-            <POI>Devant escaliers bâtiment H niveau 0</POI>
+            <POI>Devant escaliers</POI>
             <POI>H008</POI>
             <POI>H009</POI>
             <POI>H010</POI>
@@ -4334,7 +4336,7 @@
         <longitude>4.425062002</longitude>
         <batiment>J</batiment>
         <liste_POI>
-            <POI>Ascenseur bâtiment H niveau 0</POI>
+            <POI>Ascenseur</POI>
         </liste_POI>
         <liste_voisins>
             <voisin>222</voisin>

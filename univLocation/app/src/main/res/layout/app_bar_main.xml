@@ -28,6 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
+        app:backgroundTint="@color/colorPrimary"
         android:layout_marginBottom="@dimen/fab_margin"
         android:src="@drawable/ic_near_me_white_48dp" />
 
@@ -36,6 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|end"
+        app:backgroundTint="@color/colorAccent"
         android:layout_marginRight="@dimen/fab_margin"
         android:layout_marginTop="75dp"
         android:src="@drawable/ic_my_location_white_48dp" />
