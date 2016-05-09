@@ -138,7 +138,8 @@ public class MapsActivity extends AppCompatActivity
                 if(mLastLocation != null){
                     latitude = mLastLocation.getLatitude();
                     longitude = mLastLocation.getLongitude();
-                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), 18));
+
+                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), mMap.getCameraPosition().zoom));
                 }
             }
         });
@@ -556,6 +557,8 @@ public class MapsActivity extends AppCompatActivity
     public void onLocationChanged(Location loc) {
         latitude = loc.getLatitude();
         longitude = loc.getLongitude();
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), mMap.getCameraPosition().zoom));
 
         System.out.println("Nouvelle loc : (" + loc.getLatitude() + ";" + loc.getLongitude() + ")");
     }
