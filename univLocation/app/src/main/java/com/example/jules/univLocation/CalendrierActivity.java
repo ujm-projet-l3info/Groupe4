@@ -85,39 +85,18 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
             }
         }
 
-        mCursor.moveToFirst();
-        Long mtn = (new Date()).getTime();
-        while(mCursor.getLong(1) < mtn){
-            if(!mCursor.isLast())
-                mCursor.moveToNext();
-        }
-
-        mCursor.moveToPrevious();
+        mCursor = prochainCours(mCursor);
+        afficherCours();
 
         Button b = (Button)findViewById(R.id.suivant);
         b.setOnClickListener(this);
 
         b = (Button) findViewById(R.id.precedent);
         b.setOnClickListener(this);
-
-        onClick(findViewById(R.id.suivant));
     }
 
 
     public void onClick(View v) {
-        TextView tvDate = (TextView)findViewById(R.id.date);
-        TextView tvHeure = (TextView)findViewById(R.id.heure);
-        TextView tvNom = (TextView)findViewById(R.id.nom);
-        TextView tvSalle = (TextView)findViewById(R.id.salle);
-
-        Long debut = 0L;
-        Long fin = 0L;
-        String nom = "";
-        String salle = "";
-
-        Format df = DateFormat.getDateFormat(this);
-        Format tf = DateFormat.getTimeFormat(this);
-
         int tmp1 = mCursor.getPosition();
 
         if(v.getId() == R.id.suivant) {
@@ -169,21 +148,75 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
 
         int tmp2 = mCursor.getPosition();
 
-        if(tmp1 != tmp2) {
-            try {
-                nom = mCursor.getString(0);
-                debut = mCursor.getLong(1);
-                fin = mCursor.getLong(2);
-                salle = mCursor.getString(3);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+        if(tmp1 != tmp2)
+            afficherCours();
+    }
 
-            tvNom.setText(nom);
-            tvSalle.setText(salle);
-            tvDate.setText(df.format(debut));
-            tvHeure.setText(tf.format(debut) + " - " + tf.format(fin));
+    public void afficherCours() {
+        TextView tvDate = (TextView)findViewById(R.id.date);
+        TextView tvHeure = (TextView)findViewById(R.id.heure);
+        TextView tvNom = (TextView)findViewById(R.id.nom);
+        TextView tvSalle = (TextView)findViewById(R.id.salle);
+
+        Long debut = 0L;
+        Long fin = 0L;
+        String nom = "";
+        String salle = "";
+
+        Format df = DateFormat.getDateFormat(this);
+        Format tf = DateFormat.getTimeFormat(this);
+
+        try {
+            nom = mCursor.getString(0);
+            debut = mCursor.getLong(1);
+            fin = mCursor.getLong(2);
+            salle = mCursor.getString(3);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
+        tvNom.setText(nom);
+        tvSalle.setText(salle);
+        tvDate.setText(df.format(debut));
+        tvHeure.setText(tf.format(debut) + " - " + tf.format(fin));
+    }
+
+    public static Cursor prochainCours(Cursor mCursor) {
+        mCursor.moveToFirst();
+        Long mtn = (new Date()).getTime();
+        while(mCursor.getLong(1) < mtn){
+            if(!mCursor.isLast())
+                mCursor.moveToNext();
+        }
+
+        mCursor.moveToPrevious();
+
+        int tmp1 = mCursor.getPosition();
+
+        if(!mCursor.isLast()) {
+            do{
+                mCursor.moveToNext();
+
+                if(!mCursor.isLast()) {
+                    System.out.println(mCursor.getString(0));
+                    if(mCursor.getString(3) != null) {
+                        if(!mCursor.getString(3).equals(""))
+                            break;
+                    }
+                }
+            }while(!mCursor.isLast());
+
+            if(mCursor.isLast()) {
+                if (mCursor.getString(3) != null) {
+                    if (mCursor.getString(3).equals(""))
+                        mCursor.moveToPosition(tmp1);
+                } else {
+                    mCursor.moveToPosition(tmp1);
+                }
+            }
+        }
+
+        return mCursor;
     }
 
     @Override

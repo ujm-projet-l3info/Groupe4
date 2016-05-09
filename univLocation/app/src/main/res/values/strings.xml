@@ -15,6 +15,9 @@
 
     <string name="trouver_toilettes">Toilettes</string>
     <string name="trouver_distrib">Distributeurs</string>
+    <string name="trouver_manger">Où manger ?</string>
+    <string name="trouver_prochain_cours">Prochain cours</string>
+    <string name="recherche">Rechercher</string>
 
     <string name="PMR">Personne à mobilité réduite</string>
     <string name="entree_principale">Entrée principale</string>
@@ -62,31 +65,37 @@
         <div style="background:#606060;border-style:solid;border-color:#606060;border-width:2px;border-radius:10px;">
             <span style="padding:5px;color:#b055b0">Comment vite aller aux toilettes ?</span>
             <br/><br/>
-            <span style="color:#aaaaaa">Une option permet de montrer directement l\'emplacement des toilettes du niveau auquel vous êtes. Elle se trouve dans le menu déroulant en haut à droite de la page \'Carte\'.</span>
+            <span style="color:#aaaaaa">Une option permet de montrer directement l\'emplacement des toilettes uniquement du niveau auquel vous êtes. Elle se trouve dans le menu déroulant en haut à droite de la page \'Carte\'.</span>
         </div>
         <br/>
         <div style="background:#505050;border-style:solid;border-color:#505050;border-width:2px;border-radius:10px;">
             <span style="padding:5px;color:#b055b0">J\'ai une petite faim</span>
             <br/><br/>
-            <span style="color:#aaaaaa">Il y a une option similaire à celle de l\'affichage des toilettes, mais pour afficher l\'emplacement des distributeurs et machines à café.<span>
+            <span style="color:#aaaaaa">Il y a une option similaire à celle de l\'affichage des toilettes, mais pour afficher l\'emplacement des distributeurs et machines à café du campus tout niveaux confondus.<span>
         </div>
         <br/>
         <div style="background:#606060;border-style:solid;border-color:#606060;border-width:2px;border-radius:10px;">
+            <span style="padding:5px;color:#b055b0">J\'ai une grosse faim</span>
+            <br/><br/>
+            <span style="color:#aaaaaa">De même que pour toilettes et distributeurs, vous pouvez afficher les points de restauration.<span>
+        </div>
+        <br/>
+        <div style="background:#505050;border-style:solid;border-color:#505050;border-width:2px;border-radius:10px;">
             <span style="padding:5px;color:#b055b0">Comment visualiser mon emploi du temps ?</span>
             <br/><br/>
             <span style="color:#aaaaaa">Il suffit de vous rendre dans \'Calendrier\' depuis le menu de navigation. Le calendrier affiché doit avoir été au préalable importé dans votre appareil, via le clonage à un compte ou directement depuis l\'URL récupérée sur l\'ENT de l\'UJM. Attention, l\'application récupère tous les événements stockés dans l\'appareil qui ont un lieu. Il se peut que d\'autres événements ne concernant pas votre emploi du temps y apparaissent.</span>
         </div>
         <br/>
-        <div style="background:#505050;border-style:solid;border-color:#505050;border-width:2px;border-radius:10px;">
+        <div style="background:#606060;border-style:solid;border-color:#606060;border-width:2px;border-radius:10px;">
             <span style="padding:5px;color:#b055b0">Je ne suis pas à l\'aise avec le plan</span>
             <br/><br/>
             <span style="color:#aaaaaa">Une vue satellite vous est proposée si celle-ci vous convient mieux.</span>
         </div>
         <br/>
-        <div style="background:#606060;border-style:solid;border-color:#606060;border-width:2px;border-radius:10px;">
+        <div style="background:#505050;border-style:solid;border-color:#505050;border-width:2px;border-radius:10px;">
             <span style="padding:5px;color:#b055b0">J\'ai d\'autres questions</span>
             <br/><br/>
-            <span style="color:#aaaaaa">Pour tout autre question ou précision, veuillez nous contacter par mail à l\'adresse <span style="color:#63c1ba;text-decoration:underline;">yanndroy@yahoo.fr</span></span>
+            <span style="color:#aaaaaa">Pour tout autre question ou précision, veuillez nous contacter par mail à l\'adresse <span style="color:#63c1ba;text-decoration:underline;">support@univlocation.com</span></span>
         </div>
     </body>
 </html>

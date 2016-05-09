@@ -395,4 +395,18 @@ public class Graphe {
 
         return cherchePOI("Distributeurs");
     }
+
+    public ArrayList<Integer> chercheRestauration()
+    {
+        /* Renvoit la liste des Noeuds correspondant
+           au POI de restauration
+        */
+
+        ArrayList<Integer> l = new ArrayList<Integer>();
+        l.add(29);
+        l.add(91);
+        l.add(95);
+
+        return l;
+    }
 }

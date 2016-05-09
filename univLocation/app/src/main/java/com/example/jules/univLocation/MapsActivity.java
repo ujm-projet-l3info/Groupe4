@@ -5,10 +5,12 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.XmlResourceParser;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -22,6 +24,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -46,6 +49,7 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 
 import graphe.*;
 
@@ -164,24 +168,24 @@ public class MapsActivity extends AppCompatActivity
                     calqueFac.remove();
                     mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 
-                    if (!lignes.isEmpty()) {
+                    if(!lignes.isEmpty()) {
                         for (int i = 0; i < lignes.size(); i++) {
                             mMap.addPolyline(lignes.get(i));
                         }
 
-                        if (depart != -1) {
+                        if(depart != -1) {
                             mMap.addMarker(new MarkerOptions()
                                     .position(new LatLng(g.noeuds.get(depart).getLat(), g.noeuds.get(depart).getLon()))
                                     .title("Départ")
                                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE)));
                         }
-                        if (etape != -1) {
+                        if(etape != -1) {
                             mMap.addMarker(new MarkerOptions()
                                     .position(new LatLng(g.noeuds.get(etape).getLat(), g.noeuds.get(etape).getLon()))
                                     .title("Étape")
                                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
                         }
-                        if (arrivee != -1) {
+                        if(arrivee != -1) {
                             mMap.addMarker(new MarkerOptions()
                                     .position(new LatLng(g.noeuds.get(arrivee).getLat(), g.noeuds.get(arrivee).getLon()))
                                     .title("Arrivée")
@@ -466,9 +470,10 @@ public class MapsActivity extends AppCompatActivity
 
             marqueurs = new ArrayList<Marker>();
 
+            Noeud n = new Noeud();
             for(int i = 0 ; i < listeToilettes.size() ; i++)
             {
-                Noeud n = g.noeuds.get(listeToilettes.get(i));
+                n = g.noeuds.get(listeToilettes.get(i));
                 if(niveau == n.getNiveau()) {
                     l = new LatLng(n.getLat(), n.getLon());
 
@@ -484,10 +489,11 @@ public class MapsActivity extends AppCompatActivity
 
             if(nb == 0)
                 Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas de toilettes au niveau " + niveau).show();
+            else
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(n.getLat(), n.getLon()), 18));
         }
         else if(item.getItemId() == R.id.trouver_distrib)
         {
-            int nb = 0;
             LatLng l;
             ArrayList<Integer> listeDistributeurs = g.chercheDistributeurs();
 
@@ -495,24 +501,104 @@ public class MapsActivity extends AppCompatActivity
 
             marqueurs = new ArrayList<Marker>();
 
+            Noeud n = new Noeud();
             for(int i = 0 ; i < listeDistributeurs.size() ; i++)
             {
-                Noeud n = g.noeuds.get(listeDistributeurs.get(i));
-                if(niveau == n.getNiveau()) {
-                    l = new LatLng(n.getLat(), n.getLon());
+                n = g.noeuds.get(listeDistributeurs.get(i));
+                l = new LatLng(n.getLat(), n.getLon());
 
-                    MarkerOptions options = new MarkerOptions()
-                            .title("Distributeurs")
-                            .position(l)
-                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
+                MarkerOptions options = new MarkerOptions()
+                        .title("Distributeurs (niveau " + n.getNiveau() + ")")
+                        .position(l)
+                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
 
-                    marqueurs.add(mMap.addMarker(options));
-                    nb++;
-                }
+                marqueurs.add(mMap.addMarker(options));
             }
 
-            if(nb == 0)
-                Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas de distributeurs au niveau  " + niveau).show();
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(n.getLat(), n.getLon()), 18));
+        }
+        else if(item.getItemId() == R.id.trouver_manger)
+        {
+            LatLng l;
+            ArrayList<Integer> listeManger = new ArrayList<Integer>();
+
+            listeManger.add(29);
+            listeManger.add(91);
+            listeManger.add(95);
+
+            effacerMarqueurs();
+
+            marqueurs = new ArrayList<Marker>();
+
+            Noeud n = new Noeud();
+            for(int i = 0 ; i < listeManger.size() ; i++)
+            {
+                n = g.noeuds.get(listeManger.get(i));
+                l = new LatLng(n.getLat(), n.getLon());
+
+                MarkerOptions options = new MarkerOptions()
+                        .title(n.POIs.get(0) + " (niveau " + n.getNiveau() + ")")
+                        .position(l)
+                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+
+                marqueurs.add(mMap.addMarker(options));
+            }
+
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(n.getLat(), n.getLon()), 18));
+        }
+        else if(item.getItemId() == R.id.trouver_prochain_cours)
+        {
+            Cursor mCursor = null;
+
+            String[] ATTRIBUTS = new String[] {
+                    CalendarContract.Events.TITLE,
+                    CalendarContract.Events.DTSTART,
+                    CalendarContract.Events.DTEND,
+                    CalendarContract.Events.EVENT_LOCATION,
+                    CalendarContract.Events.CALENDAR_DISPLAY_NAME
+            };
+
+            try {
+                mCursor = getContentResolver().query(CalendarContract.Events.CONTENT_URI, ATTRIBUTS, null, null, CalendarContract.Events.DTSTART + " ASC");
+            } catch(SecurityException e){
+                e.printStackTrace();
+            }
+
+            mCursor = CalendrierActivity.prochainCours(mCursor);
+
+            ArrayList<Integer> listeNoeudsArr = MapsActivity.g.cherchePOI(mCursor.getString(3));
+
+            b = new Bundle();
+            b.putInt("depart", -2);
+            b.putInt("etape", -1);
+            b.putInt("arrivee", listeNoeudsArr.get(0));
+
+            tracerItineraire();
+
+            b = null;
+        }
+        else if(item.getItemId() == R.id.recherche)
+        {
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this, AlertDialog.THEME_DEVICE_DEFAULT_DARK);
+            alertDialogBuilder.setTitle("Rechercher");
+            alertDialogBuilder.setCancelable(true);
+
+            final EditText et = new EditText(this);
+
+            // set prompts.xml to alertdialog builder
+            alertDialogBuilder.setView(et);
+
+            // set dialog message
+            alertDialogBuilder.setCancelable(false);
+            alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                }
+            });
+
+            // create alert dialog
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            // show it
+            alertDialog.show();
         }
 
         return true;

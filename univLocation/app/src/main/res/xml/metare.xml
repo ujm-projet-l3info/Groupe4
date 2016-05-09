@@ -570,8 +570,8 @@
     <longitude>4.425647</longitude>
     <batiment>D</batiment>
     <liste_POI>
+        <POI>Snack</POI>
       <POI>Distributeurs</POI>
-      <POI>Snack</POI>
     </liste_POI>
     <liste_voisins>
       <voisin>27</voisin>
@@ -1790,6 +1790,7 @@
     </liste_POI>
     <liste_voisins>
       <voisin>90</voisin>
+      <voisin>95</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
       <voisin_PMR>90</voisin_PMR>
@@ -1860,6 +1861,7 @@
       <POI>Cafet'U</POI>
     </liste_POI>
     <liste_voisins>
+      <voisin>90</voisin>
       <voisin>94</voisin>
     </liste_voisins>
     <liste_voisins_PMR>
