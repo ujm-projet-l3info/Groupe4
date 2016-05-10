@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.content.res.XmlResourceParser;
 import android.database.Cursor;
 import android.graphics.Color;
@@ -18,6 +19,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.menu.MenuBuilder;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -25,10 +27,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
-import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -50,6 +48,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
+import org.w3c.dom.Text;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -65,12 +64,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
 
-
     private GoogleMap mMap;
     private GroundOverlayOptions calqueOptions;
     private GroundOverlay calqueFac;
     private ArrayList<Marker> marqueurs = new ArrayList<Marker>();
     private ArrayList<PolylineOptions> lignes = new ArrayList<PolylineOptions>();
+    private Menu menu;
     private int vue = 0;
     private int depart = -1;
     private int arrivee = -1;
@@ -89,8 +88,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         // Map
         setContentView(R.layout.activity_maps);
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
         // Toolbar
@@ -110,8 +108,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         // Volet de navigation
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
@@ -182,7 +179,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         monter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (niveau < 1 && mMap.getMapType() == GoogleMap.MAP_TYPE_NORMAL)
+                if (niveau < 1 && vue == 0)
                     setCalqueNiveau(niveau + 1);
             }
         });
@@ -191,7 +188,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         descendre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(niveau > -2 && mMap.getMapType() == GoogleMap.MAP_TYPE_NORMAL)
+                if(niveau > -2 && vue == 0)
                     setCalqueNiveau(niveau - 1);
             }
         });
@@ -390,18 +387,17 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
-        if (drawer.isDrawerOpen(GravityCompat.START))
-        {
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        }
-        else
-        {
+        } else {
             if(!marqueurs.isEmpty()){
                 effacerMarqueurs();
                 marqueurs = new ArrayList<Marker>();
             }else if(!lignes.isEmpty()) {
                 mMap.clear();
-                creerCalque(niveau);
+
+                if(vue == 0)
+                    creerCalque(niveau);
 
                 lignes = new ArrayList<PolylineOptions>();
             }else{
@@ -412,8 +408,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
+        this.menu = menu;
 
         return true;
+    }
+
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
     }
 
     public void effacerMarqueurs() {
@@ -638,6 +639,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             calqueFac.remove();
             mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 
+            TextView tv = (TextView) findViewById(R.id.etage);
+            tv.setText("");
+
             if(!lignes.isEmpty()) {
                 for (int i = 0; i < lignes.size(); i++) {
                     mMap.addPolyline(lignes.get(i));
@@ -667,6 +671,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         } else {
             mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
             creerCalque(niveau);
+
+            TextView tv = (TextView) findViewById(R.id.etage);
+            tv.setText("Niveau : " + niveau);
+
             vue = 0;
         }
     }

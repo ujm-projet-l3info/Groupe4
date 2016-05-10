@@ -11,26 +11,26 @@
     <item android:id="@+id/trouver_wc"
         android:title="@string/trouver_toilettes"
         android:icon="@drawable/ic_wc_white_48dp"
-        app:showAsAction="never" />
+        app:showAsAction="ifRoom" />
 
     <item android:id="@+id/trouver_distrib"
         android:title="@string/trouver_distrib"
         android:icon="@drawable/ic_free_breakfast_white_48dp"
-        app:showAsAction="never" />
+        app:showAsAction="ifRoom" />
 
     <item android:id="@+id/trouver_manger"
         android:title="@string/trouver_manger"
         android:icon="@drawable/ic_restaurant_white_48dp"
-        app:showAsAction="never" />
+        app:showAsAction="ifRoom" />
 
     <item android:id="@+id/trouver_prochain_cours"
         android:title="@string/trouver_prochain_cours"
         android:icon="@drawable/ic_school_white_48dp"
-        app:showAsAction="never" />
+        app:showAsAction="ifRoom" />
 
     <item android:id="@+id/changer_vue"
         android:title="@string/changer_vue"
         android:icon="@drawable/ic_terrain_white_48dp"
-        app:showAsAction="never" />
+        app:showAsAction="ifRoom" />
 
 </menu>

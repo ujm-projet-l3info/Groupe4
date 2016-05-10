@@ -39,6 +39,7 @@
         <activity
             android:name="com.example.jules.univLocation.MapsActivity"
             android:label="@string/app_name"
+            android:configChanges="orientation|screenSize"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,14 +49,17 @@
         <activity
             android:name="com.example.jules.univLocation.ItineraireActivity"
             android:label="@string/title_activity_itineraire"
+            android:configChanges="orientation|screenSize"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.example.jules.univLocation.AideActivity"
             android:label="@string/title_activity_aide"
+            android:configChanges="orientation|screenSize"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.example.jules.univLocation.CalendrierActivity"
             android:label="@string/title_activity_calendrier"
+            android:configChanges="orientation|screenSize"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
