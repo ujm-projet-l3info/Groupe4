@@ -487,12 +487,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         marqueurs = new ArrayList<Marker>();
 
-        Noeud n = new Noeud();
+        Noeud ok = new Noeud();
         for(int i = 0 ; i < listeToilettes.size() ; i++)
         {
-            n = g.noeuds.get(listeToilettes.get(i));
+            Noeud n = g.noeuds.get(listeToilettes.get(i));
             if(niveau == n.getNiveau()) {
                 l = new LatLng(n.getLat(), n.getLon());
+                ok = n;
 
                 MarkerOptions options = new MarkerOptions()
                         .title("Toilettes")
@@ -507,7 +508,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         if(nb == 0)
             Snackbar.make(findViewById(R.id.fab), "Snackbar", Snackbar.LENGTH_LONG).setText("Pas de toilettes au niveau " + niveau).show();
         else
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(n.getLat(), n.getLon()), 18));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(ok.getLat(), ok.getLon()), 18));
     }
 
     public void distributeurs() {
