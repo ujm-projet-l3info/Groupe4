@@ -458,24 +458,26 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             e.printStackTrace();
         }
 
-        mCursor = CalendrierActivity.prochainCours(mCursor);
+        if(mCursor.getCount() != 0) {
+            mCursor = CalendrierActivity.prochainCours(mCursor);
 
-        ArrayList<Integer> listeNoeudsArr = MapsActivity.g.cherchePOI(mCursor.getString(3));
+            ArrayList<Integer> listeNoeudsArr = MapsActivity.g.cherchePOI(mCursor.getString(3));
 
-        b = new Bundle();
+            b = new Bundle();
 
-        Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-        if (mLastLocation != null)
-            b.putInt("depart", -2);
-        else
-            b.putInt("depart", 0);
+            Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+            if (mLastLocation != null)
+                b.putInt("depart", -2);
+            else
+                b.putInt("depart", 0);
 
-        b.putInt("etape", -1);
-        b.putInt("arrivee", listeNoeudsArr.get(0));
+            b.putInt("etape", -1);
+            b.putInt("arrivee", listeNoeudsArr.get(0));
 
-        tracerItineraire();
+            tracerItineraire();
 
-        b = null;
+            b = null;
+        }
     }
 
     public void toilettes() {

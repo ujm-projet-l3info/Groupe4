@@ -5,8 +5,8 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.example.jules.projet2"
-        minSdkVersion 21
+        applicationId "com.example.jules.univLocation"
+        minSdkVersion 17
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -25,5 +25,4 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.2.0'
     compile 'com.google.android.gms:play-services:8.4.0'
     compile 'com.android.support:design:23.2.0'
-    compile 'ical4j:ical4j:0.9.20'
 }

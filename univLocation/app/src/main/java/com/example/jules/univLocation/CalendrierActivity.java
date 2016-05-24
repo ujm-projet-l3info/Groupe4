@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.text.Format;
@@ -85,71 +86,69 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
             }
         }
 
-        mCursor = prochainCours(mCursor);
-        afficherCours();
-
-        Button b = (Button)findViewById(R.id.suivant);
-        b.setOnClickListener(this);
-
-        b = (Button) findViewById(R.id.precedent);
-        b.setOnClickListener(this);
+        if(mCursor != null) {
+            mCursor = prochainCours(mCursor);
+            afficherCours();
+        }
     }
 
 
     public void onClick(View v) {
-        int tmp1 = mCursor.getPosition();
+        if(mCursor.getCount() != 0) {
+            int tmp1 = mCursor.getPosition();
 
-        if(v.getId() == R.id.suivant) {
-            if(!mCursor.isLast()) {
-                do{
-                    mCursor.moveToNext();
+            if (v.getId() == R.id.suivant) {
+                if (!mCursor.isLast()) {
+                    do {
+                        mCursor.moveToNext();
 
-                    if(!mCursor.isLast()) {
-                        System.out.println(mCursor.getString(0));
-                        if(mCursor.getString(3) != null) {
-                            if(!mCursor.getString(3).equals(""))
-                                break;
+                        if (!mCursor.isLast()) {
+                            System.out.println(mCursor.getString(0));
+                            if (mCursor.getString(3) != null) {
+                                if (!mCursor.getString(3).equals(""))
+                                    break;
+                            }
                         }
-                    }
-                }while(!mCursor.isLast());
+                    } while (!mCursor.isLast());
 
-                if(mCursor.isLast()) {
-                    if (mCursor.getString(3) != null) {
-                        if (mCursor.getString(3).equals(""))
-                            mCursor.moveToPosition(tmp1);
-                    } else {
-                        mCursor.moveToPosition(tmp1);
-                    }
-                }
-            }
-        }else if(v.getId() == R.id.precedent){
-            if (!mCursor.isFirst()) {
-                do {
-                    mCursor.moveToPrevious();
-
-                    if (!mCursor.isFirst()) {
+                    if (mCursor.isLast()) {
                         if (mCursor.getString(3) != null) {
-                            if (!mCursor.getString(3).equals(""))
-                                break;
+                            if (mCursor.getString(3).equals(""))
+                                mCursor.moveToPosition(tmp1);
+                        } else {
+                            mCursor.moveToPosition(tmp1);
                         }
                     }
-                } while (!mCursor.isFirst());
+                }
+            } else if (v.getId() == R.id.precedent) {
+                if (!mCursor.isFirst()) {
+                    do {
+                        mCursor.moveToPrevious();
 
-                if (mCursor.isFirst()){
-                    if(mCursor.getString(3) != null) {
-                        if(mCursor.getString(3).equals(""))
+                        if (!mCursor.isFirst()) {
+                            if (mCursor.getString(3) != null) {
+                                if (!mCursor.getString(3).equals(""))
+                                    break;
+                            }
+                        }
+                    } while (!mCursor.isFirst());
+
+                    if (mCursor.isFirst()) {
+                        if (mCursor.getString(3) != null) {
+                            if (mCursor.getString(3).equals(""))
+                                mCursor.moveToPosition(tmp1);
+                        } else {
                             mCursor.moveToPosition(tmp1);
-                    }else{
-                        mCursor.moveToPosition(tmp1);
+                        }
                     }
                 }
             }
+
+            int tmp2 = mCursor.getPosition();
+
+            if (tmp1 != tmp2)
+                afficherCours();
         }
-
-        int tmp2 = mCursor.getPosition();
-
-        if(tmp1 != tmp2)
-            afficherCours();
     }
 
     public void afficherCours() {
@@ -158,60 +157,86 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
         TextView tvNom = (TextView)findViewById(R.id.nom);
         TextView tvSalle = (TextView)findViewById(R.id.salle);
 
-        Long debut = 0L;
-        Long fin = 0L;
-        String nom = "";
-        String salle = "";
+        Button b1 = (Button)findViewById(R.id.suivant);
+        Button b2 = (Button) findViewById(R.id.precedent);
+        Button b3 = (Button) findViewById(R.id.y_aller);
 
-        Format df = DateFormat.getDateFormat(this);
-        Format tf = DateFormat.getTimeFormat(this);
+        if(mCursor.getCount() != 0) {
+            Long debut = 0L;
+            Long fin = 0L;
+            String nom = "";
+            String salle = "";
 
-        try {
-            nom = mCursor.getString(0);
-            debut = mCursor.getLong(1);
-            fin = mCursor.getLong(2);
-            salle = mCursor.getString(3);
-        } catch (Exception e) {
-            e.printStackTrace();
+            Format df = DateFormat.getDateFormat(this);
+            Format tf = DateFormat.getTimeFormat(this);
+
+            try {
+                nom = mCursor.getString(0);
+                debut = mCursor.getLong(1);
+                fin = mCursor.getLong(2);
+                salle = mCursor.getString(3);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            tvNom.setText(nom);
+            tvSalle.setText(salle);
+            tvDate.setText(df.format(debut));
+            tvHeure.setText(tf.format(debut) + " - " + tf.format(fin));
+
+            b1.setOnClickListener(this);
+            b2.setOnClickListener(this);
+        }else{
+            LinearLayout l = (LinearLayout) findViewById(R.id.calendrier);
+
+            l.removeView(tvSalle);
+            l.removeView(tvDate);
+            l.removeView(tvHeure);
+
+            l = (LinearLayout) findViewById(R.id.boutons_cal);
+
+            l.removeView(b1);
+            l.removeView(b2);
+            b3.setVisibility(View.GONE);
+
+            tvNom.setText("Votre emploi du temps est vide\nVous ne l'avez peut-être pas importé");
         }
-
-        tvNom.setText(nom);
-        tvSalle.setText(salle);
-        tvDate.setText(df.format(debut));
-        tvHeure.setText(tf.format(debut) + " - " + tf.format(fin));
     }
 
     public static Cursor prochainCours(Cursor mCursor) {
         mCursor.moveToFirst();
-        Long mtn = (new Date()).getTime();
-        while(mCursor.getLong(1) < mtn){
-            if(!mCursor.isLast())
-                mCursor.moveToNext();
-        }
 
-        mCursor.moveToPrevious();
+        if(mCursor.getCount() != 0) {
+            Long mtn = (new Date()).getTime();
+            while (mCursor.getLong(1) < mtn) {
+                if (!mCursor.isLast())
+                    mCursor.moveToNext();
+            }
 
-        int tmp1 = mCursor.getPosition();
+            mCursor.moveToPrevious();
 
-        if(!mCursor.isLast()) {
-            do{
-                mCursor.moveToNext();
+            int tmp1 = mCursor.getPosition();
 
-                if(!mCursor.isLast()) {
-                    System.out.println(mCursor.getString(0));
-                    if(mCursor.getString(3) != null) {
-                        if(!mCursor.getString(3).equals(""))
-                            break;
+            if (!mCursor.isLast()) {
+                do {
+                    mCursor.moveToNext();
+
+                    if (!mCursor.isLast()) {
+                        System.out.println(mCursor.getString(0));
+                        if (mCursor.getString(3) != null) {
+                            if (!mCursor.getString(3).equals(""))
+                                break;
+                        }
                     }
-                }
-            }while(!mCursor.isLast());
+                } while (!mCursor.isLast());
 
-            if(mCursor.isLast()) {
-                if (mCursor.getString(3) != null) {
-                    if (mCursor.getString(3).equals(""))
+                if (mCursor.isLast()) {
+                    if (mCursor.getString(3) != null) {
+                        if (mCursor.getString(3).equals(""))
+                            mCursor.moveToPosition(tmp1);
+                    } else {
                         mCursor.moveToPosition(tmp1);
-                } else {
-                    mCursor.moveToPosition(tmp1);
+                    }
                 }
             }
         }
@@ -239,8 +264,6 @@ public class CalendrierActivity extends AppCompatActivity implements NavigationV
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
         return super.onOptionsItemSelected(item);
     }
 
